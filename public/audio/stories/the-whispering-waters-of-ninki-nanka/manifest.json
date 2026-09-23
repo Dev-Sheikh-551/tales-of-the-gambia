@@ -1,0 +1,72 @@
+{
+  "storySlug": "the-whispering-waters-of-ninki-nanka",
+  "title": "The Whispering Waters of Ninki Nanka",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-17T11:14:44.636954+00:00",
+  "totalScenes": 3,
+  "totalDurationSeconds": 74.73,
+  "totalFileSizeBytes": 547104,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "Mist on the Kiang Creeks",
+      "sourceTextHash": "04a92985e4e2",
+      "audioFile": "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-narration.mp3",
+      "durationSeconds": 25.18,
+      "fileSizeBytes": 183648,
+      "substitutions": [
+        {
+          "original": "bolong",
+          "replacement": "boh-long"
+        },
+        {
+          "original": "Samba",
+          "replacement": "Sahm-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Ripple in the Deep",
+      "sourceTextHash": "33ba5ad8faba",
+      "audioFile": "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-narration.mp3",
+      "durationSeconds": 24.98,
+      "fileSizeBytes": 184944,
+      "substitutions": [
+        {
+          "original": "Ninki Nanka",
+          "replacement": "Neen-kee Nahn-kah"
+        },
+        {
+          "original": "Samba",
+          "replacement": "Sahm-bah"
+        },
+        {
+          "original": "Samba",
+          "replacement": "Sahm-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "Sanctuary Restored",
+      "sourceTextHash": "b72d3767d066",
+      "audioFile": "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-narration.mp3",
+      "durationSeconds": 24.57,
+      "fileSizeBytes": 178512,
+      "substitutions": [
+        {
+          "original": "Samba",
+          "replacement": "Sahm-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

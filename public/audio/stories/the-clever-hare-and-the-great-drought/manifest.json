@@ -1,0 +1,94 @@
+{
+  "storySlug": "the-clever-hare-and-the-great-drought",
+  "title": "The Clever Hare and the Great Drought",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.95,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-17T11:13:08.354681+00:00",
+  "totalScenes": 6,
+  "totalDurationSeconds": 142.72,
+  "totalFileSizeBytes": 1090104,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Parched Red Earth",
+      "sourceTextHash": "fbbe06bdc3b9",
+      "audioFile": "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-narration.mp3",
+      "durationSeconds": 21.2,
+      "fileSizeBytes": 162936,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Council Under the Silk Cotton Tree",
+      "sourceTextHash": "551f392f5dc7",
+      "audioFile": "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-narration.mp3",
+      "durationSeconds": 26.0,
+      "fileSizeBytes": 198600,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Labor of Paws and Claws",
+      "sourceTextHash": "17023dc8f621",
+      "audioFile": "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-narration.mp3",
+      "durationSeconds": 22.3,
+      "fileSizeBytes": 166464,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Shadows of Doubt",
+      "sourceTextHash": "1219d2c27f95",
+      "audioFile": "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-narration.mp3",
+      "durationSeconds": 23.35,
+      "fileSizeBytes": 178488,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Silver Spring Rises",
+      "sourceTextHash": "c9c429a61da8",
+      "audioFile": "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-narration.mp3",
+      "durationSeconds": 24.6,
+      "fileSizeBytes": 189672,
+      "substitutions": [
+        {
+          "original": "baobabs",
+          "replacement": "bah-oh-bahbs"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 6,
+      "title": "The Lesson of the Night Well",
+      "sourceTextHash": "1bd796c95ee2",
+      "audioFile": "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-narration.mp3",
+      "durationSeconds": 25.27,
+      "fileSizeBytes": 193944,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}
