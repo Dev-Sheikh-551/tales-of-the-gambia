@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.52,
+    "text": "Under the shadow of the rocky island, the water turned from green to ink.",
+    "charStart": 0,
+    "charEnd": 73
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.52,
+    "endSeconds": 6.87,
+    "text": "Lamin cast his heavy hemp net.",
+    "charStart": 74,
+    "charEnd": 104
+  },
+  {
+    "index": 2,
+    "startSeconds": 6.87,
+    "endSeconds": 11.77,
+    "text": "At once, the lines tightened with a weight so immense the wooden gunwales groaned.",
+    "charStart": 105,
+    "charEnd": 187
+  },
+  {
+    "index": 3,
+    "startSeconds": 11.77,
+    "endSeconds": 21.16,
+    "text": "The surface did not ripple with thrashing fish; instead, the river grew deathly still, and from the depths rose a pale, luminescent light.",
+    "charStart": 188,
+    "charEnd": 326
+  },
+  {
+    "index": 4,
+    "startSeconds": 21.16,
+    "endSeconds": 30.55,
+    "text": "A voice echoed not in their ears, but within their very chests: 'You come to take what is ours without asking, little brother of the dry shore.'",
+    "charStart": 327,
+    "charEnd": 471
+  },
+  {
+    "index": 5,
+    "startSeconds": 30.55,
+    "endSeconds": 38.17,
+    "text": "The rudder snapped like dry grass, and the pirogue was pulled slowly toward the dark vortex of the channel.",
+    "charStart": 472,
+    "charEnd": 579
+  }
+]

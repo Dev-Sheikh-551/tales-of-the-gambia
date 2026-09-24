@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 13.31,
+    "text": "Beyond the village edge, near the Kuyang-Manso camp where the young initiates rested around their fire, a band of intruders approached with axes in hand, intending to strip the rare rosewood trees.",
+    "charStart": 0,
+    "charEnd": 197
+  },
+  {
+    "index": 1,
+    "startSeconds": 13.31,
+    "endSeconds": 15.75,
+    "text": "Suddenly, the shadows parted.",
+    "charStart": 198,
+    "charEnd": 227
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.75,
+    "endSeconds": 22.29,
+    "text": "Out of the darkness bounded the Kankurang, his red coat rustling like dry grass in a gale.",
+    "charStart": 228,
+    "charEnd": 318
+  },
+  {
+    "index": 3,
+    "startSeconds": 22.29,
+    "endSeconds": 31.92,
+    "text": "He did not wound them; with a thunderous strike of his blades and an ancestral roar, he disarmed their axes and drove them fleeing into the night.",
+    "charStart": 319,
+    "charEnd": 465
+  },
+  {
+    "index": 4,
+    "startSeconds": 31.92,
+    "endSeconds": 41.8,
+    "text": "The young boys watched from the safety of their palisade, learning in that single moment what it truly meant to protect one's homeland.",
+    "charStart": 466,
+    "charEnd": 601
+  }
+]

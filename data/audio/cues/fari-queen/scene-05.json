@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.07,
+    "text": "To celebrate the visit, the palace drummers took up their sabar drums in the main square.",
+    "charStart": 0,
+    "charEnd": 89
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.07,
+    "endSeconds": 9.76,
+    "text": "The rhythm started slow, then accelerated into a wild, galloping beat.",
+    "charStart": 90,
+    "charEnd": 160
+  },
+  {
+    "index": 2,
+    "startSeconds": 9.76,
+    "endSeconds": 11.65,
+    "text": "It was too much for Fari.",
+    "charStart": 161,
+    "charEnd": 186
+  },
+  {
+    "index": 3,
+    "startSeconds": 11.65,
+    "endSeconds": 16.06,
+    "text": "Her ears—unseen under her turban—began to twitch in time with the percussion.",
+    "charStart": 187,
+    "charEnd": 264
+  },
+  {
+    "index": 4,
+    "startSeconds": 16.06,
+    "endSeconds": 23.72,
+    "text": "She opened her mouth to sing a sweet courtly ballad, but what burst forth was a colossal, window-rattling 'HEE-HAW!'",
+    "charStart": 265,
+    "charEnd": 381
+  },
+  {
+    "index": 5,
+    "startSeconds": 23.72,
+    "endSeconds": 38.55,
+    "text": "Her companions erupted in chorus, kicked their slippers into the chandeliers, snatched mouthfuls of salt, and galloped on all fours out the palace gates back to the savanna, laughing all the way home to their beloved wild grass.",
+    "charStart": 382,
+    "charEnd": 610
+  }
+]

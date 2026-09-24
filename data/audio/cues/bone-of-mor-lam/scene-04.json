@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.98,
+    "text": "Word spread that poor Mor Lam had passed away.",
+    "charStart": 0,
+    "charEnd": 46
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.98,
+    "endSeconds": 11.07,
+    "text": "The village elders arrived; the women wailed in ritual grief, and four strong cousins lifted the woven bier to carry him to the sandy cemetery.",
+    "charStart": 47,
+    "charEnd": 190
+  },
+  {
+    "index": 2,
+    "startSeconds": 11.07,
+    "endSeconds": 15.76,
+    "text": "Beneath his shroud, Mor Lam's eyes were tightly shut, his jaw clamped tight.",
+    "charStart": 191,
+    "charEnd": 267
+  },
+  {
+    "index": 3,
+    "startSeconds": 15.76,
+    "endSeconds": 19.6,
+    "text": "'Moussa will surely go home now,' he told himself desperately.",
+    "charStart": 268,
+    "charEnd": 330
+  },
+  {
+    "index": 4,
+    "startSeconds": 19.6,
+    "endSeconds": 23.31,
+    "text": "'Once they lower the bier, I will leap up and race back to my pot!'",
+    "charStart": 331,
+    "charEnd": 398
+  },
+  {
+    "index": 5,
+    "startSeconds": 23.31,
+    "endSeconds": 28.8,
+    "text": "But faithful Moussa walked at the very front of the procession, holding the chief mourner's staff.",
+    "charStart": 399,
+    "charEnd": 497
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 6.01,
+    "text": "One scorching afternoon, an old carved calabash slipped from Kumba's tired hands into the river mud.",
+    "charStart": 0,
+    "charEnd": 100
+  },
+  {
+    "index": 1,
+    "startSeconds": 6.01,
+    "endSeconds": 9.35,
+    "text": "When her stepmother saw the smudge, she flew into a rage.",
+    "charStart": 101,
+    "charEnd": 158
+  },
+  {
+    "index": 2,
+    "startSeconds": 9.35,
+    "endSeconds": 14.74,
+    "text": "'Take this calabash,' the stepmother hissed, 'and walk until you find the mythical Sea of Daayaan!",
+    "charStart": 159,
+    "charEnd": 257
+  },
+  {
+    "index": 3,
+    "startSeconds": 14.74,
+    "endSeconds": 19.31,
+    "text": "Do not show your face in this village again until the waters have washed it as pure as milk.'",
+    "charStart": 258,
+    "charEnd": 351
+  },
+  {
+    "index": 4,
+    "startSeconds": 19.31,
+    "endSeconds": 27.75,
+    "text": "With a heavy heart but without a word of anger, gentle Kumba tied her headwrap, took the bowl, and walked out into the vast, shimmering savanna.",
+    "charStart": 352,
+    "charEnd": 496
+  }
+]

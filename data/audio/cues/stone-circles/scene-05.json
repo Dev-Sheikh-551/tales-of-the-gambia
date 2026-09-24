@@ -1,0 +1,146 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.91,
+    "text": "Some people come to Wassu looking for answers.",
+    "charStart": 0,
+    "charEnd": 46
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.91,
+    "endSeconds": 8.63,
+    "text": "They want to know who built the circles, exactly when, exactly why.",
+    "charStart": 48,
+    "charEnd": 115
+  },
+  {
+    "index": 2,
+    "startSeconds": 8.63,
+    "endSeconds": 13.22,
+    "text": "They want the story — beginning, middle, end — neatly told.",
+    "charStart": 116,
+    "charEnd": 175
+  },
+  {
+    "index": 3,
+    "startSeconds": 13.22,
+    "endSeconds": 15.93,
+    "text": "The stones do not offer that.",
+    "charStart": 177,
+    "charEnd": 206
+  },
+  {
+    "index": 4,
+    "startSeconds": 15.93,
+    "endSeconds": 24.3,
+    "text": "What the stones offer instead is something more disorienting and more useful: the sheer fact of human effort across time.",
+    "charStart": 208,
+    "charEnd": 329
+  },
+  {
+    "index": 5,
+    "startSeconds": 24.3,
+    "endSeconds": 29.65,
+    "text": "Someone decided, 2,000 years ago, that the dead were worth marking.",
+    "charStart": 330,
+    "charEnd": 397
+  },
+  {
+    "index": 6,
+    "startSeconds": 29.65,
+    "endSeconds": 43.26,
+    "text": "That the labour of cutting stone and moving it and raising it in a circle was a worthy expression of something — grief, love, status, belief, community — that demanded to be made permanent.",
+    "charStart": 398,
+    "charEnd": 587
+  },
+  {
+    "index": 7,
+    "startSeconds": 43.26,
+    "endSeconds": 46.38,
+    "text": "And then someone else decided the same thing.",
+    "charStart": 589,
+    "charEnd": 634
+  },
+  {
+    "index": 8,
+    "startSeconds": 46.38,
+    "endSeconds": 47.77,
+    "text": "And someone else.",
+    "charStart": 635,
+    "charEnd": 652
+  },
+  {
+    "index": 9,
+    "startSeconds": 47.77,
+    "endSeconds": 50.37,
+    "text": "For nearly 2,000 years.",
+    "charStart": 653,
+    "charEnd": 676
+  },
+  {
+    "index": 10,
+    "startSeconds": 50.37,
+    "endSeconds": 57.16,
+    "text": "The people of The Gambia who live near Wassu today are not the same communities who built the circles.",
+    "charStart": 678,
+    "charEnd": 780
+  },
+  {
+    "index": 11,
+    "startSeconds": 57.16,
+    "endSeconds": 61.22,
+    "text": "Languages have changed, kingdoms have come and gone.",
+    "charStart": 781,
+    "charEnd": 833
+  },
+  {
+    "index": 12,
+    "startSeconds": 61.22,
+    "endSeconds": 80.66,
+    "text": "But the stones are still here, and the people are still here, and between them — between the very old stones and the very living people — there is a conversation about what it means to belong to a place, to come from something, to leave something behind.",
+    "charStart": 834,
+    "charEnd": 1088
+  },
+  {
+    "index": 13,
+    "startSeconds": 80.66,
+    "endSeconds": 83.7,
+    "text": "Go to Wassu.",
+    "charStart": 1090,
+    "charEnd": 1102
+  },
+  {
+    "index": 14,
+    "startSeconds": 83.7,
+    "endSeconds": 86.8,
+    "text": "Stand inside one of the circles.",
+    "charStart": 1104,
+    "charEnd": 1136
+  },
+  {
+    "index": 15,
+    "startSeconds": 86.8,
+    "endSeconds": 89.11,
+    "text": "Let the stones ask you their question.",
+    "charStart": 1138,
+    "charEnd": 1176
+  },
+  {
+    "index": 16,
+    "startSeconds": 89.11,
+    "endSeconds": 90.46,
+    "text": "You don't need to have an answer.",
+    "charStart": 1178,
+    "charEnd": 1211
+  },
+  {
+    "index": 17,
+    "startSeconds": 90.46,
+    "endSeconds": 91.12,
+    "text": "You just need to hear it.",
+    "charStart": 1212,
+    "charEnd": 1237
+  }
+]

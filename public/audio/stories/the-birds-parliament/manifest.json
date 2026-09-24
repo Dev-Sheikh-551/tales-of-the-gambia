@@ -1,0 +1,65 @@
+{
+  "storySlug": "the-birds-parliament",
+  "title": "The Birds' Parliament",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T16:17:51.896469+00:00",
+  "totalScenes": 4,
+  "totalDurationSeconds": 127.35,
+  "totalFileSizeBytes": 977880,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Breath of the Harmattan",
+      "sourceTextHash": "f5c7652dfec3",
+      "audioFile": "/audio/stories/the-birds-parliament/scene-01-narration.mp3",
+      "durationSeconds": 29.45,
+      "fileSizeBytes": 226584,
+      "substitutions": [
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Assembly on the White Sandbank",
+      "sourceTextHash": "e007e517285d",
+      "audioFile": "/audio/stories/the-birds-parliament/scene-02-narration.mp3",
+      "durationSeconds": 33.23,
+      "fileSizeBytes": 254712,
+      "substitutions": [
+        {
+          "original": "Janjanbureh",
+          "replacement": "Jahn-jahn-boo-ray"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Claim of the Talons",
+      "sourceTextHash": "f41354e85b32",
+      "audioFile": "/audio/stories/the-birds-parliament/scene-03-narration.mp3",
+      "durationSeconds": 26.05,
+      "fileSizeBytes": 202176,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Treaty of the River Banks",
+      "sourceTextHash": "33ea729b2e6e",
+      "audioFile": "/audio/stories/the-birds-parliament/scene-04-narration.mp3",
+      "durationSeconds": 38.62,
+      "fileSizeBytes": 294408,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    }
+  ]
+}

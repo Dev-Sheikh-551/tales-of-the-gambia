@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 13.92,
+    "text": "At the onset of the harvest season, when the rains had ceased and the evening skies over Janjanbureh turned the deep crimson of crushed mahogany bark, the village gathered in hushed reverence.",
+    "charStart": 0,
+    "charEnd": 192
+  },
+  {
+    "index": 1,
+    "startSeconds": 13.92,
+    "endSeconds": 24.8,
+    "text": "The young boys of the settlement had entered the sacred forest for their rites of passage, stepping away from childhood to learn the enduring laws of the ancestors.",
+    "charStart": 193,
+    "charEnd": 357
+  },
+  {
+    "index": 2,
+    "startSeconds": 24.8,
+    "endSeconds": 39.4,
+    "text": "But as night crept over the mangrove creeks, strange winds stirred the dust, and whispers spread that reckless woodcutters were creeping into the protected sacred groves to fell the ancient medicinal trees.",
+    "charStart": 358,
+    "charEnd": 564
+  }
+]

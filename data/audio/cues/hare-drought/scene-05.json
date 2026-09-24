@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0,
+    "endSeconds": 5.99,
+    "text": "Just as the evening sun touched the tops of the baobabs, a damp thud echoed from the bottom of the well.",
+    "charStart": 0,
+    "charEnd": 104
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.99,
+    "endSeconds": 12.11,
+    "text": "Then came a sound sweeter than twenty-one kora strings — the unmistakable rush of living water.",
+    "charStart": 105,
+    "charEnd": 200
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.11,
+    "endSeconds": 19.79,
+    "text": "Cool, crystal-clear liquid gushed upward through the white river sand, splashing over tired paws and thirsty snouts.",
+    "charStart": 201,
+    "charEnd": 317
+  },
+  {
+    "index": 3,
+    "startSeconds": 19.79,
+    "endSeconds": 24.6,
+    "text": "The animals cheered in a chorus of joyous trumpets, barks, and songs.",
+    "charStart": 318,
+    "charEnd": 387
+  }
+]

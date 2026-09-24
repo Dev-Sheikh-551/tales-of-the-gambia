@@ -1,0 +1,154 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.99,
+    "text": "One morning, Demba rose before the sun and went to count his herd.",
+    "charStart": 0,
+    "charEnd": 66
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.99,
+    "endSeconds": 8.03,
+    "text": "Forty cattle.",
+    "charStart": 68,
+    "charEnd": 81
+  },
+  {
+    "index": 2,
+    "startSeconds": 8.03,
+    "endSeconds": 10.93,
+    "text": "Not forty-three.",
+    "charStart": 82,
+    "charEnd": 98
+  },
+  {
+    "index": 3,
+    "startSeconds": 10.93,
+    "endSeconds": 13.24,
+    "text": "He counted again.",
+    "charStart": 100,
+    "charEnd": 117
+  },
+  {
+    "index": 4,
+    "startSeconds": 13.24,
+    "endSeconds": 16.68,
+    "text": "Still forty.",
+    "charStart": 118,
+    "charEnd": 130
+  },
+  {
+    "index": 5,
+    "startSeconds": 16.68,
+    "endSeconds": 19.83,
+    "text": "His three finest animals — a large bull and two young cows — were gone.",
+    "charStart": 132,
+    "charEnd": 203
+  },
+  {
+    "index": 6,
+    "startSeconds": 19.83,
+    "endSeconds": 22.81,
+    "text": "Demba stood in the field for a long moment.",
+    "charStart": 205,
+    "charEnd": 248
+  },
+  {
+    "index": 7,
+    "startSeconds": 22.81,
+    "endSeconds": 25.26,
+    "text": "The sky was the colour of old iron.",
+    "charStart": 249,
+    "charEnd": 284
+  },
+  {
+    "index": 8,
+    "startSeconds": 25.26,
+    "endSeconds": 27.6,
+    "text": "The remaining cattle stood quietly, breathing in the cold morning air.",
+    "charStart": 285,
+    "charEnd": 355
+  },
+  {
+    "index": 9,
+    "startSeconds": 27.6,
+    "endSeconds": 30.94,
+    "text": "Around him, the village was still sleeping.",
+    "charStart": 356,
+    "charEnd": 399
+  },
+  {
+    "index": 10,
+    "startSeconds": 30.94,
+    "endSeconds": 32.93,
+    "text": "He asked questions.",
+    "charStart": 401,
+    "charEnd": 420
+  },
+  {
+    "index": 11,
+    "startSeconds": 32.93,
+    "endSeconds": 34.5,
+    "text": "He tracked footprints.",
+    "charStart": 421,
+    "charEnd": 443
+  },
+  {
+    "index": 12,
+    "startSeconds": 34.5,
+    "endSeconds": 43.7,
+    "text": "By midday, he knew: the animals had been taken by Musa, a man from the neighbouring village, who had long coveted Demba's bull.",
+    "charStart": 444,
+    "charEnd": 571
+  },
+  {
+    "index": 13,
+    "startSeconds": 43.7,
+    "endSeconds": 45.98,
+    "text": "Everyone in the village knew it.",
+    "charStart": 573,
+    "charEnd": 605
+  },
+  {
+    "index": 14,
+    "startSeconds": 45.98,
+    "endSeconds": 48.81,
+    "text": "The footprints led to Musa's compound.",
+    "charStart": 606,
+    "charEnd": 644
+  },
+  {
+    "index": 15,
+    "startSeconds": 48.81,
+    "endSeconds": 52.23,
+    "text": "Musa's compound had three new animals.",
+    "charStart": 645,
+    "charEnd": 683
+  },
+  {
+    "index": 16,
+    "startSeconds": 52.23,
+    "endSeconds": 55.66,
+    "text": "The math, as they say, was not difficult.",
+    "charStart": 684,
+    "charEnd": 725
+  },
+  {
+    "index": 17,
+    "startSeconds": 55.66,
+    "endSeconds": 59.16,
+    "text": "Now every eye in the village turned to Demba.",
+    "charStart": 727,
+    "charEnd": 772
+  },
+  {
+    "index": 18,
+    "startSeconds": 59.16,
+    "endSeconds": 61.27,
+    "text": "What would he do?",
+    "charStart": 774,
+    "charEnd": 791
+  }
+]

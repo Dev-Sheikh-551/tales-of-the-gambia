@@ -12,12 +12,18 @@ interface StorySceneViewportProps {
   scene: Scene;
   totalScenes: number;
   isPaused: boolean;
+  storySlug?: string;
+  currentTime?: number;
+  hasAudio?: boolean;
 }
 
 export function StorySceneViewport({
   scene,
   totalScenes,
   isPaused,
+  storySlug,
+  currentTime,
+  hasAudio,
 }: StorySceneViewportProps) {
   return (
     <div className="relative w-full h-full flex-1 flex flex-col justify-between overflow-hidden bg-[#0A0807]">
@@ -56,6 +62,9 @@ export function StorySceneViewport({
         narration={scene.narration}
         sceneNumber={scene.sceneNumber}
         totalScenes={totalScenes}
+        storySlug={storySlug}
+        currentTime={currentTime}
+        hasAudio={hasAudio}
       />
     </div>
   );

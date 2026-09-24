@@ -7,7 +7,6 @@ import {
   ChevronLeft,
   ChevronRight,
   RotateCw,
-  Wind,
 } from "lucide-react";
 import { PlaybackState } from "@/hooks/useStoryPlayback";
 import { PlaybackRate, PLAYBACK_RATES } from "@/hooks/useStoryAudio";
@@ -31,10 +30,6 @@ interface StoryPlaybackControlsProps {
   onSetRate?: (rate: PlaybackRate) => void;
   narrationVolume?: number;
   onToggleMute?: () => void;
-  /** Whether ambience is currently enabled — shows toggle when provided */
-  ambienceEnabled?: boolean;
-  /** Called when the user clicks the ambience on/off button */
-  onToggleAmbience?: () => void;
 }
 
 export function StoryPlaybackControls({
@@ -55,8 +50,6 @@ export function StoryPlaybackControls({
   onSetRate,
   narrationVolume,
   onToggleMute,
-  ambienceEnabled,
-  onToggleAmbience,
 }: StoryPlaybackControlsProps) {
 
   const isPlaying = playbackState === "playing";
@@ -196,22 +189,6 @@ export function StoryPlaybackControls({
                 )}
               </button>
             )}
-
-            {onToggleAmbience && ambienceEnabled !== undefined && (
-              <button
-                onClick={onToggleAmbience}
-                className={`p-1.5 rounded-lg transition-colors ${
-                  ambienceEnabled
-                    ? "text-[#97CDD6] hover:text-[#F7F3EB] hover:bg-white/5"
-                    : "text-[#857364] hover:text-[#CBBCAE] hover:bg-white/5"
-                }`}
-                title={ambienceEnabled ? "Disable ambience" : "Enable ambience"}
-                aria-label={ambienceEnabled ? "Disable ambience audio" : "Enable ambience audio"}
-              >
-                <Wind className="w-4 h-4" />
-              </button>
-            )}
-
 
             <div className="flex items-center gap-1 text-xs font-mono text-[#AB9784]">
               <span className="hidden sm:inline">Scene</span>

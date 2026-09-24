@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 9.02,
+    "text": "Today, tall elephant grass grows over the ancient ramparts of Medina, and the ironwood posts have dissolved into the fertile soil.",
+    "charStart": 0,
+    "charEnd": 130
+  },
+  {
+    "index": 1,
+    "startSeconds": 9.02,
+    "endSeconds": 18.06,
+    "text": "But throughout Kiang and Foni, the elders still recount the courage of the man who refused to sell his homeland for promises of brass coin.",
+    "charStart": 131,
+    "charEnd": 270
+  },
+  {
+    "index": 2,
+    "startSeconds": 18.06,
+    "endSeconds": 31.62,
+    "text": "His name is remembered in the songs of the jelilu and the proud traditions of the south bank—a reminder that courage in defense of freedom leaves an imprint that no empire can ever erase.",
+    "charStart": 271,
+    "charEnd": 458
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.87,
+    "text": "The kora has twenty-one strings.",
+    "charStart": 0,
+    "charEnd": 32
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.87,
+    "endSeconds": 5.03,
+    "text": "Eleven on one side.",
+    "charStart": 34,
+    "charEnd": 53
+  },
+  {
+    "index": 2,
+    "startSeconds": 5.03,
+    "endSeconds": 6.63,
+    "text": "Ten on the other.",
+    "charStart": 54,
+    "charEnd": 71
+  },
+  {
+    "index": 3,
+    "startSeconds": 6.63,
+    "endSeconds": 21.01,
+    "text": "Arranged so that when a skilled jali plays, the two hands move in different registers, weaving together — melody and rhythm and harmony all at once — in a way that no other instrument quite replicates.",
+    "charStart": 72,
+    "charEnd": 273
+  },
+  {
+    "index": 4,
+    "startSeconds": 21.01,
+    "endSeconds": 27.74,
+    "text": "It is built from a large gourd, a cow skin, a hardwood neck, and leather tuning rings.",
+    "charStart": 275,
+    "charEnd": 361
+  },
+  {
+    "index": 5,
+    "startSeconds": 27.74,
+    "endSeconds": 32.22,
+    "text": "It is, in its materials, entirely of West Africa.",
+    "charStart": 362,
+    "charEnd": 411
+  },
+  {
+    "index": 6,
+    "startSeconds": 32.22,
+    "endSeconds": 35.31,
+    "text": "Every part of it grows here, belongs here.",
+    "charStart": 412,
+    "charEnd": 454
+  },
+  {
+    "index": 7,
+    "startSeconds": 35.31,
+    "endSeconds": 54.49,
+    "text": "In the hands of a master jali, it can sustain a performance for hours — holding an entire audience in a single sustained emotional landscape, moving from joy to grief to reverence to laughter without a single break in the conversation between player and listener.",
+    "charStart": 456,
+    "charEnd": 719
+  },
+  {
+    "index": 8,
+    "startSeconds": 54.49,
+    "endSeconds": 61.89,
+    "text": "Gambian kora masters — Alhaji Papa Susso, Dembo Konte, Malamini Jobarteh — have carried the instrument across the world.",
+    "charStart": 721,
+    "charEnd": 841
+  },
+  {
+    "index": 9,
+    "startSeconds": 61.89,
+    "endSeconds": 68.84,
+    "text": "It has been heard in concert halls in London and Tokyo.",
+    "charStart": 842,
+    "charEnd": 897
+  },
+  {
+    "index": 10,
+    "startSeconds": 68.84,
+    "endSeconds": 77.27,
+    "text": "It has been played alongside jazz and classical music and electronic music and every other tradition it has encountered.",
+    "charStart": 898,
+    "charEnd": 1018
+  },
+  {
+    "index": 11,
+    "startSeconds": 77.27,
+    "endSeconds": 95.8,
+    "text": "And each time it is played, the twenty-one strings vibrate and the gourd resonates and somewhere, at the edge of hearing, there is the memory of a clearing in a forest where a hunter sat down instead of walking away — and everything that followed from that.",
+    "charStart": 1020,
+    "charEnd": 1277
+  },
+  {
+    "index": 12,
+    "startSeconds": 95.8,
+    "endSeconds": 96.72,
+    "text": "Listen.",
+    "charStart": 1279,
+    "charEnd": 1286
+  },
+  {
+    "index": 13,
+    "startSeconds": 96.72,
+    "endSeconds": 98.0,
+    "text": "You can still hear it.",
+    "charStart": 1288,
+    "charEnd": 1310
+  }
+]

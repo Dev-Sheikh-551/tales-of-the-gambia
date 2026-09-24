@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 9.09,
+    "text": "In the warm shade of the family veranda, Grandmother Awa unlocked the heavy teakwood chest with an iron key worn smooth by fifty rainy seasons.",
+    "charStart": 0,
+    "charEnd": 143
+  },
+  {
+    "index": 1,
+    "startSeconds": 9.09,
+    "endSeconds": 22.37,
+    "text": "Inside lay Mai's nianyaa: long ropes of honey-colored amber beads from the northern trade routes, silver earrings shaped like the crescent moon, and crimson coral beads that smelled faintly of clove and sandalwood.",
+    "charStart": 144,
+    "charEnd": 358
+  },
+  {
+    "index": 2,
+    "startSeconds": 22.37,
+    "endSeconds": 28.28,
+    "text": "Tomorrow, Mai would wear them before the entire village as she walked to her husband's compound.",
+    "charStart": 359,
+    "charEnd": 455
+  },
+  {
+    "index": 3,
+    "startSeconds": 28.28,
+    "endSeconds": 35.8,
+    "text": "Beside her stood her half-sister Binta, her fingers tightening around her apron as she stared at the glowing silver.",
+    "charStart": 456,
+    "charEnd": 572
+  }
+]

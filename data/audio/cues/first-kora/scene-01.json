@@ -1,0 +1,106 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.18,
+    "text": "Before the kora, there was the kora.",
+    "charStart": 0,
+    "charEnd": 36
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.18,
+    "endSeconds": 5.7,
+    "text": "That is what the griots say: the kora always existed.",
+    "charStart": 38,
+    "charEnd": 91
+  },
+  {
+    "index": 2,
+    "startSeconds": 5.7,
+    "endSeconds": 8.07,
+    "text": "It was waiting.",
+    "charStart": 92,
+    "charEnd": 107
+  },
+  {
+    "index": 3,
+    "startSeconds": 8.07,
+    "endSeconds": 18.72,
+    "text": "It existed the way music exists before anyone has played it — in potential, in silence, in the space between what is and what could be.",
+    "charStart": 108,
+    "charEnd": 243
+  },
+  {
+    "index": 4,
+    "startSeconds": 18.72,
+    "endSeconds": 22.6,
+    "text": "But there was a moment when it crossed into the world.",
+    "charStart": 245,
+    "charEnd": 299
+  },
+  {
+    "index": 5,
+    "startSeconds": 22.6,
+    "endSeconds": 26.63,
+    "text": "And the man who brought it across was named Koriang.",
+    "charStart": 301,
+    "charEnd": 353
+  },
+  {
+    "index": 6,
+    "startSeconds": 26.63,
+    "endSeconds": 31.19,
+    "text": "He was a hunter — the griots are consistent about this.",
+    "charStart": 355,
+    "charEnd": 410
+  },
+  {
+    "index": 7,
+    "startSeconds": 31.19,
+    "endSeconds": 47.7,
+    "text": "A Mandinka man from the Senegambia region, before kingdoms had taken their final shapes, in the time when the forest was deeper and the border between the visible world and the world behind it was not as fixed as it has since become.",
+    "charStart": 411,
+    "charEnd": 644
+  },
+  {
+    "index": 8,
+    "startSeconds": 47.7,
+    "endSeconds": 49.4,
+    "text": "He was a good hunter.",
+    "charStart": 646,
+    "charEnd": 667
+  },
+  {
+    "index": 9,
+    "startSeconds": 49.4,
+    "endSeconds": 50.81,
+    "text": "He moved quietly.",
+    "charStart": 668,
+    "charEnd": 685
+  },
+  {
+    "index": 10,
+    "startSeconds": 50.81,
+    "endSeconds": 54.0,
+    "text": "He observed well.",
+    "charStart": 686,
+    "charEnd": 703
+  },
+  {
+    "index": 11,
+    "startSeconds": 54.0,
+    "endSeconds": 55.81,
+    "text": "He knew when to be still.",
+    "charStart": 704,
+    "charEnd": 729
+  },
+  {
+    "index": 12,
+    "startSeconds": 55.81,
+    "endSeconds": 62.83,
+    "text": "These qualities — the griots note — were also what made him capable of receiving what the forest was about to give him.",
+    "charStart": 731,
+    "charEnd": 850
+  }
+]

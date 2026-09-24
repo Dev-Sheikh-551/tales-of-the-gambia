@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.39,
+    "text": "Anansi walked from village to village with a heavy earthen jar in his eight arms.",
+    "charStart": 0,
+    "charEnd": 81
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.39,
+    "endSeconds": 18.01,
+    "text": "Every time an elder spoke an insightful proverb by the fire or a mother taught her child how to weave a grass mat, Anansi snatched the thought from the air and sealed it tightly beneath the clay lid.",
+    "charStart": 82,
+    "charEnd": 281
+  },
+  {
+    "index": 2,
+    "startSeconds": 18.01,
+    "endSeconds": 25.8,
+    "text": "'When all wisdom is sealed in my jar,' he boasted to himself, 'the whole world will kneel at my door.'",
+    "charStart": 282,
+    "charEnd": 384
+  }
+]

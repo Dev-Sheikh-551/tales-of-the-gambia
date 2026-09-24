@@ -56,8 +56,6 @@ export function StoryCinematicMode({
 
   const storyAudio = useStoryAudio({
     narrationSrc: currentScene.audio?.narrationUrl,
-    ambienceSrc: currentScene.audio?.ambienceUrl,
-    ambienceLoop: currentScene.audio?.ambienceLoop ?? true,
     onNarrationEnded: () => {
       if (isAutoAdvanceEnabled) {
         goToNextScene();
@@ -162,6 +160,9 @@ export function StoryCinematicMode({
             scene={currentScene}
             totalScenes={totalScenes}
             isPaused={isPaused}
+            storySlug={story.slug}
+            currentTime={effectiveElapsed}
+            hasAudio={storyAudio.hasAudio}
           />
         )}
 
@@ -225,8 +226,6 @@ export function StoryCinematicMode({
           onToggleMute={() => {
             storyAudio.setNarrationVolume(storyAudio.narrationVolume === 0 ? 0.8 : 0);
           }}
-          ambienceEnabled={storyAudio.ambienceEnabled}
-          onToggleAmbience={() => storyAudio.setAmbienceEnabled(!storyAudio.ambienceEnabled)}
         />
       )}
     </div>

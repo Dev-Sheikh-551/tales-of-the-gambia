@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.37,
+    "text": "Before the morning call to prayer, a wail of despair pierced the quiet mist of the compound.",
+    "charStart": 0,
+    "charEnd": 92
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.37,
+    "endSeconds": 13.08,
+    "text": "The lock on the bridal hut had been slid back; the velvet cloth was crumpled on the earth floor, and the carved chest stood empty.",
+    "charStart": 93,
+    "charEnd": 223
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.08,
+    "endSeconds": 16.38,
+    "text": "Word spread like wildfire through the compound.",
+    "charStart": 224,
+    "charEnd": 271
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.38,
+    "endSeconds": 22.41,
+    "text": "The women stopped their pounding of coos; the men stood in uneasy silence by the bantaba.",
+    "charStart": 272,
+    "charEnd": 361
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.41,
+    "endSeconds": 32.27,
+    "text": "Mai sat weeping upon her woven mat, while whispers began to circle Binta, who stood in the corner of the courtyard with eyes fixed firmly on the ground.",
+    "charStart": 362,
+    "charEnd": 514
+  }
+]

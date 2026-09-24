@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 10.92,
+    "text": "For more than two decades, while kingdoms across West Africa fell to European partition, Medina remained an unconquered island of African autonomy.",
+    "charStart": 0,
+    "charEnd": 147
+  },
+  {
+    "index": 1,
+    "startSeconds": 10.92,
+    "endSeconds": 18.35,
+    "text": "Merchants from as far as Mali and Guinea brought gold and horses to trade in safety behind its palisades.",
+    "charStart": 148,
+    "charEnd": 253
+  },
+  {
+    "index": 2,
+    "startSeconds": 18.35,
+    "endSeconds": 28.44,
+    "text": "Foday Kaba governed with an iron discipline, establishing courts of Islamic law and protecting the rural farmers from slave raiders.",
+    "charStart": 254,
+    "charEnd": 386
+  },
+  {
+    "index": 3,
+    "startSeconds": 28.44,
+    "endSeconds": 45.0,
+    "text": "When foreign artillery finally laid siege to the fortress in 1901 with joint British and French regiments, the old lion refused every offer of exile, fighting beside his captains until the last timber fell.",
+    "charStart": 387,
+    "charEnd": 593
+  }
+]

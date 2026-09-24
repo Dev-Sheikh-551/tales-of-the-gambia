@@ -1,0 +1,122 @@
+{
+  "storySlug": "the-bone-of-mor-lam",
+  "title": "The Bone of Mor Lam",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T16:08:58.623289+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 153.62,
+  "totalFileSizeBytes": 1177416,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Treasure in the Clay Pot",
+      "sourceTextHash": "4ff330a00594",
+      "audioFile": "/audio/stories/the-bone-of-mor-lam/scene-01-narration.mp3",
+      "durationSeconds": 29.18,
+      "fileSizeBytes": 222576,
+      "substitutions": [
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "kadd",
+          "replacement": "kahd"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "A Shadow at the Threshold",
+      "sourceTextHash": "0e50e7a5ff2a",
+      "audioFile": "/audio/stories/the-bone-of-mor-lam/scene-02-narration.mp3",
+      "durationSeconds": 29.3,
+      "fileSizeBytes": 225696,
+      "substitutions": [
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "Teranga",
+          "replacement": "Teh-rahn-gah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Dying Man of the Compound",
+      "sourceTextHash": "2fd344cf7788",
+      "audioFile": "/audio/stories/the-bone-of-mor-lam/scene-03-narration.mp3",
+      "durationSeconds": 28.4,
+      "fileSizeBytes": 220392,
+      "substitutions": [
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Funeral Procession",
+      "sourceTextHash": "b99cfae98af0",
+      "audioFile": "/audio/stories/the-bone-of-mor-lam/scene-04-narration.mp3",
+      "durationSeconds": 28.8,
+      "fileSizeBytes": 222672,
+      "substitutions": [
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Banquet of the Living",
+      "sourceTextHash": "b08e5fa1ed63",
+      "audioFile": "/audio/stories/the-bone-of-mor-lam/scene-05-narration.mp3",
+      "durationSeconds": 37.95,
+      "fileSizeBytes": 286080,
+      "substitutions": [
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        },
+        {
+          "original": "Mor Lam",
+          "replacement": "Mor Lahm"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

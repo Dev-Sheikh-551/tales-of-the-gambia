@@ -1,0 +1,103 @@
+{
+  "storySlug": "the-golden-palm-and-the-orphan-boy",
+  "title": "The Golden Palm and the Orphan Boy",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.93,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T16:20:26.517933+00:00",
+  "totalScenes": 4,
+  "totalDurationSeconds": 131.32,
+  "totalFileSizeBytes": 1005360,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Outcast of the Compound",
+      "sourceTextHash": "e19ac2853e9a",
+      "audioFile": "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-01-narration.mp3",
+      "durationSeconds": 27.55,
+      "fileSizeBytes": 214368,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Three Sips of Water",
+      "sourceTextHash": "016d9889655c",
+      "audioFile": "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-02-narration.mp3",
+      "durationSeconds": 37.45,
+      "fileSizeBytes": 286296,
+      "substitutions": [
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Grove of the Golden Palm",
+      "sourceTextHash": "59241de1bf15",
+      "audioFile": "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-03-narration.mp3",
+      "durationSeconds": 33.88,
+      "fileSizeBytes": 257256,
+      "substitutions": [
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Harvest of Justice",
+      "sourceTextHash": "88aa0667eea1",
+      "audioFile": "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-04-narration.mp3",
+      "durationSeconds": 32.45,
+      "fileSizeBytes": 247440,
+      "substitutions": [
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

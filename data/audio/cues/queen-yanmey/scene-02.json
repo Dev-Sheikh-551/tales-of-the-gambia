@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.3,
+    "text": "One blustery October morning, a heavily armed merchant brig from Liverpool ignored the warning flags hoisted at Barra Point.",
+    "charStart": 0,
+    "charEnd": 124
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.3,
+    "endSeconds": 17.77,
+    "text": "Relying on favorable winds and a low tide, its captain fired a mock salute and steered directly past the sandbar without paying the mandated bars of iron and sacks of salt.",
+    "charStart": 125,
+    "charEnd": 297
+  },
+  {
+    "index": 2,
+    "startSeconds": 17.77,
+    "endSeconds": 28.78,
+    "text": "When royal harbor runners paddled out to demand compliance, the British captain laughed from the quarterdeck: 'The river is free to the Crown; we pay no tribute to local sovereigns!'",
+    "charStart": 298,
+    "charEnd": 480
+  },
+  {
+    "index": 3,
+    "startSeconds": 28.78,
+    "endSeconds": 34.48,
+    "text": "He ordered all sails unfurled and vanished upriver toward the trading factories.",
+    "charStart": 481,
+    "charEnd": 561
+  }
+]

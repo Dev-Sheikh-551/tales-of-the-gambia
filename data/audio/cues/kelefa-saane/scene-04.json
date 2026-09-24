@@ -1,0 +1,106 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 11.23,
+    "text": "The scholars who have studied the Kelefaba — the great kora epic — tell us that Kelefa Saane died in battle on the North Bank of the Gambia River.",
+    "charStart": 0,
+    "charEnd": 146
+  },
+  {
+    "index": 1,
+    "startSeconds": 11.23,
+    "endSeconds": 14.03,
+    "text": "The exact date is uncertain.",
+    "charStart": 148,
+    "charEnd": 176
+  },
+  {
+    "index": 2,
+    "startSeconds": 14.03,
+    "endSeconds": 16.12,
+    "text": "The mid-19th century.",
+    "charStart": 177,
+    "charEnd": 198
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.12,
+    "endSeconds": 20.29,
+    "text": "A period of great turbulence for the Mandinka states.",
+    "charStart": 199,
+    "charEnd": 252
+  },
+  {
+    "index": 4,
+    "startSeconds": 20.29,
+    "endSeconds": 26.16,
+    "text": "The Kaabu Empire itself would fall definitively in 1867.",
+    "charStart": 253,
+    "charEnd": 309
+  },
+  {
+    "index": 5,
+    "startSeconds": 26.16,
+    "endSeconds": 29.83,
+    "text": "But the griots are not interested in dates.",
+    "charStart": 311,
+    "charEnd": 354
+  },
+  {
+    "index": 6,
+    "startSeconds": 29.83,
+    "endSeconds": 34.53,
+    "text": "The griots are interested in how a man carried himself.",
+    "charStart": 356,
+    "charEnd": 411
+  },
+  {
+    "index": 7,
+    "startSeconds": 34.53,
+    "endSeconds": 54.96,
+    "text": "And what they tell us — across every performance of this epic, whether recorded in Bansang or Brikama, whether sung by Bamba Suso or Dembo Kanute — is that Kelefa Saane carried himself like a man who had made peace with his fate long before the battle began.",
+    "charStart": 413,
+    "charEnd": 671
+  },
+  {
+    "index": 8,
+    "startSeconds": 54.96,
+    "endSeconds": 56.73,
+    "text": "He did not run.",
+    "charStart": 673,
+    "charEnd": 688
+  },
+  {
+    "index": 9,
+    "startSeconds": 56.73,
+    "endSeconds": 58.01,
+    "text": "He did not beg.",
+    "charStart": 689,
+    "charEnd": 704
+  },
+  {
+    "index": 10,
+    "startSeconds": 58.01,
+    "endSeconds": 60.76,
+    "text": "He did not make deals with his enemies.",
+    "charStart": 705,
+    "charEnd": 744
+  },
+  {
+    "index": 11,
+    "startSeconds": 60.76,
+    "endSeconds": 65.96,
+    "text": "He stood in the place where he was meant to stand and he fought and he fell.",
+    "charStart": 746,
+    "charEnd": 822
+  },
+  {
+    "index": 12,
+    "startSeconds": 65.96,
+    "endSeconds": 70.22,
+    "text": "And because he did that, the griots remembered him.",
+    "charStart": 824,
+    "charEnd": 875
+  }
+]

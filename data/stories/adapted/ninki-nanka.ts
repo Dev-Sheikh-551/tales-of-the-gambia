@@ -1,4 +1,7 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import ninkiCues01 from "@/data/audio/cues/ninki-nanka/scene-01.json";
+import ninkiCues02 from "@/data/audio/cues/ninki-nanka/scene-02.json";
+import ninkiCues03 from "@/data/audio/cues/ninki-nanka/scene-03.json";
 
 export const ninkiNankaStory: Story = {
   id: "story-2",
@@ -114,15 +117,10 @@ export const ninkiNankaStory: Story = {
           avatarTheme: "boatman",
         },
       ],
-      ambience: {
-        type: "river-flow",
-        label: "Rhythmic paddle and quiet ripples",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-narration.mp3",
         narrationDurationSeconds: 25.18,
-        ambienceUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/ambience/scene-01.mp3",
-        ambienceLoop: true,
+        cues: ninkiCues01 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -166,15 +164,10 @@ export const ninkiNankaStory: Story = {
           avatarTheme: "shadow",
         },
       ],
-      ambience: {
-        type: "river-flow",
-        label: "Deep atmospheric water rumble",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-narration.mp3",
         narrationDurationSeconds: 24.98,
-        ambienceUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/ambience/scene-02.mp3",
-        ambienceLoop: true,
+        cues: ninkiCues02 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -210,15 +203,10 @@ export const ninkiNankaStory: Story = {
           avatarTheme: "boatman",
         },
       ],
-      ambience: {
-        type: "river-flow",
-        label: "Tranquil night waters lapping boat",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-narration.mp3",
         narrationDurationSeconds: 24.57,
-        ambienceUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/ambience/scene-03.mp3",
-        ambienceLoop: true,
+        cues: ninkiCues03 as NarrationCue[],
       },
       durationSeconds: 15,
     },

@@ -46,8 +46,6 @@ export interface NarrationCue {
 export interface SceneAudio {
   narrationUrl?: string;
   narrationDurationSeconds?: number;
-  ambienceUrl?: string;
-  ambienceType?: string;
   /** Optional array of word/phrase cues ordered chronologically */
   cues?: NarrationCue[];
   /** URI to external WebVTT / JSON alignment track */

@@ -18,6 +18,8 @@ import { useStoryAudio } from "@/hooks/useStoryAudio";
 import { ReadingSettingsModal } from "./ReadingSettingsModal";
 import { StoryCinematicMode } from "./cinematic/StoryCinematicMode";
 import { StoryProvenanceCard } from "./StoryProvenanceCard";
+import { NarratedStoryText } from "./NarratedStoryText";
+import { getStorySceneCues } from "@/data/audio/cues";
 import {
   isFavorite,
   toggleFavorite as toggleStorageFavorite,
@@ -69,8 +71,6 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
   const storyAudio = useStoryAudio({
     narrationSrc: activeScene.audio?.narrationUrl,
-    ambienceSrc: activeScene.audio?.ambienceUrl,
-    ambienceLoop: activeScene.audio?.ambienceLoop ?? true,
   });
 
   const handleEnterCinematic = () => {
@@ -234,7 +234,6 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
         <div className="mb-10">
           <AudioNarrationBar
             currentSceneTitle={`Scene ${activeScene.sceneNumber}: ${activeScene.title}`}
-            ambienceLabel={activeScene.ambience?.label}
             audioState={storyAudio.audioState}
             currentTime={storyAudio.currentTime}
             duration={storyAudio.duration || activeScene.audio?.narrationDurationSeconds || activeScene.durationSeconds}
@@ -242,15 +241,11 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             hasAudio={storyAudio.hasAudio}
             playbackRate={storyAudio.playbackRate}
             narrationVolume={storyAudio.narrationVolume}
-            ambienceVolume={storyAudio.ambienceVolume}
-            ambienceEnabled={storyAudio.ambienceEnabled}
             onPlay={storyAudio.play}
             onPause={storyAudio.pause}
             onSeek={storyAudio.seek}
             onSetRate={storyAudio.setPlaybackRate}
             onSetNarrationVolume={storyAudio.setNarrationVolume}
-            onSetAmbienceVolume={storyAudio.setAmbienceVolume}
-            onSetAmbienceEnabled={storyAudio.setAmbienceEnabled}
             onRetry={storyAudio.retry}
           />
         </div>
@@ -321,7 +316,14 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           <div
             className={`story-dropcap font-story-serif font-normal select-text text-[#F7F3EB] space-y-5 ${textSizeClass}`}
           >
-            <p className="leading-relaxed">{activeScene.text}</p>
+            <NarratedStoryText
+              text={activeScene.text}
+              cues={activeScene.audio?.cues || getStorySceneCues(story.slug, activeScene.sceneNumber)}
+              currentTime={storyAudio.currentTime}
+              hasAudio={storyAudio.hasAudio}
+              className="leading-relaxed"
+              enableAutoScroll={true}
+            />
           </div>
 
           {/* Traditional Oral Closing Formula (Final Scene) */}

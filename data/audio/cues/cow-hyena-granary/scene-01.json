@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.74,
+    "text": "When the dry winds of May turned the savanna grass to straw, Mother Cow gathered her forest neighbors beneath the big silk-cotton tree.",
+    "charStart": 0,
+    "charEnd": 135
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.74,
+    "endSeconds": 12.49,
+    "text": "'If each of us farms alone,' she lowed gently, 'the drought will overcome us.",
+    "charStart": 136,
+    "charEnd": 213
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.49,
+    "endSeconds": 19.11,
+    "text": "But if we join our hooves and paws into a kafo, we can clear five fields before the first thundercloud breaks.'",
+    "charStart": 214,
+    "charEnd": 325
+  },
+  {
+    "index": 3,
+    "startSeconds": 19.11,
+    "endSeconds": 25.01,
+    "text": "Lion agreed to bring his mighty strength to fell trees.",
+    "charStart": 326,
+    "charEnd": 381
+  },
+  {
+    "index": 4,
+    "startSeconds": 25.01,
+    "endSeconds": 28.34,
+    "text": "Cow offered to plow the heavy furrow.",
+    "charStart": 382,
+    "charEnd": 419
+  },
+  {
+    "index": 5,
+    "startSeconds": 28.34,
+    "endSeconds": 35.73,
+    "text": "Hare promised to measure the seed lines with precision, and Hyena—licking his lips with enthusiastic smiles—swore by all his ancestors to guard the gate.",
+    "charStart": 420,
+    "charEnd": 573
+  }
+]

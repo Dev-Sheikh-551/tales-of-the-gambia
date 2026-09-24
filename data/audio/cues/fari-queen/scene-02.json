@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.9,
+    "text": "Fari knew an old song whispered to her grandmother by the spirits of the termite mounds.",
+    "charStart": 0,
+    "charEnd": 88
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.9,
+    "endSeconds": 13.96,
+    "text": "In the silver glow of the new moon, she turned three times around an ant hill, stamped her left hoof, and sang three magical words.",
+    "charStart": 89,
+    "charEnd": 220
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.96,
+    "endSeconds": 16.9,
+    "text": "In an instant, the coarse gray hide split like a ripe melon.",
+    "charStart": 221,
+    "charEnd": 281
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.9,
+    "endSeconds": 24.74,
+    "text": "Fari stepped forth as a tall, radiant maiden with teeth as white as cowrie shells and eyes that sparkled like the river.",
+    "charStart": 282,
+    "charEnd": 402
+  },
+  {
+    "index": 4,
+    "startSeconds": 24.74,
+    "endSeconds": 34.38,
+    "text": "Her sisters followed, shedding their bridles to become a court of breathtaking young women, adorned in indigo wrappers and jingling silver anklets.",
+    "charStart": 403,
+    "charEnd": 550
+  }
+]

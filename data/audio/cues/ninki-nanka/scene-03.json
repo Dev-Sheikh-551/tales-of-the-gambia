@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0,
+    "endSeconds": 6.68,
+    "text": "As the fish splashed beneath the mangrove roots, the violent swell subsided into glass.",
+    "charStart": 0,
+    "charEnd": 87
+  },
+  {
+    "index": 1,
+    "startSeconds": 6.68,
+    "endSeconds": 11.6,
+    "text": "Samba bowed his head toward the deep, whispering words of gratitude.",
+    "charStart": 88,
+    "charEnd": 156
+  },
+  {
+    "index": 2,
+    "startSeconds": 11.6,
+    "endSeconds": 24.57,
+    "text": "When he paddled back into the main river channel beneath the rising harvest moon, he carried no silver scales in his net — but he carried the peace of a river whose balance remained whole.",
+    "charStart": 157,
+    "charEnd": 345
+  }
+]

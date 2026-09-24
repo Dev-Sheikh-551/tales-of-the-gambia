@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.53,
+    "text": "The rains fell in generous sheets, and the earth rewarded their shared toil.",
+    "charStart": 0,
+    "charEnd": 76
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.53,
+    "endSeconds": 11.35,
+    "text": "By October, the groundnuts were dug, the yellow maize was husked, and the pearl millet stood stacked in golden sheaves.",
+    "charStart": 77,
+    "charEnd": 196
+  },
+  {
+    "index": 2,
+    "startSeconds": 11.35,
+    "endSeconds": 19.37,
+    "text": "Together, they built a tall, woven benteng raised on smooth wooden stilts, packing it to the roof with food to last through the lean months.",
+    "charStart": 197,
+    "charEnd": 337
+  },
+  {
+    "index": 3,
+    "startSeconds": 19.37,
+    "endSeconds": 27.97,
+    "text": "'No one shall touch a single grain,' Lion decreed in his rumbling voice, 'until the harmattan winds arrive and the village council approves.'",
+    "charStart": 338,
+    "charEnd": 479
+  },
+  {
+    "index": 4,
+    "startSeconds": 27.97,
+    "endSeconds": 33.45,
+    "text": "They locked the wooden door with a sturdy pad of baobab bark and went home to sleep.",
+    "charStart": 480,
+    "charEnd": 564
+  }
+]

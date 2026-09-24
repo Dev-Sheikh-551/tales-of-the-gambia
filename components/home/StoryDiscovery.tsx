@@ -18,7 +18,7 @@ const CATEGORY_TABS: Array<{ id: StoryCategory | "all"; label: string }> = [
 
 export default function StoryDiscovery() {
   const [selectedCategory, setSelectedCategory] = useState<StoryCategory | "all">("all");
-  const { isFavorite, toggleFavorite, getProgress } = useStoryStorage();
+  const { isFav, toggleFav, getProgress } = useStoryStorage();
 
   const filteredStories =
     selectedCategory === "all"
@@ -67,8 +67,8 @@ export default function StoryDiscovery() {
               key={story.id}
               story={story}
               progress={getProgress(story.slug)}
-              isFavorite={isFavorite(story.slug)}
-              onToggleFavorite={toggleFavorite}
+              isFavorite={isFav(story.slug)}
+              onToggleFavorite={toggleFav}
             />
           ))}
         </div>

@@ -4,11 +4,6 @@ import React, { useId, useState } from "react";
 import {
   Play,
   Pause,
-  RotateCcw,
-  RotateCw,
-  Volume2,
-  VolumeX,
-  Wind,
   RefreshCw,
   Mic,
   Loader2,
@@ -22,7 +17,6 @@ import { AudioState, PlaybackRate, PLAYBACK_RATES } from "@/hooks/useStoryAudio"
 
 export interface AudioNarrationBarProps {
   currentSceneTitle: string;
-  ambienceLabel?: string;
   audioState: AudioState;
   currentTime: number;
   duration: number;
@@ -30,15 +24,11 @@ export interface AudioNarrationBarProps {
   hasAudio: boolean;
   playbackRate: PlaybackRate;
   narrationVolume: number;
-  ambienceVolume: number;
-  ambienceEnabled: boolean;
   onPlay: () => void;
   onPause: () => void;
   onSeek: (seconds: number) => void;
   onSetRate: (rate: PlaybackRate) => void;
   onSetNarrationVolume: (v: number) => void;
-  onSetAmbienceVolume: (v: number) => void;
-  onSetAmbienceEnabled: (v: boolean) => void;
   onRetry: () => void;
 }
 
@@ -60,7 +50,6 @@ function formatTime(secs: number): string {
 
 export function AudioNarrationBar({
   currentSceneTitle,
-  ambienceLabel,
   audioState,
   currentTime,
   duration,
@@ -68,23 +57,17 @@ export function AudioNarrationBar({
   hasAudio,
   playbackRate,
   narrationVolume,
-  ambienceVolume,
-  ambienceEnabled,
   onPlay,
   onPause,
   onSeek,
   onSetRate,
   onSetNarrationVolume,
-  onSetAmbienceVolume,
-  onSetAmbienceEnabled,
   onRetry,
 }: AudioNarrationBarProps) {
   const scrubId = useId();
   const narVolId = useId();
-  const ambVolId = useId();
   const [showSettings, setShowSettings] = useState(false);
 
-  const isMuted = narrationVolume === 0;
   const progressPercent =
     duration > 0 ? Math.min(100, (currentTime / duration) * 100) : 0;
 
@@ -191,25 +174,6 @@ export function AudioNarrationBar({
           />
         </div>
 
-        {/* Understated Ambience Toggle */}
-        {ambienceLabel && (
-          <button
-            onClick={() => onSetAmbienceEnabled(!ambienceEnabled)}
-            className={`hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium transition-colors ${
-              ambienceEnabled
-                ? "text-[#97CDD6] bg-[#264A51]/20 hover:bg-[#264A51]/30 border border-[#4B8590]/30"
-                : "text-[#857364] hover:text-[#CBBCAE] bg-white/[0.02]"
-            }`}
-            title={ambienceEnabled ? "Click to disable ambience" : "Click to enable ambience"}
-            aria-label={ambienceEnabled ? "Disable ambience" : "Enable ambience"}
-          >
-            <Wind className="w-3 h-3 text-[#4B8590]" />
-            <span className="truncate max-w-[120px] md:max-w-xs">
-              {ambienceEnabled ? `Ambience · ${ambienceLabel}` : "Ambience off"}
-            </span>
-          </button>
-        )}
-
         {/* Audio Settings & Volume Disclosure Toggle */}
         <button
           onClick={() => setShowSettings(!showSettings)}
@@ -232,7 +196,7 @@ export function AudioNarrationBar({
           {/* Narration Volume */}
           <div className="flex items-center gap-2 flex-1 min-w-[160px]">
             <label htmlFor={narVolId} className="text-[10px] uppercase text-[#857364]">
-              Narration
+              Volume
             </label>
             <input
               id={narVolId}
@@ -249,32 +213,6 @@ export function AudioNarrationBar({
               {Math.round(narrationVolume * 100)}%
             </span>
           </div>
-
-          {/* Ambience Volume (if present) */}
-          {ambienceLabel && (
-            <div className="flex items-center gap-2 flex-1 min-w-[160px]">
-              <label htmlFor={ambVolId} className="text-[10px] uppercase text-[#857364]">
-                Ambience
-              </label>
-              <input
-                id={ambVolId}
-                type="range"
-                min={0}
-                max={1}
-                step={0.05}
-                value={ambienceVolume}
-                onChange={(e) => onSetAmbienceVolume(Number(e.target.value))}
-                disabled={!ambienceEnabled}
-                className={`flex-1 h-1 cursor-pointer select-none touch-none ${
-                  ambienceEnabled ? "accent-[#4B8590]" : "opacity-30 cursor-not-allowed"
-                }`}
-                aria-label="Ambience volume"
-              />
-              <span className="text-[10px] font-mono text-[#857364] w-7 text-right">
-                {ambienceEnabled ? `${Math.round(ambienceVolume * 100)}%` : "off"}
-              </span>
-            </div>
-          )}
 
           {/* Playback Speed selector */}
           <div className="flex items-center gap-1 text-[11px] font-mono text-[#857364]">
@@ -293,19 +231,6 @@ export function AudioNarrationBar({
               </button>
             ))}
           </div>
-
-          {/* Mobile Ambience toggle inside settings if screen is small */}
-          {ambienceLabel && (
-            <div className="sm:hidden w-full flex items-center justify-between pt-2 border-t border-[#221D18]">
-              <span className="text-[11px] text-[#AB9784]">Ambience: {ambienceLabel}</span>
-              <button
-                onClick={() => onSetAmbienceEnabled(!ambienceEnabled)}
-                className="text-xs text-[#4B8590] underline"
-              >
-                {ambienceEnabled ? "Turn Off" : "Turn On"}
-              </button>
-            </div>
-          )}
         </div>
       )}
     </div>

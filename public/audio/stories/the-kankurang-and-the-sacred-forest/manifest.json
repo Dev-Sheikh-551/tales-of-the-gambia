@@ -1,0 +1,98 @@
+{
+  "storySlug": "the-kankurang-and-the-sacred-forest",
+  "title": "The Kankurang and the Sacred Forest",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-23T16:51:15.444626+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 200.3,
+  "totalFileSizeBytes": 1477368,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Whispers at Twilight",
+      "sourceTextHash": "e333ca91cb73",
+      "audioFile": "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-narration.mp3",
+      "durationSeconds": 39.4,
+      "fileSizeBytes": 296880,
+      "substitutions": [
+        {
+          "original": "Janjanbureh",
+          "replacement": "Jahn-jahn-boo-ray"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Stripping of the Red Bark",
+      "sourceTextHash": "856e80fb9d40",
+      "audioFile": "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-narration.mp3",
+      "durationSeconds": 38.42,
+      "fileSizeBytes": 281520,
+      "substitutions": [
+        {
+          "original": "Kankurang",
+          "replacement": "Kahn-koo-rang"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Clang of the Twin Blades",
+      "sourceTextHash": "7bbe6e02d91d",
+      "audioFile": "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-narration.mp3",
+      "durationSeconds": 39.2,
+      "fileSizeBytes": 289248,
+      "substitutions": [
+        {
+          "original": "Kankurang",
+          "replacement": "Kahn-koo-rang"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Shield of the Initiates",
+      "sourceTextHash": "5fcaabc03108",
+      "audioFile": "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-narration.mp3",
+      "durationSeconds": 41.8,
+      "fileSizeBytes": 306936,
+      "substitutions": [
+        {
+          "original": "Kankurang",
+          "replacement": "Kahn-koo-rang"
+        },
+        {
+          "original": "Kuyang-Manso",
+          "replacement": "Koo-yang Mahn-so"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Dawn of Manhood",
+      "sourceTextHash": "40bbf78be105",
+      "audioFile": "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-narration.mp3",
+      "durationSeconds": 41.48,
+      "fileSizeBytes": 302784,
+      "substitutions": [
+        {
+          "original": "Kankurang",
+          "replacement": "Kahn-koo-rang"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

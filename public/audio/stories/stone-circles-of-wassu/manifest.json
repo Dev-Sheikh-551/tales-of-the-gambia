@@ -1,0 +1,158 @@
+{
+  "storySlug": "stone-circles-of-wassu",
+  "title": "The Stone Circles of Wassu",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.91,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T10:06:58.776568+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 427.73,
+  "totalFileSizeBytes": 3052896,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "Older Than the Kingdoms",
+      "sourceTextHash": "524bacc660da",
+      "audioFile": "/audio/stories/stone-circles-of-wassu/scene-01-narration.mp3",
+      "durationSeconds": 85.35,
+      "fileSizeBytes": 617160,
+      "substitutions": [
+        {
+          "original": "Mandinka",
+          "replacement": "Mahn-deen-kah"
+        },
+        {
+          "original": "Wolof",
+          "replacement": "Woh-loff"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "laterite",
+          "replacement": "lat-uh-ryte"
+        },
+        {
+          "original": "laterite",
+          "replacement": "lat-uh-ryte"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Cutting",
+      "sourceTextHash": "87c834c20456",
+      "audioFile": "/audio/stories/stone-circles-of-wassu/scene-02-narration.mp3",
+      "durationSeconds": 85.08,
+      "fileSizeBytes": 607176,
+      "substitutions": [
+        {
+          "original": "Laterite",
+          "replacement": "lat-uh-ryte"
+        },
+        {
+          "original": "laterite",
+          "replacement": "lat-uh-ryte"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "What They Left Behind",
+      "sourceTextHash": "7f1051a94690",
+      "audioFile": "/audio/stories/stone-circles-of-wassu/scene-03-narration.mp3",
+      "durationSeconds": 81.4,
+      "fileSizeBytes": 577608,
+      "substitutions": [
+        {
+          "original": "tumuli",
+          "replacement": "too-myoo-lee"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "Wassu Today",
+      "sourceTextHash": "1feeac6dd74c",
+      "audioFile": "/audio/stories/stone-circles-of-wassu/scene-04-narration.mp3",
+      "durationSeconds": 84.78,
+      "fileSizeBytes": 610032,
+      "substitutions": [
+        {
+          "original": "harmattan",
+          "replacement": "har-mah-tahn"
+        },
+        {
+          "original": "Wassu",
+          "replacement": "Wah-soo"
+        },
+        {
+          "original": "Wassu",
+          "replacement": "Wah-soo"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Question the Stones Ask",
+      "sourceTextHash": "a692d1aa1e0e",
+      "audioFile": "/audio/stories/stone-circles-of-wassu/scene-05-narration.mp3",
+      "durationSeconds": 91.12,
+      "fileSizeBytes": 640920,
+      "substitutions": [
+        {
+          "original": "Wassu",
+          "replacement": "Wah-soo"
+        },
+        {
+          "original": "Wassu",
+          "replacement": "Wah-soo"
+        },
+        {
+          "original": "Wassu",
+          "replacement": "Wah-soo"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

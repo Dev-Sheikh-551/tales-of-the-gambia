@@ -1,0 +1,106 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.49,
+    "text": "The man who had destroyed Niani and subjugated the Mandinka was named Soumaoro Kanté.",
+    "charStart": 0,
+    "charEnd": 85
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.49,
+    "endSeconds": 10.18,
+    "text": "He was the king of the Sosso.",
+    "charStart": 87,
+    "charEnd": 116
+  },
+  {
+    "index": 2,
+    "startSeconds": 10.18,
+    "endSeconds": 24.43,
+    "text": "His power was said to be supernatural — that he could transform himself, that iron weapons could not harm him, that he had made himself invincible through knowledge of the darkest forms of the old science.",
+    "charStart": 117,
+    "charEnd": 322
+  },
+  {
+    "index": 3,
+    "startSeconds": 24.43,
+    "endSeconds": 31.71,
+    "text": "He had ruled through terror for so long that many people had forgotten what it felt like not to be afraid.",
+    "charStart": 324,
+    "charEnd": 430
+  },
+  {
+    "index": 4,
+    "startSeconds": 31.71,
+    "endSeconds": 34.25,
+    "text": "Sundiata came home.",
+    "charStart": 432,
+    "charEnd": 451
+  },
+  {
+    "index": 5,
+    "startSeconds": 34.25,
+    "endSeconds": 37.06,
+    "text": "He had not been idle in exile.",
+    "charStart": 453,
+    "charEnd": 483
+  },
+  {
+    "index": 6,
+    "startSeconds": 37.06,
+    "endSeconds": 39.13,
+    "text": "He had built alliances.",
+    "charStart": 484,
+    "charEnd": 507
+  },
+  {
+    "index": 7,
+    "startSeconds": 39.13,
+    "endSeconds": 41.16,
+    "text": "He had found warriors.",
+    "charStart": 508,
+    "charEnd": 530
+  },
+  {
+    "index": 8,
+    "startSeconds": 41.16,
+    "endSeconds": 51.97,
+    "text": "He had learned — from his mother, from the griots who travelled with them, from the kings who sheltered them — what it meant to lead people who had no reason left to believe.",
+    "charStart": 531,
+    "charEnd": 705
+  },
+  {
+    "index": 9,
+    "startSeconds": 51.97,
+    "endSeconds": 58.25,
+    "text": "At the Battle of Kirina, approximately 1235 CE, the armies met.",
+    "charStart": 707,
+    "charEnd": 770
+  },
+  {
+    "index": 10,
+    "startSeconds": 58.25,
+    "endSeconds": 71.61,
+    "text": "The details of how Soumaoro's power was finally broken are told differently in different performances of the epic — but the outcome is consistent across all of them: Soumaoro fell.",
+    "charStart": 772,
+    "charEnd": 952
+  },
+  {
+    "index": 11,
+    "startSeconds": 71.61,
+    "endSeconds": 73.65,
+    "text": "The Sosso were broken.",
+    "charStart": 953,
+    "charEnd": 975
+  },
+  {
+    "index": 12,
+    "startSeconds": 73.65,
+    "endSeconds": 81.17,
+    "text": "And from the rubble of everything that had been lost, Sundiata Keita began to build the Mali Empire.",
+    "charStart": 976,
+    "charEnd": 1076
+  }
+]

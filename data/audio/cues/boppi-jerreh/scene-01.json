@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 10.27,
+    "text": "Between the sandy spit of Barra Point and the low mangrove shores of the north bank rises Dog Island—known to the elders as Sita Nunku.",
+    "charStart": 0,
+    "charEnd": 135
+  },
+  {
+    "index": 1,
+    "startSeconds": 10.27,
+    "endSeconds": 19.13,
+    "text": "When the morning fog rolls off the Atlantic, the island looks like a sleeping whale resting in the amber estuary water.",
+    "charStart": 136,
+    "charEnd": 255
+  },
+  {
+    "index": 2,
+    "startSeconds": 19.13,
+    "endSeconds": 37.98,
+    "text": "For generations, the master fishermen of the coast instructed their apprentices never to cast nets into the deep trench that swirls beside its eastern rocks without first offering a prayer and a gift of sour milk to the water guardians known as Boppi Jerreh.",
+    "charStart": 256,
+    "charEnd": 514
+  }
+]

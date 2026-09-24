@@ -1,4 +1,10 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import firstKoraScene01 from "@/data/audio/cues/first-kora/scene-01.json";
+import firstKoraScene02 from "@/data/audio/cues/first-kora/scene-02.json";
+import firstKoraScene03 from "@/data/audio/cues/first-kora/scene-03.json";
+import firstKoraScene04 from "@/data/audio/cues/first-kora/scene-04.json";
+import firstKoraScene05 from "@/data/audio/cues/first-kora/scene-05.json";
+
 
 /**
  * The First Kora
@@ -171,7 +177,11 @@ These qualities — the griots note — were also what made him capable of recei
       visual: { type: "gradient", paletteTheme: "forest" },
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 8 },
       environmentMotion: { type: "wind", intensity: "subtle" },
-      ambience: { type: "night-insects", label: "Forest at night" },
+      audio: {
+        narrationUrl: "/audio/stories/the-first-kora/scene-01-narration.mp3",
+        narrationDurationSeconds: 62.83,
+        cues: firstKoraScene01 as NarrationCue[],
+      },
       durationSeconds: 80,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -226,7 +236,11 @@ And when the playing stopped, the player turned and saw him.`,
       visual: { type: "gradient", paletteTheme: "forest" },
       cameraMotion: { preset: "pan-left", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "wind", intensity: "subtle" },
-      ambience: { type: "night-insects", label: "Deep forest" },
+      audio: {
+        narrationUrl: "/audio/stories/the-first-kora/scene-02-narration.mp3",
+        narrationDurationSeconds: 86.7,
+        cues: firstKoraScene02 as NarrationCue[],
+      },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -279,7 +293,11 @@ Koriang sat with the spirit in that clearing until dawn. And when the light bega
       visual: { type: "gradient", paletteTheme: "gold" },
       cameraMotion: { preset: "still", intensity: "subtle", durationSeconds: 11 },
       environmentMotion: { type: "wind", intensity: "subtle" },
-      ambience: { type: "kora-strings", label: "First kora" },
+      audio: {
+        narrationUrl: "/audio/stories/the-first-kora/scene-03-narration.mp3",
+        narrationDurationSeconds: 88.22,
+        cues: firstKoraScene03 as NarrationCue[],
+      },
       durationSeconds: 120,
       transition: { type: "dissolve", durationSeconds: 2 },
     },
@@ -319,7 +337,11 @@ In The Gambia today, the Suso, Kouyaté, Jobarteh, and Diabaté families are amo
       visual: { type: "gradient", paletteTheme: "ochre" },
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
-      ambience: { type: "kora-strings", label: "Kora" },
+      audio: {
+        narrationUrl: "/audio/stories/the-first-kora/scene-04-narration.mp3",
+        narrationDurationSeconds: 86.33,
+        cues: firstKoraScene04 as NarrationCue[],
+      },
       durationSeconds: 110,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -361,7 +383,11 @@ You can still hear it.`,
       visual: { type: "gradient", paletteTheme: "gold" },
       cameraMotion: { preset: "zoom-out", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },
-      ambience: { type: "kora-strings", label: "Kora" },
+      audio: {
+        narrationUrl: "/audio/stories/the-first-kora/scene-05-narration.mp3",
+        narrationDurationSeconds: 98.0,
+        cues: firstKoraScene05 as NarrationCue[],
+      },
       durationSeconds: 130,
       transition: { type: "fade", durationSeconds: 3 },
     },

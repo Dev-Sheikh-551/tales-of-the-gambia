@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 9.77,
+    "text": "From sunrise until the evening steamer horns echoed across the estuary, Erubami pushed his heavy wooden handcart through the narrow streets of Banjul.",
+    "charStart": 0,
+    "charEnd": 150
+  },
+  {
+    "index": 1,
+    "startSeconds": 9.77,
+    "endSeconds": 17.63,
+    "text": "He hauled sacks of groundnuts, crates of salted fish, and bolts of Dutch wax prints for the merchants of Albert Market.",
+    "charStart": 151,
+    "charEnd": 270
+  },
+  {
+    "index": 2,
+    "startSeconds": 17.63,
+    "endSeconds": 31.6,
+    "text": "His muscles were corded like mangrove roots, and his smile never faltered, though his pocket held scarcely enough copper coins each evening to buy a bowl of coos and smoked bonga for his family in Half-Die.",
+    "charStart": 271,
+    "charEnd": 477
+  }
+]

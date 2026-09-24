@@ -1,0 +1,90 @@
+{
+  "storySlug": "boppi-jerreh-spirits-of-dog-island",
+  "title": "Boppi Jerreh: The Spirits of Dog Island",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T15:42:45.665937+00:00",
+  "totalScenes": 4,
+  "totalDurationSeconds": 156.85,
+  "totalFileSizeBytes": 1162440,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Island in the Mist",
+      "sourceTextHash": "631868c32cbb",
+      "audioFile": "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-narration.mp3",
+      "durationSeconds": 37.98,
+      "fileSizeBytes": 285240,
+      "substitutions": [
+        {
+          "original": "Boppi Jerreh",
+          "replacement": "Boh-pee Jeh-reh"
+        },
+        {
+          "original": "Sita Nunku",
+          "replacement": "See-tah Noon-koo"
+        },
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Defiant Pirogue",
+      "sourceTextHash": "616efc37feaf",
+      "audioFile": "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-narration.mp3",
+      "durationSeconds": 39.2,
+      "fileSizeBytes": 288744,
+      "substitutions": [
+        {
+          "original": "Sita Nunku",
+          "replacement": "See-tah Noon-koo"
+        },
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        },
+        {
+          "original": "Baboucar",
+          "replacement": "Bah-boo-kahr"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Voice in the Churning Deep",
+      "sourceTextHash": "5382c1a08356",
+      "audioFile": "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-narration.mp3",
+      "durationSeconds": 38.17,
+      "fileSizeBytes": 279912,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Covenant of the Estuary",
+      "sourceTextHash": "2c3162f3930a",
+      "audioFile": "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-narration.mp3",
+      "durationSeconds": 41.5,
+      "fileSizeBytes": 308544,
+      "substitutions": [
+        {
+          "original": "Boppi Jerreh",
+          "replacement": "Boh-pee Jeh-reh"
+        },
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

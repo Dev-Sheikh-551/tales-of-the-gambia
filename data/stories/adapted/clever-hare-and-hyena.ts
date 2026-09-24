@@ -1,4 +1,11 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import hareHyenaScene01 from "@/data/audio/cues/clever-hare-hyena/scene-01.json";
+import hareHyenaScene02 from "@/data/audio/cues/clever-hare-hyena/scene-02.json";
+import hareHyenaScene03 from "@/data/audio/cues/clever-hare-hyena/scene-03.json";
+import hareHyenaScene04 from "@/data/audio/cues/clever-hare-hyena/scene-04.json";
+import hareHyenaScene05 from "@/data/audio/cues/clever-hare-hyena/scene-05.json";
+import hareHyenaScene06 from "@/data/audio/cues/clever-hare-hyena/scene-06.json";
+
 
 export const cleverHareAndHyenaStory: Story = {
   id: "story-hare-hyena",
@@ -115,9 +122,10 @@ export const cleverHareAndHyenaStory: Story = {
           avatarTheme: "hare",
         },
       ],
-      ambience: {
-        type: "gentle-wind",
-        label: "Morning breeze over open grasslands",
+      audio: {
+        narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-01-narration.mp3",
+        narrationDurationSeconds: 41.62,
+        cues: hareHyenaScene01 as NarrationCue[],
       },
       durationSeconds: 14,
     },
@@ -153,9 +161,10 @@ export const cleverHareAndHyenaStory: Story = {
           avatarTheme: "hare",
         },
       ],
-      ambience: {
-        type: "gentle-wind",
-        label: "Cicadas calling in the midday heat",
+      audio: {
+        narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-02-narration.mp3",
+        narrationDurationSeconds: 37.77,
+        cues: hareHyenaScene02 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -181,9 +190,10 @@ export const cleverHareAndHyenaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Leuk the Hare", "Bouki the Hyena"],
-      ambience: {
-        type: "gentle-wind",
-        label: "Rustle of dried groundnut leaves",
+      audio: {
+        narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-03-narration.mp3",
+        narrationDurationSeconds: 36.38,
+        cues: hareHyenaScene03 as NarrationCue[],
       },
       durationSeconds: 14,
     },
@@ -209,9 +219,10 @@ export const cleverHareAndHyenaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Bouki the Hyena"],
-      ambience: {
-        type: "night-insects",
-        label: "Nocturnal savanna insects and night breeze",
+      audio: {
+        narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-04-narration.mp3",
+        narrationDurationSeconds: 28.32,
+        cues: hareHyenaScene04 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -237,9 +248,10 @@ export const cleverHareAndHyenaStory: Story = {
         intensity: "gentle",
       },
       characters: ["Bouki the Hyena"],
-      ambience: {
-        type: "gentle-wind",
-        label: "Morning birds chirping over the field",
+      audio: {
+        narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-05-narration.mp3",
+        narrationDurationSeconds: 28.5,
+        cues: hareHyenaScene05 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -275,9 +287,10 @@ export const cleverHareAndHyenaStory: Story = {
           avatarTheme: "hare",
         },
       ],
-      ambience: {
-        type: "gentle-wind",
-        label: "Warm afternoon savanna breeze",
+      audio: {
+        narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-06-narration.mp3",
+        narrationDurationSeconds: 28.38,
+        cues: hareHyenaScene06 as NarrationCue[],
       },
       durationSeconds: 16,
     },

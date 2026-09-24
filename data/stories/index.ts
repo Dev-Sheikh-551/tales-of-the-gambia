@@ -14,6 +14,20 @@ import { sundiataStory } from "./historical/sundiata-lion-of-old-mali";
 import { baobabUpsideDownStory } from "./adapted/why-the-baobab-grows-upside-down";
 import { stoneCirlcesOfWassuStory } from "./historical/stone-circles-of-wassu";
 import { theFirstKoraStory } from "./legends/the-first-kora";
+import { massanehCeesayStory } from "./historical/massaneh-ceesay";
+import { boppiJerrehStory } from "./legends/boppi-jerreh";
+import { fariQueenOfDonkeysStory } from "./adapted/fari-queen-of-donkeys";
+import { cowHyenaSharedGranaryStory } from "./adapted/cow-hyena-shared-granary";
+import { maisStolenNianyaaStory } from "./adapted/mais-stolen-nianyaa";
+import { fallOfKansalaStory } from "./historical/fall-of-kansala";
+import { fodayKabaMedinaStory } from "./historical/foday-kaba-medina";
+import { queenYanmeyStory } from "./historical/queen-yanmey";
+import { koochiBaramaStory } from "./adapted/koochi-barama";
+import { boneOfMorLamStory } from "./adapted/bone-of-mor-lam";
+import { magicCalabashStory } from "./adapted/magic-calabash";
+import { whirlingSpiritKumpoStory } from "./legends/whirling-spirit-kumpo";
+import { birdsParliamentStory } from "./adapted/birds-parliament";
+import { goldenPalmOrphanStory } from "./adapted/golden-palm-orphan";
 
 export const STORIES: Story[] = [
   hareDroughtStory,
@@ -31,6 +45,20 @@ export const STORIES: Story[] = [
   baobabUpsideDownStory,
   stoneCirlcesOfWassuStory,
   theFirstKoraStory,
+  massanehCeesayStory,
+  boppiJerrehStory,
+  fariQueenOfDonkeysStory,
+  cowHyenaSharedGranaryStory,
+  maisStolenNianyaaStory,
+  fallOfKansalaStory,
+  fodayKabaMedinaStory,
+  queenYanmeyStory,
+  koochiBaramaStory,
+  boneOfMorLamStory,
+  magicCalabashStory,
+  whirlingSpiritKumpoStory,
+  birdsParliamentStory,
+  goldenPalmOrphanStory,
 ];
 
 /** Backward-compatible alias */

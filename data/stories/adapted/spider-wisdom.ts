@@ -1,4 +1,8 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import spiderScene01 from "@/data/audio/cues/spider-wisdom/scene-01.json";
+import spiderScene02 from "@/data/audio/cues/spider-wisdom/scene-02.json";
+import spiderScene03 from "@/data/audio/cues/spider-wisdom/scene-03.json";
+
 
 export const spiderWisdomStory: Story = {
   id: "story-6",
@@ -112,9 +116,10 @@ export const spiderWisdomStory: Story = {
           avatarTheme: "spider",
         },
       ],
-      ambience: {
-        type: "village-fire",
-        label: "Distant village storytelling echoes",
+      audio: {
+        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-narration.mp3",
+        narrationDurationSeconds: 25.8,
+        cues: spiderScene01 as NarrationCue[],
       },
       durationSeconds: 14,
     },
@@ -150,9 +155,10 @@ export const spiderWisdomStory: Story = {
           avatarTheme: "spider",
         },
       ],
-      ambience: {
-        type: "gentle-wind",
-        label: "Wind blowing through high palm fronds",
+      audio: {
+        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-narration.mp3",
+        narrationDurationSeconds: 25.85,
+        cues: spiderScene02 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -188,9 +194,10 @@ export const spiderWisdomStory: Story = {
           avatarTheme: "spider",
         },
       ],
-      ambience: {
-        type: "gentle-wind",
-        label: "Harmattan breeze whispering through palm crowns",
+      audio: {
+        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-narration.mp3",
+        narrationDurationSeconds: 29.02,
+        cues: spiderScene03 as NarrationCue[],
       },
       durationSeconds: 16,
     },

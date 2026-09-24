@@ -1,0 +1,66 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 6.58,
+    "text": "Before fear could silence the smaller creatures, the Pied Kingfisher fluttered onto a reed right before the eagle’s eyes.",
+    "charStart": 0,
+    "charEnd": 121
+  },
+  {
+    "index": 1,
+    "startSeconds": 6.58,
+    "endSeconds": 10.09,
+    "text": "'Great King of the sky,' the little bird chirped fearlessly.",
+    "charStart": 122,
+    "charEnd": 182
+  },
+  {
+    "index": 2,
+    "startSeconds": 10.09,
+    "endSeconds": 17.58,
+    "text": "'If your talons drive us away from the shallows, who will watch the river reeds to warn you when the crocodile rises?",
+    "charStart": 183,
+    "charEnd": 300
+  },
+  {
+    "index": 3,
+    "startSeconds": 17.58,
+    "endSeconds": 19.93,
+    "text": "Who will disturb the weed beds so the large fish swim up into your view?",
+    "charStart": 301,
+    "charEnd": 373
+  },
+  {
+    "index": 4,
+    "startSeconds": 19.93,
+    "endSeconds": 26.96,
+    "text": "A river where only the strong eat will soon become a river where the strong starve alone.'",
+    "charStart": 374,
+    "charEnd": 464
+  },
+  {
+    "index": 5,
+    "startSeconds": 26.96,
+    "endSeconds": 29.62,
+    "text": "The truth struck like an arrow.",
+    "charStart": 465,
+    "charEnd": 496
+  },
+  {
+    "index": 6,
+    "startSeconds": 29.62,
+    "endSeconds": 32.33,
+    "text": "The Eagle bowed his white-crowned head.",
+    "charStart": 497,
+    "charEnd": 536
+  },
+  {
+    "index": 7,
+    "startSeconds": 32.33,
+    "endSeconds": 38.62,
+    "text": "The birds divided the pools by hours—some by dawn, some by dusk—and the river sustained every wing until the rains returned.",
+    "charStart": 537,
+    "charEnd": 661
+  }
+]

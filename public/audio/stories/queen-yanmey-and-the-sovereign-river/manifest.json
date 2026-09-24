@@ -1,0 +1,138 @@
+{
+  "storySlug": "queen-yanmey-and-the-sovereign-river",
+  "title": "Queen Yanmey and the Sovereign River",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T16:02:48.228455+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 175.25,
+  "totalFileSizeBytes": 1329888,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Sentinel of the Narrows",
+      "sourceTextHash": "d0a0767fe227",
+      "audioFile": "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-01-narration.mp3",
+      "durationSeconds": 37.5,
+      "fileSizeBytes": 288024,
+      "substitutions": [
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        },
+        {
+          "original": "Yanmey",
+          "replacement": "Yahn-may"
+        },
+        {
+          "original": "Nuimi",
+          "replacement": "Nwee-mee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Merchant's Defiance",
+      "sourceTextHash": "d6e5342c7ddb",
+      "audioFile": "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-02-narration.mp3",
+      "durationSeconds": 34.48,
+      "fileSizeBytes": 265464,
+      "substitutions": [
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Council of Barra Point",
+      "sourceTextHash": "e8b9e538f29f",
+      "audioFile": "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-03-narration.mp3",
+      "durationSeconds": 32.58,
+      "fileSizeBytes": 243744,
+      "substitutions": [
+        {
+          "original": "Sundiata",
+          "replacement": "Soon-jah-tah"
+        },
+        {
+          "original": "Yanmey",
+          "replacement": "Yahn-may"
+        },
+        {
+          "original": "Nuimi",
+          "replacement": "Nwee-mee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Blockade of War-Canoes",
+      "sourceTextHash": "df519707cf77",
+      "audioFile": "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-04-narration.mp3",
+      "durationSeconds": 33.42,
+      "fileSizeBytes": 247920,
+      "substitutions": [
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        },
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        },
+        {
+          "original": "Yanmey",
+          "replacement": "Yahn-may"
+        },
+        {
+          "original": "Nuimi",
+          "replacement": "Nwee-mee"
+        },
+        {
+          "original": "Nuimi",
+          "replacement": "Nwee-mee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "Tribute to the Crown of Nuimi",
+      "sourceTextHash": "da0c1677083f",
+      "audioFile": "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-05-narration.mp3",
+      "durationSeconds": 37.27,
+      "fileSizeBytes": 284736,
+      "substitutions": [
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        },
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        },
+        {
+          "original": "Yanmey",
+          "replacement": "Yahn-may"
+        },
+        {
+          "original": "Yanmey",
+          "replacement": "Yahn-may"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

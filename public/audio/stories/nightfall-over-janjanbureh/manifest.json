@@ -1,0 +1,40 @@
+{
+  "storySlug": "nightfall-over-janjanbureh",
+  "title": "Nightfall Over Janjanbureh",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.9,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-23T16:36:32.085690+00:00",
+  "totalScenes": 2,
+  "totalDurationSeconds": 38.67,
+  "totalFileSizeBytes": 299400,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Moon on Still Waters",
+      "sourceTextHash": "af6efd24acd7",
+      "audioFile": "/audio/stories/nightfall-over-janjanbureh/scene-01-narration.mp3",
+      "durationSeconds": 20.23,
+      "fileSizeBytes": 156816,
+      "substitutions": [
+        {
+          "original": "Janjanbureh",
+          "replacement": "Jahn-jahn-boo-ray"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "Whispers of the Mahogany Trees",
+      "sourceTextHash": "56b5265e9489",
+      "audioFile": "/audio/stories/nightfall-over-janjanbureh/scene-02-narration.mp3",
+      "durationSeconds": 18.45,
+      "fileSizeBytes": 142584,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    }
+  ]
+}

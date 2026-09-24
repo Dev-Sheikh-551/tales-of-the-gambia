@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 10.72,
+    "text": "In a wealthy compound near the eastern river bluffs, young Alieu was treated as an unwanted burden by his uncle, who had claimed the boy’s inherited cattle after his father’s death.",
+    "charStart": 0,
+    "charEnd": 181
+  },
+  {
+    "index": 1,
+    "startSeconds": 10.72,
+    "endSeconds": 19.96,
+    "text": "While his cousins slept in airy rooms and ate bowls of buttery couscous, Alieu was sent out each dawn into the thornbush with a flock of stubborn goats.",
+    "charStart": 182,
+    "charEnd": 334
+  },
+  {
+    "index": 2,
+    "startSeconds": 19.96,
+    "endSeconds": 27.55,
+    "text": "His only possession was a small, polished water calabash and a wooden herder’s flute he had carved from river reed.",
+    "charStart": 335,
+    "charEnd": 450
+  }
+]

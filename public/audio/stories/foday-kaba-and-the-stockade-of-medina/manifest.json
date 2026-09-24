@@ -1,0 +1,134 @@
+{
+  "storySlug": "foday-kaba-and-the-stockade-of-medina",
+  "title": "Foday Kaba and the Stockade of Medina",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T15:59:26.249149+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 199.97,
+  "totalFileSizeBytes": 1477440,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Stockade in the Ironwood",
+      "sourceTextHash": "41f843c8f8c6",
+      "audioFile": "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-narration.mp3",
+      "durationSeconds": 41.6,
+      "fileSizeBytes": 307536,
+      "substitutions": [
+        {
+          "original": "Kiang",
+          "replacement": "Kee-ahng"
+        },
+        {
+          "original": "Casamance",
+          "replacement": "Kah-sah-mahns"
+        },
+        {
+          "original": "Foday Kaba",
+          "replacement": "Foh-day Kah-bah"
+        },
+        {
+          "original": "Dumbuya",
+          "replacement": "Doom-boo-yah"
+        },
+        {
+          "original": "Medina",
+          "replacement": "Meh-dee-nah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Steamers on the River",
+      "sourceTextHash": "70415998dc90",
+      "audioFile": "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-narration.mp3",
+      "durationSeconds": 42.0,
+      "fileSizeBytes": 310200,
+      "substitutions": [
+        {
+          "original": "Kiang",
+          "replacement": "Kee-ahng"
+        },
+        {
+          "original": "Foday Kaba",
+          "replacement": "Foh-day Kah-bah"
+        },
+        {
+          "original": "Foday Kaba",
+          "replacement": "Foh-day Kah-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Labyrinth of the Bolongs",
+      "sourceTextHash": "5fcd7d1af623",
+      "audioFile": "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-narration.mp3",
+      "durationSeconds": 39.75,
+      "fileSizeBytes": 289632,
+      "substitutions": [
+        {
+          "original": "baobabs",
+          "replacement": "bah-oh-bahbs"
+        },
+        {
+          "original": "Foday Kaba",
+          "replacement": "Foh-day Kah-bah"
+        },
+        {
+          "original": "Foday Kaba",
+          "replacement": "Foh-day Kah-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Defiance of Medina",
+      "sourceTextHash": "cb2c745b9e94",
+      "audioFile": "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-narration.mp3",
+      "durationSeconds": 45.0,
+      "fileSizeBytes": 335112,
+      "substitutions": [
+        {
+          "original": "Foday Kaba",
+          "replacement": "Foh-day Kah-bah"
+        },
+        {
+          "original": "Medina",
+          "replacement": "Meh-dee-nah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Legacy of the South Bank",
+      "sourceTextHash": "aacc66999072",
+      "audioFile": "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-narration.mp3",
+      "durationSeconds": 31.62,
+      "fileSizeBytes": 234960,
+      "substitutions": [
+        {
+          "original": "Kiang",
+          "replacement": "Kee-ahng"
+        },
+        {
+          "original": "jelilu",
+          "replacement": "jeh-lee-loo"
+        },
+        {
+          "original": "Medina",
+          "replacement": "Meh-dee-nah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

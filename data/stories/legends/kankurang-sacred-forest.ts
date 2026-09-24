@@ -1,4 +1,10 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import kankurangScene01 from "@/data/audio/cues/kankurang/scene-01.json";
+import kankurangScene02 from "@/data/audio/cues/kankurang/scene-02.json";
+import kankurangScene03 from "@/data/audio/cues/kankurang/scene-03.json";
+import kankurangScene04 from "@/data/audio/cues/kankurang/scene-04.json";
+import kankurangScene05 from "@/data/audio/cues/kankurang/scene-05.json";
+
 
 export const kankurangSacredForestStory: Story = {
   id: "story-kankurang-sacred-forest",
@@ -87,9 +93,10 @@ export const kankurangSacredForestStory: Story = {
         intensity: "gentle",
       },
       characters: ["Elder Bakary"],
-      ambience: {
-        type: "night-insects",
-        label: "Riverbank insects and distant ceremonial drumbeat",
+      audio: {
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-narration.mp3",
+        narrationDurationSeconds: 39.4,
+        cues: kankurangScene01 as NarrationCue[],
       },
       durationSeconds: 14,
     },
@@ -115,9 +122,10 @@ export const kankurangSacredForestStory: Story = {
         intensity: "gentle",
       },
       characters: ["The Spirit of the Kankurang"],
-      ambience: {
-        type: "kora-strings",
-        label: "Low rhythmic Mandinka initiation drumming",
+      audio: {
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-narration.mp3",
+        narrationDurationSeconds: 38.42,
+        cues: kankurangScene02 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -143,9 +151,10 @@ export const kankurangSacredForestStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Spirit of the Kankurang"],
-      ambience: {
-        type: "village-fire",
-        label: "Crackling campfire and rhythmic footsteps",
+      audio: {
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-narration.mp3",
+        narrationDurationSeconds: 39.2,
+        cues: kankurangScene03 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -171,9 +180,10 @@ export const kankurangSacredForestStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Initiates", "The Spirit of the Kankurang"],
-      ambience: {
-        type: "night-insects",
-        label: "Night forest breeze through deep foliage",
+      audio: {
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-narration.mp3",
+        narrationDurationSeconds: 41.8,
+        cues: kankurangScene04 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -199,9 +209,10 @@ export const kankurangSacredForestStory: Story = {
         intensity: "gentle",
       },
       characters: ["The Initiates"],
-      ambience: {
-        type: "river-flow",
-        label: "Gentle morning river flow and birdsong",
+      audio: {
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-narration.mp3",
+        narrationDurationSeconds: 41.48,
+        cues: kankurangScene05 as NarrationCue[],
       },
       durationSeconds: 16,
     },

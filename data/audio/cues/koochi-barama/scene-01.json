@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.06,
+    "text": "In the green heart of Fogny, where freshwater streams feed emerald rice valleys, lived Koochi Barama.",
+    "charStart": 0,
+    "charEnd": 101
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.06,
+    "endSeconds": 13.13,
+    "text": "Koochi possessed a tongue so smooth that people said he could convince a fish that drowning was a blessing.",
+    "charStart": 102,
+    "charEnd": 209
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.13,
+    "endSeconds": 18.06,
+    "text": "If he forgot to tie the family goats, he claimed a golden leopard had frightened them away.",
+    "charStart": 210,
+    "charEnd": 301
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.06,
+    "endSeconds": 26.15,
+    "text": "If he spilled a calabash of palm oil, he swore an invisible wind from the clouds had tipped it over.",
+    "charStart": 302,
+    "charEnd": 402
+  },
+  {
+    "index": 4,
+    "startSeconds": 26.15,
+    "endSeconds": 28.61,
+    "text": "'Words are like smoke,' Koochi laughed to his companions.",
+    "charStart": 403,
+    "charEnd": 460
+  },
+  {
+    "index": 5,
+    "startSeconds": 28.61,
+    "endSeconds": 32.0,
+    "text": "'They dance in the air, and then they disappear.",
+    "charStart": 461,
+    "charEnd": 509
+  },
+  {
+    "index": 6,
+    "startSeconds": 32.0,
+    "endSeconds": 34.95,
+    "text": "Who could ever be hurt by smoke?'",
+    "charStart": 510,
+    "charEnd": 543
+  }
+]

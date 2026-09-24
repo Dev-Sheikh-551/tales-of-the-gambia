@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.5,
+    "text": "One by one, the birds tucked their heads beneath their wings in the branches of Abuko.",
+    "charStart": 0,
+    "charEnd": 86
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.5,
+    "endSeconds": 10.37,
+    "text": "The great mahogany trees sighed in the cool breeze that drifted from the sea.",
+    "charStart": 87,
+    "charEnd": 164
+  },
+  {
+    "index": 2,
+    "startSeconds": 10.37,
+    "endSeconds": 19.45,
+    "text": "Little Pangolin uncurled his shiny golden scales, blinked his dark eyes, and looked up at the first evening star sparkling through the leaves.",
+    "charStart": 165,
+    "charEnd": 307
+  }
+]

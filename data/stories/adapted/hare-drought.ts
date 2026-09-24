@@ -1,4 +1,10 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import hareCues01 from "@/data/audio/cues/hare-drought/scene-01.json";
+import hareCues02 from "@/data/audio/cues/hare-drought/scene-02.json";
+import hareCues03 from "@/data/audio/cues/hare-drought/scene-03.json";
+import hareCues04 from "@/data/audio/cues/hare-drought/scene-04.json";
+import hareCues05 from "@/data/audio/cues/hare-drought/scene-05.json";
+import hareCues06 from "@/data/audio/cues/hare-drought/scene-06.json";
 
 export const hareDroughtStory: Story = {
   id: "story-1",
@@ -115,15 +121,10 @@ export const hareDroughtStory: Story = {
         intensity: "subtle",
       },
       characters: ["Savanna Wildlife"],
-      ambience: {
-        type: "gentle-wind",
-        label: "Harmattan wind through dry grass",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-narration.mp3",
         narrationDurationSeconds: 21.2,
-        ambienceUrl: "/audio/stories/the-clever-hare-and-the-great-drought/ambience/scene-01.mp3",
-        ambienceLoop: true,
+        cues: hareCues01 as NarrationCue[],
       },
       durationSeconds: 14,
     },
@@ -167,15 +168,10 @@ export const hareDroughtStory: Story = {
           avatarTheme: "hare",
         },
       ],
-      ambience: {
-        type: "village-fire",
-        label: "Murmurs of gathered savanna animals",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-narration.mp3",
         narrationDurationSeconds: 26.0,
-        ambienceUrl: "/audio/stories/the-clever-hare-and-the-great-drought/ambience/scene-02.mp3",
-        ambienceLoop: true,
+        cues: hareCues02 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -219,15 +215,10 @@ export const hareDroughtStory: Story = {
           avatarTheme: "hare",
         },
       ],
-      ambience: {
-        type: "gentle-wind",
-        label: "Harmattan dust and digging rhythm",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-narration.mp3",
         narrationDurationSeconds: 22.3,
-        ambienceUrl: "/audio/stories/the-clever-hare-and-the-great-drought/ambience/scene-03.mp3",
-        ambienceLoop: true,
+        cues: hareCues03 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -263,15 +254,10 @@ export const hareDroughtStory: Story = {
           avatarTheme: "hare",
         },
       ],
-      ambience: {
-        type: "gentle-wind",
-        label: "Dry wind whistling over the river bank",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-narration.mp3",
         narrationDurationSeconds: 23.35,
-        ambienceUrl: "/audio/stories/the-clever-hare-and-the-great-drought/ambience/scene-04.mp3",
-        ambienceLoop: true,
+        cues: hareCues04 as NarrationCue[],
       },
       durationSeconds: 14,
     },
@@ -315,15 +301,10 @@ export const hareDroughtStory: Story = {
           avatarTheme: "tortoise",
         },
       ],
-      ambience: {
-        type: "river-flow",
-        label: "Cool freshwater bubbling vigorously",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-narration.mp3",
         narrationDurationSeconds: 24.6,
-        ambienceUrl: "/audio/stories/the-clever-hare-and-the-great-drought/ambience/scene-05.mp3",
-        ambienceLoop: true,
+        cues: hareCues05 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -367,15 +348,10 @@ export const hareDroughtStory: Story = {
           avatarTheme: "elephant",
         },
       ],
-      ambience: {
-        type: "night-insects",
-        label: "Quiet cicadas under the savanna night sky",
-      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-narration.mp3",
         narrationDurationSeconds: 25.27,
-        ambienceUrl: "/audio/stories/the-clever-hare-and-the-great-drought/ambience/scene-06.mp3",
-        ambienceLoop: true,
+        cues: hareCues06 as NarrationCue[],
       },
       durationSeconds: 16,
     },

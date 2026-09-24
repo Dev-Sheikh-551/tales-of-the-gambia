@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 11.12,
+    "text": "Deep in the dense forests between Kiang and the Casamance border, where foreign maps showed only green wilderness, rose the fortified citadel of Medina.",
+    "charStart": 0,
+    "charEnd": 152
+  },
+  {
+    "index": 1,
+    "startSeconds": 11.12,
+    "endSeconds": 17.62,
+    "text": "Foday Kaba Dumbuya did not build with soft mud that washed away in the August rains.",
+    "charStart": 153,
+    "charEnd": 237
+  },
+  {
+    "index": 2,
+    "startSeconds": 17.62,
+    "endSeconds": 29.6,
+    "text": "He felled thousands of massive mahogany and ironwood trees, driving them two fathoms into the earth in double parallel palisades packed with red clay and broken river rock.",
+    "charStart": 238,
+    "charEnd": 410
+  },
+  {
+    "index": 3,
+    "startSeconds": 29.6,
+    "endSeconds": 41.6,
+    "text": "Behind these walls lived blacksmiths forging muskets, scholars teaching the Quran, and cavalrymen who could ride through mangrove mud without leaving a trace.",
+    "charStart": 411,
+    "charEnd": 569
+  }
+]

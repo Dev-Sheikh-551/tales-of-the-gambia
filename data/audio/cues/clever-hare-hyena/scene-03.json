@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.3,
+    "text": "Moons passed, and the green leaves withered into the gold of harvest time.",
+    "charStart": 0,
+    "charEnd": 74
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.3,
+    "endSeconds": 8.45,
+    "text": "Beneath the earth, the groundnuts had swelled into crisp, rich pods.",
+    "charStart": 75,
+    "charEnd": 143
+  },
+  {
+    "index": 2,
+    "startSeconds": 8.45,
+    "endSeconds": 13.98,
+    "text": "When Leuk began to pull the vines from the dry loam, Bouki miraculously recovered his strength.",
+    "charStart": 144,
+    "charEnd": 239
+  },
+  {
+    "index": 3,
+    "startSeconds": 13.98,
+    "endSeconds": 20.32,
+    "text": "He bounded into the clearing with two enormous woven baskets strapped to his sides, his eyes glistening.",
+    "charStart": 240,
+    "charEnd": 344
+  },
+  {
+    "index": 4,
+    "startSeconds": 20.32,
+    "endSeconds": 22.89,
+    "text": "'Behold our bountiful crop, partner!'",
+    "charStart": 345,
+    "charEnd": 382
+  },
+  {
+    "index": 5,
+    "startSeconds": 22.89,
+    "endSeconds": 25.46,
+    "text": "Bouki shouted, rubbing his paws.",
+    "charStart": 383,
+    "charEnd": 415
+  },
+  {
+    "index": 6,
+    "startSeconds": 25.46,
+    "endSeconds": 36.38,
+    "text": "'Since I am larger and have a larger household to sustain, it is only proper that I take the pods from the tall rows, and you may have the roots and empty shells from the edges.'",
+    "charStart": 416,
+    "charEnd": 594
+  }
+]

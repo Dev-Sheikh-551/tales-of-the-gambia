@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.53,
+    "text": "The drums erupted into an exhilarating, accelerating rhythm.",
+    "charStart": 0,
+    "charEnd": 60
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.53,
+    "endSeconds": 12.49,
+    "text": "The Kumpo planted its central staff into the sand, lifted its fronds entirely off the ground, and began to spin.",
+    "charStart": 61,
+    "charEnd": 173
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.49,
+    "endSeconds": 20.81,
+    "text": "Faster and faster it whirled, generating a localized whirlwind of amber dust that swept through the dancing circle.",
+    "charStart": 174,
+    "charEnd": 289
+  },
+  {
+    "index": 3,
+    "startSeconds": 20.81,
+    "endSeconds": 25.35,
+    "text": "It approached Bakary, spinning within inches of his chest.",
+    "charStart": 290,
+    "charEnd": 348
+  },
+  {
+    "index": 4,
+    "startSeconds": 25.35,
+    "endSeconds": 42.98,
+    "text": "As the wind whipped his face, Bakary felt the collective weight of centuries—the realization that this dance was not entertainment, but the living law of communal solidarity that had kept his people alive through famine, war, and drought.",
+    "charStart": 349,
+    "charEnd": 587
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "storySlug": "the-spider-and-the-pot-of-wisdom",
+  "title": "The Spider and the Pot of Wisdom",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.94,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-23T16:38:14.383327+00:00",
+  "totalScenes": 3,
+  "totalDurationSeconds": 80.68,
+  "totalFileSizeBytes": 592536,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "Gathering Every Whispered Word",
+      "sourceTextHash": "78863f331dac",
+      "audioFile": "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-narration.mp3",
+      "durationSeconds": 25.8,
+      "fileSizeBytes": 189024,
+      "substitutions": [
+        {
+          "original": "Anansi",
+          "replacement": "Ah-nahn-see"
+        },
+        {
+          "original": "Anansi",
+          "replacement": "Ah-nahn-see"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Climb Up the Oil Palm",
+      "sourceTextHash": "04c25c097c03",
+      "audioFile": "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-narration.mp3",
+      "durationSeconds": 25.85,
+      "fileSizeBytes": 191640,
+      "substitutions": [
+        {
+          "original": "Anansi",
+          "replacement": "Ah-nahn-see"
+        },
+        {
+          "original": "Ntikuma",
+          "replacement": "N-tee-koo-mah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "Wisdom Scattered to the Winds",
+      "sourceTextHash": "6b665ab22a35",
+      "audioFile": "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-narration.mp3",
+      "durationSeconds": 29.02,
+      "fileSizeBytes": 211872,
+      "substitutions": [
+        {
+          "original": "Anansi",
+          "replacement": "Ah-nahn-see"
+        },
+        {
+          "original": "Ntikuma",
+          "replacement": "N-tee-koo-mah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

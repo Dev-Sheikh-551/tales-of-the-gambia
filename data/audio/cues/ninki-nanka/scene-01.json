@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0,
+    "endSeconds": 4.29,
+    "text": "The Gambia River does not merely flow; it breathes.",
+    "charStart": 0,
+    "charEnd": 51
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.29,
+    "endSeconds": 15.2,
+    "text": "At twilight, when the tide turns and the green roots of the mangrove stand revealed like the ribcages of ancient giants, mist rises in silver coils.",
+    "charStart": 52,
+    "charEnd": 200
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.2,
+    "endSeconds": 25.18,
+    "text": "Samba dipped his wooden paddle into the dark current without making a single ripple, heading deep into the sacred bolong where few dared to fish.",
+    "charStart": 201,
+    "charEnd": 346
+  }
+]

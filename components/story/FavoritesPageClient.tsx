@@ -8,7 +8,7 @@ import { StoryCard } from "./StoryCard";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 
 export function FavoritesPageClient() {
-  const { favorites, isFavorite, toggleFavorite, getProgress, isLoaded } = useStoryStorage();
+  const { favorites, isFav, toggleFav, getProgress, isLoaded } = useStoryStorage();
 
   const favoriteStories = useMemo(() => {
     return MOCK_STORIES.filter((s) => favorites.includes(s.slug));
@@ -78,8 +78,8 @@ export function FavoritesPageClient() {
                 key={story.id}
                 story={story}
                 progress={getProgress(story.slug)}
-                isFavorite={isFavorite(story.slug)}
-                onToggleFavorite={toggleFavorite}
+                isFavorite={isFav(story.slug)}
+                onToggleFavorite={toggleFav}
               />
             ))}
           </div>

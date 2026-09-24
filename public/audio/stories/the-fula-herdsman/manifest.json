@@ -1,0 +1,281 @@
+{
+  "storySlug": "the-fula-herdsman",
+  "title": "The Herdsman and the Stolen Cattle",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.93,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T09:44:46.270436+00:00",
+  "totalScenes": 6,
+  "totalDurationSeconds": 426.35,
+  "totalFileSizeBytes": 2973792,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "A Man and His Cattle",
+      "sourceTextHash": "ce3f82a44643",
+      "audioFile": "/audio/stories/the-fula-herdsman/scene-01-narration.mp3",
+      "durationSeconds": 67.22,
+      "fileSizeBytes": 479592,
+      "substitutions": [
+        {
+          "original": "Pulaaku",
+          "replacement": "Poo-lah-koo"
+        },
+        {
+          "original": "Fula",
+          "replacement": "Foo-lah"
+        },
+        {
+          "original": "Fula",
+          "replacement": "Foo-lah"
+        },
+        {
+          "original": "Fula",
+          "replacement": "Foo-lah"
+        },
+        {
+          "original": "Keba Kunda",
+          "replacement": "Keh-bah Koon-dah"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "Three Animals Gone",
+      "sourceTextHash": "b8a9ca892c4b",
+      "audioFile": "/audio/stories/the-fula-herdsman/scene-02-narration.mp3",
+      "durationSeconds": 61.27,
+      "fileSizeBytes": 428712,
+      "substitutions": [
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "What Pulaaku Requires",
+      "sourceTextHash": "8a5cf6230b25",
+      "audioFile": "/audio/stories/the-fula-herdsman/scene-03-narration.mp3",
+      "durationSeconds": 74.53,
+      "fileSizeBytes": 507672,
+      "substitutions": [
+        {
+          "original": "harmattan",
+          "replacement": "har-mah-tahn"
+        },
+        {
+          "original": "Pulaaku",
+          "replacement": "Poo-lah-koo"
+        },
+        {
+          "original": "Pulaaku",
+          "replacement": "Poo-lah-koo"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Waiting",
+      "sourceTextHash": "65b03b2ef951",
+      "audioFile": "/audio/stories/the-fula-herdsman/scene-04-narration.mp3",
+      "durationSeconds": 72.9,
+      "fileSizeBytes": 512376,
+      "substitutions": [
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Return",
+      "sourceTextHash": "4290714caed1",
+      "audioFile": "/audio/stories/the-fula-herdsman/scene-05-narration.mp3",
+      "durationSeconds": 70.97,
+      "fileSizeBytes": 493224,
+      "substitutions": [
+        {
+          "original": "Pulaaku",
+          "replacement": "Poo-lah-koo"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Musa",
+          "replacement": "Moo-sah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 6,
+      "title": "Munyal \u2014 Patience",
+      "sourceTextHash": "2b6887da197d",
+      "audioFile": "/audio/stories/the-fula-herdsman/scene-06-narration.mp3",
+      "durationSeconds": 79.45,
+      "fileSizeBytes": 552216,
+      "substitutions": [
+        {
+          "original": "Pulaaku",
+          "replacement": "Poo-lah-koo"
+        },
+        {
+          "original": "Fula",
+          "replacement": "Foo-lah"
+        },
+        {
+          "original": "Fula",
+          "replacement": "Foo-lah"
+        },
+        {
+          "original": "Munyal",
+          "replacement": "moon-yahl"
+        },
+        {
+          "original": "Munyal",
+          "replacement": "moon-yahl"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Demba",
+          "replacement": "Dem-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

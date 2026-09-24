@@ -1,0 +1,129 @@
+{
+  "storySlug": "the-two-kumbas",
+  "title": "The Two Kumbas",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.93,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-23T16:46:36.060115+00:00",
+  "totalScenes": 6,
+  "totalDurationSeconds": 183.22,
+  "totalFileSizeBytes": 1403064,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Two Daughters of the Compound",
+      "sourceTextHash": "8ec0f0b5641f",
+      "audioFile": "/audio/stories/the-two-kumbas/scene-01-narration.mp3",
+      "durationSeconds": 29.2,
+      "fileSizeBytes": 227208,
+      "substitutions": [
+        {
+          "original": "Kumba Am Ndey",
+          "replacement": "Koom-bah Ahm Ndey"
+        },
+        {
+          "original": "Kumba Amul Ndey",
+          "replacement": "Koom-bah Ah-mool Ndey"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Impossible Errand",
+      "sourceTextHash": "b50ac0f42aa5",
+      "audioFile": "/audio/stories/the-two-kumbas/scene-02-narration.mp3",
+      "durationSeconds": 27.75,
+      "fileSizeBytes": 215304,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "Daayaan",
+          "replacement": "Dah-yahn"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Voices of the Bush",
+      "sourceTextHash": "f4c42c76026f",
+      "audioFile": "/audio/stories/the-two-kumbas/scene-03-narration.mp3",
+      "durationSeconds": 35.33,
+      "fileSizeBytes": 266880,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Old Mother by the Shimmering Waters",
+      "sourceTextHash": "86fa86b0caf2",
+      "audioFile": "/audio/stories/the-two-kumbas/scene-04-narration.mp3",
+      "durationSeconds": 28.35,
+      "fileSizeBytes": 215160,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "Daayaan",
+          "replacement": "Dah-yahn"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Gift of the Singing Eggs",
+      "sourceTextHash": "3008e749fc64",
+      "audioFile": "/audio/stories/the-two-kumbas/scene-05-narration.mp3",
+      "durationSeconds": 33.12,
+      "fileSizeBytes": 252888,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 6,
+      "title": "The Mirror of Character",
+      "sourceTextHash": "7ec18b8fb3d9",
+      "audioFile": "/audio/stories/the-two-kumbas/scene-06-narration.mp3",
+      "durationSeconds": 29.48,
+      "fileSizeBytes": 225624,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "Kumba Am Ndey",
+          "replacement": "Koom-bah Ahm Ndey"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

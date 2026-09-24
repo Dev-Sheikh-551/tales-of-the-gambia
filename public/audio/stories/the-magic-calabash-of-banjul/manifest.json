@@ -1,0 +1,122 @@
+{
+  "storySlug": "the-magic-calabash-of-banjul",
+  "title": "The Magic Calabash of Banjul",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.93,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T16:12:28.935600+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 179.47,
+  "totalFileSizeBytes": 1318752,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Handcart of Russell Street",
+      "sourceTextHash": "2b1dd79137f6",
+      "audioFile": "/audio/stories/the-magic-calabash-of-banjul/scene-01-narration.mp3",
+      "durationSeconds": 31.6,
+      "fileSizeBytes": 235392,
+      "substitutions": [
+        {
+          "original": "Banjul",
+          "replacement": "Bahn-jool"
+        },
+        {
+          "original": "Erubami",
+          "replacement": "Eh-roo-bah-mee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Gift Beneath the Roots",
+      "sourceTextHash": "80be2069f7b8",
+      "audioFile": "/audio/stories/the-magic-calabash-of-banjul/scene-02-narration.mp3",
+      "durationSeconds": 37.92,
+      "fileSizeBytes": 274848,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "Banjul",
+          "replacement": "Bahn-jool"
+        },
+        {
+          "original": "Erubami",
+          "replacement": "Eh-roo-bah-mee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Quiet Hearth",
+      "sourceTextHash": "51028f42b000",
+      "audioFile": "/audio/stories/the-magic-calabash-of-banjul/scene-03-narration.mp3",
+      "durationSeconds": 35.85,
+      "fileSizeBytes": 264264,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "Erubami",
+          "replacement": "Eh-roo-bah-mee"
+        },
+        {
+          "original": "Modupeh",
+          "replacement": "Moh-doo-peh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Midnight Whisper",
+      "sourceTextHash": "1dd65dff28e1",
+      "audioFile": "/audio/stories/the-magic-calabash-of-banjul/scene-04-narration.mp3",
+      "durationSeconds": 34.83,
+      "fileSizeBytes": 255960,
+      "substitutions": [
+        {
+          "original": "Erubami",
+          "replacement": "Eh-roo-bah-mee"
+        },
+        {
+          "original": "Erubami",
+          "replacement": "Eh-roo-bah-mee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Contented Heart",
+      "sourceTextHash": "557e715f1afb",
+      "audioFile": "/audio/stories/the-magic-calabash-of-banjul/scene-05-narration.mp3",
+      "durationSeconds": 39.27,
+      "fileSizeBytes": 288288,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "Erubami",
+          "replacement": "Eh-roo-bah-mee"
+        },
+        {
+          "original": "Erubami",
+          "replacement": "Eh-roo-bah-mee"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

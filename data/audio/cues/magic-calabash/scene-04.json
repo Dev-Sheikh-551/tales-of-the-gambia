@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.6,
+    "text": "Months passed, and the peace of the household flourished.",
+    "charStart": 0,
+    "charEnd": 57
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.6,
+    "endSeconds": 5.6,
+    "text": "But human eyes are sharp.",
+    "charStart": 58,
+    "charEnd": 83
+  },
+  {
+    "index": 2,
+    "startSeconds": 5.6,
+    "endSeconds": 13.72,
+    "text": "Market merchants noticed that Erubami no longer took loans at high interest, and neighbors saw meat in his soup pot every evening.",
+    "charStart": 84,
+    "charEnd": 214
+  },
+  {
+    "index": 3,
+    "startSeconds": 13.72,
+    "endSeconds": 16.48,
+    "text": "Envy began to knock at the compound door.",
+    "charStart": 215,
+    "charEnd": 256
+  },
+  {
+    "index": 4,
+    "startSeconds": 16.48,
+    "endSeconds": 31.85,
+    "text": "One midnight, as rain drummed against the corrugated tin roof, a voice of doubt crept into Erubami's thoughts: 'Why live on three coins a day when you could open the bowl in the dark and take a chest of gold to buy your own merchant ship?'",
+    "charStart": 257,
+    "charEnd": 496
+  },
+  {
+    "index": 5,
+    "startSeconds": 31.85,
+    "endSeconds": 34.83,
+    "text": "His hand reached toward the cloth.",
+    "charStart": 497,
+    "charEnd": 531
+  }
+]

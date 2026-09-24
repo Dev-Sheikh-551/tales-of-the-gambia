@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.83,
+    "text": "Bouki lunged into the pile with both paws.",
+    "charStart": 0,
+    "charEnd": 42
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.83,
+    "endSeconds": 5.88,
+    "text": "Instantly, the sticky tree sap seized his fur.",
+    "charStart": 43,
+    "charEnd": 89
+  },
+  {
+    "index": 2,
+    "startSeconds": 5.88,
+    "endSeconds": 7.62,
+    "text": "'Who dares hold Bouki?'",
+    "charStart": 90,
+    "charEnd": 113
+  },
+  {
+    "index": 3,
+    "startSeconds": 7.62,
+    "endSeconds": 9.96,
+    "text": "he snarled, kicking with his hind leg.",
+    "charStart": 114,
+    "charEnd": 152
+  },
+  {
+    "index": 4,
+    "startSeconds": 9.96,
+    "endSeconds": 11.83,
+    "text": "That leg stuck fast too.",
+    "charStart": 153,
+    "charEnd": 177
+  },
+  {
+    "index": 5,
+    "startSeconds": 11.83,
+    "endSeconds": 15.64,
+    "text": "He struck with his snout, and his jaws sealed shut against the pot.",
+    "charStart": 178,
+    "charEnd": 245
+  },
+  {
+    "index": 6,
+    "startSeconds": 15.64,
+    "endSeconds": 28.5,
+    "text": "By the time the golden light of dawn filtered through the leaves of the baobab, Bouki was curled around the jar like a tangled calabash, howling in muffled embarrassment as the village birds gathered above to sing of his folly.",
+    "charStart": 246,
+    "charEnd": 473
+  }
+]

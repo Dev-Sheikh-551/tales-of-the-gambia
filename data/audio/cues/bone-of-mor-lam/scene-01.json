@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.24,
+    "text": "Never in the history of the district had an ox yielded a bone quite like this.",
+    "charStart": 0,
+    "charEnd": 78
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.24,
+    "endSeconds": 11.57,
+    "text": "It was thick as a warrior’s forearm, glistening with pearls of white fat and packed to the marrow with rich, fragrant juices.",
+    "charStart": 79,
+    "charEnd": 204
+  },
+  {
+    "index": 2,
+    "startSeconds": 11.57,
+    "endSeconds": 18.1,
+    "text": "Mor Lam had traded three baskets of dry fish and his favorite hunting knife for it at the weekly lumo market.",
+    "charStart": 205,
+    "charEnd": 314
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.1,
+    "endSeconds": 29.18,
+    "text": "As the pot bubbled over the slow kadd coals, filling the compound with an aroma that made the village dogs howl in longing, Mor Lam rubbed his round belly with reverent anticipation.",
+    "charStart": 315,
+    "charEnd": 497
+  }
+]

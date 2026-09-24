@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 9.09,
+    "text": "At the narrow mouth of the River Gambia, where the opposite shore of Bathurst was barely three miles away, stood the royal watchtower of Barra Point.",
+    "charStart": 0,
+    "charEnd": 149
+  },
+  {
+    "index": 1,
+    "startSeconds": 9.09,
+    "endSeconds": 16.54,
+    "text": "Every brig, brigantine, and schooner arriving from the Atlantic had to drop anchor and send an officer ashore.",
+    "charStart": 150,
+    "charEnd": 260
+  },
+  {
+    "index": 2,
+    "startSeconds": 16.54,
+    "endSeconds": 23.57,
+    "text": "For centuries, the Kingdom of Nuimi had levied customary transit dues on all foreign commerce.",
+    "charStart": 261,
+    "charEnd": 355
+  },
+  {
+    "index": 3,
+    "startSeconds": 23.57,
+    "endSeconds": 37.5,
+    "text": "At the head of the royal customs court sat Queen Yanmey—a woman of the royal Sonko lineage whose piercing gaze and mastery of international commerce made even the haughtiest sea captains lower their hats.",
+    "charStart": 356,
+    "charEnd": 560
+  }
+]

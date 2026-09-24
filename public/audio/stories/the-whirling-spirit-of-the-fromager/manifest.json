@@ -1,0 +1,95 @@
+{
+  "storySlug": "the-whirling-spirit-of-the-fromager",
+  "title": "The Whirling Spirit of the Fromager",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T16:15:21.968477+00:00",
+  "totalScenes": 4,
+  "totalDurationSeconds": 150.45,
+  "totalFileSizeBytes": 1101600,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Shadows of the Silk-Cotton Grove",
+      "sourceTextHash": "a3808af01d7d",
+      "audioFile": "/audio/stories/the-whirling-spirit-of-the-fromager/scene-01-narration.mp3",
+      "durationSeconds": 35.77,
+      "fileSizeBytes": 262608,
+      "substitutions": [
+        {
+          "original": "fromager",
+          "replacement": "froh-mah-zhay"
+        },
+        {
+          "original": "Brefet",
+          "replacement": "Breh-fet"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Rustle of the Palm Fronds",
+      "sourceTextHash": "5166669f8a16",
+      "audioFile": "/audio/stories/the-whirling-spirit-of-the-fromager/scene-02-narration.mp3",
+      "durationSeconds": 33.48,
+      "fileSizeBytes": 246816,
+      "substitutions": [
+        {
+          "original": "Kumpo",
+          "replacement": "Koom-poh"
+        },
+        {
+          "original": "Arfang",
+          "replacement": "Ahr-fahng"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Whirlwind in the Sand",
+      "sourceTextHash": "04766de4ae5f",
+      "audioFile": "/audio/stories/the-whirling-spirit-of-the-fromager/scene-03-narration.mp3",
+      "durationSeconds": 42.98,
+      "fileSizeBytes": 313872,
+      "substitutions": [
+        {
+          "original": "Kumpo",
+          "replacement": "Koom-poh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Blessing of the Kafo",
+      "sourceTextHash": "22d1c3bd1738",
+      "audioFile": "/audio/stories/the-whirling-spirit-of-the-fromager/scene-04-narration.mp3",
+      "durationSeconds": 38.23,
+      "fileSizeBytes": 278304,
+      "substitutions": [
+        {
+          "original": "kajando",
+          "replacement": "kah-jahn-doh"
+        },
+        {
+          "original": "Kumpo",
+          "replacement": "Koom-poh"
+        },
+        {
+          "original": "Kumpo",
+          "replacement": "Koom-poh"
+        },
+        {
+          "original": "fromager",
+          "replacement": "froh-mah-zhay"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

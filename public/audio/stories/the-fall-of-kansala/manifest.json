@@ -1,0 +1,197 @@
+{
+  "storySlug": "the-fall-of-kansala",
+  "title": "The Fall of Kansala",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.91,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T15:55:35.855197+00:00",
+  "totalScenes": 6,
+  "totalDurationSeconds": 227.57,
+  "totalFileSizeBytes": 1667472,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Red Walls of Kansala",
+      "sourceTextHash": "2acbf80aa012",
+      "audioFile": "/audio/stories/the-fall-of-kansala/scene-01-narration.mp3",
+      "durationSeconds": 37.88,
+      "fileSizeBytes": 273504,
+      "substitutions": [
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Kansala",
+          "replacement": "Kahn-sah-lah"
+        },
+        {
+          "original": "Nyanchos",
+          "replacement": "Nyahn-chohs"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Gathering of the Storm",
+      "sourceTextHash": "38c6fd37f6c3",
+      "audioFile": "/audio/stories/the-fall-of-kansala/scene-02-narration.mp3",
+      "durationSeconds": 39.7,
+      "fileSizeBytes": 292752,
+      "substitutions": [
+        {
+          "original": "Fula",
+          "replacement": "Foo-lah"
+        },
+        {
+          "original": "Dianke Wali",
+          "replacement": "Jahn-keh Wah-lee"
+        },
+        {
+          "original": "Nyancho",
+          "replacement": "Nyahn-choh"
+        },
+        {
+          "original": "Nyancho",
+          "replacement": "Nyahn-choh"
+        },
+        {
+          "original": "Almamy Alpha",
+          "replacement": "Ahl-mah-mee Ahl-fah"
+        },
+        {
+          "original": "Timbo",
+          "replacement": "Teem-boh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "Eleven Days of Thunder",
+      "sourceTextHash": "7208c269fce5",
+      "audioFile": "/audio/stories/the-fall-of-kansala/scene-03-narration.mp3",
+      "durationSeconds": 39.25,
+      "fileSizeBytes": 288000,
+      "substitutions": [
+        {
+          "original": "Kansala",
+          "replacement": "Kahn-sah-lah"
+        },
+        {
+          "original": "Dianke Wali",
+          "replacement": "Jahn-keh Wah-lee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Kora Amidst the Smoke",
+      "sourceTextHash": "01ad4a8f467b",
+      "audioFile": "/audio/stories/the-fall-of-kansala/scene-04-narration.mp3",
+      "durationSeconds": 38.55,
+      "fileSizeBytes": 283992,
+      "substitutions": [
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Manding",
+          "replacement": "Mahn-ding"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Fire of Dianke Wali",
+      "sourceTextHash": "e51b5c97594b",
+      "audioFile": "/audio/stories/the-fall-of-kansala/scene-05-narration.mp3",
+      "durationSeconds": 37.75,
+      "fileSizeBytes": 276480,
+      "substitutions": [
+        {
+          "original": "Kansala",
+          "replacement": "Kahn-sah-lah"
+        },
+        {
+          "original": "Dianke Wali",
+          "replacement": "Jahn-keh Wah-lee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 6,
+      "title": "The Song That Conquered Time",
+      "sourceTextHash": "2ee1eaacd578",
+      "audioFile": "/audio/stories/the-fall-of-kansala/scene-06-narration.mp3",
+      "durationSeconds": 34.45,
+      "fileSizeBytes": 252744,
+      "substitutions": [
+        {
+          "original": "Janjanbureh",
+          "replacement": "Jahn-jahn-boo-ray"
+        },
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Brikama",
+          "replacement": "Bree-kah-mah"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Barra",
+          "replacement": "Bah-rah"
+        },
+        {
+          "original": "Kansala",
+          "replacement": "Kahn-sah-lah"
+        },
+        {
+          "original": "Dianke Wali",
+          "replacement": "Jahn-keh Wah-lee"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

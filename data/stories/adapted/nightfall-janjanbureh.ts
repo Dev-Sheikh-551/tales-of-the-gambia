@@ -1,4 +1,7 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import nightfallScene01 from "@/data/audio/cues/nightfall-janjanbureh/scene-01.json";
+import nightfallScene02 from "@/data/audio/cues/nightfall-janjanbureh/scene-02.json";
+
 
 export const nightfallJanjanburehStory: Story = {
   id: "story-5",
@@ -92,9 +95,10 @@ export const nightfallJanjanburehStory: Story = {
           avatarTheme: "boatman",
         },
       ],
-      ambience: {
-        type: "river-flow",
-        label: "Gentle water lap against river pilings",
+      audio: {
+        narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-01-narration.mp3",
+        narrationDurationSeconds: 20.23,
+        cues: nightfallScene01 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -130,9 +134,10 @@ export const nightfallJanjanburehStory: Story = {
           avatarTheme: "boatman",
         },
       ],
-      ambience: {
-        type: "night-insects",
-        label: "Distant tree frogs and gentle breeze",
+      audio: {
+        narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-02-narration.mp3",
+        narrationDurationSeconds: 18.45,
+        cues: nightfallScene02 as NarrationCue[],
       },
       durationSeconds: 16,
     },

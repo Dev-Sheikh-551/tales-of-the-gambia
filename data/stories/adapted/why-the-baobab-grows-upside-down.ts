@@ -1,4 +1,10 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import baobabScene01 from "@/data/audio/cues/baobab-upside-down/scene-01.json";
+import baobabScene02 from "@/data/audio/cues/baobab-upside-down/scene-02.json";
+import baobabScene03 from "@/data/audio/cues/baobab-upside-down/scene-03.json";
+import baobabScene04 from "@/data/audio/cues/baobab-upside-down/scene-04.json";
+import baobabScene05 from "@/data/audio/cues/baobab-upside-down/scene-05.json";
+
 
 /**
  * Why the Baobab Grows Upside Down
@@ -169,7 +175,11 @@ And the baobab knew it.`,
       visual: { type: "gradient", paletteTheme: "ochre" },
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 8 },
       environmentMotion: { type: "wind", intensity: "subtle" },
-      ambience: { type: "gentle-wind", label: "Morning breeze" },
+      audio: {
+        narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-01-narration.mp3",
+        narrationDurationSeconds: 57.95,
+        cues: baobabScene01 as NarrationCue[],
+      },
       durationSeconds: 80,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -211,7 +221,11 @@ And then decided the baobab had been beautiful for long enough in its current co
       visual: { type: "gradient", paletteTheme: "earth" },
       cameraMotion: { preset: "pan-right", intensity: "subtle", durationSeconds: 9 },
       environmentMotion: { type: "wind", intensity: "subtle" },
-      ambience: { type: "gentle-wind", label: "Afternoon wind" },
+      audio: {
+        narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-02-narration.mp3",
+        narrationDurationSeconds: 60.73,
+        cues: baobabScene02 as NarrationCue[],
+      },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -259,7 +273,11 @@ And the baobab had no one to blame but itself.`,
       visual: { type: "gradient", paletteTheme: "forest" },
       cameraMotion: { preset: "zoom-out", intensity: "medium", durationSeconds: 10 },
       environmentMotion: { type: "wind", intensity: "gentle" },
-      ambience: { type: "gentle-wind", label: "Sudden quiet" },
+      audio: {
+        narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-03-narration.mp3",
+        narrationDurationSeconds: 65.1,
+        cues: baobabScene03 as NarrationCue[],
+      },
       durationSeconds: 100,
       transition: { type: "dissolve", durationSeconds: 2 },
     },
@@ -303,7 +321,11 @@ It felt necessary.`,
       visual: { type: "gradient", paletteTheme: "earth" },
       cameraMotion: { preset: "pan-left", intensity: "subtle", durationSeconds: 11 },
       environmentMotion: { type: "wind", intensity: "subtle" },
-      ambience: { type: "gentle-wind", label: "Village sounds" },
+      audio: {
+        narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-04-narration.mp3",
+        narrationDurationSeconds: 71.72,
+        cues: baobabScene04 as NarrationCue[],
+      },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -349,7 +371,11 @@ Laughing, softly, at itself.`,
       visual: { type: "gradient", paletteTheme: "gold" },
       cameraMotion: { preset: "zoom-out", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },
-      ambience: { type: "night-insects", label: "Night" },
+      audio: {
+        narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-05-narration.mp3",
+        narrationDurationSeconds: 81.65,
+        cues: baobabScene05 as NarrationCue[],
+      },
       durationSeconds: 110,
       transition: { type: "fade", durationSeconds: 3 },
     },

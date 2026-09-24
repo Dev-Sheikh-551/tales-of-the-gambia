@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.98,
+    "text": "In the quiet of his humble room, Erubami shared the discovery with his wife Modupeh.",
+    "charStart": 0,
+    "charEnd": 84
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.98,
+    "endSeconds": 11.88,
+    "text": "The calabash asked for no incantations—only clean hands and an honest heart.",
+    "charStart": 85,
+    "charEnd": 161
+  },
+  {
+    "index": 2,
+    "startSeconds": 11.88,
+    "endSeconds": 21.06,
+    "text": "Each morning, it produced three shining silver coins and enough fresh rice to fill their clay cooking pot and feed their elderly neighbors.",
+    "charStart": 162,
+    "charEnd": 301
+  },
+  {
+    "index": 3,
+    "startSeconds": 21.06,
+    "endSeconds": 29.51,
+    "text": "But an elder who saw the bowl in a dream had delivered one strict covenant: 'Take only what your hands can carry for today.",
+    "charStart": 302,
+    "charEnd": 425
+  },
+  {
+    "index": 4,
+    "startSeconds": 29.51,
+    "endSeconds": 35.85,
+    "text": "Never open it after the midnight bell, and never boast of its presence to the street.'",
+    "charStart": 426,
+    "charEnd": 512
+  }
+]

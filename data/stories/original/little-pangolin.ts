@@ -1,4 +1,7 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import pangolinScene01 from "@/data/audio/cues/little-pangolin/scene-01.json";
+import pangolinScene02 from "@/data/audio/cues/little-pangolin/scene-02.json";
+
 
 export const littlePangolinStory: Story = {
   id: "story-4",
@@ -103,9 +106,10 @@ export const littlePangolinStory: Story = {
           avatarTheme: "pangolin",
         },
       ],
-      ambience: {
-        type: "night-insects",
-        label: "Gentle cicadas and tree frogs",
+      audio: {
+        narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-01-narration.mp3",
+        narrationDurationSeconds: 19.45,
+        cues: pangolinScene01 as NarrationCue[],
       },
       durationSeconds: 12,
     },
@@ -141,9 +145,10 @@ export const littlePangolinStory: Story = {
           avatarTheme: "pangolin",
         },
       ],
-      ambience: {
-        type: "night-insects",
-        label: "Slow rhythmic night breathing",
+      audio: {
+        narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-02-narration.mp3",
+        narrationDurationSeconds: 14.7,
+        cues: pangolinScene02 as NarrationCue[],
       },
       durationSeconds: 13,
     },

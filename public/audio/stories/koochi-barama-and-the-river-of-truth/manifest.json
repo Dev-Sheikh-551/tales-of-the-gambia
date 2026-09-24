@@ -1,0 +1,107 @@
+{
+  "storySlug": "koochi-barama-and-the-river-of-truth",
+  "title": "Koochi Barama and the River of Truth",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.93,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T16:05:56.676351+00:00",
+  "totalScenes": 4,
+  "totalDurationSeconds": 159.15,
+  "totalFileSizeBytes": 1169064,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Weaver of Air",
+      "sourceTextHash": "d1284192d261",
+      "audioFile": "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-narration.mp3",
+      "durationSeconds": 34.95,
+      "fileSizeBytes": 255744,
+      "substitutions": [
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "Koochi Barama",
+          "replacement": "Koo-chee Bah-rah-mah"
+        },
+        {
+          "original": "Koochi",
+          "replacement": "Koo-chee"
+        },
+        {
+          "original": "Koochi",
+          "replacement": "Koo-chee"
+        },
+        {
+          "original": "Fogny",
+          "replacement": "Foh-nyee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Dispute Over the Rice Dike",
+      "sourceTextHash": "593e3831c9fc",
+      "audioFile": "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-narration.mp3",
+      "durationSeconds": 41.62,
+      "fileSizeBytes": 305544,
+      "substitutions": [
+        {
+          "original": "Koochi Barama",
+          "replacement": "Koo-chee Bah-rah-mah"
+        },
+        {
+          "original": "Koochi",
+          "replacement": "Koo-chee"
+        },
+        {
+          "original": "kajando",
+          "replacement": "kah-jahn-doh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Sacred River Crossing",
+      "sourceTextHash": "2ae4351443a2",
+      "audioFile": "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-narration.mp3",
+      "durationSeconds": 37.02,
+      "fileSizeBytes": 271608,
+      "substitutions": [
+        {
+          "original": "Bintang",
+          "replacement": "Been-tahng"
+        },
+        {
+          "original": "Koochi",
+          "replacement": "Koo-chee"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Cleansing of the Waters",
+      "sourceTextHash": "b73aa0185314",
+      "audioFile": "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-narration.mp3",
+      "durationSeconds": 45.55,
+      "fileSizeBytes": 336168,
+      "substitutions": [
+        {
+          "original": "Koochi",
+          "replacement": "Koo-chee"
+        },
+        {
+          "original": "Koochi",
+          "replacement": "Koo-chee"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

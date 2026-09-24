@@ -94,17 +94,32 @@ export interface EnvironmentMotion {
   intensity?: "subtle" | "gentle";
 }
 
+export interface NarrationCue {
+  /** 0-indexed cue position within the scene */
+  index: number;
+  /** Precise start offset in seconds relative to the scene narration audio */
+  startSeconds: number;
+  /** Precise end offset in seconds relative to the scene narration audio */
+  endSeconds: number;
+  /** The clean text matching the spoken audio */
+  text: string;
+  /** Character offset range into the scene text for fast DOM mapping */
+  charStart?: number;
+  charEnd?: number;
+  /** Optional speaker tag for dialogues within the scene */
+  speaker?: string;
+}
+
 export interface SceneAudio {
   narrationUrl?: string;
-  ambienceUrl?: string;
   /** Actual duration in seconds (from audio file metadata, not estimated). */
   narrationDurationSeconds?: number;
+  /** Optional array of word/phrase/sentence cues ordered chronologically */
+  cues?: NarrationCue[];
   /**
    * @deprecated Use narrationDurationSeconds. Kept for backward compat with scene-level fallback.
    */
   durationSeconds?: number;
-  /** Whether ambience should loop continuously. Defaults to true when ambienceUrl is present. */
-  ambienceLoop?: boolean;
 }
 
 export interface SceneTransition {
@@ -126,10 +141,6 @@ export interface Scene {
   environmentMotion?: EnvironmentMotion;
   audio?: SceneAudio;
   transition?: SceneTransition;
-  ambience?: {
-    type: "night-insects" | "river-flow" | "village-fire" | "gentle-wind" | "kora-strings";
-    label: string;
-  };
   durationSeconds: number;
 }
 
@@ -268,12 +279,8 @@ export interface StoryProgress {
 export interface AudioSettings {
   /** Narration volume, 0–1. Default: 1. */
   narrationVolume: number;
-  /** Ambience volume, 0–1. Default: 0.2 (20% relative balance). */
-  ambienceVolume: number;
   /** Playback rate multiplier. Default: 1. */
   playbackRate: number;
-  /** Whether environmental ambience track is enabled. Default: true. */
-  ambienceEnabled?: boolean;
 }
 
 export interface ReadingSettings {

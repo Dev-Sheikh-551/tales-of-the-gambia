@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 12.82,
+    "text": "Along the winding banks of the Bintang Bolong, where trading pirogues carried wax, salt, and groundnuts toward the great river, no name rang louder than that of Massaneh Ceesay.",
+    "charStart": 0,
+    "charEnd": 177
+  },
+  {
+    "index": 1,
+    "startSeconds": 12.82,
+    "endSeconds": 15.99,
+    "text": "He rode horses draped in crimson cloth.",
+    "charStart": 178,
+    "charEnd": 217
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.99,
+    "endSeconds": 28.88,
+    "text": "His robes were stitched with heavy gold thread from Bamako, and his compound in Foni Bondali held granaries so full that laborers sang his praises from sunrise to dusk.",
+    "charStart": 218,
+    "charEnd": 386
+  },
+  {
+    "index": 3,
+    "startSeconds": 28.88,
+    "endSeconds": 38.77,
+    "text": "Massaneh believed there was no door in Senegambia that his silver could not unlock, and no heart that his riches could not sway.",
+    "charStart": 387,
+    "charEnd": 515
+  }
+]

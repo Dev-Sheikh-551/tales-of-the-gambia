@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0,
+    "endSeconds": 8.48,
+    "text": "When twilight settled into deep Senegambian indigo and the first stars appeared above the silk cotton tree, the animals gathered to drink their fill.",
+    "charStart": 0,
+    "charEnd": 149
+  },
+  {
+    "index": 1,
+    "startSeconds": 8.48,
+    "endSeconds": 14.34,
+    "text": "The Hare crept near with an empty calabash, his throat parched, but the council stood firm.",
+    "charStart": 150,
+    "charEnd": 241
+  },
+  {
+    "index": 2,
+    "startSeconds": 14.34,
+    "endSeconds": 16.59,
+    "text": "Water belonged to those who dug.",
+    "charStart": 242,
+    "charEnd": 274
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.59,
+    "endSeconds": 25.27,
+    "text": "And so the Hare departed into the cool night, carrying the bitter seed of wisdom: that true belonging cannot be stolen from the toil of others.",
+    "charStart": 275,
+    "charEnd": 418
+  }
+]

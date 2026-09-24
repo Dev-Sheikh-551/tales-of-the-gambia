@@ -1,0 +1,100 @@
+{
+  "storySlug": "the-griot-under-the-baobab",
+  "title": "The Griot Under the Baobab",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.93,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-23T16:34:54.120892+00:00",
+  "totalScenes": 3,
+  "totalDurationSeconds": 68.95,
+  "totalFileSizeBytes": 509280,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "Tuning the Cowrie-Studded Bridge",
+      "sourceTextHash": "ed6586905d72",
+      "audioFile": "/audio/stories/the-griot-under-the-baobab/scene-01-narration.mp3",
+      "durationSeconds": 21.8,
+      "fileSizeBytes": 161880,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "Jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "nyanyero",
+          "replacement": "nyahn-yeh-ro"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "A Library in the Blood",
+      "sourceTextHash": "5e45fd6015f3",
+      "audioFile": "/audio/stories/the-griot-under-the-baobab/scene-02-narration.mp3",
+      "durationSeconds": 25.48,
+      "fileSizeBytes": 188040,
+      "substitutions": [
+        {
+          "original": "Jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Kaddy",
+          "replacement": "Kah-dee"
+        },
+        {
+          "original": "Alieu",
+          "replacement": "Ah-lee-oo"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "Echoes on the River",
+      "sourceTextHash": "58332044c008",
+      "audioFile": "/audio/stories/the-griot-under-the-baobab/scene-03-narration.mp3",
+      "durationSeconds": 21.68,
+      "fileSizeBytes": 159360,
+      "substitutions": [
+        {
+          "original": "Janjanbureh",
+          "replacement": "Jahn-jahn-boo-ray"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "Kaddy",
+          "replacement": "Kah-dee"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

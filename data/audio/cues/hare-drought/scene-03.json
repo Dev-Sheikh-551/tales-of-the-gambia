@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0,
+    "endSeconds": 2.88,
+    "text": "The work began before the sun reached its zenith.",
+    "charStart": 0,
+    "charEnd": 49
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.88,
+    "endSeconds": 12.02,
+    "text": "Baboons rolled heavy river pebbles; warthogs plowed through the sunbaked crust; elder tortoises carried damp silt away, shell by shell.",
+    "charStart": 50,
+    "charEnd": 185
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.02,
+    "endSeconds": 22.3,
+    "text": "Only the Hare reclined comfortably on a fallen mahogany trunk, fanning his brow with a wild palm frond and claiming that his delicate paws would blister in the sun.",
+    "charStart": 186,
+    "charEnd": 350
+  }
+]

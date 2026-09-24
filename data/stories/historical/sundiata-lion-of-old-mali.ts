@@ -1,4 +1,13 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import sundiataScene01 from "@/data/audio/cues/sundiata/scene-01.json";
+import sundiataScene02 from "@/data/audio/cues/sundiata/scene-02.json";
+import sundiataScene03 from "@/data/audio/cues/sundiata/scene-03.json";
+import sundiataScene04 from "@/data/audio/cues/sundiata/scene-04.json";
+import sundiataScene05 from "@/data/audio/cues/sundiata/scene-05.json";
+import sundiataScene06 from "@/data/audio/cues/sundiata/scene-06.json";
+
+
+
 
 /**
  * Sundiata — The Lion Child of Niani
@@ -215,7 +224,11 @@ At the royal court of Niani, in the kingdom of the Mandinka, a king received a p
       visual: { type: "gradient", paletteTheme: "gold" },
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 8 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
-      ambience: { type: "kora-strings", label: "Kora strings" },
+      audio: {
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-01-narration.mp3",
+        narrationDurationSeconds: 65.42,
+        cues: sundiataScene01 as NarrationCue[],
+      },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -259,7 +272,11 @@ She always believed it.`,
       visual: { type: "gradient", paletteTheme: "earth" },
       cameraMotion: { preset: "pan-right", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
-      ambience: { type: "village-fire", label: "Palace courtyard" },
+      audio: {
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-02-narration.mp3",
+        narrationDurationSeconds: 68.7,
+        cues: sundiataScene02 as NarrationCue[],
+      },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -303,7 +320,11 @@ The griot says: *The whole of Mali stood with him.*`,
       visual: { type: "gradient", paletteTheme: "ochre" },
       cameraMotion: { preset: "zoom-in", intensity: "medium", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "gentle" },
-      ambience: { type: "village-fire", label: "Court of Niani" },
+      audio: {
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-03-narration.mp3",
+        narrationDurationSeconds: 74.85,
+        cues: sundiataScene03 as NarrationCue[],
+      },
       durationSeconds: 100,
       transition: { type: "dissolve", durationSeconds: 2 },
     },
@@ -352,7 +373,11 @@ He was learning the world from the outside. And that, the griots say, was part o
       visual: { type: "gradient", paletteTheme: "river" },
       cameraMotion: { preset: "pan-left", intensity: "subtle", durationSeconds: 12 },
       environmentMotion: { type: "wind", intensity: "gentle" },
-      ambience: { type: "gentle-wind", label: "The open road" },
+      audio: {
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-04-narration.mp3",
+        narrationDurationSeconds: 78.7,
+        cues: sundiataScene04 as NarrationCue[],
+      },
       durationSeconds: 110,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -392,7 +417,11 @@ The details of how Soumaoro's power was finally broken are told differently in d
       visual: { type: "gradient", paletteTheme: "ochre" },
       cameraMotion: { preset: "zoom-out", intensity: "medium", durationSeconds: 14 },
       environmentMotion: { type: "dust-particles", intensity: "gentle" },
-      ambience: { type: "gentle-wind", label: "Field of Kirina" },
+      audio: {
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-05-narration.mp3",
+        narrationDurationSeconds: 81.17,
+        cues: sundiataScene05 as NarrationCue[],
+      },
       durationSeconds: 120,
       transition: { type: "dissolve", durationSeconds: 2 },
     },
@@ -438,7 +467,11 @@ The empire that began with a single iron rod driven into the earth.
       visual: { type: "gradient", paletteTheme: "gold" },
       cameraMotion: { preset: "drift", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },
-      ambience: { type: "kora-strings", label: "Kora" },
+      audio: {
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-06-narration.mp3",
+        narrationDurationSeconds: 97.7,
+        cues: sundiataScene06 as NarrationCue[],
+      },
       durationSeconds: 140,
       transition: { type: "fade", durationSeconds: 3 },
     },

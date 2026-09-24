@@ -1,0 +1,174 @@
+{
+  "storySlug": "why-the-baobab-grows-upside-down",
+  "title": "Why the Baobab Grows Upside Down",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T09:59:46.591754+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 337.15,
+  "totalFileSizeBytes": 2477136,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "In the Beginning",
+      "sourceTextHash": "07823c3eb273",
+      "audioFile": "/audio/stories/why-the-baobab-grows-upside-down/scene-01-narration.mp3",
+      "durationSeconds": 57.95,
+      "fileSizeBytes": 418560,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Complaints",
+      "sourceTextHash": "3a1f5bebd39e",
+      "audioFile": "/audio/stories/why-the-baobab-grows-upside-down/scene-02-narration.mp3",
+      "durationSeconds": 60.73,
+      "fileSizeBytes": 451680,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Correction",
+      "sourceTextHash": "c538cbe34330",
+      "audioFile": "/audio/stories/why-the-baobab-grows-upside-down/scene-03-narration.mp3",
+      "durationSeconds": 65.1,
+      "fileSizeBytes": 471528,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "What the Baobab Learned",
+      "sourceTextHash": "93a5eac49823",
+      "audioFile": "/audio/stories/why-the-baobab-grows-upside-down/scene-04-narration.mp3",
+      "durationSeconds": 71.72,
+      "fileSizeBytes": 532200,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Tree That Remembers",
+      "sourceTextHash": "68e4b8b04b12",
+      "audioFile": "/audio/stories/why-the-baobab-grows-upside-down/scene-05-narration.mp3",
+      "durationSeconds": 81.65,
+      "fileSizeBytes": 603168,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "baobabs",
+          "replacement": "bah-oh-bahbs"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

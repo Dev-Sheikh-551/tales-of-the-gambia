@@ -2,6 +2,8 @@
 
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { NarratedStoryText } from "../NarratedStoryText";
+import { getStorySceneCues } from "@/data/audio/cues";
 
 interface SceneCaptionProps {
   sceneId: string;
@@ -10,6 +12,9 @@ interface SceneCaptionProps {
   narration?: string;
   sceneNumber: number;
   totalScenes: number;
+  storySlug?: string;
+  currentTime?: number;
+  hasAudio?: boolean;
 }
 
 export function SceneCaption({
@@ -19,6 +24,9 @@ export function SceneCaption({
   narration,
   sceneNumber,
   totalScenes,
+  storySlug,
+  currentTime = 0,
+  hasAudio = false,
 }: SceneCaptionProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -40,9 +48,13 @@ export function SceneCaption({
         )}
 
         {/* Narrative Text */}
-        <p className="font-story-serif text-sm sm:text-base text-[#F7F3EB] leading-relaxed line-clamp-3 sm:line-clamp-4">
-          {text}
-        </p>
+        <NarratedStoryText
+          text={text}
+          cues={storySlug ? getStorySceneCues(storySlug, sceneNumber) : undefined}
+          currentTime={currentTime}
+          hasAudio={hasAudio}
+          className="font-story-serif text-sm sm:text-base text-[#F7F3EB] leading-relaxed line-clamp-3 sm:line-clamp-4"
+        />
       </div>
     </div>
   );

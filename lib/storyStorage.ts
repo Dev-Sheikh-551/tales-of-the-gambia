@@ -158,9 +158,7 @@ export function clearRecentStories(): void {
 // ---------------- AUDIO SETTINGS ----------------
 const DEFAULT_AUDIO_SETTINGS: AudioSettings = {
   narrationVolume: 1,
-  ambienceVolume: 0.2,
   playbackRate: 1,
-  ambienceEnabled: true,
 };
 
 export function getAudioSettings(): AudioSettings {
@@ -169,10 +167,10 @@ export function getAudioSettings(): AudioSettings {
     const data = localStorage.getItem(STORAGE_KEYS.AUDIO_SETTINGS);
     if (!data) return { ...DEFAULT_AUDIO_SETTINGS };
     const parsed = JSON.parse(data);
+    // Old ambienceVolume / ambienceEnabled fields in localStorage are silently ignored.
     return {
-      ...DEFAULT_AUDIO_SETTINGS,
-      ...parsed,
-      ambienceEnabled: parsed.ambienceEnabled !== undefined ? parsed.ambienceEnabled : true,
+      narrationVolume: typeof parsed.narrationVolume === "number" ? parsed.narrationVolume : DEFAULT_AUDIO_SETTINGS.narrationVolume,
+      playbackRate: typeof parsed.playbackRate === "number" ? parsed.playbackRate : DEFAULT_AUDIO_SETTINGS.playbackRate,
     };
   } catch {
     return { ...DEFAULT_AUDIO_SETTINGS };

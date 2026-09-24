@@ -79,7 +79,7 @@ export default function FeaturedStory() {
                 </span>
                 <span className="flex items-center gap-1.5 text-[#E0AB3A]">
                   <Volume2 className="w-3.5 h-3.5" />
-                  Full Audio Narration & Ambience
+                  Full Audio Narration
                 </span>
               </div>
 

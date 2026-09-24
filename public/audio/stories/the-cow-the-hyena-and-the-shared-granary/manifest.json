@@ -1,0 +1,78 @@
+{
+  "storySlug": "the-cow-the-hyena-and-the-shared-granary",
+  "title": "The Cow, the Hyena, and the Shared Granary",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.95,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T15:48:54.515720+00:00",
+  "totalScenes": 4,
+  "totalDurationSeconds": 140.8,
+  "totalFileSizeBytes": 1082424,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Covenant of the Kafo",
+      "sourceTextHash": "e735966e0457",
+      "audioFile": "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-01-narration.mp3",
+      "durationSeconds": 35.73,
+      "fileSizeBytes": 271320,
+      "substitutions": [
+        {
+          "original": "kafo",
+          "replacement": "kah-foh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Filled Granary",
+      "sourceTextHash": "65e9713746c3",
+      "audioFile": "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-02-narration.mp3",
+      "durationSeconds": 33.45,
+      "fileSizeBytes": 254904,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "harmattan",
+          "replacement": "har-mah-tahn"
+        },
+        {
+          "original": "benteng",
+          "replacement": "ben-teng"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Midnight Robbery",
+      "sourceTextHash": "e3d25b467bd3",
+      "audioFile": "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-03-narration.mp3",
+      "durationSeconds": 34.55,
+      "fileSizeBytes": 267360,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Trap of White Ash",
+      "sourceTextHash": "14f307ddd642",
+      "audioFile": "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-04-narration.mp3",
+      "durationSeconds": 37.08,
+      "fileSizeBytes": 288840,
+      "substitutions": [
+        {
+          "original": "benteng",
+          "replacement": "ben-teng"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

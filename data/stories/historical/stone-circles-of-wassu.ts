@@ -1,4 +1,10 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import stoneCirclesScene01 from "@/data/audio/cues/stone-circles/scene-01.json";
+import stoneCirclesScene02 from "@/data/audio/cues/stone-circles/scene-02.json";
+import stoneCirclesScene03 from "@/data/audio/cues/stone-circles/scene-03.json";
+import stoneCirclesScene04 from "@/data/audio/cues/stone-circles/scene-04.json";
+import stoneCirclesScene05 from "@/data/audio/cues/stone-circles/scene-05.json";
+
 
 /**
  * The Stone Circles of Wassu
@@ -188,7 +194,11 @@ Before all of that, someone was building.`,
       visual: { type: "gradient", paletteTheme: "earth" },
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 9 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
-      ambience: { type: "gentle-wind", label: "Wind in the bush" },
+      audio: {
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-01-narration.mp3",
+        narrationDurationSeconds: 85.35,
+        cues: stoneCirclesScene01 as NarrationCue[],
+      },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -228,7 +238,11 @@ Every one of the 1,000-plus stone circles is someone's way of saying: *here. Thi
       visual: { type: "gradient", paletteTheme: "ochre" },
       cameraMotion: { preset: "pan-right", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "gentle" },
-      ambience: { type: "gentle-wind", label: "Quarry sounds" },
+      audio: {
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-02-narration.mp3",
+        narrationDurationSeconds: 85.08,
+        cues: stoneCirclesScene02 as NarrationCue[],
+      },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -274,7 +288,11 @@ But we know they were here. The stones make that impossible to forget.`,
       visual: { type: "gradient", paletteTheme: "river" },
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "river-ripples", intensity: "subtle" },
-      ambience: { type: "river-flow", label: "River below the plateau" },
+      audio: {
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-03-narration.mp3",
+        narrationDurationSeconds: 81.4,
+        cues: stoneCirclesScene03 as NarrationCue[],
+      },
       durationSeconds: 110,
       transition: { type: "dissolve", durationSeconds: 2 },
     },
@@ -314,7 +332,11 @@ Who were they? And what did they believe was worth building in stone?`,
       visual: { type: "gradient", paletteTheme: "forest" },
       cameraMotion: { preset: "drift", intensity: "subtle", durationSeconds: 12 },
       environmentMotion: { type: "wind", intensity: "subtle" },
-      ambience: { type: "gentle-wind", label: "Wassu site" },
+      audio: {
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-04-narration.mp3",
+        narrationDurationSeconds: 84.78,
+        cues: stoneCirclesScene04 as NarrationCue[],
+      },
       durationSeconds: 110,
       transition: { type: "crossfade", durationSeconds: 1.5 },
     },
@@ -360,7 +382,11 @@ You don't need to have an answer. You just need to hear it.`,
       visual: { type: "gradient", paletteTheme: "earth" },
       cameraMotion: { preset: "zoom-out", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },
-      ambience: { type: "night-insects", label: "Gambian night" },
+      audio: {
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-05-narration.mp3",
+        narrationDurationSeconds: 91.12,
+        cues: stoneCirclesScene05 as NarrationCue[],
+      },
       durationSeconds: 130,
       transition: { type: "fade", durationSeconds: 3 },
     },

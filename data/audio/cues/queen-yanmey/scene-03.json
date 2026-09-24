@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.98,
+    "text": "Inside the royal court, some counselors urged caution, fearing retaliation from the newly constructed garrison across the water.",
+    "charStart": 0,
+    "charEnd": 128
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.98,
+    "endSeconds": 13.84,
+    "text": "Queen Yanmey stood before the assembly, her indigo shawl pinned with heavy silver rosettes.",
+    "charStart": 129,
+    "charEnd": 220
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.84,
+    "endSeconds": 22.72,
+    "text": "'If we allow one ship to break our law today,' she spoke with calm authority, 'tomorrow twenty ships will sail through our living rooms and call it their highway.",
+    "charStart": 221,
+    "charEnd": 383
+  },
+  {
+    "index": 3,
+    "startSeconds": 22.72,
+    "endSeconds": 26.98,
+    "text": "Nuimi has ruled these waters since the days of Sundiata.",
+    "charStart": 384,
+    "charEnd": 440
+  },
+  {
+    "index": 4,
+    "startSeconds": 26.98,
+    "endSeconds": 32.58,
+    "text": "We do not ask for gifts; we collect the legitimate toll of our ancestors' soil.'",
+    "charStart": 441,
+    "charEnd": 521
+  }
+]

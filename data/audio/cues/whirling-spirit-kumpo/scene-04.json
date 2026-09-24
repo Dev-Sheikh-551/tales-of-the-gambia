@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.42,
+    "text": "The Kumpo suddenly halted, bowing low before the assembled elders.",
+    "charStart": 0,
+    "charEnd": 66
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.42,
+    "endSeconds": 13.73,
+    "text": "With trembling hands, Bakary picked up a wooden kajando spade and stepped into line beside his village brothers.",
+    "charStart": 67,
+    "charEnd": 179
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.73,
+    "endSeconds": 23.98,
+    "text": "The Kumpo tapped the earth three times before him with its staff, leaving a circle of white river sand as a mark of reconciliation and blessing.",
+    "charStart": 180,
+    "charEnd": 324
+  },
+  {
+    "index": 3,
+    "startSeconds": 23.98,
+    "endSeconds": 38.23,
+    "text": "By dawn, the rice dikes were built, water flowed peacefully to the fields, and the spirit vanished back into the leafy shadows of the fromager, leaving a united village singing in the morning dew.",
+    "charStart": 325,
+    "charEnd": 521
+  }
+]

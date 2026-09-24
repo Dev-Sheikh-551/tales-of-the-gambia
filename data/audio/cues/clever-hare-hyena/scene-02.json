@@ -1,0 +1,74 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.99,
+    "text": "By midday, the heat climbed into the sky like flame off dry wood.",
+    "charStart": 0,
+    "charEnd": 65
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.99,
+    "endSeconds": 9.6,
+    "text": "Leuk swung his short-handled hoe with rhythmic precision, turning over the rich earth furrow by furrow.",
+    "charStart": 66,
+    "charEnd": 169
+  },
+  {
+    "index": 2,
+    "startSeconds": 9.6,
+    "endSeconds": 14.68,
+    "text": "But Bouki leaned against his hoe, mopping his forehead with a leafy branch.",
+    "charStart": 170,
+    "charEnd": 245
+  },
+  {
+    "index": 3,
+    "startSeconds": 14.68,
+    "endSeconds": 22.85,
+    "text": "'Ah, Leuk,' Bouki groaned, clutching his side with exaggerated sorrow, 'a sudden fever has seized my bones!",
+    "charStart": 246,
+    "charEnd": 353
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.85,
+    "endSeconds": 26.21,
+    "text": "My head spins like a top.",
+    "charStart": 354,
+    "charEnd": 379
+  },
+  {
+    "index": 5,
+    "startSeconds": 26.21,
+    "endSeconds": 28.19,
+    "text": "I must rest under the shade of the baobab for just a little while, or I shall surely perish.'",
+    "charStart": 380,
+    "charEnd": 473
+  },
+  {
+    "index": 6,
+    "startSeconds": 28.19,
+    "endSeconds": 31.62,
+    "text": "Leuk smiled knowingly, his paws never pausing.",
+    "charStart": 474,
+    "charEnd": 520
+  },
+  {
+    "index": 7,
+    "startSeconds": 31.62,
+    "endSeconds": 34.46,
+    "text": "'Rest well, Brother Bouki,' he replied.",
+    "charStart": 521,
+    "charEnd": 560
+  },
+  {
+    "index": 8,
+    "startSeconds": 34.46,
+    "endSeconds": 37.77,
+    "text": "'The hoe does not ask who watches, only who digs.'",
+    "charStart": 561,
+    "charEnd": 611
+  }
+]

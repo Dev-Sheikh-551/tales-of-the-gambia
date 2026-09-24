@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.82,
+    "text": "The old woman smiled, and her eyes sparkled like stars in the evening tide.",
+    "charStart": 0,
+    "charEnd": 75
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.82,
+    "endSeconds": 10.31,
+    "text": "She dipped Kumba's calabash into the water, and it emerged gleaming like polished ivory.",
+    "charStart": 76,
+    "charEnd": 164
+  },
+  {
+    "index": 2,
+    "startSeconds": 10.31,
+    "endSeconds": 16.4,
+    "text": "Then she offered Kumba three small eggs from beneath her shawl: 'Take these, child of peace.",
+    "charStart": 165,
+    "charEnd": 257
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.4,
+    "endSeconds": 23.67,
+    "text": "Break the first when you enter the deep forest; break the second outside your village; and break the third inside your room.'",
+    "charStart": 258,
+    "charEnd": 383
+  },
+  {
+    "index": 4,
+    "startSeconds": 23.67,
+    "endSeconds": 33.12,
+    "text": "When Kumba broke the eggs, they did not crack with yolk — they opened with herds of healthy cattle, bolts of indigo cloth, and shining gold ornaments.",
+    "charStart": 384,
+    "charEnd": 534
+  }
+]

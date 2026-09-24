@@ -1,0 +1,53 @@
+{
+  "storySlug": "the-little-pangolin-who-counted-stars",
+  "title": "The Little Pangolin Who Counted Stars",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-23T16:35:40.153601+00:00",
+  "totalScenes": 2,
+  "totalDurationSeconds": 34.15,
+  "totalFileSizeBytes": 258216,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "When the Crickets Begin to Hum",
+      "sourceTextHash": "eb0430ae2329",
+      "audioFile": "/audio/stories/the-little-pangolin-who-counted-stars/scene-01-narration.mp3",
+      "durationSeconds": 19.45,
+      "fileSizeBytes": 147576,
+      "substitutions": [
+        {
+          "original": "Abuko",
+          "replacement": "Ah-boo-ko"
+        },
+        {
+          "original": "Pangolin",
+          "replacement": "pang-oh-lin"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "One, Two, Sleepy Eyes",
+      "sourceTextHash": "3a38924165c3",
+      "audioFile": "/audio/stories/the-little-pangolin-who-counted-stars/scene-02-narration.mp3",
+      "durationSeconds": 14.7,
+      "fileSizeBytes": 110640,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "Pangolin",
+          "replacement": "pang-oh-lin"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

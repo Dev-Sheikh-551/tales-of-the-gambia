@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 10.12,
+    "text": "At the edge of the village of Brefet rose the ancient fromager—a silk-cotton tree so massive that ten men joining hands could not encircle its trunk.",
+    "charStart": 0,
+    "charEnd": 149
+  },
+  {
+    "index": 1,
+    "startSeconds": 10.12,
+    "endSeconds": 20.83,
+    "text": "As the sun sank below the palm canopy, painting the clouds in crimson and ash, the village youth gathered to repair the communal rice dikes before the heavy rains.",
+    "charStart": 150,
+    "charEnd": 313
+  },
+  {
+    "index": 2,
+    "startSeconds": 20.83,
+    "endSeconds": 26.92,
+    "text": "But young Bakary, newly returned from years in the coastal city, scoffed at the work.",
+    "charStart": 314,
+    "charEnd": 399
+  },
+  {
+    "index": 3,
+    "startSeconds": 26.92,
+    "endSeconds": 31.25,
+    "text": "'Why should we work for the community for free?'",
+    "charStart": 400,
+    "charEnd": 448
+  },
+  {
+    "index": 4,
+    "startSeconds": 31.25,
+    "endSeconds": 32.7,
+    "text": "Bakary laughed.",
+    "charStart": 449,
+    "charEnd": 464
+  },
+  {
+    "index": 5,
+    "startSeconds": 32.7,
+    "endSeconds": 35.77,
+    "text": "'In the city, every man looks after his own pocket.'",
+    "charStart": 465,
+    "charEnd": 517
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 6.15,
+    "text": "In a quiet village near the great river lived two girls who shared the same father and the same name: Kumba.",
+    "charStart": 0,
+    "charEnd": 108
+  },
+  {
+    "index": 1,
+    "startSeconds": 6.15,
+    "endSeconds": 9.71,
+    "text": "But their lives were as different as the sun and the dry dust.",
+    "charStart": 109,
+    "charEnd": 171
+  },
+  {
+    "index": 2,
+    "startSeconds": 9.71,
+    "endSeconds": 16.91,
+    "text": "Kumba Am Ndey, whose mother ruled the household, slept on soft woven mats and wore necklaces of polished amber.",
+    "charStart": 172,
+    "charEnd": 283
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.91,
+    "endSeconds": 29.2,
+    "text": "But Kumba Amul Ndey, whose mother had passed into the realm of the ancestors, rose before the first rooster crowed to pound millet, sweep the compound, and fetch river water with bruised hands.",
+    "charStart": 284,
+    "charEnd": 477
+  }
+]

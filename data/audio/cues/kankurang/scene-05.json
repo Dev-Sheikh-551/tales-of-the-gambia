@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 10.72,
+    "text": "When morning broke over the broad waters of the River Gambia, the boys emerged from the sacred grove, their heads held high and their hearts fortified with wisdom.",
+    "charStart": 0,
+    "charEnd": 163
+  },
+  {
+    "index": 1,
+    "startSeconds": 10.72,
+    "endSeconds": 16.64,
+    "text": "The Kankurang stood atop the high red bank, silent as an ancient monument.",
+    "charStart": 164,
+    "charEnd": 238
+  },
+  {
+    "index": 2,
+    "startSeconds": 16.64,
+    "endSeconds": 27.09,
+    "text": "As the boys sang the songs of completion and returned to their rejoicing families, the red figure dissolved quietly back into the deep woods.",
+    "charStart": 239,
+    "charEnd": 380
+  },
+  {
+    "index": 3,
+    "startSeconds": 27.09,
+    "endSeconds": 41.48,
+    "text": "For centuries upon centuries, the tradition remains unbroken: so long as the river flows and the mahogany bears bark, the guardian will rise whenever the people need to remember who they are.",
+    "charStart": 381,
+    "charEnd": 572
+  }
+]

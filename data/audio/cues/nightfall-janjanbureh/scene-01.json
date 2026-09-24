@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.43,
+    "text": "The wooden ferry rests moored against the weathered wooden pilings at Janjanbureh.",
+    "charStart": 0,
+    "charEnd": 82
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.43,
+    "endSeconds": 9.67,
+    "text": "The river flows like liquid amber under the rising harvest moon.",
+    "charStart": 83,
+    "charEnd": 147
+  },
+  {
+    "index": 2,
+    "startSeconds": 9.67,
+    "endSeconds": 20.23,
+    "text": "From the tall mahogany trees on the opposite shore, a lone nightjar sings two sweet, melodious notes, signaling to all the world that it is time to rest.",
+    "charStart": 148,
+    "charEnd": 301
+  }
+]

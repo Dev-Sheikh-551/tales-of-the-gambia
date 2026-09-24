@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.22,
+    "text": "When naval expeditions attempted to march into the interior, they found the land itself had become a fortress.",
+    "charStart": 0,
+    "charEnd": 110
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.22,
+    "endSeconds": 15.0,
+    "text": "Foday Kaba’s scouts felled gigantic baobabs across the narrow creeks, blocking gunboats in the shallows.",
+    "charStart": 111,
+    "charEnd": 215
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.0,
+    "endSeconds": 24.87,
+    "text": "In the swampy labyrinth where mosquitoes swarmed like smoke, every bend in the mangrove concealed riflemen standing chest-deep in water.",
+    "charStart": 216,
+    "charEnd": 352
+  },
+  {
+    "index": 3,
+    "startSeconds": 24.87,
+    "endSeconds": 39.75,
+    "text": "Troops marched in circles for days, baffled by paths that vanished at high tide and reappeared at dusk, while Foday Kaba’s cavalry slipped silently from village to village along secret sand ridges.",
+    "charStart": 353,
+    "charEnd": 550
+  }
+]

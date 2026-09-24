@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.67,
+    "text": "Through the village lanes and along the boundary paths of the farmland, the Kankurang surged with breathtaking speed.",
+    "charStart": 0,
+    "charEnd": 117
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.67,
+    "endSeconds": 14.07,
+    "text": "His red fibers trailed like living flames, and in each hand he gripped a heavy iron cutlass.",
+    "charStart": 118,
+    "charEnd": 210
+  },
+  {
+    "index": 2,
+    "startSeconds": 14.07,
+    "endSeconds": 19.01,
+    "text": "As he leapt into the moonlit square, he struck the two blades together — CLANG!",
+    "charStart": 211,
+    "charEnd": 290
+  },
+  {
+    "index": 3,
+    "startSeconds": 19.01,
+    "endSeconds": 22.19,
+    "text": "— sending bright sparks showering into the dust.",
+    "charStart": 291,
+    "charEnd": 339
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.19,
+    "endSeconds": 31.56,
+    "text": "Children scurried indoors, women ceased their chatter, and any who harbored deceit in their thoughts felt a cold shiver down their spines.",
+    "charStart": 340,
+    "charEnd": 478
+  },
+  {
+    "index": 5,
+    "startSeconds": 31.56,
+    "endSeconds": 39.2,
+    "text": "The clanging iron proclaimed that peace, order, and absolute restraint now governed the settlement.",
+    "charStart": 479,
+    "charEnd": 578
+  }
+]

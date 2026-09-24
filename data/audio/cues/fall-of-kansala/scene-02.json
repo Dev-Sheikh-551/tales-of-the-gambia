@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 6.54,
+    "text": "In the dry season of 1867, dust rose on the eastern horizon like a thunderhead.",
+    "charStart": 0,
+    "charEnd": 79
+  },
+  {
+    "index": 1,
+    "startSeconds": 6.54,
+    "endSeconds": 15.79,
+    "text": "The allied armies of the Fula jihad, led by Almamy Alpha of Timbo, had crossed the river with thousands of cavalry and riflemen.",
+    "charStart": 80,
+    "charEnd": 208
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.79,
+    "endSeconds": 24.95,
+    "text": "Inside the imperial council chamber, messengers delivered the ultimatum: surrender the fortress, tear down the ancestral shrines, and bend the knee.",
+    "charStart": 209,
+    "charEnd": 357
+  },
+  {
+    "index": 3,
+    "startSeconds": 24.95,
+    "endSeconds": 31.34,
+    "text": "Mansa Dianke Wali rose from his carved ebony stool.",
+    "charStart": 358,
+    "charEnd": 409
+  },
+  {
+    "index": 4,
+    "startSeconds": 31.34,
+    "endSeconds": 35.05,
+    "text": "He did not raise his voice.",
+    "charStart": 410,
+    "charEnd": 437
+  },
+  {
+    "index": 5,
+    "startSeconds": 35.05,
+    "endSeconds": 37.48,
+    "text": "'A Nyancho does not bend,' he answered.",
+    "charStart": 438,
+    "charEnd": 477
+  },
+  {
+    "index": 6,
+    "startSeconds": 37.48,
+    "endSeconds": 39.7,
+    "text": "'A Nyancho either rules, or dies where he stands.'",
+    "charStart": 478,
+    "charEnd": 528
+  }
+]

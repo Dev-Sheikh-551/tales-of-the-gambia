@@ -1,4 +1,8 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import griotScene01 from "@/data/audio/cues/griot-baobab/scene-01.json";
+import griotScene02 from "@/data/audio/cues/griot-baobab/scene-02.json";
+import griotScene03 from "@/data/audio/cues/griot-baobab/scene-03.json";
+
 
 export const griotBaobabStory: Story = {
   id: "story-3",
@@ -128,9 +132,10 @@ export const griotBaobabStory: Story = {
           avatarTheme: "griot",
         },
       ],
-      ambience: {
-        type: "kora-strings",
-        label: "Acoustic kora resonance in open air",
+      audio: {
+        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-01-narration.mp3",
+        narrationDurationSeconds: 21.8,
+        cues: griotScene01 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -166,9 +171,10 @@ export const griotBaobabStory: Story = {
           avatarTheme: "griot",
         },
       ],
-      ambience: {
-        type: "village-fire",
-        label: "Campfire embers snapping gently",
+      audio: {
+        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-02-narration.mp3",
+        narrationDurationSeconds: 25.48,
+        cues: griotScene02 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -204,9 +210,10 @@ export const griotBaobabStory: Story = {
           avatarTheme: "griot",
         },
       ],
-      ambience: {
-        type: "river-flow",
-        label: "Quiet river currents under night sky",
+      audio: {
+        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-03-narration.mp3",
+        narrationDurationSeconds: 21.68,
+        cues: griotScene03 as NarrationCue[],
       },
       durationSeconds: 15,
     },

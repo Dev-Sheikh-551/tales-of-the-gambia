@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.63,
+    "text": "The village elders were not fools.",
+    "charStart": 0,
+    "charEnd": 34
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.63,
+    "endSeconds": 6.77,
+    "text": "They decreed that no words spoken on dry land would suffice.",
+    "charStart": 35,
+    "charEnd": 95
+  },
+  {
+    "index": 2,
+    "startSeconds": 6.77,
+    "endSeconds": 17.44,
+    "text": "On the morning of the new moon, both entire villages gathered at the sacred river crossing of the Bintang tributary, where crystal water flowed over smooth black river stones.",
+    "charStart": 96,
+    "charEnd": 271
+  },
+  {
+    "index": 3,
+    "startSeconds": 17.44,
+    "endSeconds": 26.76,
+    "text": "Here, ancestral law held that anyone who swore a false oath while standing ankle-deep in the current would be struck dumb and swallowed by the sinking mud.",
+    "charStart": 272,
+    "charEnd": 427
+  },
+  {
+    "index": 4,
+    "startSeconds": 26.76,
+    "endSeconds": 32.07,
+    "text": "As Koochi stepped into the cool water, his knees trembled violently.",
+    "charStart": 428,
+    "charEnd": 496
+  },
+  {
+    "index": 5,
+    "startSeconds": 32.07,
+    "endSeconds": 34.29,
+    "text": "The air was dead silent.",
+    "charStart": 497,
+    "charEnd": 521
+  },
+  {
+    "index": 6,
+    "startSeconds": 34.29,
+    "endSeconds": 37.02,
+    "text": "Hundreds of eyes watched his lips.",
+    "charStart": 522,
+    "charEnd": 556
+  }
+]

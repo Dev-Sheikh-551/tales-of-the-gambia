@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 8.06,
+    "text": "At noon, when the sun stood directly overhead and the red earth shimmered like hot iron, Alieu sat beneath an acacia to drink his meager water.",
+    "charStart": 0,
+    "charEnd": 143
+  },
+  {
+    "index": 1,
+    "startSeconds": 8.06,
+    "endSeconds": 13.4,
+    "text": "Just then, a tiny golden weaver bird fell from a branch, panting with dry throat.",
+    "charStart": 144,
+    "charEnd": 225
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.4,
+    "endSeconds": 16.75,
+    "text": "Alieu poured a spoonful into his palm for the bird to drink.",
+    "charStart": 226,
+    "charEnd": 286
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.75,
+    "endSeconds": 22.91,
+    "text": "Next, a gray sand lizard dragged itself across the dust; Alieu wet a leaf for the creature.",
+    "charStart": 287,
+    "charEnd": 378
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.91,
+    "endSeconds": 28.42,
+    "text": "Finally, an old blind wayfarer stumbled down the path, whispering for moisture.",
+    "charStart": 379,
+    "charEnd": 458
+  },
+  {
+    "index": 5,
+    "startSeconds": 28.42,
+    "endSeconds": 37.45,
+    "text": "Without hesitating, Alieu pressed the remainder of his gourd into the old man’s trembling hands, keeping not a single drop for himself.",
+    "charStart": 459,
+    "charEnd": 594
+  }
+]

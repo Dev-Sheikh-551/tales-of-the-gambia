@@ -1,4 +1,11 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import kelefaScene01 from "@/data/audio/cues/kelefa-saane/scene-01.json";
+import kelefaScene02 from "@/data/audio/cues/kelefa-saane/scene-02.json";
+import kelefaScene03 from "@/data/audio/cues/kelefa-saane/scene-03.json";
+import kelefaScene04 from "@/data/audio/cues/kelefa-saane/scene-04.json";
+import kelefaScene05 from "@/data/audio/cues/kelefa-saane/scene-05.json";
+import kelefaScene06 from "@/data/audio/cues/kelefa-saane/scene-06.json";
+
 
 /**
  * Kelefa Saane — The Warrior of Kaabu
@@ -203,9 +210,10 @@ This is his story, as best as it can be told.`,
         type: "dust-particles",
         intensity: "subtle",
       },
-      ambience: {
-        type: "kora-strings",
-        label: "Kora strings",
+      audio: {
+        narrationUrl: "/audio/stories/kelefa-saane/scene-01-narration.mp3",
+        narrationDurationSeconds: 68.0,
+        cues: kelefaScene01 as NarrationCue[],
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -256,9 +264,10 @@ His mother, they say, loved him fiercely. And she feared for him just as fiercel
         type: "wind",
         intensity: "subtle",
       },
-      ambience: {
-        type: "village-fire",
-        label: "Village fire",
+      audio: {
+        narrationUrl: "/audio/stories/kelefa-saane/scene-02-narration.mp3",
+        narrationDurationSeconds: 71.08,
+        cues: kelefaScene02 as NarrationCue[],
       },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -311,9 +320,10 @@ He did not come back.`,
         type: "river-ripples",
         intensity: "gentle",
       },
-      ambience: {
-        type: "river-flow",
-        label: "River at dawn",
+      audio: {
+        narrationUrl: "/audio/stories/kelefa-saane/scene-03-narration.mp3",
+        narrationDurationSeconds: 62.0,
+        cues: kelefaScene03 as NarrationCue[],
       },
       durationSeconds: 110,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -366,9 +376,10 @@ And because he did that, the griots remembered him.`,
         type: "dust-particles",
         intensity: "gentle",
       },
-      ambience: {
-        type: "gentle-wind",
-        label: "Wind across the river",
+      audio: {
+        narrationUrl: "/audio/stories/kelefa-saane/scene-04-narration.mp3",
+        narrationDurationSeconds: 70.22,
+        cues: kelefaScene04 as NarrationCue[],
       },
       durationSeconds: 110,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -423,9 +434,10 @@ And in crossing it, he reminds us what it means to live without flinching.`,
         type: "night-stars",
         intensity: "subtle",
       },
-      ambience: {
-        type: "kora-strings",
-        label: "Kora strings",
+      audio: {
+        narrationUrl: "/audio/stories/kelefa-saane/scene-05-narration.mp3",
+        narrationDurationSeconds: 81.85,
+        cues: kelefaScene05 as NarrationCue[],
       },
       durationSeconds: 120,
       transition: { type: "fade", durationSeconds: 2.5 },
@@ -481,9 +493,10 @@ They always will.`,
         type: "night-stars",
         intensity: "subtle",
       },
-      ambience: {
-        type: "kora-strings",
-        label: "Kora",
+      audio: {
+        narrationUrl: "/audio/stories/kelefa-saane/scene-06-narration.mp3",
+        narrationDurationSeconds: 69.67,
+        cues: kelefaScene06 as NarrationCue[],
       },
       durationSeconds: 130,
       transition: { type: "fade", durationSeconds: 3 },

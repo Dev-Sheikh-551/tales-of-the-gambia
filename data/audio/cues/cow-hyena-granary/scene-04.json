@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.34,
+    "text": "Hare said nothing of his suspicions.",
+    "charStart": 0,
+    "charEnd": 36
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.34,
+    "endSeconds": 12.72,
+    "text": "Instead, before sunset, he quietly mixed fine river clay with white wood ash from the cooking fire, spreading a smooth, invisible circle around the stilts of the benteng.",
+    "charStart": 37,
+    "charEnd": 207
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.72,
+    "endSeconds": 26.04,
+    "text": "When dawn came, the thieves' tracks were pressed into the clay with photographic clarity: broad, uneven pads and dragging claws that led straight across the clearing and stopped right at the front door of Hyena's sleeping hut!",
+    "charStart": 208,
+    "charEnd": 434
+  },
+  {
+    "index": 3,
+    "startSeconds": 26.04,
+    "endSeconds": 37.08,
+    "text": "Confronted before the council of animals, Hyena dropped his head in disgrace and fled into the thorn thickets, leaving the honest companions to share what remained in peace.",
+    "charStart": 435,
+    "charEnd": 608
+  }
+]

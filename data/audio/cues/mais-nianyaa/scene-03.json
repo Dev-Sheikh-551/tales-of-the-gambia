@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.12,
+    "text": "Rather than summon the village guards to search the huts, Grandmother Awa held up her hand.",
+    "charStart": 0,
+    "charEnd": 91
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.12,
+    "endSeconds": 13.73,
+    "text": "She placed a large earthenware water pot in the center of the dark storeroom, covered it with a white sheet, and called all the daughters and cousins into the room.",
+    "charStart": 92,
+    "charEnd": 256
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.73,
+    "endSeconds": 18.96,
+    "text": "'The spirits of our ancestors do not tolerate deceit,' the grandmother said quietly.",
+    "charStart": 257,
+    "charEnd": 341
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.96,
+    "endSeconds": 26.06,
+    "text": "'Let each daughter enter this room alone in the dark, place her right hand into the covered jar, and leave.",
+    "charStart": 342,
+    "charEnd": 449
+  },
+  {
+    "index": 4,
+    "startSeconds": 26.06,
+    "endSeconds": 28.42,
+    "text": "If her heart is clean, the water will smell of sweet mint.",
+    "charStart": 450,
+    "charEnd": 508
+  },
+  {
+    "index": 5,
+    "startSeconds": 28.42,
+    "endSeconds": 35.65,
+    "text": "If the jewelry is returned into the pot before the candle burns down, no name will ever be spoken in shame.'",
+    "charStart": 509,
+    "charEnd": 617
+  }
+]

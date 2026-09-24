@@ -1,0 +1,158 @@
+{
+  "storySlug": "the-ballad-of-massaneh-ceesay",
+  "title": "The Ballad of Massaneh Ceesay",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.91,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T15:29:16.004710+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 200.98,
+  "totalFileSizeBytes": 1467480,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Merchant of Bintang Bolong",
+      "sourceTextHash": "1bef43f4ff80",
+      "audioFile": "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-narration.mp3",
+      "durationSeconds": 38.77,
+      "fileSizeBytes": 284136,
+      "substitutions": [
+        {
+          "original": "Bolong",
+          "replacement": "boh-long"
+        },
+        {
+          "original": "Senegambia",
+          "replacement": "Sen-eh-gam-bee-ah"
+        },
+        {
+          "original": "Massaneh Ceesay",
+          "replacement": "Mah-sah-neh Seh-say"
+        },
+        {
+          "original": "Massaneh",
+          "replacement": "Mah-sah-neh"
+        },
+        {
+          "original": "Foni Bondali",
+          "replacement": "Foh-nee Bon-dah-lee"
+        },
+        {
+          "original": "Bintang",
+          "replacement": "Been-tahng"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Vow by the Water's Edge",
+      "sourceTextHash": "4a4a23780712",
+      "audioFile": "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-narration.mp3",
+      "durationSeconds": 38.25,
+      "fileSizeBytes": 280848,
+      "substitutions": [
+        {
+          "original": "Bakary Niuminko",
+          "replacement": "Bah-kah-ree Nyoo-meen-koh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Caravan of Temptation",
+      "sourceTextHash": "836017db6519",
+      "audioFile": "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-narration.mp3",
+      "durationSeconds": 40.27,
+      "fileSizeBytes": 290832,
+      "substitutions": [
+        {
+          "original": "Massaneh Ceesay",
+          "replacement": "Mah-sah-neh Seh-say"
+        },
+        {
+          "original": "Massaneh Ceesay",
+          "replacement": "Mah-sah-neh Seh-say"
+        },
+        {
+          "original": "Massaneh",
+          "replacement": "Mah-sah-neh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Griot's Warning",
+      "sourceTextHash": "77bbfb10b73c",
+      "audioFile": "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-narration.mp3",
+      "durationSeconds": 39.48,
+      "fileSizeBytes": 291168,
+      "substitutions": [
+        {
+          "original": "bolong",
+          "replacement": "boh-long"
+        },
+        {
+          "original": "calabash",
+          "replacement": "kal-uh-bash"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Massaneh",
+          "replacement": "Mah-sah-neh"
+        },
+        {
+          "original": "Massaneh",
+          "replacement": "Mah-sah-neh"
+        },
+        {
+          "original": "Massaneh",
+          "replacement": "Mah-sah-neh"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Morning of Destiny",
+      "sourceTextHash": "95a9e0598c3d",
+      "audioFile": "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-narration.mp3",
+      "durationSeconds": 44.2,
+      "fileSizeBytes": 320496,
+      "substitutions": [
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Senegambia",
+          "replacement": "Sen-eh-gam-bee-ah"
+        },
+        {
+          "original": "Massaneh Ceesay",
+          "replacement": "Mah-sah-neh Seh-say"
+        },
+        {
+          "original": "Massaneh",
+          "replacement": "Mah-sah-neh"
+        },
+        {
+          "original": "Foni Bondali",
+          "replacement": "Foh-nee Bon-dah-lee"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

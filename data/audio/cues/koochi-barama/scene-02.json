@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 8.6,
+    "text": "Trouble arrived when the rainy season flooded the valley between two neighboring villages that had lived in peace since their grandfathers' days.",
+    "charStart": 0,
+    "charEnd": 145
+  },
+  {
+    "index": 1,
+    "startSeconds": 8.6,
+    "endSeconds": 15.79,
+    "text": "Both claimed ownership of a fertile high-ground strip where five hundred baskets of sweet rice could be harvested.",
+    "charStart": 146,
+    "charEnd": 260
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.79,
+    "endSeconds": 29.4,
+    "text": "To avoid armed strife with their heavy kajando spades, the elders agreed to consult the only person who had tended cattle along that ridge during the previous dry season: Koochi Barama.",
+    "charStart": 261,
+    "charEnd": 446
+  },
+  {
+    "index": 3,
+    "startSeconds": 29.4,
+    "endSeconds": 41.62,
+    "text": "Knowing that both village headmen were eager to reward him, Koochi whispered conflicting promises to each, weaving two opposite webs to win favors from both sides.",
+    "charStart": 447,
+    "charEnd": 610
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "storySlug": "mais-stolen-nianyaa",
+  "title": "Mai\u2019s Stolen Nianyaa",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.93,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T15:51:29.607198+00:00",
+  "totalScenes": 4,
+  "totalDurationSeconds": 142.47,
+  "totalFileSizeBytes": 1087344,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Box of Ancestral Amber",
+      "sourceTextHash": "69266afef2dd",
+      "audioFile": "/audio/stories/mais-stolen-nianyaa/scene-01-narration.mp3",
+      "durationSeconds": 35.8,
+      "fileSizeBytes": 269136,
+      "substitutions": [
+        {
+          "original": "nianyaa",
+          "replacement": "nyahn-yah"
+        },
+        {
+          "original": "Binta",
+          "replacement": "Been-tah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Cry at First Light",
+      "sourceTextHash": "72dcc9fb3fa6",
+      "audioFile": "/audio/stories/mais-stolen-nianyaa/scene-02-narration.mp3",
+      "durationSeconds": 32.27,
+      "fileSizeBytes": 249888,
+      "substitutions": [
+        {
+          "original": "bantaba",
+          "replacement": "Bahn-tah-bah"
+        },
+        {
+          "original": "Binta",
+          "replacement": "Been-tah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Circle of the Water Pot",
+      "sourceTextHash": "26be02ad95db",
+      "audioFile": "/audio/stories/mais-stolen-nianyaa/scene-03-narration.mp3",
+      "durationSeconds": 35.65,
+      "fileSizeBytes": 273408,
+      "substitutions": [],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Sisters' Embrace",
+      "sourceTextHash": "d0271647e962",
+      "audioFile": "/audio/stories/mais-stolen-nianyaa/scene-04-narration.mp3",
+      "durationSeconds": 38.75,
+      "fileSizeBytes": 294912,
+      "substitutions": [
+        {
+          "original": "Binta",
+          "replacement": "Been-tah"
+        },
+        {
+          "original": "Binta",
+          "replacement": "Been-tah"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

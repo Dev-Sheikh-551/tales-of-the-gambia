@@ -1,0 +1,353 @@
+{
+  "storySlug": "kelefa-saane",
+  "title": "Kelefa Saane",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.91,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T09:36:06.706707+00:00",
+  "totalScenes": 6,
+  "totalDurationSeconds": 422.82,
+  "totalFileSizeBytes": 2980752,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "What the Kora Remembers",
+      "sourceTextHash": "01e22806eafb",
+      "audioFile": "/audio/stories/kelefa-saane/scene-01-narration.mp3",
+      "durationSeconds": 68.0,
+      "fileSizeBytes": 488232,
+      "substitutions": [
+        {
+          "original": "Mandinka",
+          "replacement": "Mahn-deen-kah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "griot",
+          "replacement": "gree-oh"
+        },
+        {
+          "original": "griot",
+          "replacement": "gree-oh"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Casamance",
+          "replacement": "Kah-sah-mahns"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "A Son of Kaabu",
+      "sourceTextHash": "c1ac80e86eed",
+      "audioFile": "/audio/stories/kelefa-saane/scene-02-narration.mp3",
+      "durationSeconds": 71.08,
+      "fileSizeBytes": 505560,
+      "substitutions": [
+        {
+          "original": "Mandinka",
+          "replacement": "Mahn-deen-kah"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Senegambia",
+          "replacement": "Sen-eh-gam-bee-ah"
+        },
+        {
+          "original": "Fula",
+          "replacement": "Foo-lah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Farewell",
+      "sourceTextHash": "4bf11cbafc9d",
+      "audioFile": "/audio/stories/kelefa-saane/scene-03-narration.mp3",
+      "durationSeconds": 62.0,
+      "fileSizeBytes": 432936,
+      "substitutions": [
+        {
+          "original": "griot",
+          "replacement": "gree-oh"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The North Bank",
+      "sourceTextHash": "6221d768e7b4",
+      "audioFile": "/audio/stories/kelefa-saane/scene-04-narration.mp3",
+      "durationSeconds": 70.22,
+      "fileSizeBytes": 490896,
+      "substitutions": [
+        {
+          "original": "Mandinka",
+          "replacement": "Mahn-deen-kah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefaba",
+          "replacement": "Keh-leh-fah-bah"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Bamba Suso",
+          "replacement": "Bahm-bah Soo-so"
+        },
+        {
+          "original": "Dembo Kanute",
+          "replacement": "Dem-boh Kah-noo-teh"
+        },
+        {
+          "original": "Bansang",
+          "replacement": "Bahn-sang"
+        },
+        {
+          "original": "Brikama",
+          "replacement": "Bree-kah-mah"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "What the Griots Keep",
+      "sourceTextHash": "72aa8fd4de94",
+      "audioFile": "/audio/stories/kelefa-saane/scene-05-narration.mp3",
+      "durationSeconds": 81.85,
+      "fileSizeBytes": 581712,
+      "substitutions": [
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "griot",
+          "replacement": "gree-oh"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefaba",
+          "replacement": "Keh-leh-fah-bah"
+        },
+        {
+          "original": "Kelefaba",
+          "replacement": "Keh-leh-fah-bah"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 6,
+      "title": "Listen",
+      "sourceTextHash": "d36213890193",
+      "audioFile": "/audio/stories/kelefa-saane/scene-06-narration.mp3",
+      "durationSeconds": 69.67,
+      "fileSizeBytes": 481416,
+      "substitutions": [
+        {
+          "original": "Mandinka",
+          "replacement": "Mahn-deen-kah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa Saane",
+          "replacement": "Keh-leh-fah Sah-neh"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kelefa",
+          "replacement": "Keh-leh-fah"
+        },
+        {
+          "original": "Kaabu",
+          "replacement": "Kah-boo"
+        },
+        {
+          "original": "Ziguinchor",
+          "replacement": "Zig-in-shor"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        },
+        {
+          "original": "Banjul",
+          "replacement": "Bahn-jool"
+        },
+        {
+          "original": "Dakar",
+          "replacement": "Dah-kar"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

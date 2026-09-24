@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.41,
+    "text": "Near Janjanbureh, where the river splits around the historic island, a broad white sandbank emerged from the shallows.",
+    "charStart": 0,
+    "charEnd": 118
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.41,
+    "endSeconds": 15.46,
+    "text": "The Sacred Ibis—venerated for her solemn step and curved beak—struck the water three times to summon the feathered parliament.",
+    "charStart": 119,
+    "charEnd": 245
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.46,
+    "endSeconds": 22.18,
+    "text": "The Great Fish Eagle took his seat on a stranded driftwood trunk, flexing talons that could snap an oar.",
+    "charStart": 246,
+    "charEnd": 350
+  },
+  {
+    "index": 3,
+    "startSeconds": 22.18,
+    "endSeconds": 33.23,
+    "text": "Beside him stood the Marabou Stork, hunched in his gray coat like an impatient judge, while thousands of herons, egrets, and tiny sandpipers crowded the muddy edges.",
+    "charStart": 351,
+    "charEnd": 516
+  }
+]

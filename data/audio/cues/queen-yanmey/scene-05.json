@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.66,
+    "text": "The British captain was escorted ashore to the shaded veranda of Barra court.",
+    "charStart": 0,
+    "charEnd": 77
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.66,
+    "endSeconds": 6.25,
+    "text": "He did not laugh now.",
+    "charStart": 78,
+    "charEnd": 99
+  },
+  {
+    "index": 2,
+    "startSeconds": 6.25,
+    "endSeconds": 18.66,
+    "text": "Before Queen Yanmey and the assembled elders, he paid every iron bar of the overdue customs, doubled by a penalty fine of silver thalers, and signed an official pledge of future compliance.",
+    "charStart": 100,
+    "charEnd": 289
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.66,
+    "endSeconds": 25.32,
+    "text": "When the brig finally sailed out into the Atlantic, it dipped its ensign three times in salute to the queen.",
+    "charStart": 290,
+    "charEnd": 398
+  },
+  {
+    "index": 4,
+    "startSeconds": 25.32,
+    "endSeconds": 37.27,
+    "text": "On the sands of Barra Point, Queen Yanmey watched the sails shrink into the horizon, having proved that true sovereignty belongs to those who stand firm in defense of their heritage.",
+    "charStart": 399,
+    "charEnd": 581
+  }
+]

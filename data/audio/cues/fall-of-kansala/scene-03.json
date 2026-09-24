@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.77,
+    "text": "The siege began with the roar of brass cannons.",
+    "charStart": 0,
+    "charEnd": 47
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.77,
+    "endSeconds": 12.61,
+    "text": "For eleven days and eleven nights, the red walls of Kansala shuddered under cannonades and surging infantry assaults.",
+    "charStart": 48,
+    "charEnd": 165
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.61,
+    "endSeconds": 20.19,
+    "text": "Wave after wave broke against the palisades, repelled by the archery and musketry of the defenders.",
+    "charStart": 166,
+    "charEnd": 265
+  },
+  {
+    "index": 3,
+    "startSeconds": 20.19,
+    "endSeconds": 39.25,
+    "text": "The wells inside the fortress ran dry; the grain storehouses burned into ash, but Dianke Wali walked the ramparts each morning in white damask robes, encouraging his soldiers and speaking words of calm courage to the mothers and children gathered in the inner keep.",
+    "charStart": 266,
+    "charEnd": 531
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.0,
+    "text": "At dawn on the eleventh day, the main gate collapsed.",
+    "charStart": 0,
+    "charEnd": 53
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.0,
+    "endSeconds": 8.18,
+    "text": "Thousands poured into the breached courtyard, shouting victory.",
+    "charStart": 54,
+    "charEnd": 117
+  },
+  {
+    "index": 2,
+    "startSeconds": 8.18,
+    "endSeconds": 15.99,
+    "text": "But Mansa Dianke Wali had already gathered the remaining royal council inside the subterranean gunpowder vaults.",
+    "charStart": 118,
+    "charEnd": 230
+  },
+  {
+    "index": 3,
+    "startSeconds": 15.99,
+    "endSeconds": 23.73,
+    "text": "He looked at his commanders, nodded in solemn brotherhood, and touched a flaming torch to the iron magazines.",
+    "charStart": 231,
+    "charEnd": 340
+  },
+  {
+    "index": 4,
+    "startSeconds": 23.73,
+    "endSeconds": 28.82,
+    "text": "A deafening roar shook the earth for forty miles across the savannas.",
+    "charStart": 341,
+    "charEnd": 410
+  },
+  {
+    "index": 5,
+    "startSeconds": 28.82,
+    "endSeconds": 37.75,
+    "text": "When the smoke cleared, the fortress of Kansala had vanished into legend, leaving nothing for the conquerors to chain.",
+    "charStart": 411,
+    "charEnd": 529
+  }
+]

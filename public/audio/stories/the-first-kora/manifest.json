@@ -1,0 +1,194 @@
+{
+  "storySlug": "the-first-kora",
+  "title": "The First Kora",
+  "engine": "Kokoro-82M",
+  "voice": "am_michael",
+  "speed": 0.92,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T10:15:24.684502+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 422.07,
+  "totalFileSizeBytes": 3021120,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "Before the Kora",
+      "sourceTextHash": "91694f4ba946",
+      "audioFile": "/audio/stories/the-first-kora/scene-01-narration.mp3",
+      "durationSeconds": 62.83,
+      "fileSizeBytes": 448320,
+      "substitutions": [
+        {
+          "original": "Mandinka",
+          "replacement": "Mahn-deen-kah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "Senegambia",
+          "replacement": "Sen-eh-gam-bee-ah"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Sound in the Forest",
+      "sourceTextHash": "60bdba1c9b81",
+      "audioFile": "/audio/stories/the-first-kora/scene-02-narration.mp3",
+      "durationSeconds": 86.7,
+      "fileSizeBytes": 613632,
+      "substitutions": [
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "The Teaching",
+      "sourceTextHash": "6546ef01f567",
+      "audioFile": "/audio/stories/the-first-kora/scene-03-narration.mp3",
+      "durationSeconds": 88.22,
+      "fileSizeBytes": 632880,
+      "substitutions": [
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Griots Receive It",
+      "sourceTextHash": "542a7e63fe8f",
+      "audioFile": "/audio/stories/the-first-kora/scene-04-narration.mp3",
+      "durationSeconds": 86.33,
+      "fileSizeBytes": 619704,
+      "substitutions": [
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "griots",
+          "replacement": "gree-ohs"
+        },
+        {
+          "original": "jalolu",
+          "replacement": "jah-loh-loo"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        },
+        {
+          "original": "Koriang",
+          "replacement": "Koh-ree-ahng"
+        },
+        {
+          "original": "Gambia",
+          "replacement": "Gam-bee-ah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "Twenty-One Strings",
+      "sourceTextHash": "b5b75f2704d4",
+      "audioFile": "/audio/stories/the-first-kora/scene-05-narration.mp3",
+      "durationSeconds": 98.0,
+      "fileSizeBytes": 706584,
+      "substitutions": [
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "kora",
+          "replacement": "koh-rah"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        },
+        {
+          "original": "jali",
+          "replacement": "jah-lee"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

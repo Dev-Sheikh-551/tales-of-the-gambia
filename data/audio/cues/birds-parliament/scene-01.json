@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.72,
+    "text": "The November winds arrived out of the north, veiled in fine Saharan dust that turned the afternoon sun into a pale copper disk.",
+    "charStart": 0,
+    "charEnd": 127
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.72,
+    "endSeconds": 18.99,
+    "text": "Day by day, the great River Gambia pulled back from the grassy floodplains, leaving behind scattered, isolated lagoons where silver minnows and mudfish swarmed in shrinking water.",
+    "charStart": 128,
+    "charEnd": 307
+  },
+  {
+    "index": 2,
+    "startSeconds": 18.99,
+    "endSeconds": 29.45,
+    "text": "From Senegal, Guinea, and distant northern marshes, flocks of birds arrived by the tens of thousands, their wings beating a steady rhythm against the hazy sky.",
+    "charStart": 308,
+    "charEnd": 467
+  }
+]

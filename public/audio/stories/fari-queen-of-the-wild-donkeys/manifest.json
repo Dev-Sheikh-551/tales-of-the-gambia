@@ -1,0 +1,122 @@
+{
+  "storySlug": "fari-queen-of-the-wild-donkeys",
+  "title": "Fari, Queen of the Wild Donkeys",
+  "engine": "Kokoro-82M",
+  "voice": "af_heart",
+  "speed": 0.94,
+  "language": "en",
+  "status": "production-pilot",
+  "generatedAt": "2026-09-24T15:46:11.840431+00:00",
+  "totalScenes": 5,
+  "totalDurationSeconds": 178.68,
+  "totalFileSizeBytes": 1376088,
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "title": "The Rebellion in the Scrubland",
+      "sourceTextHash": "331f294649fd",
+      "audioFile": "/audio/stories/fari-queen-of-the-wild-donkeys/scene-01-narration.mp3",
+      "durationSeconds": 36.42,
+      "fileSizeBytes": 280728,
+      "substitutions": [
+        {
+          "original": "baobab",
+          "replacement": "bah-oh-bahb"
+        },
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        },
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        },
+        {
+          "original": "kinkeliba",
+          "replacement": "keen-keh-lee-bah"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 2,
+      "title": "The Shedding of the Hides",
+      "sourceTextHash": "0b814f7a4785",
+      "audioFile": "/audio/stories/fari-queen-of-the-wild-donkeys/scene-02-narration.mp3",
+      "durationSeconds": 34.38,
+      "fileSizeBytes": 265872,
+      "substitutions": [
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        },
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 3,
+      "title": "Maidens in the King's Palace",
+      "sourceTextHash": "475ddf500bc9",
+      "audioFile": "/audio/stories/fari-queen-of-the-wild-donkeys/scene-03-narration.mp3",
+      "durationSeconds": 35.35,
+      "fileSizeBytes": 274248,
+      "substitutions": [
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        },
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        },
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        },
+        {
+          "original": "benachin",
+          "replacement": "beh-nah-cheen"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 4,
+      "title": "The Scent of the Salt Lick",
+      "sourceTextHash": "181c2fe8c169",
+      "audioFile": "/audio/stories/fari-queen-of-the-wild-donkeys/scene-04-narration.mp3",
+      "durationSeconds": 33.98,
+      "fileSizeBytes": 259320,
+      "substitutions": [
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        }
+      ],
+      "reviewStatus": "approved"
+    },
+    {
+      "sceneNumber": 5,
+      "title": "The Rhythm That Broke the Spell",
+      "sourceTextHash": "941b884e52cc",
+      "audioFile": "/audio/stories/fari-queen-of-the-wild-donkeys/scene-05-narration.mp3",
+      "durationSeconds": 38.55,
+      "fileSizeBytes": 295920,
+      "substitutions": [
+        {
+          "original": "Fari",
+          "replacement": "Fah-ree"
+        },
+        {
+          "original": "sabar",
+          "replacement": "sah-bahr"
+        }
+      ],
+      "reviewStatus": "approved"
+    }
+  ]
+}

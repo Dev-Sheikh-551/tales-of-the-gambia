@@ -1,0 +1,66 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.0,
+    "text": "The rains had washed over the red ridges of Saloum, leaving the soil soft and sweet with the smell of young green shoots.",
+    "charStart": 0,
+    "charEnd": 121
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.0,
+    "endSeconds": 12.66,
+    "text": "Leuk the Hare sat upon a fallen termite mound, his long ears twitching in the cool morning air.",
+    "charStart": 122,
+    "charEnd": 217
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.66,
+    "endSeconds": 19.3,
+    "text": "Up the sandy trail came Bouki the Hyena, his shoulders slumped and his belly rumbling like distant thunder.",
+    "charStart": 218,
+    "charEnd": 325
+  },
+  {
+    "index": 3,
+    "startSeconds": 19.3,
+    "endSeconds": 25.18,
+    "text": "'Brother Leuk,' Bouki wheezed, licking his dry chops, 'hunger is gnawing at my ribs.",
+    "charStart": 326,
+    "charEnd": 410
+  },
+  {
+    "index": 4,
+    "startSeconds": 25.18,
+    "endSeconds": 31.75,
+    "text": "If we do not farm this season, we shall have only dust to chew when the dry harmattan winds return.'",
+    "charStart": 411,
+    "charEnd": 511
+  },
+  {
+    "index": 5,
+    "startSeconds": 31.75,
+    "endSeconds": 34.19,
+    "text": "Leuk stroked his whiskers thoughtfully.",
+    "charStart": 512,
+    "charEnd": 551
+  },
+  {
+    "index": 6,
+    "startSeconds": 34.19,
+    "endSeconds": 39.1,
+    "text": "'Let us clear the fertile bottomland by the baobab tree together,' he proposed.",
+    "charStart": 552,
+    "charEnd": 631
+  },
+  {
+    "index": 7,
+    "startSeconds": 39.1,
+    "endSeconds": 41.62,
+    "text": "'Half the labor, half the harvest.'",
+    "charStart": 632,
+    "charEnd": 667
+  }
+]

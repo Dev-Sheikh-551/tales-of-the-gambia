@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 11.58,
+    "text": "One rainy afternoon, as a sudden squall lashed the Banjul foreshore, Erubami sought shelter beneath the gnarled roots of a towering silk-cotton tree near the shoreline.",
+    "charStart": 0,
+    "charEnd": 168
+  },
+  {
+    "index": 1,
+    "startSeconds": 11.58,
+    "endSeconds": 18.12,
+    "text": "In a hollow washed clean by the receding tide, his fingers touched something smooth and round.",
+    "charStart": 169,
+    "charEnd": 263
+  },
+  {
+    "index": 2,
+    "startSeconds": 18.12,
+    "endSeconds": 27.68,
+    "text": "He pulled free an ancient calabash, polished like dark amber and etched with geometric spirals that seemed to hum with silent warmth.",
+    "charStart": 264,
+    "charEnd": 397
+  },
+  {
+    "index": 3,
+    "startSeconds": 27.68,
+    "endSeconds": 37.92,
+    "text": "When he turned it over, three grains of golden rice fell into his palm, expanding instantly into a warm, fragrant loaf of bread.",
+    "charStart": 398,
+    "charEnd": 526
+  }
+]

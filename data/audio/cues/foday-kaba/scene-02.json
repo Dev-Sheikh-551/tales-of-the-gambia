@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 8.7,
+    "text": "From the British garrison in Bathurst, armored paddle-steamers churned up the brown river, their brass guns glinting in the midday sun.",
+    "charStart": 0,
+    "charEnd": 135
+  },
+  {
+    "index": 1,
+    "startSeconds": 8.7,
+    "endSeconds": 21.64,
+    "text": "Colonial dispatches described Foday Kaba as an outlaw who refused customs taxes, tore down boundary stones, and gave sanctuary to runaway captives from neighboring territories.",
+    "charStart": 136,
+    "charEnd": 312
+  },
+  {
+    "index": 2,
+    "startSeconds": 21.64,
+    "endSeconds": 31.67,
+    "text": "When British envoys arrived at the mouth of the creek bearing treaties printed on parchment, Foday Kaba received them under the shade of a silk-cotton tree.",
+    "charStart": 313,
+    "charEnd": 469
+  },
+  {
+    "index": 3,
+    "startSeconds": 31.67,
+    "endSeconds": 35.81,
+    "text": "'You brought paper across the sea,' he told them calmly.",
+    "charStart": 470,
+    "charEnd": 526
+  },
+  {
+    "index": 4,
+    "startSeconds": 35.81,
+    "endSeconds": 39.04,
+    "text": "'We hold this soil by the bones of our fathers.",
+    "charStart": 527,
+    "charEnd": 574
+  },
+  {
+    "index": 5,
+    "startSeconds": 39.04,
+    "endSeconds": 42.0,
+    "text": "Paper does not grow in Kiang.'",
+    "charStart": 575,
+    "charEnd": 605
+  }
+]

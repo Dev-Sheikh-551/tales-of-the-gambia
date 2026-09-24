@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 9.5,
+    "text": "On the tenth night, when ammunition was nearly exhausted and the outer walls began to breach, the royal jali climbed to the highest watchtower.",
+    "charStart": 0,
+    "charEnd": 143
+  },
+  {
+    "index": 1,
+    "startSeconds": 9.5,
+    "endSeconds": 14.7,
+    "text": "He carried no shield and no rifle—only his 21-stringed kora.",
+    "charStart": 144,
+    "charEnd": 204
+  },
+  {
+    "index": 2,
+    "startSeconds": 14.7,
+    "endSeconds": 19.47,
+    "text": "As smoke curled past his face, his fingers found the strings.",
+    "charStart": 205,
+    "charEnd": 266
+  },
+  {
+    "index": 3,
+    "startSeconds": 19.47,
+    "endSeconds": 30.64,
+    "text": "He did not play a retreat; he played the genealogy of every clan in Kaabu, singing of their ancestors who crossed the Manding mountains six hundred years before.",
+    "charStart": 267,
+    "charEnd": 428
+  },
+  {
+    "index": 4,
+    "startSeconds": 30.64,
+    "endSeconds": 38.55,
+    "text": "The defenders wept not from fear, but from the unbearable beauty of their own history ringing out in the night.",
+    "charStart": 429,
+    "charEnd": 540
+  }
+]

@@ -1,4 +1,11 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import twoKumbasScene01 from "@/data/audio/cues/two-kumbas/scene-01.json";
+import twoKumbasScene02 from "@/data/audio/cues/two-kumbas/scene-02.json";
+import twoKumbasScene03 from "@/data/audio/cues/two-kumbas/scene-03.json";
+import twoKumbasScene04 from "@/data/audio/cues/two-kumbas/scene-04.json";
+import twoKumbasScene05 from "@/data/audio/cues/two-kumbas/scene-05.json";
+import twoKumbasScene06 from "@/data/audio/cues/two-kumbas/scene-06.json";
+
 
 export const twoKumbasStory: Story = {
   id: "story-two-kumbas",
@@ -86,9 +93,10 @@ export const twoKumbasStory: Story = {
         intensity: "subtle",
       },
       characters: ["Kumba the Gentle"],
-      ambience: {
-        type: "village-fire",
-        label: "Distant rhythm of morning pestle and mortar",
+      audio: {
+        narrationUrl: "/audio/stories/the-two-kumbas/scene-01-narration.mp3",
+        narrationDurationSeconds: 29.2,
+        cues: twoKumbasScene01 as NarrationCue[],
       },
       durationSeconds: 14,
     },
@@ -114,9 +122,10 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle", "The Stepmother"],
-      ambience: {
-        type: "gentle-wind",
-        label: "Dry harmattan wind whispering through thorns",
+      audio: {
+        narrationUrl: "/audio/stories/the-two-kumbas/scene-02-narration.mp3",
+        narrationDurationSeconds: 27.75,
+        cues: twoKumbasScene02 as NarrationCue[],
       },
       durationSeconds: 15,
     },
@@ -142,9 +151,10 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle", "The Talking Baobab"],
-      ambience: {
-        type: "gentle-wind",
-        label: "Rustling baobab leaves and birdsong",
+      audio: {
+        narrationUrl: "/audio/stories/the-two-kumbas/scene-03-narration.mp3",
+        narrationDurationSeconds: 35.33,
+        cues: twoKumbasScene03 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -170,9 +180,10 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle", "The Old Woman of the Bush"],
-      ambience: {
-        type: "river-flow",
-        label: "Lapping of clear enchanted waters",
+      audio: {
+        narrationUrl: "/audio/stories/the-two-kumbas/scene-04-narration.mp3",
+        narrationDurationSeconds: 28.35,
+        cues: twoKumbasScene04 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -198,9 +209,10 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle"],
-      ambience: {
-        type: "village-fire",
-        label: "Gentle shimmering mystical resonance",
+      audio: {
+        narrationUrl: "/audio/stories/the-two-kumbas/scene-05-narration.mp3",
+        narrationDurationSeconds: 33.12,
+        cues: twoKumbasScene05 as NarrationCue[],
       },
       durationSeconds: 16,
     },
@@ -226,9 +238,10 @@ export const twoKumbasStory: Story = {
         intensity: "subtle",
       },
       characters: ["Kumba the Gentle"],
-      ambience: {
-        type: "night-insects",
-        label: "Peaceful evening village soundscape",
+      audio: {
+        narrationUrl: "/audio/stories/the-two-kumbas/scene-06-narration.mp3",
+        narrationDurationSeconds: 29.48,
+        cues: twoKumbasScene06 as NarrationCue[],
       },
       durationSeconds: 16,
     },

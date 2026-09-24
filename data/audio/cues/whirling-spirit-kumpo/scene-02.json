@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.49,
+    "text": "Elder Arfang did not argue.",
+    "charStart": 0,
+    "charEnd": 27
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.49,
+    "endSeconds": 8.12,
+    "text": "He walked to the edge of the sacred grove and struck three measured beats upon the hollow slit-drum.",
+    "charStart": 28,
+    "charEnd": 128
+  },
+  {
+    "index": 2,
+    "startSeconds": 8.12,
+    "endSeconds": 10.91,
+    "text": "A sudden silence fell over the compound.",
+    "charStart": 129,
+    "charEnd": 169
+  },
+  {
+    "index": 3,
+    "startSeconds": 10.91,
+    "endSeconds": 22.12,
+    "text": "From the deep twilight of the forest came a sound like dry grass rushing before a bushfire: the rustle of a thousand dried palm leaves moving as one.",
+    "charStart": 170,
+    "charEnd": 319
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.12,
+    "endSeconds": 23.65,
+    "text": "Out stepped the Kumpo.",
+    "charStart": 320,
+    "charEnd": 342
+  },
+  {
+    "index": 5,
+    "startSeconds": 23.65,
+    "endSeconds": 33.48,
+    "text": "It had no face, no eyes, and no limbs visible—only a dome of whispering golden fronds crowned by a single pointed ironwood staff that pierced the sky.",
+    "charStart": 343,
+    "charEnd": 493
+  }
+]

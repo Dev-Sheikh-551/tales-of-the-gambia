@@ -23,10 +23,6 @@ export type PlaybackRate = (typeof PLAYBACK_RATES)[number];
 interface UseStoryAudioOptions {
   /** URL for the narration audio file. `undefined` = no narration for this scene. */
   narrationSrc: string | undefined;
-  /** URL for the ambience audio file. `undefined` = no ambience. */
-  ambienceSrc?: string | undefined;
-  /** Whether ambience should loop. Defaults to true. */
-  ambienceLoop?: boolean;
   /** Called when narration ends naturally (not on pause). */
   onNarrationEnded?: () => void;
   /** Called when the audio element emits a load/decode error. */
@@ -38,8 +34,6 @@ export interface UseStoryAudioReturn {
   currentTime: number;
   duration: number;
   narrationVolume: number;
-  ambienceVolume: number;
-  ambienceEnabled: boolean;
   playbackRate: PlaybackRate;
   isPlaying: boolean;
   isLoading: boolean;
@@ -50,8 +44,6 @@ export interface UseStoryAudioReturn {
   toggle: () => Promise<void>;
   seek: (seconds: number) => void;
   setNarrationVolume: (v: number) => void;
-  setAmbienceVolume: (v: number) => void;
-  setAmbienceEnabled: (enabled: boolean) => void;
   setPlaybackRate: (r: PlaybackRate) => void;
   retry: () => void;
 }
@@ -64,47 +56,20 @@ function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(max, value));
 }
 
-/** Fade an HTMLAudioElement's volume to `target` over `durationMs`. */
-function fadeVolume(
-  el: HTMLAudioElement,
-  target: number,
-  durationMs = 200
-): Promise<void> {
-  return new Promise((resolve) => {
-    const steps = 10;
-    const start = el.volume;
-    const delta = (target - start) / steps;
-    const interval = durationMs / steps;
-    let step = 0;
-    const id = setInterval(() => {
-      step++;
-      el.volume = clamp(start + delta * step, 0, 1);
-      if (step >= steps) {
-        clearInterval(id);
-        el.volume = clamp(target, 0, 1);
-        resolve();
-      }
-    }, interval);
-  });
-}
-
 // ---------------------------------------------------------------------------
 // Hook
 // ---------------------------------------------------------------------------
 
 export function useStoryAudio({
   narrationSrc,
-  ambienceSrc,
-  ambienceLoop = true,
   onNarrationEnded,
   onNarrationError,
 }: UseStoryAudioOptions): UseStoryAudioReturn {
   // Persistent settings — read once on mount
   const settingsRef = useRef(getAudioSettings());
 
-  // Both audio elements are created ONCE per hook instance and never re-created.
+  // Narration audio element is created ONCE per hook instance and never re-created.
   const narrationRef = useRef<HTMLAudioElement | null>(null);
-  const ambienceRef = useRef<HTMLAudioElement | null>(null);
   const isMounted = useRef(false);
 
   // Stable callback refs to avoid stale closures in event listeners
@@ -124,17 +89,11 @@ export function useStoryAudio({
   const [narrationVolume, setNarrationVolumeState] = useState(
     settingsRef.current.narrationVolume
   );
-  const [ambienceVolume, setAmbienceVolumeState] = useState(
-    settingsRef.current.ambienceVolume
-  );
-  const [ambienceEnabled, setAmbienceEnabledState] = useState<boolean>(
-    settingsRef.current.ambienceEnabled ?? true
-  );
   const [playbackRate, setPlaybackRateState] = useState<PlaybackRate>(
     (settingsRef.current.playbackRate as PlaybackRate) ?? 1
   );
 
-  // ── Create HTMLAudioElements once (client only) ───────────────────────────
+  // ── Create HTMLAudioElement once (client only) ────────────────────────────
   useEffect(() => {
     isMounted.current = true;
     const s = settingsRef.current;
@@ -144,12 +103,6 @@ export function useStoryAudio({
     narration.volume = clamp(s.narrationVolume, 0, 1);
     narration.playbackRate = s.playbackRate;
     narrationRef.current = narration;
-
-    const ambience = new Audio();
-    ambience.preload = "none";
-    ambience.volume = clamp(s.ambienceVolume, 0, 1);
-    ambience.loop = true;
-    ambienceRef.current = ambience;
 
     // ── Narration event listeners ──────────────────────────────────────────
     const onLoadedMetadata = () => {
@@ -218,11 +171,10 @@ export function useStoryAudio({
       narration.removeEventListener("canplay", onCanPlay);
       // Release resources
       narration.pause();
-      narration.src = "";
-      ambience.pause();
-      ambience.src = "";
+      narration.removeAttribute("src");
+      narration.load();
     };
-  }, []); // intentionally empty — elements created/destroyed once per mount
+  }, []); // intentionally empty — element created/destroyed once per mount
 
   // ── React to narrationSrc changes ─────────────────────────────────────────
   useEffect(() => {
@@ -248,59 +200,6 @@ export function useStoryAudio({
     setDuration(0);
   }, [narrationSrc]);
 
-  // ── React to ambienceSrc changes ─────────────────────────────────────────
-  useEffect(() => {
-    const el = ambienceRef.current;
-    if (!el) return;
-
-    el.loop = ambienceLoop;
-
-    if (!ambienceSrc) {
-      // Fade out and stop
-      if (!el.paused) {
-        fadeVolume(el, 0, 400).then(() => {
-          el.pause();
-          el.src = "";
-        });
-      } else {
-        el.src = "";
-      }
-      return;
-    }
-
-    // If ambience is currently disabled, just stage the src without playing
-    if (!settingsRef.current.ambienceEnabled) {
-      if (el.src !== ambienceSrc) {
-        el.src = ambienceSrc;
-        el.loop = ambienceLoop;
-        el.volume = clamp(settingsRef.current.ambienceVolume, 0, 1);
-        el.load();
-      }
-      return;
-    }
-
-    const targetVol = clamp(settingsRef.current.ambienceVolume, 0, 1);
-
-    if (!el.paused && el.src && !el.src.endsWith(ambienceSrc)) {
-      // Playing a different track — crossfade with 800ms for richer scene transitions
-      fadeVolume(el, 0, 800).then(() => {
-        el.pause();
-        el.src = ambienceSrc;
-        el.loop = ambienceLoop;
-        el.volume = 0;
-        el.load();
-        el.play().then(() => fadeVolume(el, targetVol, 800)).catch(() => {});
-      });
-    } else if (el.src !== ambienceSrc) {
-      // Not playing — just set the src ready for when narration starts
-      el.src = ambienceSrc;
-      el.loop = ambienceLoop;
-      el.volume = targetVol;
-      el.load();
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ambienceSrc, ambienceLoop]);
-
   // ── Controls ───────────────────────────────────────────────────────────────
 
   const play = useCallback(async () => {
@@ -310,12 +209,6 @@ export function useStoryAudio({
     // If track has ended or is at the end, rewind to start before playing
     if (el.ended || (el.duration && el.currentTime >= el.duration - 0.2)) {
       el.currentTime = 0;
-    }
-
-    // Start ambience alongside narration — only if enabled
-    const amb = ambienceRef.current;
-    if (amb && amb.src && settingsRef.current.ambienceEnabled) {
-      amb.play().catch(() => {}); // Ignore autoplay block for ambience
     }
 
     try {
@@ -332,7 +225,6 @@ export function useStoryAudio({
 
   const pause = useCallback(() => {
     narrationRef.current?.pause();
-    ambienceRef.current?.pause();
   }, []);
 
   const toggle = useCallback(async () => {
@@ -358,40 +250,6 @@ export function useStoryAudio({
     settingsRef.current.narrationVolume = clamped;
     setNarrationVolumeState(clamped);
     saveAudioSettings({ narrationVolume: clamped });
-  }, []);
-
-  const setAmbienceVolume = useCallback((v: number) => {
-    const clamped = clamp(v, 0, 1);
-    if (ambienceRef.current) ambienceRef.current.volume = clamped;
-    settingsRef.current.ambienceVolume = clamped;
-    setAmbienceVolumeState(clamped);
-    saveAudioSettings({ ambienceVolume: clamped });
-  }, []);
-
-  const setAmbienceEnabled = useCallback((enabled: boolean) => {
-    settingsRef.current.ambienceEnabled = enabled;
-    setAmbienceEnabledState(enabled);
-    saveAudioSettings({ ambienceEnabled: enabled });
-
-    const amb = ambienceRef.current;
-    if (!amb) return;
-
-    if (enabled) {
-      // Re-enable: start ambience if narration is currently playing
-      if (amb.src && narrationRef.current && !narrationRef.current.paused) {
-        amb.volume = 0;
-        amb.play()
-          .then(() => fadeVolume(amb, clamp(settingsRef.current.ambienceVolume, 0, 1), 600))
-          .catch(() => {});
-      }
-    } else {
-      // Disable: fade out and pause ambience
-      if (!amb.paused) {
-        fadeVolume(amb, 0, 400).then(() => {
-          amb.pause();
-        });
-      }
-    }
   }, []);
 
   const setPlaybackRate = useCallback((r: PlaybackRate) => {
@@ -422,8 +280,6 @@ export function useStoryAudio({
     currentTime,
     duration,
     narrationVolume,
-    ambienceVolume,
-    ambienceEnabled,
     playbackRate,
     isPlaying,
     isLoading,
@@ -433,8 +289,6 @@ export function useStoryAudio({
     toggle,
     seek,
     setNarrationVolume,
-    setAmbienceVolume,
-    setAmbienceEnabled,
     setPlaybackRate,
     retry,
   };

@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.23,
+    "text": "Dawn broke over Foni Bondali in hues of violet and gold.",
+    "charStart": 0,
+    "charEnd": 56
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.23,
+    "endSeconds": 11.84,
+    "text": "The wedding drums began their thunderous beat, and guests arrived from every village along the river.",
+    "charStart": 57,
+    "charEnd": 158
+  },
+  {
+    "index": 2,
+    "startSeconds": 11.84,
+    "endSeconds": 16.29,
+    "text": "But inside his bedchamber, Massaneh did not rise.",
+    "charStart": 159,
+    "charEnd": 208
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.29,
+    "endSeconds": 26.9,
+    "text": "When his brothers entered to drape him in his wedding damask, they found him still and cold, claimed peacefully in his sleep before the first ray touched his face.",
+    "charStart": 209,
+    "charEnd": 372
+  },
+  {
+    "index": 4,
+    "startSeconds": 26.9,
+    "endSeconds": 44.2,
+    "text": "The wedding turned to weeping, the bride returned to her home, and by sunset the jali began the song that would echo across Senegambia forever: Massaneh Ceesay had all the gold of the earth, but not a single second to spend it.",
+    "charStart": 373,
+    "charEnd": 600
+  }
+]

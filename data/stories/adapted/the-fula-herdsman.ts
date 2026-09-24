@@ -1,4 +1,11 @@
-import { Story } from "@/types/story";
+import { Story, NarrationCue } from "@/types/story";
+import fulaScene01 from "@/data/audio/cues/fula-herdsman/scene-01.json";
+import fulaScene02 from "@/data/audio/cues/fula-herdsman/scene-02.json";
+import fulaScene03 from "@/data/audio/cues/fula-herdsman/scene-03.json";
+import fulaScene04 from "@/data/audio/cues/fula-herdsman/scene-04.json";
+import fulaScene05 from "@/data/audio/cues/fula-herdsman/scene-05.json";
+import fulaScene06 from "@/data/audio/cues/fula-herdsman/scene-06.json";
+
 
 /**
  * The Fula Herdsman and the Stolen Cattle
@@ -180,9 +187,10 @@ And Demba's cattle were the finest in three villages.`,
         type: "wind",
         intensity: "subtle",
       },
-      ambience: {
-        type: "gentle-wind",
-        label: "Harmattan wind",
+      audio: {
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-01-narration.mp3",
+        narrationDurationSeconds: 67.22,
+        cues: fulaScene01 as NarrationCue[],
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -238,9 +246,10 @@ What would he do?`,
         type: "dust-particles",
         intensity: "subtle",
       },
-      ambience: {
-        type: "gentle-wind",
-        label: "Morning wind",
+      audio: {
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-02-narration.mp3",
+        narrationDurationSeconds: 61.27,
+        cues: fulaScene02 as NarrationCue[],
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -315,9 +324,10 @@ The old man nodded slowly. "Then you already know what to do."`,
         type: "wind",
         intensity: "subtle",
       },
-      ambience: {
-        type: "village-fire",
-        label: "Village sounds",
+      audio: {
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-03-narration.mp3",
+        narrationDurationSeconds: 74.53,
+        cues: fulaScene03 as NarrationCue[],
       },
       durationSeconds: 120,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -375,9 +385,10 @@ And that — that stillness, that patience, that refusal to be provoked — was 
         type: "wind",
         intensity: "gentle",
       },
-      ambience: {
-        type: "gentle-wind",
-        label: "Open grassland",
+      audio: {
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-04-narration.mp3",
+        narrationDurationSeconds: 72.9,
+        cues: fulaScene04 as NarrationCue[],
       },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -444,9 +455,10 @@ Demba sat beside him and watched the village go about its business.
         type: "wind",
         intensity: "subtle",
       },
-      ambience: {
-        type: "village-fire",
-        label: "Evening village",
+      audio: {
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-05-narration.mp3",
+        narrationDurationSeconds: 70.97,
+        cues: fulaScene05 as NarrationCue[],
       },
       durationSeconds: 110,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -504,9 +516,10 @@ And everything was as it should be.`,
         type: "wind",
         intensity: "subtle",
       },
-      ambience: {
-        type: "river-flow",
-        label: "River at dusk",
+      audio: {
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-06-narration.mp3",
+        narrationDurationSeconds: 79.45,
+        cues: fulaScene06 as NarrationCue[],
       },
       durationSeconds: 130,
       transition: { type: "fade", durationSeconds: 3 },

@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 8.57,
+    "text": "When Massaneh Ceesay laid eyes upon Fatou at the weekly market, his pride refused to accept that she belonged to another.",
+    "charStart": 0,
+    "charEnd": 121
+  },
+  {
+    "index": 1,
+    "startSeconds": 8.57,
+    "endSeconds": 13.23,
+    "text": "'A fisherman gives fish that spoil in a day,' Massaneh declared.",
+    "charStart": 122,
+    "charEnd": 186
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.23,
+    "endSeconds": 16.73,
+    "text": "'I shall give gold that endures for generations.'",
+    "charStart": 187,
+    "charEnd": 236
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.73,
+    "endSeconds": 28.69,
+    "text": "The next morning, a train of pack-donkeys arrived at Fatou's family compound, bearing bolts of velvet, sacks of white rice, and cowrie shells by the thousands.",
+    "charStart": 237,
+    "charEnd": 396
+  },
+  {
+    "index": 4,
+    "startSeconds": 28.69,
+    "endSeconds": 40.27,
+    "text": "Dazzled by the mountain of wealth, Fatou's kin broke their solemn word to Bakary, declaring that the wedding of the century would belong to Massaneh Ceesay.",
+    "charStart": 397,
+    "charEnd": 553
+  }
+]

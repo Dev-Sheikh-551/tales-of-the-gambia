@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.5,
+    "text": "The Fish Eagle opened his wings, casting a dark shadow over the assembly.",
+    "charStart": 0,
+    "charEnd": 73
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.5,
+    "endSeconds": 8.04,
+    "text": "'The water is low, and meat is scarce,' he shrieked.",
+    "charStart": 74,
+    "charEnd": 126
+  },
+  {
+    "index": 2,
+    "startSeconds": 8.04,
+    "endSeconds": 12.73,
+    "text": "'By the law of the sky, the largest wings must have the first and deepest pools!",
+    "charStart": 127,
+    "charEnd": 207
+  },
+  {
+    "index": 3,
+    "startSeconds": 12.73,
+    "endSeconds": 17.01,
+    "text": "The small birds may pick what falls upon the mud once our bellies are filled.'",
+    "charStart": 208,
+    "charEnd": 286
+  },
+  {
+    "index": 4,
+    "startSeconds": 17.01,
+    "endSeconds": 26.05,
+    "text": "The Marabou Stork clattered his massive bill in greedy approval, stepping forward to claim the deepest fishing pool where the prized catfish had gathered.",
+    "charStart": 287,
+    "charEnd": 441
+  }
+]

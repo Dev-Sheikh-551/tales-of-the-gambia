@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0,
+    "endSeconds": 4.66,
+    "text": "The sun hung like a polished copper calabash in the dry midday sky.",
+    "charStart": 0,
+    "charEnd": 67
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.66,
+    "endSeconds": 10.42,
+    "text": "For three whole moons, not a single drop of rain had touched the red dust of the grasslands.",
+    "charStart": 68,
+    "charEnd": 160
+  },
+  {
+    "index": 2,
+    "startSeconds": 10.42,
+    "endSeconds": 15.94,
+    "text": "Leaves curled into brittle whispers, and the savanna grass turned the color of dry thatch.",
+    "charStart": 161,
+    "charEnd": 251
+  },
+  {
+    "index": 3,
+    "startSeconds": 15.94,
+    "endSeconds": 21.2,
+    "text": "In the distance, the ancient silk cotton tree stood against the copper horizon.",
+    "charStart": 252,
+    "charEnd": 331
+  }
+]

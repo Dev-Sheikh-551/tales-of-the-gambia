@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.93,
+    "text": "Under the shade of an enormous baobab at the edge of the thorny scrub, Queen Fari called her subjects together.",
+    "charStart": 0,
+    "charEnd": 111
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.93,
+    "endSeconds": 12.78,
+    "text": "They were donkeys—gray donkeys, brown donkeys, patient donkeys with soft brown eyes and calloused hooves.",
+    "charStart": 112,
+    "charEnd": 217
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.78,
+    "endSeconds": 28.84,
+    "text": "'For three hundred dry seasons,' Fari brayed indignantly, flicking her long ears, 'we have carried water for the villagers, hauled sacks of groundnuts, and walked behind stubborn carts, while the people in the king's court do nothing but sip sweet kinkeliba tea and dress in embroidered silk!",
+    "charStart": 218,
+    "charEnd": 510
+  },
+  {
+    "index": 3,
+    "startSeconds": 28.84,
+    "endSeconds": 32.48,
+    "text": "Are we not as clever as they are?",
+    "charStart": 511,
+    "charEnd": 544
+  },
+  {
+    "index": 4,
+    "startSeconds": 32.48,
+    "endSeconds": 34.52,
+    "text": "Are we not as handsome?'",
+    "charStart": 545,
+    "charEnd": 569
+  },
+  {
+    "index": 5,
+    "startSeconds": 34.52,
+    "endSeconds": 36.42,
+    "text": "A chorus of eager brays shook the dry dust in agreement.",
+    "charStart": 570,
+    "charEnd": 626
+  }
+]

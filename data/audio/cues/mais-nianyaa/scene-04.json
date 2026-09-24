@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 4.62,
+    "text": "One by one, the young women entered the darkened room and emerged into the courtyard.",
+    "charStart": 0,
+    "charEnd": 85
+  },
+  {
+    "index": 1,
+    "startSeconds": 4.62,
+    "endSeconds": 12.9,
+    "text": "When Grandmother Awa stepped inside and lifted the cloth, the heavy strands of amber and silver lay resting safely at the bottom of the dry jar.",
+    "charStart": 86,
+    "charEnd": 230
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.9,
+    "endSeconds": 18.79,
+    "text": "She brought them out into the sunlight without uttering a single accusation.",
+    "charStart": 231,
+    "charEnd": 307
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.79,
+    "endSeconds": 21.38,
+    "text": "Binta broke into tears, falling at Mai's feet in silent remorse.",
+    "charStart": 308,
+    "charEnd": 372
+  },
+  {
+    "index": 4,
+    "startSeconds": 21.38,
+    "endSeconds": 28.71,
+    "text": "Mai reached down, took her sister by the hand, and fastened one of the silver moon earrings onto Binta's own ear.",
+    "charStart": 373,
+    "charEnd": 486
+  },
+  {
+    "index": 5,
+    "startSeconds": 28.71,
+    "endSeconds": 38.75,
+    "text": "When the wedding procession danced through the village at sunset, both sisters walked side by side, bound together by a grace that outshone the finest gold.",
+    "charStart": 487,
+    "charEnd": 643
+  }
+]

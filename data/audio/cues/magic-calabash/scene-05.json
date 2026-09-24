@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.32,
+    "text": "As the town hall clock struck the twelfth chime, Erubami paused.",
+    "charStart": 0,
+    "charEnd": 64
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.32,
+    "endSeconds": 10.65,
+    "text": "He looked at his sleeping wife, his healthy children, and the peaceful warmth of his home.",
+    "charStart": 65,
+    "charEnd": 155
+  },
+  {
+    "index": 2,
+    "startSeconds": 10.65,
+    "endSeconds": 16.31,
+    "text": "He pulled his hand back, knelt beside the table, and whispered a prayer of thanksgiving.",
+    "charStart": 156,
+    "charEnd": 244
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.31,
+    "endSeconds": 20.44,
+    "text": "The calabash glowed with a deep, approving amber light.",
+    "charStart": 245,
+    "charEnd": 300
+  },
+  {
+    "index": 4,
+    "startSeconds": 20.44,
+    "endSeconds": 25.0,
+    "text": "When morning arrived, the vessel remained as generous as ever.",
+    "charStart": 301,
+    "charEnd": 363
+  },
+  {
+    "index": 5,
+    "startSeconds": 25.0,
+    "endSeconds": 39.27,
+    "text": "Erubami returned to his handcart on Russell Street with a singing heart, knowing that the greatest magic on earth is not the gold that fills a purse, but the gratitude that satisfies the soul.",
+    "charStart": 364,
+    "charEnd": 556
+  }
+]

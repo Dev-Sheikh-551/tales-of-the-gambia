@@ -1,0 +1,26 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 9.88,
+    "text": "The empire of Kaabu was gone, but the griots who survived carried the memory down the River Gambia to Brikama, Janjanbureh, and Barra.",
+    "charStart": 0,
+    "charEnd": 134
+  },
+  {
+    "index": 1,
+    "startSeconds": 9.88,
+    "endSeconds": 20.64,
+    "text": "They composed the melody 'Kansala'—a tune so sacred that even today, when a master jali strikes its opening notes, listeners stand in silent respect.",
+    "charStart": 135,
+    "charEnd": 284
+  },
+  {
+    "index": 2,
+    "startSeconds": 20.64,
+    "endSeconds": 34.45,
+    "text": "The physical city became grass and red dust, but the spirit of Dianke Wali lives on in the calabash of every kora, reminding all who listen that true sovereignty can never be conquered.",
+    "charStart": 285,
+    "charEnd": 470
+  }
+]

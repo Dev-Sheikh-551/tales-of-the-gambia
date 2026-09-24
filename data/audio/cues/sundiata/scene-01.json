@@ -1,0 +1,130 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.24,
+    "text": "My name is Djeli.",
+    "charStart": 0,
+    "charEnd": 17
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.24,
+    "endSeconds": 4.2,
+    "text": "I am a griot.",
+    "charStart": 19,
+    "charEnd": 32
+  },
+  {
+    "index": 2,
+    "startSeconds": 4.2,
+    "endSeconds": 18.49,
+    "text": "My father was a griot before me, and his father before him, and before him, and before him — all the way back to the time when the first words were spoken over the first fire, and someone had to remember them.",
+    "charStart": 33,
+    "charEnd": 242
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.49,
+    "endSeconds": 22.07,
+    "text": "I am here to tell you about Sundiata Keita.",
+    "charStart": 244,
+    "charEnd": 287
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.07,
+    "endSeconds": 24.03,
+    "text": "You may have heard his name.",
+    "charStart": 289,
+    "charEnd": 317
+  },
+  {
+    "index": 5,
+    "startSeconds": 24.03,
+    "endSeconds": 26.2,
+    "text": "Sogolon's child.",
+    "charStart": 318,
+    "charEnd": 334
+  },
+  {
+    "index": 6,
+    "startSeconds": 26.2,
+    "endSeconds": 27.93,
+    "text": "The Lion of Mali.",
+    "charStart": 335,
+    "charEnd": 352
+  },
+  {
+    "index": 7,
+    "startSeconds": 27.93,
+    "endSeconds": 37.76,
+    "text": "The king who could not walk until the day he decided to stand up — and when he stood, the world shook.",
+    "charStart": 353,
+    "charEnd": 455
+  },
+  {
+    "index": 8,
+    "startSeconds": 37.76,
+    "endSeconds": 42.75,
+    "text": "This story is 800 years old.",
+    "charStart": 457,
+    "charEnd": 485
+  },
+  {
+    "index": 9,
+    "startSeconds": 42.75,
+    "endSeconds": 45.15,
+    "text": "But I tell it as if it happened this morning, because that is what griots do.",
+    "charStart": 487,
+    "charEnd": 564
+  },
+  {
+    "index": 10,
+    "startSeconds": 45.15,
+    "endSeconds": 46.49,
+    "text": "Time is not a line for us.",
+    "charStart": 565,
+    "charEnd": 591
+  },
+  {
+    "index": 11,
+    "startSeconds": 46.49,
+    "endSeconds": 49.88,
+    "text": "It is a circle.",
+    "charStart": 592,
+    "charEnd": 607
+  },
+  {
+    "index": 12,
+    "startSeconds": 49.88,
+    "endSeconds": 55.49,
+    "text": "And every time the Sunjata epic is sung, Sundiata lives again — walks again — wins again.",
+    "charStart": 608,
+    "charEnd": 697
+  },
+  {
+    "index": 13,
+    "startSeconds": 55.49,
+    "endSeconds": 58.1,
+    "text": "So.",
+    "charStart": 699,
+    "charEnd": 702
+  },
+  {
+    "index": 14,
+    "startSeconds": 58.1,
+    "endSeconds": 60.65,
+    "text": "Let us begin at the beginning.",
+    "charStart": 704,
+    "charEnd": 734
+  },
+  {
+    "index": 15,
+    "startSeconds": 60.65,
+    "endSeconds": 65.42,
+    "text": "At the royal court of Niani, in the kingdom of the Mandinka, a king received a prophecy.",
+    "charStart": 736,
+    "charEnd": 824
+  }
+]
