@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -67,11 +67,42 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
     }
   }, []);
 
+  const sceneTopRef = React.useRef<HTMLDivElement | null>(null);
+  const isInitialMount = React.useRef(true);
+
+  // Auto-advance to next scene when current scene audio finishes
+  const handleNarrationEnded = React.useCallback(() => {
+    setActiveSceneIndex((prev) => {
+      if (prev < story.scenes.length - 1) {
+        return prev + 1;
+      }
+      return prev;
+    });
+  }, [story.scenes.length]);
+
   const activeScene: Scene = story.scenes[activeSceneIndex] || story.scenes[0];
 
   const storyAudio = useStoryAudio({
     narrationSrc: activeScene.audio?.narrationUrl,
+    onNarrationEnded: handleNarrationEnded,
   });
+
+  // Smoothly scroll reader to top of scene content when scene changes
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    if (sceneTopRef.current && typeof window !== "undefined") {
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      sceneTopRef.current.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
+    }
+  }, [activeSceneIndex]);
 
   const handleEnterCinematic = () => {
     storyAudio.pause();
@@ -285,6 +316,9 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
         {/* Editorial Story Text — Pure Storybook Page */}
         <article className="space-y-6 pt-2">
+          {/* Scroll anchor — scene transitions bring this into view */}
+          <div ref={sceneTopRef} aria-hidden="true" />
+
           {/* Scene Title Cue with Narration Indicator */}
           <div className="flex items-center justify-between border-b border-white/10 pb-3">
             <h2 className="font-story-serif text-2xl sm:text-3xl font-medium text-[#F7F3EB]">

@@ -17,6 +17,8 @@ interface NarratedStoryTextProps {
   className?: string;
   /** Whether gentle auto-scroll is enabled */
   enableAutoScroll?: boolean;
+  /** Optional scrollable container ref to scroll within (e.g. in Cinematic Mode) */
+  containerRef?: React.RefObject<HTMLElement | null>;
 }
 
 interface TextSegment {
@@ -33,6 +35,7 @@ export function NarratedStoryText({
   hasAudio,
   className = "",
   enableAutoScroll = false,
+  containerRef,
 }: NarratedStoryTextProps) {
   const activeCueRef = useRef<HTMLSpanElement | null>(null);
 
@@ -48,23 +51,47 @@ export function NarratedStoryText({
     if (typeof window === "undefined") return;
 
     const el = activeCueRef.current;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // Case 1: Scroll within dedicated container (e.g. Cinematic Mode caption card)
+    if (containerRef && containerRef.current) {
+      const container = containerRef.current;
+      const containerRect = container.getBoundingClientRect();
+      const elRect = el.getBoundingClientRect();
+
+      // Only scroll if active cue is near or beyond the top or bottom of visible container
+      const isAbove = elRect.top < containerRect.top + 16;
+      const isBelow = elRect.bottom > containerRect.bottom - 16;
+
+      if (isAbove || isBelow) {
+        const relativeTop = elRect.top - containerRect.top + container.scrollTop;
+        const targetScrollTop =
+          relativeTop - container.clientHeight / 2 + elRect.height / 2;
+
+        container.scrollTo({
+          top: Math.max(0, targetScrollTop),
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+        });
+      }
+      return;
+    }
+
+    // Case 2: Window viewport scrolling (e.g. Normal Reading Mode)
     const rect = el.getBoundingClientRect();
     const viewportHeight = window.innerHeight;
 
-    // Only scroll if text is cut off near the top or bottom of the viewport
     const isAbove = rect.top < viewportHeight * 0.15;
     const isBelow = rect.bottom > viewportHeight * 0.85;
 
     if (isAbove || isBelow) {
-      const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
       el.scrollIntoView({
         behavior: prefersReducedMotion ? "auto" : "smooth",
         block: "center",
       });
     }
-  }, [activeIndex, enableAutoScroll]);
+  }, [activeIndex, enableAutoScroll, containerRef]);
 
   // Fallback: if no cues available, render canonical text with zero overhead
   if (!cues || cues.length === 0) {

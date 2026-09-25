@@ -72,6 +72,9 @@ export function useStoryAudio({
   const narrationRef = useRef<HTMLAudioElement | null>(null);
   const isMounted = useRef(false);
 
+  // Track playback intent across scene changes ("idle" | "playing" | "paused")
+  const playbackIntentRef = useRef<"idle" | "playing" | "paused">("idle");
+
   // Stable callback refs to avoid stale closures in event listeners
   const narrationSrcRef = useRef(narrationSrc);
   useEffect(() => { narrationSrcRef.current = narrationSrc; }, [narrationSrc]);
@@ -120,6 +123,7 @@ export function useStoryAudio({
     };
     const onPlay = () => {
       if (!isMounted.current) return;
+      playbackIntentRef.current = "playing";
       setAudioState("playing");
     };
     const onPause = () => {
@@ -130,6 +134,8 @@ export function useStoryAudio({
     const onEnded = () => {
       if (!isMounted.current) return;
       setAudioState("ended");
+      // Intentionally preserve playbackIntentRef as "playing" when audio naturally ends,
+      // so if a next scene loads automatically, narration continues seamlessly.
       onNarrationEndedRef.current?.();
     };
     const onError = () => {
@@ -191,13 +197,53 @@ export function useStoryAudio({
       return;
     }
 
+    const shouldAutoPlay = playbackIntentRef.current === "playing";
+
     // New source — reset and load
     el.pause();
     el.src = narrationSrc;
+    el.currentTime = 0;
     el.load();
     setAudioState("loading");
     setCurrentTime(0);
     setDuration(0);
+
+    let isCurrent = true;
+
+    if (shouldAutoPlay) {
+      const executeAutoPlay = async () => {
+        if (!isCurrent || !isMounted.current || playbackIntentRef.current !== "playing") {
+          return;
+        }
+        try {
+          await el.play();
+          if (isCurrent && isMounted.current && playbackIntentRef.current === "playing") {
+            setAudioState("playing");
+          }
+        } catch (err: unknown) {
+          const name = err instanceof Error ? err.name : "";
+          if (name !== "AbortError" && isCurrent && isMounted.current) {
+            // Autoplay rejected or blocked — settle gracefully into paused state
+            playbackIntentRef.current = "paused";
+            setAudioState("paused");
+          }
+        }
+      };
+
+      if (el.readyState >= 2) {
+        executeAutoPlay();
+      } else {
+        const onCanPlay = () => {
+          el.removeEventListener("canplay", onCanPlay);
+          executeAutoPlay();
+        };
+        el.addEventListener("canplay", onCanPlay, { once: true });
+      }
+    }
+
+    return () => {
+      isCurrent = false;
+    };
   }, [narrationSrc]);
 
   // ── Controls ───────────────────────────────────────────────────────────────
@@ -205,6 +251,8 @@ export function useStoryAudio({
   const play = useCallback(async () => {
     const el = narrationRef.current;
     if (!el || !narrationSrc) return;
+
+    playbackIntentRef.current = "playing";
 
     // If track has ended or is at the end, rewind to start before playing
     if (el.ended || (el.duration && el.currentTime >= el.duration - 0.2)) {
@@ -218,13 +266,19 @@ export function useStoryAudio({
       // Do NOT re-throw — just settle into paused state.
       const name = err instanceof Error ? err.name : "";
       if (name !== "AbortError") {
+        playbackIntentRef.current = "paused";
         setAudioState("paused");
       }
     }
   }, [narrationSrc]);
 
   const pause = useCallback(() => {
-    narrationRef.current?.pause();
+    playbackIntentRef.current = "paused";
+    const el = narrationRef.current;
+    if (el) {
+      el.pause();
+      setAudioState("paused");
+    }
   }, []);
 
   const toggle = useCallback(async () => {
@@ -264,11 +318,13 @@ export function useStoryAudio({
     if (!el || !narrationSrc) return;
     el.pause();
     el.src = narrationSrc;
+    el.currentTime = 0;
     el.load();
     setAudioState("loading");
     setCurrentTime(0);
     setDuration(0);
-  }, [narrationSrc]);
+    play();
+  }, [narrationSrc, play]);
 
   // ── Derived ────────────────────────────────────────────────────────────────
   const hasAudio = !!narrationSrc;
