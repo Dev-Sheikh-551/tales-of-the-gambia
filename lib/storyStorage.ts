@@ -1,4 +1,5 @@
 import { StoryProgress, RecentStory, AudioSettings } from "@/types/story";
+import { safeStorage } from "@/lib/mobile/safeStorage";
 
 export const STORAGE_KEYS = {
   FAVORITES: "totg_favorites",
@@ -19,7 +20,7 @@ function notifyStorageUpdate() {
 export function getFavorites(): string[] {
   if (typeof window === "undefined") return [];
   try {
-    const data = localStorage.getItem(STORAGE_KEYS.FAVORITES);
+    const data = safeStorage.getItem(STORAGE_KEYS.FAVORITES);
     return data ? JSON.parse(data) : [];
   } catch {
     return [];
@@ -43,7 +44,7 @@ export function toggleFavorite(slug: string): boolean {
       updated = [...list, slug];
       state = true;
     }
-    localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(updated));
+    safeStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(updated));
     notifyStorageUpdate();
     return state;
   } catch {
@@ -55,7 +56,7 @@ export function removeFavorite(slug: string): void {
   if (typeof window === "undefined") return;
   try {
     const list = getFavorites().filter((s) => s !== slug);
-    localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(list));
+    safeStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(list));
     notifyStorageUpdate();
   } catch {
     // Ignore
@@ -66,7 +67,7 @@ export function removeFavorite(slug: string): void {
 export function getReadingProgress(): StoryProgress[] {
   if (typeof window === "undefined") return [];
   try {
-    const data = localStorage.getItem(STORAGE_KEYS.PROGRESS);
+    const data = safeStorage.getItem(STORAGE_KEYS.PROGRESS);
     return data ? JSON.parse(data) : [];
   } catch {
     return [];
@@ -98,7 +99,7 @@ export function saveReadingProgress(
       entry.audioPositionSeconds = audioPositionSeconds;
     }
     list.unshift(entry);
-    localStorage.setItem(STORAGE_KEYS.PROGRESS, JSON.stringify(list));
+    safeStorage.setItem(STORAGE_KEYS.PROGRESS, JSON.stringify(list));
     notifyStorageUpdate();
   } catch {
     // Ignore
@@ -108,7 +109,7 @@ export function saveReadingProgress(
 export function clearReadingProgress(): void {
   if (typeof window === "undefined") return;
   try {
-    localStorage.removeItem(STORAGE_KEYS.PROGRESS);
+    safeStorage.removeItem(STORAGE_KEYS.PROGRESS);
     notifyStorageUpdate();
   } catch {
     // Ignore
@@ -121,7 +122,7 @@ const MAX_RECENT_STORIES = 8;
 export function getRecentStories(): RecentStory[] {
   if (typeof window === "undefined") return [];
   try {
-    const data = localStorage.getItem(STORAGE_KEYS.RECENT);
+    const data = safeStorage.getItem(STORAGE_KEYS.RECENT);
     return data ? JSON.parse(data) : [];
   } catch {
     return [];
@@ -138,7 +139,7 @@ export function recordRecentStory(storyId: string, slug: string): void {
       timestamp: Date.now(),
     });
     const trimmed = list.slice(0, MAX_RECENT_STORIES);
-    localStorage.setItem(STORAGE_KEYS.RECENT, JSON.stringify(trimmed));
+    safeStorage.setItem(STORAGE_KEYS.RECENT, JSON.stringify(trimmed));
     notifyStorageUpdate();
   } catch {
     // Ignore
@@ -148,7 +149,7 @@ export function recordRecentStory(storyId: string, slug: string): void {
 export function clearRecentStories(): void {
   if (typeof window === "undefined") return;
   try {
-    localStorage.removeItem(STORAGE_KEYS.RECENT);
+    safeStorage.removeItem(STORAGE_KEYS.RECENT);
     notifyStorageUpdate();
   } catch {
     // Ignore
@@ -164,7 +165,7 @@ const DEFAULT_AUDIO_SETTINGS: AudioSettings = {
 export function getAudioSettings(): AudioSettings {
   if (typeof window === "undefined") return { ...DEFAULT_AUDIO_SETTINGS };
   try {
-    const data = localStorage.getItem(STORAGE_KEYS.AUDIO_SETTINGS);
+    const data = safeStorage.getItem(STORAGE_KEYS.AUDIO_SETTINGS);
     if (!data) return { ...DEFAULT_AUDIO_SETTINGS };
     const parsed = JSON.parse(data);
     // Old ambienceVolume / ambienceEnabled fields in localStorage are silently ignored.
@@ -182,7 +183,7 @@ export function saveAudioSettings(partial: Partial<AudioSettings>): void {
   try {
     const current = getAudioSettings();
     const updated: AudioSettings = { ...current, ...partial };
-    localStorage.setItem(STORAGE_KEYS.AUDIO_SETTINGS, JSON.stringify(updated));
+    safeStorage.setItem(STORAGE_KEYS.AUDIO_SETTINGS, JSON.stringify(updated));
     // Audio settings don't need to trigger the storage UI update event
   } catch {
     // Ignore
@@ -192,7 +193,7 @@ export function saveAudioSettings(partial: Partial<AudioSettings>): void {
 export function resetAudioSettings(): void {
   if (typeof window === "undefined") return;
   try {
-    localStorage.removeItem(STORAGE_KEYS.AUDIO_SETTINGS);
+    safeStorage.removeItem(STORAGE_KEYS.AUDIO_SETTINGS);
   } catch {
     // Ignore
   }

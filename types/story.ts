@@ -1,3 +1,5 @@
+import type { SceneNarrationTrack } from "./narrator";
+
 export type StoryCategory =
   | "folktale"
   | "fable"
@@ -120,6 +122,18 @@ export interface SceneAudio {
    * @deprecated Use narrationDurationSeconds. Kept for backward compat with scene-level fallback.
    */
   durationSeconds?: number;
+  /**
+   * Optional active narrator identifier for this track (e.g. "amara-gambia").
+   * Defaults to DEFAULT_NARRATOR_ID if omitted.
+   */
+  narratorId?: string;
+  /**
+   * Multi-narrator track registry for this scene.
+   * Maps narratorId -> SceneNarrationTrack.
+   * Backward-compatible: if omitted or narratorId not found, the top-level
+   * narrationUrl/cues are used directly.
+   */
+  narrations?: Record<string, SceneNarrationTrack>;
 }
 
 export interface SceneTransition {
