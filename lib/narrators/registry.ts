@@ -12,7 +12,7 @@ export const DEFAULT_NARRATOR_ID = "amara-gambia";
 export const NARRATORS: Narrator[] = [
   {
     id: DEFAULT_NARRATOR_ID,
-    name: "Amara",
+    name: "Amara Gambia",
     title: "Griot Voice",
     description:
       "A resonant, warm storytelling cadence inspired by Gambian oral traditions and the measured pacing of traditional jalis.",
@@ -24,8 +24,8 @@ export const NARRATORS: Narrator[] = [
     presentation: "female",
     available: true,
     isDefault: true,
-    badge: "Primary Griot",
-    credits: "Master narration pipeline powered by Kokoro-82M with Gambian phoneme calibration.",
+    badge: "Available",
+    credits: "Master narration pipeline calibrated for Gambian phonemes and folkloric pacing.",
   },
   {
     id: "elder-baboucar",
@@ -40,7 +40,7 @@ export const NARRATORS: Narrator[] = [
     accent: "Gambian English (Elder Mandinka inflection)",
     presentation: "male",
     available: false,
-    badge: "Coming in V2",
+    badge: "Coming Soon",
   },
   {
     id: "kaddy-brikama",
@@ -55,7 +55,7 @@ export const NARRATORS: Narrator[] = [
     accent: "Gambian English (Western Division rhythm)",
     presentation: "female",
     available: false,
-    badge: "Coming in V2",
+    badge: "Coming Soon",
   },
   {
     id: "foday-jali",
@@ -70,7 +70,7 @@ export const NARRATORS: Narrator[] = [
     accent: "Gambian English (Traditional Griot cadence)",
     presentation: "male",
     available: false,
-    badge: "Coming in V2",
+    badge: "Coming Soon",
   },
 ];
 

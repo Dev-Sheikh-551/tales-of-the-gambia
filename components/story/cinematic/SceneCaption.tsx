@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { NarratedStoryText } from "../NarratedStoryText";
 import { getStorySceneCues } from "@/data/audio/cues";
+import { NarrationCue } from "@/types/story";
 
 interface SceneCaptionProps {
   sceneId: string;
@@ -15,6 +16,8 @@ interface SceneCaptionProps {
   storySlug?: string;
   currentTime?: number;
   hasAudio?: boolean;
+  isPaused?: boolean;
+  cues?: NarrationCue[];
 }
 
 export function SceneCaption({
@@ -27,6 +30,8 @@ export function SceneCaption({
   storySlug,
   currentTime = 0,
   hasAudio = false,
+  isPaused = false,
+  cues: explicitCues,
 }: SceneCaptionProps) {
   const shouldReduceMotion = useReducedMotion();
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
@@ -38,7 +43,7 @@ export function SceneCaption({
     }
   }, [sceneId]);
 
-  const cues = storySlug ? getStorySceneCues(storySlug, sceneNumber) : undefined;
+  const cues = explicitCues || (storySlug ? getStorySceneCues(storySlug, sceneNumber) : undefined);
 
   const content = (
     <div className="max-w-xl lg:max-w-2xl mx-auto px-3 sm:px-6 pointer-events-auto">
@@ -49,8 +54,13 @@ export function SceneCaption({
             Scene {sceneNumber} of {totalScenes} · {title}
           </span>
           {hasAudio && (
-            <span className="text-[10px] text-[#D9732B] font-mono shrink-0">
-              Audio Synced
+            <span className="text-[10px] text-[#D9732B] font-mono shrink-0 flex items-center gap-1.5">
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${
+                  isPaused ? "bg-[#AB9784]" : "bg-[#E0AB3A] animate-pulse"
+                }`}
+              />
+              <span>{isPaused ? "Audio Paused" : "Audio Synced"}</span>
             </span>
           )}
         </div>
@@ -95,10 +105,10 @@ export function SceneCaption({
   return (
     <motion.div
       key={sceneId}
-      initial={{ opacity: 0, y: 8 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -4 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
+      exit={{ opacity: 0, y: -6 }}
+      transition={{ duration: 0.45, ease: [0.0, 0.0, 0.2, 1.0] }}
       className="absolute bottom-3 sm:bottom-4 md:bottom-5 lg:bottom-6 left-0 right-0 z-30 pointer-events-none"
     >
       {content}

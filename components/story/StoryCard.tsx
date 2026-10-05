@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Bookmark,
   Clock,
@@ -12,6 +13,7 @@ import {
 } from "lucide-react";
 import { Story, StoryProgress } from "@/types/story";
 import { StoryArt } from "@/components/ui/StoryArt";
+import { MOTION_EASINGS } from "@/lib/motion/tokens";
 
 interface StoryCardProps {
   story: Story;
@@ -43,7 +45,12 @@ export function StoryCard({
   );
 
   return (
-    <article className="group relative flex flex-col justify-between rounded-xl bg-[#1A1613] border border-[#2A231D] hover:border-[#3E352E] transition-all duration-200 p-4 overflow-hidden">
+    <motion.article
+      whileHover={{ y: -3 }}
+      whileTap={{ scale: 0.985 }}
+      transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
+      className="group relative flex flex-col justify-between rounded-xl bg-[#1A1613] border border-[#2A231D] hover:border-[#4A3E34] transition-colors p-4 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-black/30"
+    >
       {/* Top Media & Content */}
       <div className="space-y-3">
         {/* Visual Artwork Container */}
@@ -57,22 +64,25 @@ export function StoryCard({
             <StoryArt
               theme={story.coverImage.paletteTheme}
               size="sm"
-              className="rounded-lg transition-transform duration-300 group-hover:scale-102"
+              className="rounded-lg transition-transform duration-300 group-hover:scale-103"
             />
           </Link>
 
-          {/* Favorite Toggle Button */}
+          {/* Favorite Toggle Button with Satisfying Micro-interaction */}
           {onToggleFavorite && (
-            <button
+            <motion.button
               type="button"
+              whileTap={{ scale: 0.75 }}
+              animate={isFavorite ? { scale: [1, 1.25, 1] } : { scale: 1 }}
+              transition={{ duration: 0.3 }}
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 onToggleFavorite(story.slug);
               }}
-              className={`absolute top-2 right-2 p-1.5 rounded-full backdrop-blur-md transition-colors ${
+              className={`absolute top-2 right-2 p-1.5 rounded-full backdrop-blur-md transition-colors cursor-pointer ${
                 isFavorite
-                  ? "bg-[#D9732B] text-white"
+                  ? "bg-[#D9732B] text-white shadow-md shadow-[#D9732B]/30"
                   : "bg-black/60 text-[#AB9784] hover:text-[#F7F3EB]"
               }`}
               aria-label={
@@ -83,7 +93,7 @@ export function StoryCard({
               title={isFavorite ? "Saved" : "Save"}
             >
               <Bookmark className={`w-3.5 h-3.5 ${isFavorite ? "fill-current" : ""}`} />
-            </button>
+            </motion.button>
           )}
 
           {/* Minimal Reading Status Indicator */}
@@ -170,6 +180,6 @@ export function StoryCard({
           </Link>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }

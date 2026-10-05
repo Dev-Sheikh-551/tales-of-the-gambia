@@ -145,7 +145,7 @@ export const kelafeaSaaneStory: Story = {
       culturalSignificance:
         "Warrior-prince of the Kaabu Empire; subject of one of the most celebrated kora epics in the Mandinka oral tradition.",
       traits: ["fearless", "destined", "honourable", "fatalistic"],
-      avatarTheme: "shadow",
+      avatarTheme: "kelefa",
     },
     {
       id: "griot",
@@ -192,23 +192,55 @@ This is his story, as best as it can be told.`,
           name: "The Griot",
           position: "center",
           expression: "composed",
-          motion: "subtle-float",
-          scale: 1.0,
+          motion: "pluck-kora",
+          scale: 1.1,
           avatarTheme: "griot",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "kelefa-s1-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "slow-push",
+              intensity: "medium",
+              durationSeconds: 15,
+            },
+          },
+          {
+            id: "kelefa-s1-e2",
+            cueIndex: 1,
+            payload: {
+              target: "character",
+              characterId: "griot",
+              action: "pluck-kora",
+            },
+          },
+          {
+            id: "kelefa-s1-e3",
+            cueIndex: 3,
+            payload: {
+              target: "character",
+              characterId: "griot",
+              action: "singing",
+            },
+          },
+        ],
+      },
       visual: {
         type: "gradient",
-        paletteTheme: "ochre",
+        paletteTheme: "gold",
       },
       cameraMotion: {
         preset: "zoom-in",
-        intensity: "subtle",
-        durationSeconds: 8,
+        intensity: "medium",
+        durationSeconds: 12,
       },
       environmentMotion: {
-        type: "dust-particles",
-        intensity: "subtle",
+        type: "fire-flicker",
+        intensity: "gentle",
       },
       audio: {
         narrationUrl: "/audio/stories/kelefa-saane/scene-01-narration.mp3",
@@ -216,7 +248,7 @@ This is his story, as best as it can be told.`,
         cues: kelefaScene01 as NarrationCue[],
       },
       durationSeconds: 90,
-      transition: { type: "crossfade", durationSeconds: 1.5 },
+      transition: { type: "cinematic-fade", durationSeconds: 1.5 },
     },
 
     {
@@ -244,25 +276,67 @@ His mother, they say, loved him fiercely. And she feared for him just as fiercel
         {
           id: "kelefa",
           name: "Kelefa Saane",
-          position: "right",
+          position: "center",
           expression: "proud",
-          motion: "breathing",
-          scale: 1.1,
-          avatarTheme: "shadow",
+          motion: "stand",
+          scale: 1.15,
+          avatarTheme: "kelefa",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "kelefa-s2-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "wide-establishing",
+              intensity: "medium",
+              durationSeconds: 12,
+            },
+          },
+          {
+            id: "kelefa-s2-e2",
+            cueIndex: 1,
+            payload: {
+              target: "character",
+              characterId: "kelefa",
+              action: "step",
+            },
+          },
+          {
+            id: "kelefa-s2-e3",
+            cueIndex: 2,
+            payload: {
+              target: "character",
+              characterId: "kelefa",
+              action: "raise-hand",
+            },
+          },
+          {
+            id: "kelefa-s2-e4",
+            cueIndex: 2,
+            payload: {
+              target: "camera",
+              preset: "dramatic-push",
+              intensity: "dramatic",
+              durationSeconds: 10,
+            },
+          },
+        ],
+      },
       visual: {
         type: "gradient",
         paletteTheme: "earth",
       },
       cameraMotion: {
         preset: "pan-right",
-        intensity: "subtle",
-        durationSeconds: 10,
+        intensity: "medium",
+        durationSeconds: 12,
       },
       environmentMotion: {
         type: "wind",
-        intensity: "subtle",
+        intensity: "expressive",
       },
       audio: {
         narrationUrl: "/audio/stories/kelefa-saane/scene-02-narration.mp3",
@@ -270,7 +344,7 @@ His mother, they say, loved him fiercely. And she feared for him just as fiercel
         cues: kelefaScene02 as NarrationCue[],
       },
       durationSeconds: 100,
-      transition: { type: "crossfade", durationSeconds: 1.5 },
+      transition: { type: "cinematic-fade", durationSeconds: 1.5 },
     },
 
     {
@@ -295,7 +369,7 @@ He crossed the river.
 
 He did not come back.`,
       backgroundGradient: "linear-gradient(135deg, #0d1a2d 0%, #1a3352 50%, #2d5280 100%)",
-      characters: ["Kelefa Saane", "Kelefa's Mother"],
+      characters: ["Kelefa Saane"],
       charactersData: [
         {
           id: "kelefa",
@@ -303,18 +377,61 @@ He did not come back.`,
           position: "left",
           expression: "resolute",
           motion: "still",
-          scale: 1.05,
-          avatarTheme: "shadow",
+          scale: 1.08,
+          avatarTheme: "kelefa",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "kelefa-s3-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "wide-establishing",
+              intensity: "medium",
+              durationSeconds: 12,
+            },
+          },
+          {
+            id: "kelefa-s3-e2",
+            cueIndex: 1,
+            payload: {
+              target: "environment",
+              type: "river-surge",
+              intensity: "subtle",
+            },
+          },
+          {
+            id: "kelefa-s3-e3",
+            cueIndex: 2,
+            payload: {
+              target: "character",
+              characterId: "kelefa",
+              action: "step",
+            },
+          },
+          {
+            id: "kelefa-s3-e4",
+            cueIndex: 3,
+            payload: {
+              target: "camera",
+              preset: "slow-pull",
+              intensity: "medium",
+              durationSeconds: 14,
+              focusTarget: "environment",
+            },
+          },
+        ],
+      },
       visual: {
         type: "gradient",
         paletteTheme: "river",
       },
       cameraMotion: {
-        preset: "zoom-out",
-        intensity: "subtle",
-        durationSeconds: 10,
+        preset: "slow-pull",
+        intensity: "medium",
+        durationSeconds: 14,
       },
       environmentMotion: {
         type: "river-ripples",
@@ -326,7 +443,7 @@ He did not come back.`,
         cues: kelefaScene03 as NarrationCue[],
       },
       durationSeconds: 110,
-      transition: { type: "crossfade", durationSeconds: 1.5 },
+      transition: { type: "cinematic-fade", durationSeconds: 1.5 },
     },
 
     {
@@ -358,23 +475,77 @@ And because he did that, the griots remembered him.`,
           name: "Kelefa Saane",
           position: "center",
           expression: "defiant",
-          motion: "still",
+          motion: "raise-hand",
           scale: 1.2,
-          avatarTheme: "shadow",
+          avatarTheme: "kelefa",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "kelefa-s4-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "character-reveal",
+              intensity: "dramatic",
+              durationSeconds: 10,
+              focusTarget: "character",
+            },
+          },
+          {
+            id: "kelefa-s4-e2",
+            cueIndex: 1,
+            payload: {
+              target: "environment",
+              type: "harmattan-dust",
+              intensity: "dramatic",
+            },
+          },
+          {
+            id: "kelefa-s4-e3",
+            cueIndex: 2,
+            payload: {
+              target: "character",
+              characterId: "kelefa",
+              action: "raise-hand",
+              intensity: "expressive",
+            },
+          },
+          {
+            id: "kelefa-s4-e4",
+            cueIndex: 3,
+            payload: {
+              target: "camera",
+              preset: "dramatic-push",
+              intensity: "dramatic",
+              durationSeconds: 12,
+              focusTarget: "character",
+            },
+          },
+          {
+            id: "kelefa-s4-e5",
+            cueIndex: 4,
+            payload: {
+              target: "character",
+              characterId: "kelefa",
+              action: "still",
+            },
+          },
+        ],
+      },
       visual: {
         type: "gradient",
         paletteTheme: "ochre",
       },
       cameraMotion: {
         preset: "zoom-in",
-        intensity: "medium",
+        intensity: "dramatic",
         durationSeconds: 12,
       },
       environmentMotion: {
         type: "dust-particles",
-        intensity: "gentle",
+        intensity: "expressive",
       },
       audio: {
         narrationUrl: "/audio/stories/kelefa-saane/scene-04-narration.mp3",
@@ -382,7 +553,7 @@ And because he did that, the griots remembered him.`,
         cues: kelefaScene04 as NarrationCue[],
       },
       durationSeconds: 110,
-      transition: { type: "dissolve", durationSeconds: 2 },
+      transition: { type: "cinematic-fade", durationSeconds: 2 },
     },
 
     {
@@ -416,23 +587,67 @@ And in crossing it, he reminds us what it means to live without flinching.`,
           name: "The Griot",
           position: "center",
           expression: "reverent",
-          motion: "subtle-float",
-          scale: 1.0,
+          motion: "pluck-kora",
+          scale: 1.05,
           avatarTheme: "griot",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "kelefa-s5-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "environment-reveal",
+              intensity: "medium",
+              durationSeconds: 12,
+              focusTarget: "environment",
+            },
+          },
+          {
+            id: "kelefa-s5-e2",
+            cueIndex: 0,
+            payload: {
+              target: "character",
+              characterId: "griot",
+              action: "pluck-kora",
+            },
+          },
+          {
+            id: "kelefa-s5-e3",
+            cueIndex: 2,
+            payload: {
+              target: "camera",
+              preset: "slow-push",
+              intensity: "subtle",
+              durationSeconds: 16,
+              focusTarget: "character",
+            },
+          },
+          {
+            id: "kelefa-s5-e4",
+            cueIndex: 3,
+            payload: {
+              target: "environment",
+              type: "nightfall",
+              intensity: "subtle",
+            },
+          },
+        ],
+      },
       visual: {
         type: "gradient",
         paletteTheme: "river",
       },
       cameraMotion: {
-        preset: "drift",
+        preset: "slow-push",
         intensity: "subtle",
-        durationSeconds: 12,
+        durationSeconds: 16,
       },
       environmentMotion: {
         type: "night-stars",
-        intensity: "subtle",
+        intensity: "standard",
       },
       audio: {
         narrationUrl: "/audio/stories/kelefa-saane/scene-05-narration.mp3",
@@ -440,7 +655,7 @@ And in crossing it, he reminds us what it means to live without flinching.`,
         cues: kelefaScene05 as NarrationCue[],
       },
       durationSeconds: 120,
-      transition: { type: "fade", durationSeconds: 2.5 },
+      transition: { type: "nightfall", durationSeconds: 2.5 },
     },
 
     {
@@ -475,23 +690,57 @@ They always will.`,
           name: "The Griot",
           position: "center",
           expression: "composed",
-          motion: "breathing",
-          scale: 1.0,
+          motion: "pluck-kora",
+          scale: 1.05,
           avatarTheme: "griot",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "kelefa-s6-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "slow-pull",
+              intensity: "subtle",
+              durationSeconds: 14,
+            },
+          },
+          {
+            id: "kelefa-s6-e2",
+            cueIndex: 0,
+            payload: {
+              target: "character",
+              characterId: "griot",
+              action: "pluck-kora",
+            },
+          },
+          {
+            id: "kelefa-s6-e3",
+            cueIndex: 2,
+            payload: {
+              target: "camera",
+              preset: "wide-establishing",
+              intensity: "medium",
+              durationSeconds: 16,
+              focusTarget: "environment",
+            },
+          },
+        ],
+      },
       visual: {
         type: "gradient",
         paletteTheme: "gold",
       },
       cameraMotion: {
-        preset: "zoom-out",
-        intensity: "subtle",
-        durationSeconds: 14,
+        preset: "slow-pull",
+        intensity: "medium",
+        durationSeconds: 16,
       },
       environmentMotion: {
         type: "night-stars",
-        intensity: "subtle",
+        intensity: "standard",
       },
       audio: {
         narrationUrl: "/audio/stories/kelefa-saane/scene-06-narration.mp3",
@@ -499,7 +748,7 @@ They always will.`,
         cues: kelefaScene06 as NarrationCue[],
       },
       durationSeconds: 130,
-      transition: { type: "fade", durationSeconds: 3 },
+      transition: { type: "cinematic-fade", durationSeconds: 3 },
     },
   ],
 };

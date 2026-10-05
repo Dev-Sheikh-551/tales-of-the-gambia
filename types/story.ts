@@ -1,4 +1,5 @@
 import type { SceneNarrationTrack } from "./narrator";
+import type { SceneTimeline } from "./engine";
 
 export type StoryCategory =
   | "folktale"
@@ -75,10 +76,100 @@ export interface SceneVisual {
   };
 }
 
+export type CameraPreset =
+  | "still"
+  | "slow-push"
+  | "slow-pull"
+  | "horizontal-pan-left"
+  | "horizontal-pan-right"
+  | "vertical-reveal"
+  | "diagonal-drift"
+  | "dramatic-push"
+  | "wide-establishing"
+  | "character-reveal"
+  | "environment-reveal"
+  | "focus-shift"
+  | "zoom-in"
+  | "zoom-out"
+  | "pan-left"
+  | "pan-right"
+  | "drift";
+
 export interface CameraMotion {
-  preset: "zoom-in" | "zoom-out" | "pan-left" | "pan-right" | "drift" | "still";
-  intensity?: "subtle" | "medium";
+  preset: CameraPreset;
+  intensity?: "subtle" | "medium" | "dramatic";
   durationSeconds?: number;
+  origin?: "center" | "top" | "bottom" | "left" | "right";
+  direction?: "left" | "right" | "up" | "down";
+  depth?: "shallow" | "medium" | "deep";
+  focusTarget?: "character" | "environment" | "center";
+}
+
+export type CharacterMotionPreset =
+  | "enter-left"
+  | "enter-right"
+  | "rise"
+  | "reveal"
+  | "turn"
+  | "look"
+  | "step"
+  | "gesture"
+  | "react"
+  | "exit-left"
+  | "exit-right"
+  | "fade"
+  | "dissolve"
+  | "still"
+  | "subtle-float"
+  | "breathing"
+  // Extended action vocabulary (used by animated storybook engine)
+  | "stand"
+  | "walk"
+  | "run"
+  | "approach"
+  | "retreat"
+  | "jump"
+  | "fall"
+  | "sit"
+  | "crouch"
+  | "kneel"
+  | "lean"
+  | "recline"
+  | "look-left"
+  | "look-right"
+  | "look-up"
+  | "look-down"
+  | "focus"
+  | "point"
+  | "wave"
+  | "raise-hand"
+  | "reach"
+  | "embrace"
+  | "push"
+  | "pull"
+  | "paddle"
+  | "pluck-kora"
+  | "singing"
+  | "fanning"
+  | "labor"
+  | "surprise"
+  | "fear"
+  | "concern"
+  | "joy"
+  | "triumphant"
+  | "sadness"
+  | "anger"
+  | "curiosity"
+  | "relief"
+  | "determination"
+  | "cunning-look"
+  | "mock"
+  | "disappear";
+
+export interface CharacterMotionConfig {
+  preset: CharacterMotionPreset;
+  delay?: number;
+  duration?: number;
 }
 
 export interface SceneCharacter {
@@ -86,14 +177,46 @@ export interface SceneCharacter {
   name: string;
   position: "far-left" | "left" | "center" | "right" | "far-right";
   expression?: string;
-  motion?: "subtle-float" | "breathing" | "enter-left" | "enter-right" | "still";
+  motion?: CharacterMotionPreset;
+  motionConfig?: CharacterMotionConfig;
   scale?: number;
-  avatarTheme?: "hare" | "elephant" | "tortoise" | "griot" | "boatman" | "shadow" | "pangolin" | "spider";
+  avatarTheme?:
+    | "hare"
+    | "elephant"
+    | "tortoise"
+    | "griot"
+    | "boatman"
+    | "shadow"
+    | "pangolin"
+    | "spider"
+    | "kelefa"
+    | "ninki-nanka"
+    | "samba";
 }
 
 export interface EnvironmentMotion {
-  type: "wind" | "river-ripples" | "fire-flicker" | "night-stars" | "dust-particles" | "none";
-  intensity?: "subtle" | "gentle";
+  type: "wind" | "river-ripples" | "fire-flicker" | "night-stars" | "dust-particles" | "heat-shimmer" | "rain" | "none";
+  intensity?: "subtle" | "gentle" | "standard" | "expressive";
+  density?: "sparse" | "normal" | "dense";
+  direction?: "left" | "right" | "up" | "down";
+  speed?: "slow" | "normal" | "fast";
+  opacity?: number;
+  depth?: "shallow" | "midground" | "deep";
+}
+
+export type ForegroundMotionType =
+  | "grass-silhouettes"
+  | "branches"
+  | "reeds"
+  | "leaves"
+  | "soft-light"
+  | "dust-drift"
+  | "none";
+
+export interface ForegroundMotion {
+  enabled?: boolean;
+  type?: ForegroundMotionType;
+  intensity?: "subtle" | "standard";
 }
 
 export interface NarrationCue {
@@ -137,7 +260,18 @@ export interface SceneAudio {
 }
 
 export interface SceneTransition {
-  type: "crossfade" | "dissolve" | "fade";
+  type:
+    | "crossfade"
+    | "dissolve"
+    | "fade"
+    | "cinematic-fade"
+    | "wind"
+    | "river"
+    | "dust"
+    | "light"
+    | "nightfall"
+    | "directional"
+    | "curtain";
   durationSeconds?: number;
 }
 
@@ -156,6 +290,8 @@ export interface Scene {
   audio?: SceneAudio;
   transition?: SceneTransition;
   durationSeconds: number;
+  foregroundMotion?: ForegroundMotion;
+  timeline?: SceneTimeline;
 }
 
 // --- Cultural Provenance Model ---
@@ -231,7 +367,18 @@ export interface CharacterProfile {
   role: "protagonist" | "antagonist" | "trickster" | "elder" | "guardian" | "chorus";
   culturalSignificance?: string;
   traits?: string[];
-  avatarTheme?: "hare" | "elephant" | "tortoise" | "griot" | "boatman" | "shadow" | "pangolin" | "spider";
+  avatarTheme?:
+    | "hare"
+    | "elephant"
+    | "tortoise"
+    | "griot"
+    | "boatman"
+    | "shadow"
+    | "pangolin"
+    | "spider"
+    | "kelefa"
+    | "ninki-nanka"
+    | "samba";
 }
 
 export interface Story {

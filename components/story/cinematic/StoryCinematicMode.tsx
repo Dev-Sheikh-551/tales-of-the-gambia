@@ -5,6 +5,9 @@ import { X, Sparkles, RotateCcw, Play } from "lucide-react";
 import { Story } from "@/types/story";
 import { useStoryPlayback } from "@/hooks/useStoryPlayback";
 import { useStoryAudio } from "@/hooks/useStoryAudio";
+import { useNarrator } from "@/hooks/useNarrator";
+import { resolveSceneNarration } from "@/lib/narrators/resolver";
+import { NarratorPicker } from "../NarratorPicker";
 import { StorySceneViewport } from "./StorySceneViewport";
 import { StoryPlaybackControls } from "./StoryPlaybackControls";
 import { StoryCompletionView } from "./StoryCompletionView";
@@ -22,6 +25,8 @@ export function StoryCinematicMode({
 }: StoryCinematicModeProps) {
   // Pre-check for audio mode on initial render
   const [currentSceneIdx, setCurrentSceneIdx] = React.useState(initialSceneIndex);
+  const { selectedNarratorId, selectedNarrator } = useNarrator();
+  const [isNarratorPickerOpen, setIsNarratorPickerOpen] = React.useState(false);
 
   const {
     currentSceneIndex,
@@ -54,8 +59,11 @@ export function StoryCinematicMode({
     setCurrentSceneIdx(currentSceneIndex);
   }, [currentSceneIndex]);
 
+  // Resolve narration track for current scene given the selected storyteller
+  const resolvedNarration = resolveSceneNarration(currentScene.audio, selectedNarratorId);
+
   const storyAudio = useStoryAudio({
-    narrationSrc: currentScene.audio?.narrationUrl,
+    narrationSrc: resolvedNarration.narrationUrl,
     onNarrationEnded: () => {
       if (isAutoAdvanceEnabled) {
         goToNextScene();
@@ -95,8 +103,8 @@ export function StoryCinematicMode({
 
   // When narration audio exists, audio duration and current time become authoritative
   const effectiveDuration =
-    storyAudio.hasAudio && (storyAudio.duration > 0 || currentScene.audio?.narrationDurationSeconds)
-      ? storyAudio.duration || currentScene.audio?.narrationDurationSeconds || sceneDuration
+    storyAudio.hasAudio && (storyAudio.duration > 0 || resolvedNarration.narrationDurationSeconds || currentScene.audio?.narrationDurationSeconds)
+      ? storyAudio.duration || resolvedNarration.narrationDurationSeconds || currentScene.audio?.narrationDurationSeconds || sceneDuration
       : sceneDuration;
 
   const effectiveElapsed = storyAudio.hasAudio
@@ -163,6 +171,9 @@ export function StoryCinematicMode({
             storySlug={story.slug}
             currentTime={effectiveElapsed}
             hasAudio={storyAudio.hasAudio}
+            cues={resolvedNarration.cues}
+            onNext={goToNextScene}
+            onPrevious={goToPreviousScene}
           />
         )}
 
@@ -226,8 +237,16 @@ export function StoryCinematicMode({
           onToggleMute={() => {
             storyAudio.setNarrationVolume(storyAudio.narrationVolume === 0 ? 0.8 : 0);
           }}
+          onOpenNarratorPicker={() => setIsNarratorPickerOpen(true)}
+          currentNarratorName={selectedNarrator.name}
         />
       )}
+
+      {/* Narrator Selection Bottom Sheet / Modal */}
+      <NarratorPicker
+        isOpen={isNarratorPickerOpen}
+        onClose={() => setIsNarratorPickerOpen(false)}
+      />
     </div>
   );
 }

@@ -1,16 +1,20 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import {
   Play,
   Pause,
   ChevronLeft,
   ChevronRight,
   RotateCw,
+  Volume2,
+  VolumeX,
+  Mic,
 } from "lucide-react";
+
 import { PlaybackState } from "@/hooks/useStoryPlayback";
 import { PlaybackRate, PLAYBACK_RATES } from "@/hooks/useStoryAudio";
-import { Volume2, VolumeX, Mic } from "lucide-react";
 
 interface StoryPlaybackControlsProps {
   currentSceneIndex: number;
@@ -30,6 +34,8 @@ interface StoryPlaybackControlsProps {
   onSetRate?: (rate: PlaybackRate) => void;
   narrationVolume?: number;
   onToggleMute?: () => void;
+  onOpenNarratorPicker?: () => void;
+  currentNarratorName?: string;
 }
 
 export function StoryPlaybackControls({
@@ -50,6 +56,8 @@ export function StoryPlaybackControls({
   onSetRate,
   narrationVolume,
   onToggleMute,
+  onOpenNarratorPicker,
+  currentNarratorName,
 }: StoryPlaybackControlsProps) {
 
   const isPlaying = playbackState === "playing";
@@ -122,19 +130,23 @@ export function StoryPlaybackControls({
 
           {/* Center: Main Playback Buttons (Thumb-friendly 44px+) */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <button
+            <motion.button
+              whileTap={{ scale: 0.92 }}
               disabled={currentSceneIndex === 0}
               onClick={onPrevious}
-              className="w-11 h-11 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-[#F7F3EB] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              className="w-11 h-11 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-[#F7F3EB] disabled:opacity-30 disabled:cursor-not-allowed transition-all cursor-pointer"
               aria-label="Previous scene"
               title="Previous scene (Left Arrow)"
             >
               <ChevronLeft className="w-5 h-5" />
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.92 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
               onClick={onTogglePlayPause}
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#D9732B] to-[#C69224] text-white shadow-lg shadow-[#D9732B]/30 hover:scale-105 active:scale-95 transition-all"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-[#D9732B] to-[#C69224] text-white shadow-lg shadow-[#D9732B]/30 transition-all cursor-pointer"
               aria-label={isPlaying ? "Pause playback" : "Play playback"}
               title="Play / Pause (Space)"
             >
@@ -143,11 +155,12 @@ export function StoryPlaybackControls({
               ) : (
                 <Play className="w-5 h-5 ml-0.5" />
               )}
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
+              whileTap={{ scale: 0.92 }}
               onClick={onNext}
-              className="w-11 h-11 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-[#F7F3EB] transition-all"
+              className="w-11 h-11 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 text-[#F7F3EB] transition-all cursor-pointer"
               aria-label={
                 currentSceneIndex === totalScenes - 1
                   ? "Complete story"
@@ -156,11 +169,25 @@ export function StoryPlaybackControls({
               title="Next scene (Right Arrow)"
             >
               <ChevronRight className="w-5 h-5" />
-            </button>
+            </motion.button>
           </div>
 
           {/* Right: Audio options & Scene count indicator */}
           <div className="flex items-center gap-2 sm:gap-3">
+            {onOpenNarratorPicker && (
+              <button
+                onClick={onOpenNarratorPicker}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs text-[#AB9784] hover:text-[#F7F3EB] transition-colors cursor-pointer"
+                title="Choose storyteller voice"
+                aria-label={`Storyteller voice: ${currentNarratorName || "Amara Gambia"}`}
+              >
+                <Mic className="w-3.5 h-3.5 text-[#E0AB3A]" />
+                <span className="hidden md:inline font-story-sans text-[11px] max-w-[90px] truncate">
+                  {currentNarratorName || "Amara"}
+                </span>
+              </button>
+            )}
+
             {onSetRate && playbackRate && (
               <button
                 onClick={() => {

@@ -120,7 +120,54 @@ export const hareDroughtStory: Story = {
         type: "wind",
         intensity: "subtle",
       },
+      foregroundMotion: {
+        enabled: true,
+        type: "grass-silhouettes",
+        intensity: "subtle",
+      },
       characters: ["Savanna Wildlife"],
+      charactersData: [
+        {
+          id: "hare",
+          name: "Cunning Hare",
+          position: "right",
+          motion: "stand",
+          scale: 0.9,
+          avatarTheme: "hare",
+        },
+      ],
+      timeline: {
+        events: [
+          {
+            id: "hare-s1-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "wide-establishing",
+              intensity: "medium",
+              durationSeconds: 12,
+            },
+          },
+          {
+            id: "hare-s1-e2",
+            cueIndex: 1,
+            payload: {
+              target: "environment",
+              type: "harmattan-dust",
+              intensity: "standard",
+            },
+          },
+          {
+            id: "hare-s1-e3",
+            cueIndex: 2,
+            payload: {
+              target: "character",
+              characterId: "hare",
+              action: "turn",
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-narration.mp3",
         narrationDurationSeconds: 21.2,
@@ -142,7 +189,7 @@ export const hareDroughtStory: Story = {
       },
       cameraMotion: {
         preset: "pan-right",
-        intensity: "subtle",
+        intensity: "medium",
         durationSeconds: 16,
       },
       environmentMotion: {
@@ -156,7 +203,8 @@ export const hareDroughtStory: Story = {
           name: "Wise Elephant",
           position: "left",
           expression: "solemn",
-          motion: "breathing",
+          motion: "gesture",
+          scale: 1.1,
           avatarTheme: "elephant",
         },
         {
@@ -164,10 +212,53 @@ export const hareDroughtStory: Story = {
           name: "Cunning Hare",
           position: "right",
           expression: "cunning",
-          motion: "subtle-float",
+          motion: "cunning-look",
+          scale: 0.95,
           avatarTheme: "hare",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "hare-s2-e1",
+            cueIndex: 0,
+            payload: {
+              target: "character",
+              characterId: "elephant",
+              action: "gesture",
+            },
+          },
+          {
+            id: "hare-s2-e2",
+            cueIndex: 1,
+            payload: {
+              target: "camera",
+              preset: "slow-push",
+              intensity: "medium",
+              durationSeconds: 10,
+            },
+          },
+          {
+            id: "hare-s2-e3",
+            cueIndex: 3,
+            payload: {
+              target: "character",
+              characterId: "hare",
+              action: "cunning-look",
+            },
+          },
+          {
+            id: "hare-s2-e4",
+            cueIndex: 3,
+            payload: {
+              target: "camera",
+              preset: "focus-shift",
+              intensity: "dramatic",
+              durationSeconds: 8,
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-narration.mp3",
         narrationDurationSeconds: 26.0,
@@ -189,7 +280,7 @@ export const hareDroughtStory: Story = {
       },
       cameraMotion: {
         preset: "drift",
-        intensity: "subtle",
+        intensity: "medium",
         durationSeconds: 15,
       },
       environmentMotion: {
@@ -203,18 +294,61 @@ export const hareDroughtStory: Story = {
           name: "Elder Tortoise",
           position: "left",
           expression: "determined",
-          motion: "breathing",
+          motion: "labor",
+          scale: 1.0,
           avatarTheme: "tortoise",
         },
         {
           id: "hare",
           name: "Cunning Hare",
-          position: "far-right",
+          position: "right",
           expression: "leisurely",
-          motion: "subtle-float",
+          motion: "recline",
+          scale: 1.0,
           avatarTheme: "hare",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "hare-s3-e1",
+            cueIndex: 0,
+            payload: {
+              target: "character",
+              characterId: "tortoise",
+              action: "labor",
+            },
+          },
+          {
+            id: "hare-s3-e2",
+            cueIndex: 0,
+            payload: {
+              target: "character",
+              characterId: "hare",
+              action: "recline",
+            },
+          },
+          {
+            id: "hare-s3-e3",
+            cueIndex: 2,
+            payload: {
+              target: "camera",
+              preset: "dramatic-push",
+              intensity: "medium",
+              durationSeconds: 9,
+            },
+          },
+          {
+            id: "hare-s3-e4",
+            cueIndex: 3,
+            payload: {
+              target: "character",
+              characterId: "hare",
+              action: "fanning",
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-narration.mp3",
         narrationDurationSeconds: 22.3,
@@ -236,7 +370,7 @@ export const hareDroughtStory: Story = {
       },
       cameraMotion: {
         preset: "pan-left",
-        intensity: "subtle",
+        intensity: "medium",
         durationSeconds: 14,
       },
       environmentMotion: {
@@ -250,10 +384,43 @@ export const hareDroughtStory: Story = {
           name: "Cunning Hare",
           position: "center",
           expression: "mocking",
-          motion: "breathing",
+          motion: "mock",
+          scale: 1.05,
           avatarTheme: "hare",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "hare-s4-e1",
+            cueIndex: 0,
+            payload: {
+              target: "environment",
+              type: "heat-shimmer",
+              intensity: "dramatic",
+            },
+          },
+          {
+            id: "hare-s4-e2",
+            cueIndex: 1,
+            payload: {
+              target: "character",
+              characterId: "hare",
+              action: "mock",
+            },
+          },
+          {
+            id: "hare-s4-e3",
+            cueIndex: 2,
+            payload: {
+              target: "camera",
+              preset: "dramatic-push",
+              intensity: "dramatic",
+              durationSeconds: 8,
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-narration.mp3",
         narrationDurationSeconds: 23.35,
@@ -280,7 +447,7 @@ export const hareDroughtStory: Story = {
       },
       environmentMotion: {
         type: "river-ripples",
-        intensity: "gentle",
+        intensity: "expressive",
       },
       characters: ["Wise Elephant", "Elder Tortoise"],
       charactersData: [
@@ -289,7 +456,8 @@ export const hareDroughtStory: Story = {
           name: "Wise Elephant",
           position: "left",
           expression: "triumphant",
-          motion: "breathing",
+          motion: "triumphant",
+          scale: 1.1,
           avatarTheme: "elephant",
         },
         {
@@ -297,10 +465,52 @@ export const hareDroughtStory: Story = {
           name: "Elder Tortoise",
           position: "right",
           expression: "joyful",
-          motion: "subtle-float",
+          motion: "joy",
+          scale: 1.0,
           avatarTheme: "tortoise",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "hare-s5-e1",
+            cueIndex: 0,
+            payload: {
+              target: "environment",
+              type: "river-surge",
+              intensity: "dramatic",
+            },
+          },
+          {
+            id: "hare-s5-e2",
+            cueIndex: 1,
+            payload: {
+              target: "character",
+              characterId: "elephant",
+              action: "triumphant",
+            },
+          },
+          {
+            id: "hare-s5-e3",
+            cueIndex: 2,
+            payload: {
+              target: "character",
+              characterId: "tortoise",
+              action: "joy",
+            },
+          },
+          {
+            id: "hare-s5-e4",
+            cueIndex: 2,
+            payload: {
+              target: "camera",
+              preset: "slow-pull",
+              intensity: "dramatic",
+              durationSeconds: 12,
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-narration.mp3",
         narrationDurationSeconds: 24.6,
@@ -332,22 +542,65 @@ export const hareDroughtStory: Story = {
       characters: ["Wise Elephant", "Cunning Hare"],
       charactersData: [
         {
-          id: "hare",
-          name: "Cunning Hare",
-          position: "far-left",
-          expression: "humble",
-          motion: "subtle-float",
-          avatarTheme: "hare",
-        },
-        {
           id: "elephant",
           name: "Wise Elephant",
           position: "center",
           expression: "peaceful",
-          motion: "breathing",
+          motion: "stand",
+          scale: 1.05,
           avatarTheme: "elephant",
         },
+        {
+          id: "hare",
+          name: "Cunning Hare",
+          position: "right",
+          expression: "humble",
+          motion: "retreat",
+          scale: 0.95,
+          avatarTheme: "hare",
+        },
       ],
+      timeline: {
+        events: [
+          {
+            id: "hare-s6-e1",
+            cueIndex: 0,
+            payload: {
+              target: "environment",
+              type: "nightfall",
+              intensity: "standard",
+            },
+          },
+          {
+            id: "hare-s6-e2",
+            cueIndex: 1,
+            payload: {
+              target: "character",
+              characterId: "hare",
+              action: "approach",
+            },
+          },
+          {
+            id: "hare-s6-e3",
+            cueIndex: 3,
+            payload: {
+              target: "character",
+              characterId: "hare",
+              action: "retreat",
+            },
+          },
+          {
+            id: "hare-s6-e4",
+            cueIndex: 3,
+            payload: {
+              target: "camera",
+              preset: "slow-pull",
+              intensity: "medium",
+              durationSeconds: 12,
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-narration.mp3",
         narrationDurationSeconds: 25.27,

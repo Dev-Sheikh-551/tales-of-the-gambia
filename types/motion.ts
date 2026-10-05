@@ -84,3 +84,60 @@ export interface MotionTokens {
     cinematic: number;
   };
 }
+
+/**
+ * Device motion quality profile
+ */
+export type DeviceMotionQuality = "high" | "balanced" | "low";
+export type DeviceQualityTier = DeviceMotionQuality;
+
+/**
+ * Reusable motion reveal animation variants
+ */
+export type MotionRevealVariant =
+  | "fade"
+  | "slide-up"
+  | "slide-down"
+  | "slide-left"
+  | "slide-right"
+  | "scale"
+  | "blur"
+  | "clip";
+
+/**
+ * Cinematic scene transition styles
+ */
+export type CinematicTransitionType =
+  | "dissolve"
+  | "cinematic-fade"
+  | "crossfade"
+  | "fade"
+  | "directional"
+  | "curtain"
+  | "wind"
+  | "river"
+  | "dust"
+  | "light"
+  | "nightfall";
+
+/**
+ * Visual layers comprising a cinematic storytelling scene in Tales of The Gambia V2.
+ */
+export type CinematicLayerName =
+  | "background"
+  | "midground"
+  | "character"
+  | "foreground"
+  | "caption"
+  | "controls";
+
+/**
+ * Normalized depth scale factors for spatial parallax.
+ * Higher values translate more with camera / pointer shifts.
+ */
+export interface SceneDepthConfig {
+  background: number;
+  midground: number;
+  character: number;
+  foreground: number;
+}

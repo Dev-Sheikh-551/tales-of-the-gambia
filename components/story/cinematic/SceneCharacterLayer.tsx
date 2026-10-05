@@ -39,8 +39,12 @@ export function SceneCharacterLayer({
     }
   };
 
-  // Entrance motion: one-time entrance animation with no repeating loop, breathing, or pulse
-  const getMotionVariants = (motionType?: SceneCharacter["motion"]) => {
+  // Event-driven character choreography: one-time entrance/reaction animation that cleanly settles.
+  // CRITICAL: Strictly NO repeating loops, infinite breathing, pulsing, or floating.
+  const getMotionVariants = (
+    motionType?: SceneCharacter["motion"],
+    motionConfig?: SceneCharacter["motionConfig"]
+  ) => {
     if (shouldReduceMotion) {
       return {
         initial: { opacity: 1 },
@@ -49,28 +53,110 @@ export function SceneCharacterLayer({
       };
     }
 
-    if (motionType === "enter-left") {
-      return {
-        initial: { opacity: 0, x: -20 },
-        animate: { opacity: 1, x: 0 },
-        transition: { duration: 0.5, ease: "easeOut" as const },
-      };
-    }
+    const delay = motionConfig?.delay || 0;
+    const duration = motionConfig?.duration || 0.55;
 
-    if (motionType === "enter-right") {
-      return {
-        initial: { opacity: 0, x: 20 },
-        animate: { opacity: 1, x: 0 },
-        transition: { duration: 0.5, ease: "easeOut" as const },
-      };
-    }
+    switch (motionType) {
+      case "enter-left":
+        return {
+          initial: { opacity: 0, x: -25 },
+          animate: { opacity: 1, x: 0 },
+          transition: { duration, delay, ease: "easeOut" as const },
+        };
 
-    // Default entrance: calm fade-in with slight settle, completely stable afterwards
-    return {
-      initial: { opacity: 0, y: 10 },
-      animate: { opacity: 1, y: 0 },
-      transition: { duration: 0.45, ease: "easeOut" as const },
-    };
+      case "enter-right":
+        return {
+          initial: { opacity: 0, x: 25 },
+          animate: { opacity: 1, x: 0 },
+          transition: { duration, delay, ease: "easeOut" as const },
+        };
+
+      case "rise":
+        return {
+          initial: { opacity: 0, y: 24 },
+          animate: { opacity: 1, y: 0 },
+          transition: {
+            duration: duration * 1.1,
+            delay,
+            ease: [0.16, 1.0, 0.3, 1.0] as [number, number, number, number],
+          },
+        };
+
+      case "reveal":
+        return {
+          initial: { opacity: 0, scale: 0.93 },
+          animate: { opacity: 1, scale: 1 },
+          transition: { duration, delay, ease: "easeOut" as const },
+        };
+
+      case "turn":
+        return {
+          initial: { opacity: 0, rotateY: 35 },
+          animate: { opacity: 1, rotateY: 0 },
+          transition: { duration: duration * 1.1, delay, ease: "easeOut" as const },
+        };
+
+      case "look":
+        return {
+          initial: { opacity: 0, rotate: -4 },
+          animate: { opacity: 1, rotate: 0 },
+          transition: { duration, delay, ease: "easeOut" as const },
+        };
+
+      case "step":
+        return {
+          initial: { opacity: 0, y: 14, scale: 0.96 },
+          animate: { opacity: 1, y: 0, scale: 1 },
+          transition: { duration, delay, ease: "easeOut" as const },
+        };
+
+      case "gesture":
+        return {
+          initial: { opacity: 0, y: 8 },
+          animate: { opacity: 1, y: [8, -3, 0] },
+          transition: { duration: duration * 1.2, delay, ease: "easeInOut" as const },
+        };
+
+      case "react":
+        return {
+          initial: { opacity: 0, scale: 0.96 },
+          animate: { opacity: 1, scale: [0.96, 1.03, 1] },
+          transition: { duration, delay, ease: "easeOut" as const },
+        };
+
+      case "exit-left":
+        return {
+          initial: { opacity: 1, x: 0 },
+          animate: { opacity: 0, x: -35 },
+          transition: { duration, delay, ease: "easeIn" as const },
+        };
+
+      case "exit-right":
+        return {
+          initial: { opacity: 1, x: 0 },
+          animate: { opacity: 0, x: 35 },
+          transition: { duration, delay, ease: "easeIn" as const },
+        };
+
+      case "fade":
+      case "dissolve":
+        return {
+          initial: { opacity: 0 },
+          animate: { opacity: 1 },
+          transition: { duration, delay, ease: "easeOut" as const },
+        };
+
+      case "still":
+      case "subtle-float":
+      case "breathing":
+      default:
+        // Calm entrance, permanent dignified stillness
+        return {
+          initial: { opacity: 0, y: 10 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.45, delay, ease: "easeOut" as const },
+        };
+    }
   };
 
   const renderSilhouetteMotif = (theme?: SceneCharacter["avatarTheme"]) => {
@@ -204,7 +290,7 @@ export function SceneCharacterLayer({
     <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden">
       {characters.map((char) => {
         const positionClass = getPositionClasses(char.position);
-        const variants = getMotionVariants(char.motion);
+        const variants = getMotionVariants(char.motion, char.motionConfig);
 
         if (shouldReduceMotion) {
           return (

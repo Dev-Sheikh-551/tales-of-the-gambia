@@ -3,9 +3,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, BookOpen, Volume2, ArrowRight, CornerDownLeft } from "lucide-react";
 import { MOCK_STORIES } from "@/data/stories";
 import { CategoryBadge, ContentTypeBadge, Badge } from "./Badge";
+import { MOTION_EASINGS } from "@/lib/motion/tokens";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -102,24 +104,32 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, filteredStories, selectedIndex, onClose, router]);
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-20 px-4">
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
-        onClick={onClose}
-        aria-hidden="true"
-      />
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-20 px-4">
+          {/* Backdrop */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm"
+            onClick={onClose}
+            aria-hidden="true"
+          />
 
-      {/* Modal Dialog */}
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-label="Search stories"
-        className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-[#1B1714] border border-[#3E352E] shadow-2xl z-10 animate-in fade-in zoom-in-95 duration-200"
-      >
+          {/* Modal Dialog */}
+          <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Search stories"
+            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.96, y: -10 }}
+            transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
+            className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-[#1B1714] border border-[#3E352E] shadow-2xl z-10"
+          >
         {/* Search Input Bar */}
         <div className="flex items-center px-4 py-3.5 border-b border-[#2E2721] bg-[#171310]">
           <Search className="w-5 h-5 text-[#AB9784] mr-3 shrink-0" />
@@ -201,65 +211,71 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 story.provenance?.community;
 
               return (
-                <Link
+                <motion.div
                   key={story.id}
-                  href={`/stories/${story.slug}`}
-                  onClick={onClose}
-                  onMouseEnter={() => setSelectedIndex(idx)}
-                  className={`group flex items-center justify-between p-3 rounded-xl border transition-all ${
-                    isSelected
-                      ? "bg-[#28221C] border-[#E0AB3A]/40 shadow-sm"
-                      : "bg-[#221D18] hover:bg-[#28221C] border-transparent"
-                  }`}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: Math.min(0.12, idx * 0.025), duration: 0.22 }}
                 >
-                  <div className="space-y-1.5 pr-3">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span
-                        className={`font-story-serif text-base transition-colors ${
-                          isSelected ? "text-[#F2C765]" : "text-[#F7F3EB]"
-                        }`}
-                      >
-                        {story.title}
-                      </span>
-                      <CategoryBadge category={story.category} />
-                      <ContentTypeBadge type={story.contentType} />
-                      {tradition && (
-                        <Badge variant="gold" size="sm">
-                          {tradition}
-                        </Badge>
-                      )}
+                  <Link
+                    href={`/stories/${story.slug}`}
+                    onClick={onClose}
+                    onMouseEnter={() => setSelectedIndex(idx)}
+                    className={`group flex items-center justify-between p-3 rounded-xl border transition-all ${
+                      isSelected
+                        ? "bg-[#28221C] border-[#E0AB3A]/40 shadow-sm"
+                        : "bg-[#221D18] hover:bg-[#28221C] border-transparent"
+                    }`}
+                  >
+                    <div className="space-y-1.5 pr-3">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span
+                          className={`font-story-serif text-base transition-colors ${
+                            isSelected ? "text-[#F2C765]" : "text-[#F7F3EB]"
+                          }`}
+                        >
+                          {story.title}
+                        </span>
+                        <CategoryBadge category={story.category} />
+                        <ContentTypeBadge type={story.contentType} />
+                        {tradition && (
+                          <Badge variant="gold" size="sm">
+                            {tradition}
+                          </Badge>
+                        )}
+                      </div>
+                      <p className="text-xs text-[#AB9784] line-clamp-1">{story.subtitle}</p>
+                      <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#857364]">
+                        <span className="flex items-center gap-1">
+                          <BookOpen className="w-3 h-3 text-[#D9732B]" />
+                          {story.readingTimeMinutes} min read
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Volume2 className="w-3 h-3 text-[#E0AB3A]" />
+                          {Math.round(story.listeningDurationSeconds / 60)} min audio
+                        </span>
+                        <span>{story.scenes.length} scenes</span>
+                        <span className="text-[#AB9784]">• {story.origin.region}</span>
+                      </div>
                     </div>
-                    <p className="text-xs text-[#AB9784] line-clamp-1">{story.subtitle}</p>
-                    <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#857364]">
-                      <span className="flex items-center gap-1">
-                        <BookOpen className="w-3 h-3 text-[#D9732B]" />
-                        {story.readingTimeMinutes} min read
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Volume2 className="w-3 h-3 text-[#E0AB3A]" />
-                        {Math.round(story.listeningDurationSeconds / 60)} min audio
-                      </span>
-                      <span>{story.scenes.length} scenes</span>
-                      <span className="text-[#AB9784]">• {story.origin.region}</span>
-                    </div>
-                  </div>
 
-                  <div className="flex items-center gap-2 shrink-0">
-                    {isSelected && (
-                      <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-[#857364] px-1.5 py-0.5 rounded bg-[#1B1714] border border-[#3E352E]">
-                        <span>Enter</span>
-                        <CornerDownLeft className="w-2.5 h-2.5" />
-                      </span>
-                    )}
-                    <ArrowRight
-                      className={`w-4 h-4 transition-all ${
-                        isSelected
-                          ? "text-[#F2C765] translate-x-1"
-                          : "text-[#857364] group-hover:text-[#F2C765]"
-                      }`}
-                    />
-                  </div>
-                </Link>
+                    <div className="flex items-center gap-2 shrink-0">
+                      {isSelected && (
+                        <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-[#857364] px-1.5 py-0.5 rounded bg-[#1B1714] border border-[#3E352E]">
+                          <span>Enter</span>
+                          <CornerDownLeft className="w-2.5 h-2.5" />
+                        </span>
+                      )}
+                      <ArrowRight
+                        className={`w-4 h-4 transition-all ${
+                          isSelected
+                            ? "text-[#F2C765] translate-x-1"
+                            : "text-[#857364] group-hover:text-[#F2C765]"
+                        }`}
+                      />
+                    </div>
+                  </Link>
+                </motion.div>
               );
             })
           )}
@@ -280,7 +296,9 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             Explore all {MOCK_STORIES.length} stories →
           </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
+      )}
+    </AnimatePresence>
   );
 }

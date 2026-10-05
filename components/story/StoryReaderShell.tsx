@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowLeft,
   Bookmark,
@@ -20,6 +21,9 @@ import { StoryCinematicMode } from "./cinematic/StoryCinematicMode";
 import { StoryProvenanceCard } from "./StoryProvenanceCard";
 import { NarratedStoryText } from "./NarratedStoryText";
 import { getStorySceneCues } from "@/data/audio/cues";
+import { MOTION_EASINGS } from "@/lib/motion/tokens";
+import { useNarrator } from "@/hooks/useNarrator";
+import { resolveSceneNarration } from "@/lib/narrators/resolver";
 import {
   isFavorite,
   toggleFavorite as toggleStorageFavorite,
@@ -33,6 +37,7 @@ interface StoryReaderShellProps {
 }
 
 export default function StoryReaderShell({ story }: StoryReaderShellProps) {
+  const shouldReduceMotion = useReducedMotion();
   const [activeSceneIndex, setActiveSceneIndex] = useState(0);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -81,9 +86,11 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
   }, [story.scenes.length]);
 
   const activeScene: Scene = story.scenes[activeSceneIndex] || story.scenes[0];
+  const { selectedNarratorId } = useNarrator();
+  const resolvedNarration = resolveSceneNarration(activeScene.audio, selectedNarratorId);
 
   const storyAudio = useStoryAudio({
-    narrationSrc: activeScene.audio?.narrationUrl,
+    narrationSrc: resolvedNarration.narrationUrl,
     onNarrationEnded: handleNarrationEnded,
   });
 
@@ -207,9 +214,12 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
               <Sliders className="w-4 h-4" />
             </button>
 
-            <button
+            <motion.button
+              whileTap={{ scale: 0.75 }}
+              animate={isBookmarked ? { scale: [1, 1.25, 1] } : { scale: 1 }}
+              transition={{ duration: 0.3 }}
               onClick={toggleBookmark}
-              className={`p-2 rounded-lg transition-colors ${
+              className={`p-2 rounded-lg transition-colors cursor-pointer ${
                 isBookmarked
                   ? "text-[#F2C765]"
                   : "text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5"
@@ -218,7 +228,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
               title="Bookmark story"
             >
               <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current text-[#D9732B]" : ""}`} />
-            </button>
+            </motion.button>
 
             <button
               onClick={handleShare}
@@ -240,7 +250,12 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
       {/* Main Editorial Reading Area */}
       <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 sm:pt-14">
         {/* Story Header: Clean, Typography-First */}
-        <header className="space-y-3 mb-8 text-center sm:text-left">
+        <motion.header
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: MOTION_EASINGS.enter }}
+          className="space-y-3 mb-8 text-center sm:text-left"
+        >
           {/* Max 2 pieces of essential context: Category · Tradition */}
           <div className="text-xs uppercase tracking-widest text-[#E0AB3A] font-semibold flex items-center justify-center sm:justify-start gap-2">
             <span>{story.category}</span>
@@ -250,24 +265,39 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             <span className="text-[#857364] normal-case tracking-normal">{story.readingTimeMinutes} min read</span>
           </div>
 
-          <h1 className="font-story-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.15] text-[#F7F3EB]">
+          <motion.h1
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.06, ease: MOTION_EASINGS.enter }}
+            className="font-story-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.15] text-[#F7F3EB]"
+          >
             {story.title}
-          </h1>
+          </motion.h1>
 
           {story.subtitle && (
-            <p className="font-story-serif text-lg sm:text-xl italic text-[#AB9784]">
+            <motion.p
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.12, ease: MOTION_EASINGS.enter }}
+              className="font-story-serif text-lg sm:text-xl italic text-[#AB9784]"
+            >
               &ldquo;{story.subtitle}&rdquo;
-            </p>
+            </motion.p>
           )}
-        </header>
+        </motion.header>
 
         {/* Audio Narration Bar: Integrated Reading Companion */}
-        <div className="mb-10">
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.18, ease: MOTION_EASINGS.enter }}
+          className="mb-10"
+        >
           <AudioNarrationBar
             currentSceneTitle={`Scene ${activeScene.sceneNumber}: ${activeScene.title}`}
             audioState={storyAudio.audioState}
             currentTime={storyAudio.currentTime}
-            duration={storyAudio.duration || activeScene.audio?.narrationDurationSeconds || activeScene.durationSeconds}
+            duration={storyAudio.duration || resolvedNarration.narrationDurationSeconds || activeScene.audio?.narrationDurationSeconds || activeScene.durationSeconds}
             isPlaying={storyAudio.isPlaying}
             hasAudio={storyAudio.hasAudio}
             playbackRate={storyAudio.playbackRate}
@@ -279,7 +309,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             onSetNarrationVolume={storyAudio.setNarrationVolume}
             onRetry={storyAudio.retry}
           />
-        </div>
+        </motion.div>
 
         {/* Scene Navigation Strip: Clean & Restrained */}
         {story.scenes.length > 1 && (
@@ -352,7 +382,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           >
             <NarratedStoryText
               text={activeScene.text}
-              cues={activeScene.audio?.cues || getStorySceneCues(story.slug, activeScene.sceneNumber)}
+              cues={resolvedNarration.cues || activeScene.audio?.cues || getStorySceneCues(story.slug, activeScene.sceneNumber)}
               currentTime={storyAudio.currentTime}
               hasAudio={storyAudio.hasAudio}
               className="leading-relaxed"

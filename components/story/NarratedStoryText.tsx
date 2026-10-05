@@ -160,10 +160,10 @@ export function NarratedStoryText({
             key={seg.key}
             ref={isActive ? activeCueRef : undefined}
             data-active-cue={isActive ? "true" : undefined}
-            className={`transition-colors duration-200 rounded-md box-decoration-clone ${
+            className={`transition-all duration-300 rounded-md box-decoration-clone ${
               isActive
-                ? "bg-[#D9732B]/20 text-[#F2C765] shadow-[0_0_12px_rgba(217,115,43,0.15)] px-1 py-0.5"
-                : "text-inherit"
+                ? "bg-[#D9732B]/20 text-[#F2C765] font-medium shadow-[0_0_12px_rgba(217,115,43,0.18)] px-1 py-0.5"
+                : "text-inherit opacity-90"
             }`}
           >
             {seg.text}

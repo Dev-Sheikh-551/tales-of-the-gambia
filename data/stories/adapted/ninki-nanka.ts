@@ -113,10 +113,34 @@ export const ninkiNankaStory: Story = {
           name: "Samba the Boatman",
           position: "center",
           expression: "determined",
-          motion: "subtle-float",
+          motion: "paddle",
+          scale: 1.05,
           avatarTheme: "boatman",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "ninki-s1-e1",
+            cueIndex: 0,
+            payload: {
+              target: "camera",
+              preset: "slow-push",
+              intensity: "medium",
+              durationSeconds: 14,
+            },
+          },
+          {
+            id: "ninki-s1-e2",
+            cueIndex: 1,
+            payload: {
+              target: "character",
+              characterId: "samba",
+              action: "paddle",
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-narration.mp3",
         narrationDurationSeconds: 25.18,
@@ -138,12 +162,12 @@ export const ninkiNankaStory: Story = {
       },
       cameraMotion: {
         preset: "drift",
-        intensity: "medium",
+        intensity: "dramatic",
         durationSeconds: 16,
       },
       environmentMotion: {
         type: "river-ripples",
-        intensity: "gentle",
+        intensity: "expressive",
       },
       characters: ["Samba the Boatman", "The River Shadow"],
       charactersData: [
@@ -152,18 +176,71 @@ export const ninkiNankaStory: Story = {
           name: "Samba the Boatman",
           position: "left",
           expression: "awe",
-          motion: "breathing",
+          motion: "paddle",
+          scale: 1.0,
           avatarTheme: "boatman",
         },
         {
           id: "shadow",
-          name: "The River Shadow",
+          name: "Ninki Nanka",
           position: "right",
           expression: "imposing",
-          motion: "subtle-float",
+          motion: "rise",
+          scale: 1.15,
           avatarTheme: "shadow",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "ninki-s2-e1",
+            cueIndex: 0,
+            payload: {
+              target: "environment",
+              type: "river-surge",
+              intensity: "dramatic",
+            },
+          },
+          {
+            id: "ninki-s2-e2",
+            cueIndex: 1,
+            payload: {
+              target: "camera",
+              preset: "dramatic-push",
+              intensity: "dramatic",
+              durationSeconds: 10,
+            },
+          },
+          {
+            id: "ninki-s2-e3",
+            cueIndex: 2,
+            payload: {
+              target: "character",
+              characterId: "shadow",
+              action: "rise",
+            },
+          },
+          {
+            id: "ninki-s2-e4",
+            cueIndex: 2,
+            payload: {
+              target: "character",
+              characterId: "samba",
+              action: "reach",
+            },
+          },
+          {
+            id: "ninki-s2-e5",
+            cueIndex: 3,
+            payload: {
+              target: "camera",
+              preset: "focus-shift",
+              intensity: "dramatic",
+              durationSeconds: 8,
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-narration.mp3",
         narrationDurationSeconds: 24.98,
@@ -185,7 +262,7 @@ export const ninkiNankaStory: Story = {
       },
       cameraMotion: {
         preset: "zoom-out",
-        intensity: "subtle",
+        intensity: "medium",
         durationSeconds: 15,
       },
       environmentMotion: {
@@ -199,10 +276,43 @@ export const ninkiNankaStory: Story = {
           name: "Samba the Boatman",
           position: "center",
           expression: "peaceful",
-          motion: "breathing",
+          motion: "paddle",
+          scale: 1.05,
           avatarTheme: "boatman",
         },
       ],
+      timeline: {
+        events: [
+          {
+            id: "ninki-s3-e1",
+            cueIndex: 0,
+            payload: {
+              target: "environment",
+              type: "nightfall",
+              intensity: "standard",
+            },
+          },
+          {
+            id: "ninki-s3-e2",
+            cueIndex: 1,
+            payload: {
+              target: "character",
+              characterId: "samba",
+              action: "paddle",
+            },
+          },
+          {
+            id: "ninki-s3-e3",
+            cueIndex: 2,
+            payload: {
+              target: "camera",
+              preset: "slow-pull",
+              intensity: "medium",
+              durationSeconds: 12,
+            },
+          },
+        ],
+      },
       audio: {
         narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-narration.mp3",
         narrationDurationSeconds: 24.57,

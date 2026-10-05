@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useId, useState } from "react";
+import { motion } from "framer-motion";
 import {
   Play,
   Pause,
@@ -10,6 +11,8 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import { AudioState, PlaybackRate, PLAYBACK_RATES } from "@/hooks/useStoryAudio";
+import { useNarrator } from "@/hooks/useNarrator";
+import { NarratorPicker } from "./NarratorPicker";
 
 // ---------------------------------------------------------------------------
 // Props
@@ -30,6 +33,7 @@ export interface AudioNarrationBarProps {
   onSetRate: (rate: PlaybackRate) => void;
   onSetNarrationVolume: (v: number) => void;
   onRetry: () => void;
+  onNarratorChanged?: (narratorId: string) => void;
 }
 
 // ---------------------------------------------------------------------------
@@ -63,10 +67,13 @@ export function AudioNarrationBar({
   onSetRate,
   onSetNarrationVolume,
   onRetry,
+  onNarratorChanged,
 }: AudioNarrationBarProps) {
   const scrubId = useId();
   const narVolId = useId();
   const [showSettings, setShowSettings] = useState(false);
+  const [isNarratorPickerOpen, setIsNarratorPickerOpen] = useState(false);
+  const { selectedNarrator } = useNarrator();
 
   const progressPercent =
     duration > 0 ? Math.min(100, (currentTime / duration) * 100) : 0;
@@ -131,10 +138,13 @@ export function AudioNarrationBar({
 
       {/* Main Single-Row Audio Companion */}
       <div className="flex items-center gap-3 sm:gap-4">
-        {/* Play / Pause Button */}
-        <button
+        {/* Tactile Play / Pause Button */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.92 }}
+          transition={{ type: "spring", stiffness: 400, damping: 25 }}
           onClick={handleToggle}
-          className="w-9 h-9 rounded-full bg-gradient-to-br from-[#D9732B] to-[#C69224] text-white flex items-center justify-center shrink-0 shadow-sm hover:scale-105 active:scale-95 transition-transform cursor-pointer"
+          className="w-9 h-9 rounded-full bg-gradient-to-br from-[#D9732B] to-[#C69224] text-white flex items-center justify-center shrink-0 shadow-sm transition-transform cursor-pointer"
           aria-label={isPlaying ? "Pause narration" : "Play narration"}
         >
           {isPlaying ? (
@@ -142,20 +152,44 @@ export function AudioNarrationBar({
           ) : (
             <Play className="w-4 h-4 fill-current ml-0.5" />
           )}
-        </button>
+        </motion.button>
 
-        {/* Time Readout */}
-        <span className="text-[11px] font-mono text-[#857364] shrink-0 w-16">
-          {formatTime(currentTime)} / {formatTime(duration)}
-        </span>
+        {/* Audio Equalizer & Time Readout */}
+        <div className="flex items-center gap-2 shrink-0">
+          {/* Subtle 3-bar audio reactive visualizer */}
+          <div className="flex items-end gap-0.5 h-3 px-0.5" aria-hidden="true">
+            <motion.span
+              animate={isPlaying ? { height: ["30%", "100%", "45%", "85%", "30%"] } : { height: "25%" }}
+              transition={{ duration: 1.1, repeat: isPlaying ? Infinity : 0, ease: "easeInOut" }}
+              className="w-0.5 bg-[#E0AB3A] rounded-full"
+            />
+            <motion.span
+              animate={isPlaying ? { height: ["60%", "25%", "95%", "40%", "60%"] } : { height: "25%" }}
+              transition={{ duration: 0.9, repeat: isPlaying ? Infinity : 0, ease: "easeInOut" }}
+              className="w-0.5 bg-[#D9732B] rounded-full"
+            />
+            <motion.span
+              animate={isPlaying ? { height: ["20%", "80%", "30%", "100%", "20%"] } : { height: "25%" }}
+              transition={{ duration: 1.3, repeat: isPlaying ? Infinity : 0, ease: "easeInOut" }}
+              className="w-0.5 bg-[#F2C765] rounded-full"
+            />
+          </div>
+          <span className="text-[11px] font-mono text-[#857364] w-16">
+            {formatTime(currentTime)} / {formatTime(duration)}
+          </span>
+        </div>
 
         {/* Scrubber Progress Bar */}
         <div className="relative flex-1 py-2 cursor-pointer select-none">
-          <div className="w-full h-1 bg-[#26201A] rounded-full overflow-hidden pointer-events-none">
+          <div className="w-full h-1 bg-[#26201A] rounded-full overflow-hidden pointer-events-none relative">
             <div
-              className="h-full bg-gradient-to-r from-[#D9732B] to-[#E0AB3A] rounded-full transition-all duration-100"
+              className="h-full bg-gradient-to-r from-[#D9732B] to-[#E0AB3A] rounded-full transition-all duration-100 relative"
               style={{ width: `${progressPercent}%` }}
-            />
+            >
+              {isPlaying && (
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#FFE8A3] shadow-[0_0_6px_#E0AB3A]" />
+              )}
+            </div>
           </div>
           <input
             id={scrubId}
@@ -174,8 +208,23 @@ export function AudioNarrationBar({
           />
         </div>
 
+        {/* Storyteller Voice Trigger */}
+        <motion.button
+          whileTap={{ scale: 0.92 }}
+          onClick={() => setIsNarratorPickerOpen(true)}
+          className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 text-[#CBBCAE] hover:text-[#F7F3EB] transition-colors cursor-pointer"
+          title="Choose storyteller voice"
+          aria-label={`Storyteller voice: ${selectedNarrator.name}`}
+        >
+          <Mic className="w-3.5 h-3.5 text-[#E0AB3A]" />
+          <span className="hidden sm:inline font-story-sans text-[11px] max-w-[100px] truncate">
+            {selectedNarrator.name}
+          </span>
+        </motion.button>
+
         {/* Audio Settings & Volume Disclosure Toggle */}
-        <button
+        <motion.button
+          whileTap={{ scale: 0.92 }}
           onClick={() => setShowSettings(!showSettings)}
           className={`p-1.5 rounded-lg text-xs transition-colors cursor-pointer ${
             showSettings
@@ -187,7 +236,7 @@ export function AudioNarrationBar({
           aria-expanded={showSettings}
         >
           <SlidersHorizontal className="w-4 h-4" />
-        </button>
+        </motion.button>
       </div>
 
       {/* Expandable Subtle Audio Levels Drawer */}
@@ -231,8 +280,29 @@ export function AudioNarrationBar({
               </button>
             ))}
           </div>
+
+          {/* Storyteller Voice Quick-link in Drawer */}
+          <div className="w-full pt-2 border-t border-white/5 flex items-center justify-between text-xs text-[#857364]">
+            <div className="flex items-center gap-1.5">
+              <Mic className="w-3 h-3 text-[#E0AB3A]" />
+              <span className="text-[11px]">Voice: {selectedNarrator.name}</span>
+            </div>
+            <button
+              onClick={() => setIsNarratorPickerOpen(true)}
+              className="text-[11px] text-[#F2C765] hover:underline cursor-pointer"
+            >
+              Change Voice
+            </button>
+          </div>
         </div>
       )}
+
+      {/* Narrator Selection Bottom Sheet / Modal */}
+      <NarratorPicker
+        isOpen={isNarratorPickerOpen}
+        onClose={() => setIsNarratorPickerOpen(false)}
+        onNarratorChanged={onNarratorChanged}
+      />
     </div>
   );
 }

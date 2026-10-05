@@ -1,11 +1,13 @@
 import { StoryProgress, RecentStory, AudioSettings } from "@/types/story";
 import { safeStorage } from "@/lib/mobile/safeStorage";
+import { DEFAULT_NARRATOR_ID, getNarratorById } from "@/lib/narrators/registry";
 
 export const STORAGE_KEYS = {
   FAVORITES: "totg_favorites",
   PROGRESS: "totg_reading_progress",
   RECENT: "totg_recent_stories",
   AUDIO_SETTINGS: "totg_audio_settings",
+  SELECTED_NARRATOR: "totg_selected_narrator",
 } as const;
 
 export const STORAGE_EVENT_NAME = "totg-storage-update";
@@ -194,6 +196,29 @@ export function resetAudioSettings(): void {
   if (typeof window === "undefined") return;
   try {
     safeStorage.removeItem(STORAGE_KEYS.AUDIO_SETTINGS);
+  } catch {
+    // Ignore
+  }
+}
+
+// ---------------- SELECTED NARRATOR ----------------
+export function getSelectedNarratorId(): string {
+  if (typeof window === "undefined") return DEFAULT_NARRATOR_ID;
+  try {
+    const data = safeStorage.getItem(STORAGE_KEYS.SELECTED_NARRATOR);
+    if (!data) return DEFAULT_NARRATOR_ID;
+    const narrator = getNarratorById(data);
+    return narrator ? narrator.id : DEFAULT_NARRATOR_ID;
+  } catch {
+    return DEFAULT_NARRATOR_ID;
+  }
+}
+
+export function setSelectedNarratorId(narratorId: string): void {
+  if (typeof window === "undefined") return;
+  try {
+    safeStorage.setItem(STORAGE_KEYS.SELECTED_NARRATOR, narratorId);
+    notifyStorageUpdate();
   } catch {
     // Ignore
   }
