@@ -13,11 +13,13 @@ import {
   Clock,
   Sparkles,
   Bookmark,
+  HardDriveDownload,
 } from "lucide-react";
 import { Story, StoryCategory, ContentType } from "@/types/story";
 import { CATEGORIES } from "@/data/categories";
 import { StoryCard } from "./StoryCard";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
+import { useDownloadedStories } from "@/hooks/useOfflineStory";
 import { MotionReveal } from "@/components/motion/MotionReveal";
 
 interface StoryLibraryClientProps {
@@ -41,6 +43,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const [, startTransition] = useTransition();
 
   const { isFav, toggleFav, getProgress, progressList, isLoaded } = useStoryStorage();
+  const { downloadedSlugs } = useDownloadedStories();
 
   // Read initial filter values from URL query parameters
   const initialSearch = searchParams.get("search") || "";
@@ -49,6 +52,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const initialTradition = searchParams.get("tradition") || "all";
   const initialAge = searchParams.get("age") || "all";
   const initialSort = (searchParams.get("sort") as SortOption) || "featured";
+  const initialOffline = searchParams.get("offline") === "true";
 
   const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [selectedCategory, setSelectedCategory] = useState<StoryCategory | "all">(initialCategory);
@@ -56,6 +60,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const [selectedTradition, setSelectedTradition] = useState<string>(initialTradition);
   const [selectedAge, setSelectedAge] = useState<string>(initialAge);
   const [selectedSort, setSelectedSort] = useState<SortOption>(initialSort);
+  const [isOfflineOnly, setIsOfflineOnly] = useState<boolean>(initialOffline);
 
   // Sync state if URL searchParams change (e.g. browser back/forward)
   useEffect(() => {
@@ -65,6 +70,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     setSelectedTradition(searchParams.get("tradition") || "all");
     setSelectedAge(searchParams.get("age") || "all");
     setSelectedSort((searchParams.get("sort") as SortOption) || "featured");
+    setIsOfflineOnly(searchParams.get("offline") === "true");
   }, [searchParams]);
 
   // Helper to update URL params
@@ -136,6 +142,12 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     updateUrl({ sort: sort });
   };
 
+  const handleOfflineToggle = () => {
+    const nextVal = !isOfflineOnly;
+    setIsOfflineOnly(nextVal);
+    updateUrl({ offline: nextVal ? "true" : null });
+  };
+
   const handleResetFilters = () => {
     setSearchQuery("");
     setSelectedCategory("all");
@@ -143,6 +155,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     setSelectedTradition("all");
     setSelectedAge("all");
     setSelectedSort("featured");
+    setIsOfflineOnly(false);
     startTransition(() => {
       router.replace(pathname, { scroll: false });
     });
@@ -154,11 +167,17 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     selectedType !== "all" ||
     selectedTradition !== "all" ||
     selectedAge !== "all" ||
-    selectedSort !== "featured";
+    selectedSort !== "featured" ||
+    isOfflineOnly;
 
   // Filter and sort the stories
   const filteredStories = useMemo(() => {
     let list = [...stories];
+
+    // Offline downloaded filter
+    if (isOfflineOnly) {
+      list = list.filter((s) => downloadedSlugs.has(s.slug));
+    }
 
     // Search query
     if (searchQuery.trim()) {
@@ -258,6 +277,8 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     selectedTradition,
     selectedAge,
     selectedSort,
+    isOfflineOnly,
+    downloadedSlugs,
   ]);
 
   // Active in-progress stories for the Continue Reading top section
@@ -425,12 +446,25 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
               type="button"
               onClick={() => handleCategoryChange("all")}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
-                selectedCategory === "all"
+                selectedCategory === "all" && !isOfflineOnly
                   ? "bg-[#D9732B] text-white shadow-sm"
                   : "bg-[#201B17] text-[#AB9784] border border-[#2E2721] hover:text-[#F7F3EB] hover:border-[#4A3E34]"
               }`}
             >
               All Categories ({stories.length})
+            </button>
+            <button
+              type="button"
+              onClick={handleOfflineToggle}
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 ${
+                isOfflineOnly
+                  ? "bg-emerald-600 text-white shadow-sm font-semibold"
+                  : "bg-[#201B17] text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/60 hover:text-emerald-300"
+              }`}
+              title="Show only stories saved for offline reading and listening"
+            >
+              <HardDriveDownload className="w-3.5 h-3.5" />
+              <span>Downloaded ({downloadedSlugs.size})</span>
             </button>
             {CATEGORIES.map((cat) => {
               const count = stories.filter((s) => s.category === cat.id).length;

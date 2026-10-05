@@ -14,6 +14,7 @@ import {
 import { Story, StoryProgress } from "@/types/story";
 import { StoryArt } from "@/components/ui/StoryArt";
 import { MOTION_EASINGS } from "@/lib/motion/tokens";
+import { useOfflineStory } from "@/hooks/useOfflineStory";
 
 interface StoryCardProps {
   story: Story;
@@ -31,6 +32,7 @@ export function StoryCard({
 }: StoryCardProps) {
   const isCompleted = progress && progress.percentComplete >= 100;
   const isInProgress = progress && progress.percentComplete > 0 && !isCompleted;
+  const { isOfflineReady } = useOfflineStory(story);
 
   // Extract tradition/community
   const tradition =
@@ -156,6 +158,12 @@ export function StoryCard({
             <span className="flex items-center gap-1 text-[#E0AB3A]" title="Narration audio available">
               <Volume2 className="w-3 h-3" />
               <span>Audio</span>
+            </span>
+          )}
+          {isOfflineReady && (
+            <span className="flex items-center gap-1 text-emerald-400 font-medium" title="Saved offline">
+              <CheckCircle2 className="w-3 h-3" />
+              <span>Offline</span>
             </span>
           )}
         </div>

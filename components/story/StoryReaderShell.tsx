@@ -24,6 +24,8 @@ import { getStorySceneCues } from "@/data/audio/cues";
 import { MOTION_EASINGS } from "@/lib/motion/tokens";
 import { useNarrator } from "@/hooks/useNarrator";
 import { resolveSceneNarration } from "@/lib/narrators/resolver";
+import { useOfflineStory } from "@/hooks/useOfflineStory";
+import { StoryDownloadButton } from "./StoryDownloadButton";
 import {
   isFavorite,
   toggleFavorite as toggleStorageFavorite,
@@ -89,8 +91,36 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
   const { selectedNarratorId } = useNarrator();
   const resolvedNarration = resolveSceneNarration(activeScene.audio, selectedNarratorId);
 
+  // Offline asset resolution: if the story is downloaded offline, resolve cached audio URI
+  const { isOfflineReady, resolveAssetUri } = useOfflineStory(story);
+  const [effectiveAudioSrc, setEffectiveAudioSrc] = useState<string | undefined>(
+    resolvedNarration.narrationUrl
+  );
+
+  useEffect(() => {
+    let isMounted = true;
+    if (!resolvedNarration.narrationUrl) {
+      setEffectiveAudioSrc(undefined);
+      return;
+    }
+
+    if (isOfflineReady) {
+      resolveAssetUri(resolvedNarration.narrationUrl).then((localUri) => {
+        if (isMounted) {
+          setEffectiveAudioSrc(localUri || resolvedNarration.narrationUrl);
+        }
+      });
+    } else {
+      setEffectiveAudioSrc(resolvedNarration.narrationUrl);
+    }
+
+    return () => {
+      isMounted = false;
+    };
+  }, [resolvedNarration.narrationUrl, isOfflineReady, resolveAssetUri]);
+
   const storyAudio = useStoryAudio({
-    narrationSrc: resolvedNarration.narrationUrl,
+    narrationSrc: effectiveAudioSrc,
     onNarrationEnded: handleNarrationEnded,
   });
 
@@ -213,6 +243,8 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             >
               <Sliders className="w-4 h-4" />
             </button>
+
+            <StoryDownloadButton story={story} variant="compact" />
 
             <motion.button
               whileTap={{ scale: 0.75 }}

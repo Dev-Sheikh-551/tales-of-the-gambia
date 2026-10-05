@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { X, Sparkles, RotateCcw, Play } from "lucide-react";
 import { Story } from "@/types/story";
 import { useStoryPlayback } from "@/hooks/useStoryPlayback";
 import { useStoryAudio } from "@/hooks/useStoryAudio";
 import { useNarrator } from "@/hooks/useNarrator";
 import { resolveSceneNarration } from "@/lib/narrators/resolver";
+import { useOfflineStory } from "@/hooks/useOfflineStory";
+import { StoryDownloadButton } from "../StoryDownloadButton";
 import { NarratorPicker } from "../NarratorPicker";
 import { StorySceneViewport } from "./StorySceneViewport";
 import { StoryPlaybackControls } from "./StoryPlaybackControls";
@@ -62,8 +64,36 @@ export function StoryCinematicMode({
   // Resolve narration track for current scene given the selected storyteller
   const resolvedNarration = resolveSceneNarration(currentScene.audio, selectedNarratorId);
 
+  // Offline asset resolution: use cached audio blob/URI when story is downloaded
+  const { isOfflineReady, resolveAssetUri } = useOfflineStory(story);
+  const [effectiveAudioSrc, setEffectiveAudioSrc] = useState<string | undefined>(
+    resolvedNarration.narrationUrl
+  );
+
+  useEffect(() => {
+    let isMounted = true;
+    if (!resolvedNarration.narrationUrl) {
+      setEffectiveAudioSrc(undefined);
+      return;
+    }
+
+    if (isOfflineReady) {
+      resolveAssetUri(resolvedNarration.narrationUrl).then((localUri) => {
+        if (isMounted) {
+          setEffectiveAudioSrc(localUri || resolvedNarration.narrationUrl);
+        }
+      });
+    } else {
+      setEffectiveAudioSrc(resolvedNarration.narrationUrl);
+    }
+
+    return () => {
+      isMounted = false;
+    };
+  }, [resolvedNarration.narrationUrl, isOfflineReady, resolveAssetUri]);
+
   const storyAudio = useStoryAudio({
-    narrationSrc: resolvedNarration.narrationUrl,
+    narrationSrc: effectiveAudioSrc,
     onNarrationEnded: () => {
       if (isAutoAdvanceEnabled) {
         goToNextScene();
@@ -141,6 +171,7 @@ export function StoryCinematicMode({
 
         {/* Exit & Controls */}
         <div className="flex items-center gap-2 sm:gap-3">
+          <StoryDownloadButton story={story} variant="compact" />
           <span className="hidden sm:inline text-[11px] text-[#857364] font-mono">
             Press ESC or click Exit
           </span>
