@@ -51,12 +51,20 @@ export function StoryCard({
       whileHover={{ y: -3 }}
       whileTap={{ scale: 0.985 }}
       transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
-      className="group relative flex flex-col justify-between rounded-xl bg-[#1A1613] border border-[#2A231D] hover:border-[#4A3E34] transition-colors p-4 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-black/30"
+      className="group relative flex flex-col justify-between rounded-xl bg-[#1A1613] border border-[#2A231D] hover:border-[#4A3E34] transition-colors p-4 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-black/30 cursor-pointer"
     >
+      {/* Full Card Tap Target Overlay */}
+      <Link
+        href={`/stories/${story.slug}`}
+        className="absolute inset-0 z-0"
+        aria-label={`Open story: ${story.title}`}
+        tabIndex={-1}
+      />
+
       {/* Top Media & Content */}
-      <div className="space-y-3">
+      <div className="space-y-3 relative z-10 pointer-events-none">
         {/* Visual Artwork Container */}
-        <div className="relative overflow-hidden rounded-lg">
+        <div className="relative overflow-hidden rounded-lg pointer-events-auto">
           <Link
             href={`/stories/${story.slug}`}
             className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] rounded-lg"
@@ -70,11 +78,11 @@ export function StoryCard({
             />
           </Link>
 
-          {/* Favorite Toggle Button with Satisfying Micro-interaction */}
+          {/* Favorite Toggle Button with 40-44px Touch Target & Event Isolation */}
           {onToggleFavorite && (
             <motion.button
               type="button"
-              whileTap={{ scale: 0.75 }}
+              whileTap={{ scale: 0.8 }}
               animate={isFavorite ? { scale: [1, 1.25, 1] } : { scale: 1 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => {
@@ -82,7 +90,7 @@ export function StoryCard({
                 e.stopPropagation();
                 onToggleFavorite(story.slug);
               }}
-              className={`absolute top-2 right-2 p-1.5 rounded-full backdrop-blur-md transition-colors cursor-pointer ${
+              className={`absolute top-1.5 right-1.5 min-w-[40px] min-h-[40px] flex items-center justify-center p-2 rounded-full backdrop-blur-md transition-colors cursor-pointer z-20 ${
                 isFavorite
                   ? "bg-[#D9732B] text-white shadow-md shadow-[#D9732B]/30"
                   : "bg-black/60 text-[#AB9784] hover:text-[#F7F3EB]"
@@ -94,7 +102,7 @@ export function StoryCard({
               }
               title={isFavorite ? "Saved" : "Save"}
             >
-              <Bookmark className={`w-3.5 h-3.5 ${isFavorite ? "fill-current" : ""}`} />
+              <Bookmark className={`w-4 h-4 ${isFavorite ? "fill-current" : ""}`} />
             </motion.button>
           )}
 
@@ -169,21 +177,21 @@ export function StoryCard({
         </div>
 
         {/* Primary Action Button + Secondary Cinematic Icon */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 relative z-10">
           <Link
             href={`/stories/${story.slug}?mode=cinematic`}
-            className="p-1.5 rounded-lg text-[#857364] hover:text-[#E0AB3A] hover:bg-white/5 transition-colors"
+            className="w-9 h-9 flex items-center justify-center rounded-lg text-[#857364] hover:text-[#E0AB3A] hover:bg-white/5 transition-colors cursor-pointer"
             title="Cinematic Story Mode"
             aria-label={`Cinematic mode for ${story.title}`}
           >
-            <Play className="w-3.5 h-3.5 fill-current" />
+            <Play className="w-4 h-4 fill-current" />
           </Link>
 
           <Link
             href={`/stories/${story.slug}`}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#D9732B]/15 hover:bg-[#D9732B]/25 text-[#F2C765] text-xs font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[36px] rounded-lg bg-[#D9732B]/15 hover:bg-[#D9732B]/25 text-[#F2C765] text-xs font-medium transition-colors cursor-pointer"
           >
-            <BookOpen className="w-3 h-3" />
+            <BookOpen className="w-3.5 h-3.5" />
             <span>{hasNarration ? "Read & Listen" : "Read"}</span>
           </Link>
         </div>

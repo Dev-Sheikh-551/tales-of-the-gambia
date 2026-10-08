@@ -1,8 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { X, Type, Sun, Moon, Droplets, Check } from "lucide-react";
 import { ReadingSettings } from "@/types/story";
+import { registerBackButtonHandler } from "@/lib/native/backButton";
 
 interface ReadingSettingsModalProps {
   isOpen: boolean;
@@ -17,10 +18,18 @@ export function ReadingSettingsModal({
   settings,
   onUpdateSettings,
 }: ReadingSettingsModalProps) {
+  useEffect(() => {
+    if (!isOpen) return;
+    return registerBackButtonHandler(() => {
+      onClose();
+      return true;
+    });
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 select-none">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/75 backdrop-blur-sm"
@@ -28,21 +37,24 @@ export function ReadingSettingsModal({
         aria-hidden="true"
       />
 
-      {/* Modal Content */}
+      {/* Bottom Sheet / Modal Content */}
       <div
         role="dialog"
         aria-modal="true"
         aria-label="Reading Controls & Preferences"
-        className="relative w-full max-w-md bg-[#1C1713] border border-[#3E352E] rounded-2xl p-6 shadow-2xl z-10 space-y-6"
+        className="relative w-full sm:max-w-md bg-[#1C1713] border border-[#3E352E] rounded-t-3xl sm:rounded-2xl p-5 sm:p-6 shadow-2xl z-10 space-y-5 sm:space-y-6 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] max-h-[85vh] overflow-y-auto overscroll-contain"
       >
+        {/* Grab Handle for Touch Devices */}
+        <div className="w-12 h-1.5 bg-white/25 rounded-full mx-auto -mt-1 mb-2 sm:hidden" />
+
         <div className="flex items-center justify-between border-b border-[#2E2721] pb-3">
           <div className="flex items-center gap-2">
             <Type className="w-4 h-4 text-[#E0AB3A]" />
-            <h3 className="font-story-serif text-lg text-[#F7F3EB]">Reading Experience</h3>
+            <h3 className="font-story-serif text-base sm:text-lg text-[#F7F3EB]">Reading Experience</h3>
           </div>
           <button
             onClick={onClose}
-            className="p-1 text-[#857364] hover:text-[#F7F3EB] transition-colors"
+            className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-[#CBBCAE] hover:text-white transition-colors cursor-pointer"
             aria-label="Close settings"
           >
             <X className="w-5 h-5" />
@@ -59,7 +71,7 @@ export function ReadingSettingsModal({
               <button
                 key={size}
                 onClick={() => onUpdateSettings({ fontSize: size })}
-                className={`py-2 px-3 rounded-xl border text-center transition-all ${
+                className={`py-2.5 sm:py-2 px-3 min-h-[44px] rounded-xl border text-center transition-all cursor-pointer ${
                   settings.fontSize === size
                     ? "bg-[#D9732B] border-[#D9732B] text-white font-bold shadow-sm"
                     : "bg-[#241F1A] border-[#3A3026] text-[#AB9784] hover:text-[#F7F3EB]"

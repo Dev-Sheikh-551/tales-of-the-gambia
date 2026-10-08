@@ -8,6 +8,7 @@ import { Search, X, BookOpen, Volume2, ArrowRight, CornerDownLeft } from "lucide
 import { MOCK_STORIES } from "@/data/stories";
 import { CategoryBadge, ContentTypeBadge, Badge } from "./Badge";
 import { MOTION_EASINGS } from "@/lib/motion/tokens";
+import { registerBackButtonHandler } from "@/lib/native/backButton";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -70,6 +71,15 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     }
   }, [isOpen]);
 
+  // Register native Android back-button handler
+  useEffect(() => {
+    if (!isOpen) return;
+    return registerBackButtonHandler(() => {
+      onClose();
+      return true;
+    });
+  }, [isOpen, onClose]);
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -107,7 +117,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-20 px-4">
+        <div className="fixed inset-0 z-50 flex items-start justify-center pt-0 sm:pt-20 px-0 sm:px-4">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -124,15 +134,15 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             role="dialog"
             aria-modal="true"
             aria-label="Search stories"
-            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            initial={{ opacity: 0, scale: 0.98, y: -8 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.96, y: -10 }}
+            exit={{ opacity: 0, scale: 0.98, y: -8 }}
             transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
-            className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-[#1B1714] border border-[#3E352E] shadow-2xl z-10"
+            className="relative w-full max-w-2xl h-[100dvh] sm:h-auto sm:max-h-[80vh] flex flex-col overflow-hidden sm:rounded-2xl bg-[#1B1714] border-0 sm:border border-[#3E352E] shadow-2xl z-10"
           >
-        {/* Search Input Bar */}
-        <div className="flex items-center px-4 py-3.5 border-b border-[#2E2721] bg-[#171310]">
-          <Search className="w-5 h-5 text-[#AB9784] mr-3 shrink-0" />
+        {/* Search Input Bar with Safe Area Top */}
+        <div className="flex items-center px-4 py-3 sm:py-3.5 border-b border-[#2E2721] bg-[#171310] pt-[calc(0.75rem+env(safe-area-inset-top,0px))] sm:pt-3.5">
+          <Search className="w-5 h-5 text-[#E0AB3A] mr-3 shrink-0" />
           <input
             ref={inputRef}
             type="text"
@@ -145,7 +155,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <button
               type="button"
               onClick={() => setQuery("")}
-              className="p-1 text-[#857364] hover:text-[#F7F3EB] transition-colors"
+              className="w-10 h-10 flex items-center justify-center text-[#857364] hover:text-[#F7F3EB] transition-colors cursor-pointer"
               aria-label="Clear query"
             >
               <X className="w-4 h-4" />
@@ -154,9 +164,9 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           <button
             type="button"
             onClick={onClose}
-            className="ml-2 px-2 py-1 text-xs rounded border border-[#3E352E] text-[#AB9784] hover:bg-[#29231E] transition-colors"
+            className="ml-1 px-3 py-1.5 min-h-[40px] flex items-center justify-center text-xs rounded-xl border border-[#3E352E] text-[#AB9784] hover:bg-[#29231E] hover:text-[#F7F3EB] transition-colors cursor-pointer"
           >
-            ESC
+            Close
           </button>
         </div>
 
@@ -281,8 +291,8 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           )}
         </div>
 
-        {/* Modal Footer Note */}
-        <div className="px-4 py-2.5 bg-[#14100E] border-t border-[#2E2721] flex items-center justify-between text-[11px] text-[#857364]">
+        {/* Modal Footer Note with Safe Area Bottom */}
+        <div className="px-4 py-2.5 bg-[#14100E] border-t border-[#2E2721] flex items-center justify-between text-[11px] text-[#857364] pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:pb-2.5">
           <div className="flex items-center gap-3">
             <span>↑↓ Navigate</span>
             <span>↵ Select</span>

@@ -16,6 +16,7 @@ import {
 import { SearchModal } from "@/components/ui/SearchModal";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 import { MOTION_EASINGS } from "@/lib/motion/tokens";
+import { MobileBottomNav } from "./MobileBottomNav";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -289,6 +290,9 @@ export default function Navbar() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Persistent Mobile Bottom Navigation (Home | Stories | Saved | Search) */}
+      <MobileBottomNav onOpenSearch={() => setIsSearchOpen(true)} />
     </>
   );
 }

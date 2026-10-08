@@ -26,6 +26,7 @@ import { useNarrator } from "@/hooks/useNarrator";
 import { resolveSceneNarration } from "@/lib/narrators/resolver";
 import { useOfflineStory } from "@/hooks/useOfflineStory";
 import { StoryDownloadButton } from "./StoryDownloadButton";
+import { useSceneSwipe } from "@/hooks/useSceneSwipe";
 import {
   isFavorite,
   toggleFavorite as toggleStorageFavorite,
@@ -64,14 +65,18 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
     }
   }, [story.id, story.slug, story.scenes.length]);
 
-  // Sync mode=cinematic URL query parameter
+  // Sync mode=cinematic URL query parameter and handle back button popstate
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window === "undefined") return;
+
+    const syncFromUrl = () => {
       const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get("mode") === "cinematic") {
-        setIsCinematicOpen(true);
-      }
-    }
+      setIsCinematicOpen(urlParams.get("mode") === "cinematic");
+    };
+
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
   }, []);
 
   const sceneTopRef = React.useRef<HTMLDivElement | null>(null);
@@ -147,7 +152,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
     if (typeof window !== "undefined") {
       const url = new URL(window.location.href);
       url.searchParams.set("mode", "cinematic");
-      window.history.replaceState({}, "", url.toString());
+      window.history.pushState({ mode: "cinematic" }, "", url.toString());
     }
   };
 
@@ -159,6 +164,23 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
       window.history.replaceState({}, "", url.toString());
     }
   };
+
+  // Touch gesture swipe hook for natural scene navigation
+  const swipeHandlers = useSceneSwipe({
+    onNext: () => {
+      if (activeSceneIndex < story.scenes.length - 1) {
+        setActiveSceneIndex((prev) => prev + 1);
+      }
+    },
+    onPrevious: () => {
+      if (activeSceneIndex > 0) {
+        setActiveSceneIndex((prev) => prev - 1);
+      }
+    },
+    canNext: activeSceneIndex < story.scenes.length - 1,
+    canPrevious: activeSceneIndex > 0,
+    disabled: isCinematicOpen,
+  });
 
   // Save reading progress whenever active scene changes
   useEffect(() => {
@@ -204,12 +226,12 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           : "bg-[#12100E] text-[#F7F3EB]"
       }`}
     >
-      {/* Top Subtle Reading Bar */}
-      <header className="sticky top-0 z-30 border-b border-white/10 backdrop-blur-md bg-black/30 px-4 sm:px-8 py-3">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
+      {/* Top Subtle Reading Bar with Safe Area & 44px Touch Targets */}
+      <header className="sticky top-0 z-30 border-b border-white/10 backdrop-blur-md bg-black/40 px-3 sm:px-8 py-2 sm:py-3 pt-[calc(0.5rem+env(safe-area-inset-top,0px))]">
+        <div className="max-w-4xl mx-auto flex items-center justify-between gap-2">
           <Link
             href="/stories"
-            className="flex items-center gap-1.5 text-xs text-[#AB9784] hover:text-[#F7F3EB] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] rounded px-1"
+            className="flex items-center gap-1.5 text-xs text-[#AB9784] hover:text-[#F7F3EB] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] rounded-xl px-2 min-h-[44px]"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="hidden sm:inline">All Stories</span>
@@ -217,27 +239,27 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           </Link>
 
           {/* Center Story Title snippet */}
-          <div className="text-center truncate max-w-xs px-2">
-            <span className="font-story-serif text-sm font-medium tracking-tight truncate block opacity-85">
+          <div className="text-center truncate max-w-[140px] sm:max-w-xs px-1">
+            <span className="font-story-serif text-xs sm:text-sm font-medium tracking-tight truncate block opacity-90">
               {story.title}
             </span>
           </div>
 
           {/* Action Icons */}
-          <div className="flex items-center gap-1.5 select-none">
+          <div className="flex items-center gap-1 sm:gap-1.5 select-none shrink-0">
             <button
               onClick={handleEnterCinematic}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-[#D9732B] to-[#C69224] text-white text-xs font-medium shadow-sm hover:opacity-95 transition-opacity"
+              className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 min-h-[40px] sm:min-h-[44px] rounded-xl bg-gradient-to-r from-[#D9732B] to-[#C69224] text-white text-xs font-medium shadow-sm hover:opacity-95 transition-opacity cursor-pointer"
               title="Cinematic Story Mode"
               aria-label="Enter cinematic story mode"
             >
-              <Play className="w-3 h-3 fill-current" />
-              <span className="hidden sm:inline">Cinematic</span>
+              <Play className="w-3.5 h-3.5 fill-current" />
+              <span className="hidden xs:inline sm:inline">Cinematic</span>
             </button>
 
             <button
               onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-lg text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5 transition-colors"
+              className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5 transition-colors cursor-pointer"
               aria-label="Adjust reading typography and theme"
               title="Reading display settings"
             >
@@ -251,7 +273,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
               animate={isBookmarked ? { scale: [1, 1.25, 1] } : { scale: 1 }}
               transition={{ duration: 0.3 }}
               onClick={toggleBookmark}
-              className={`p-2 rounded-lg transition-colors cursor-pointer ${
+              className={`w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl transition-colors cursor-pointer ${
                 isBookmarked
                   ? "text-[#F2C765]"
                   : "text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5"
@@ -264,7 +286,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
             <button
               onClick={handleShare}
-              className="p-2 rounded-lg text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5 transition-colors relative"
+              className="hidden sm:flex w-11 h-11 items-center justify-center rounded-xl text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5 transition-colors relative cursor-pointer"
               aria-label="Share story link"
               title="Copy link"
             >
@@ -280,16 +302,16 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
       </header>
 
       {/* Main Editorial Reading Area */}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-10 sm:pt-14">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-6 sm:pt-12 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))]">
         {/* Story Header: Clean, Typography-First */}
         <motion.header
           initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: MOTION_EASINGS.enter }}
-          className="space-y-3 mb-8 text-center sm:text-left"
+          className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8 text-center sm:text-left"
         >
           {/* Max 2 pieces of essential context: Category · Tradition */}
-          <div className="text-xs uppercase tracking-widest text-[#E0AB3A] font-semibold flex items-center justify-center sm:justify-start gap-2">
+          <div className="text-[11px] sm:text-xs uppercase tracking-widest text-[#E0AB3A] font-semibold flex items-center justify-center sm:justify-start gap-2 flex-wrap">
             <span>{story.category}</span>
             <span>·</span>
             <span>{tradition}</span>
@@ -301,7 +323,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.06, ease: MOTION_EASINGS.enter }}
-            className="font-story-serif text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.15] text-[#F7F3EB]"
+            className="font-story-serif text-2xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.18] sm:leading-[1.15] text-[#F7F3EB]"
           >
             {story.title}
           </motion.h1>
@@ -311,7 +333,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
               initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.12, ease: MOTION_EASINGS.enter }}
-              className="font-story-serif text-lg sm:text-xl italic text-[#AB9784]"
+              className="font-story-serif text-base sm:text-xl italic text-[#AB9784]"
             >
               &ldquo;{story.subtitle}&rdquo;
             </motion.p>
@@ -323,7 +345,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.18, ease: MOTION_EASINGS.enter }}
-          className="mb-10"
+          className="mb-8 sm:mb-10"
         >
           <AudioNarrationBar
             currentSceneTitle={`Scene ${activeScene.sceneNumber}: ${activeScene.title}`}
@@ -343,20 +365,20 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           />
         </motion.div>
 
-        {/* Scene Navigation Strip: Clean & Restrained */}
+        {/* Scene Navigation Strip: Clean, Horizontally Scrollable & Restrained */}
         {story.scenes.length > 1 && (
           <nav
             aria-label="Scene selection"
-            className="flex items-center justify-between py-3 px-4 rounded-xl bg-white/[0.03] border border-white/5 mb-8 select-none"
+            className="flex items-center justify-between py-2.5 px-3 sm:px-4 rounded-xl bg-white/[0.03] border border-white/5 mb-6 sm:mb-8 select-none gap-2 overflow-x-auto no-scrollbar"
           >
-            <div className="flex items-center gap-2">
-              <span className="text-xs uppercase tracking-wider text-[#857364]">Scene</span>
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="text-[11px] uppercase tracking-wider text-[#857364]">Scene</span>
               <div className="flex items-center gap-1">
                 {story.scenes.map((s, idx) => (
                   <button
                     key={s.id}
                     onClick={() => setActiveSceneIndex(idx)}
-                    className={`w-7 h-7 rounded-lg text-xs font-mono transition-colors ${
+                    className={`min-w-[34px] h-8 sm:min-w-[32px] sm:h-7 px-1 rounded-lg text-xs font-mono transition-colors flex items-center justify-center cursor-pointer ${
                       idx === activeSceneIndex
                         ? "bg-[#D9732B] text-white font-semibold shadow-sm"
                         : "text-[#857364] hover:text-[#F7F3EB] hover:bg-white/5"
@@ -370,20 +392,20 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
               </div>
             </div>
 
-            <div className="text-xs text-[#AB9784] font-story-serif italic truncate max-w-[180px] sm:max-w-xs text-right">
+            <div className="text-xs text-[#AB9784] font-story-serif italic truncate max-w-[130px] sm:max-w-xs text-right shrink-0">
               {activeScene.title}
             </div>
           </nav>
         )}
 
-        {/* Editorial Story Text — Pure Storybook Page */}
-        <article className="space-y-6 pt-2">
+        {/* Editorial Story Text — Pure Storybook Page with Touch Swipe Navigation */}
+        <article {...swipeHandlers} className="space-y-6 pt-1 touch-pan-y">
           {/* Scroll anchor — scene transitions bring this into view */}
           <div ref={sceneTopRef} aria-hidden="true" />
 
           {/* Scene Title Cue with Narration Indicator */}
           <div className="flex items-center justify-between border-b border-white/10 pb-3">
-            <h2 className="font-story-serif text-2xl sm:text-3xl font-medium text-[#F7F3EB]">
+            <h2 className="font-story-serif text-xl sm:text-3xl font-medium text-[#F7F3EB]">
               {activeScene.title}
             </h2>
             {storyAudio.isPlaying && (
@@ -431,14 +453,14 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
           {/* Scene Stepper Bottom Controls */}
           {story.scenes.length > 1 && (
-            <div className="pt-8 border-t border-white/10 flex items-center justify-between select-none">
+            <div className="pt-8 border-t border-white/10 flex items-center justify-between select-none gap-2">
               <button
                 disabled={activeSceneIndex === 0}
                 onClick={() => setActiveSceneIndex((prev) => Math.max(0, prev - 1))}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-medium text-[#CBBCAE] disabled:opacity-20 disabled:cursor-not-allowed hover:text-white hover:bg-white/5 transition-all select-none"
+                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 min-h-[44px] rounded-xl text-xs font-medium text-[#CBBCAE] disabled:opacity-20 disabled:cursor-not-allowed hover:text-white hover:bg-white/5 transition-all select-none cursor-pointer"
               >
                 <ChevronLeft className="w-4 h-4" />
-                <span>Previous Scene</span>
+                <span>Previous</span>
               </button>
 
               <span className="text-xs text-[#857364] font-mono select-none">
@@ -452,9 +474,9 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
                     Math.min(story.scenes.length - 1, prev + 1)
                   )
                 }
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#D9732B] hover:bg-[#C45E1B] text-white text-xs font-medium disabled:opacity-20 disabled:cursor-not-allowed transition-all shadow-sm select-none"
+                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 min-h-[44px] rounded-xl bg-[#D9732B] hover:bg-[#C45E1B] text-white text-xs font-medium disabled:opacity-20 disabled:cursor-not-allowed transition-all shadow-sm select-none cursor-pointer"
               >
-                <span>Next Scene</span>
+                <span>Next</span>
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>

@@ -13,6 +13,7 @@ import { NarratorPicker } from "../NarratorPicker";
 import { StorySceneViewport } from "./StorySceneViewport";
 import { StoryPlaybackControls } from "./StoryPlaybackControls";
 import { StoryCompletionView } from "./StoryCompletionView";
+import { registerBackButtonHandler } from "@/lib/native/backButton";
 
 interface StoryCinematicModeProps {
   story: Story;
@@ -128,6 +129,14 @@ export function StoryCinematicMode({
     };
   }, []);
 
+  // Register native Android back-button handler to exit cinematic mode cleanly
+  useEffect(() => {
+    return registerBackButtonHandler(() => {
+      onExit();
+      return true;
+    });
+  }, [onExit]);
+
   const isPaused = playbackState === "paused";
   const isCompleted = playbackState === "completed";
 
@@ -146,20 +155,57 @@ export function StoryCinematicMode({
       ? Math.min(100, Math.round((effectiveElapsed / effectiveDuration) * 100))
       : progressPercent;
 
+  // Mobile cinematic controls visibility: tap to reveal, auto-fade during playback
+  const [showControls, setShowControls] = useState(true);
+  const hideControlsTimerRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const resetControlsTimeout = React.useCallback(() => {
+    setShowControls(true);
+    if (hideControlsTimerRef.current) {
+      clearTimeout(hideControlsTimerRef.current);
+    }
+    if (playbackState === "playing") {
+      hideControlsTimerRef.current = setTimeout(() => {
+        setShowControls(false);
+      }, 3500);
+    }
+  }, [playbackState]);
+
+  useEffect(() => {
+    resetControlsTimeout();
+    return () => {
+      if (hideControlsTimerRef.current) clearTimeout(hideControlsTimerRef.current);
+    };
+  }, [playbackState, currentSceneIndex, resetControlsTimeout]);
+
+  const toggleControls = () => {
+    if (showControls) {
+      setShowControls(false);
+    } else {
+      resetControlsTimeout();
+    }
+  };
+
   return (
     <div
       role="region"
       aria-label="Cinematic Story Mode"
+      onClick={resetControlsTimeout}
+      onPointerMove={resetControlsTimeout}
       className="fixed inset-0 z-50 flex flex-col bg-[#0C0A09] text-[#F7F3EB] overflow-hidden select-none animate-in fade-in duration-300"
     >
-      {/* Top Cinematic Navigation Header */}
-      <header className="relative z-40 flex items-center justify-between px-4 sm:px-8 py-3 bg-gradient-to-b from-black/90 via-black/50 to-transparent border-b border-white/5">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-[#D9732B]/20 border border-[#D9732B]/40 flex items-center justify-center">
+      {/* Top Cinematic Navigation Header with Safe Area Insets */}
+      <header
+        className={`relative z-40 flex items-center justify-between px-4 sm:px-8 py-2.5 sm:py-3 pt-[calc(0.75rem+env(safe-area-inset-top,0px))] pl-[calc(1rem+env(safe-area-inset-left,0px))] pr-[calc(1rem+env(safe-area-inset-right,0px))] bg-gradient-to-b from-black/95 via-black/60 to-transparent border-b border-white/5 transition-opacity duration-300 ${
+          showControls || isPaused || isCompleted ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          <div className="w-8 h-8 rounded-lg bg-[#D9732B]/20 border border-[#D9732B]/40 flex items-center justify-center shrink-0">
             <span className="font-story-serif text-sm font-bold text-[#F2C765]">TG</span>
           </div>
           <div className="flex flex-col">
-            <h1 className="font-story-serif text-sm sm:text-base font-medium text-[#F7F3EB] truncate max-w-[200px] sm:max-w-md">
+            <h1 className="font-story-serif text-xs sm:text-base font-medium text-[#F7F3EB] truncate max-w-[170px] sm:max-w-md">
               {story.title}
             </h1>
             <span className="text-[10px] text-[#AB9784] font-mono">
@@ -170,14 +216,14 @@ export function StoryCinematicMode({
         </div>
 
         {/* Exit & Controls */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <StoryDownloadButton story={story} variant="compact" />
-          <span className="hidden sm:inline text-[11px] text-[#857364] font-mono">
+          <span className="hidden md:inline text-[11px] text-[#857364] font-mono">
             Press ESC or click Exit
           </span>
           <button
             onClick={onExit}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-xs font-medium text-[#F7F3EB] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A]"
+            className="flex items-center gap-1.5 px-3 py-2 min-h-[40px] sm:min-h-[44px] rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-xs font-medium text-[#F7F3EB] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] cursor-pointer"
             aria-label="Exit cinematic mode"
           >
             <X className="w-4 h-4" />
@@ -246,31 +292,40 @@ export function StoryCinematicMode({
         )}
       </main>
 
-      {/* Bottom Transport Controls (Hidden if Completed) */}
+      {/* Bottom Transport Controls (Auto-faded during playback on mobile, reveals on tap) */}
       {!isCompleted && (
-        <StoryPlaybackControls
-          currentSceneIndex={currentSceneIndex}
-          totalScenes={totalScenes}
-          playbackState={playbackState}
-          elapsedSeconds={effectiveElapsed}
-          sceneDuration={effectiveDuration}
-          progressPercent={effectiveProgressPercent}
-          isAutoAdvanceEnabled={isAutoAdvanceEnabled}
-          onToggleAutoAdvance={() => setIsAutoAdvanceEnabled(!isAutoAdvanceEnabled)}
-          onTogglePlayPause={togglePlayPause}
-          onNext={goToNextScene}
-          onPrevious={goToPreviousScene}
-          onJumpToScene={jumpToScene}
-          hasAudio={storyAudio.hasAudio}
-          playbackRate={storyAudio.playbackRate}
-          onSetRate={storyAudio.setPlaybackRate}
-          narrationVolume={storyAudio.narrationVolume}
-          onToggleMute={() => {
-            storyAudio.setNarrationVolume(storyAudio.narrationVolume === 0 ? 0.8 : 0);
-          }}
-          onOpenNarratorPicker={() => setIsNarratorPickerOpen(true)}
-          currentNarratorName={selectedNarrator.name}
-        />
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className={`transition-opacity duration-300 z-40 ${
+            showControls || isPaused
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <StoryPlaybackControls
+            currentSceneIndex={currentSceneIndex}
+            totalScenes={totalScenes}
+            playbackState={playbackState}
+            elapsedSeconds={effectiveElapsed}
+            sceneDuration={effectiveDuration}
+            progressPercent={effectiveProgressPercent}
+            isAutoAdvanceEnabled={isAutoAdvanceEnabled}
+            onToggleAutoAdvance={() => setIsAutoAdvanceEnabled(!isAutoAdvanceEnabled)}
+            onTogglePlayPause={togglePlayPause}
+            onNext={goToNextScene}
+            onPrevious={goToPreviousScene}
+            onJumpToScene={jumpToScene}
+            hasAudio={storyAudio.hasAudio}
+            playbackRate={storyAudio.playbackRate}
+            onSetRate={storyAudio.setPlaybackRate}
+            narrationVolume={storyAudio.narrationVolume}
+            onToggleMute={() => {
+              storyAudio.setNarrationVolume(storyAudio.narrationVolume === 0 ? 0.8 : 0);
+            }}
+            onOpenNarratorPicker={() => setIsNarratorPickerOpen(true)}
+            currentNarratorName={selectedNarrator.name}
+          />
+        </div>
       )}
 
       {/* Narrator Selection Bottom Sheet / Modal */}

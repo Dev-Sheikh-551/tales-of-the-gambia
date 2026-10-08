@@ -137,25 +137,25 @@ export function AudioNarrationBar({
       </div>
 
       {/* Main Single-Row Audio Companion */}
-      <div className="flex items-center gap-3 sm:gap-4">
-        {/* Tactile Play / Pause Button */}
+      <div className="flex items-center gap-2.5 sm:gap-4">
+        {/* Tactile Play / Pause Button (44px touch-friendly) */}
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.92 }}
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
           onClick={handleToggle}
-          className="w-9 h-9 rounded-full bg-gradient-to-br from-[#D9732B] to-[#C69224] text-white flex items-center justify-center shrink-0 shadow-sm transition-transform cursor-pointer"
+          className="w-11 h-11 rounded-full bg-gradient-to-br from-[#D9732B] to-[#C69224] text-white flex items-center justify-center shrink-0 shadow-sm transition-transform cursor-pointer"
           aria-label={isPlaying ? "Pause narration" : "Play narration"}
         >
           {isPlaying ? (
-            <Pause className="w-4 h-4 fill-current" />
+            <Pause className="w-5 h-5 fill-current" />
           ) : (
-            <Play className="w-4 h-4 fill-current ml-0.5" />
+            <Play className="w-5 h-5 fill-current ml-0.5" />
           )}
         </motion.button>
 
         {/* Audio Equalizer & Time Readout */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           {/* Subtle 3-bar audio reactive visualizer */}
           <div className="flex items-end gap-0.5 h-3 px-0.5" aria-hidden="true">
             <motion.span
@@ -174,7 +174,7 @@ export function AudioNarrationBar({
               className="w-0.5 bg-[#F2C765] rounded-full"
             />
           </div>
-          <span className="text-[11px] font-mono text-[#857364] w-16">
+          <span className="text-[10px] sm:text-[11px] font-mono text-[#857364] w-14 sm:w-16">
             {formatTime(currentTime)} / {formatTime(duration)}
           </span>
         </div>
@@ -199,7 +199,8 @@ export function AudioNarrationBar({
             step={0.5}
             value={currentTime}
             onChange={handleScrubChange}
-            className="absolute inset-0 w-full opacity-0 cursor-pointer select-none touch-none h-full"
+            data-no-swipe="true"
+            className="absolute inset-0 w-full opacity-0 cursor-pointer select-none touch-none no-swipe h-full"
             aria-label="Seek narration"
             aria-valuemin={0}
             aria-valuemax={duration || 0}
@@ -212,7 +213,7 @@ export function AudioNarrationBar({
         <motion.button
           whileTap={{ scale: 0.92 }}
           onClick={() => setIsNarratorPickerOpen(true)}
-          className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 text-[#CBBCAE] hover:text-[#F7F3EB] transition-colors cursor-pointer"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 min-h-[36px] rounded-lg text-xs bg-white/[0.04] hover:bg-white/[0.08] border border-white/5 text-[#CBBCAE] hover:text-[#F7F3EB] transition-colors cursor-pointer"
           title="Choose storyteller voice"
           aria-label={`Storyteller voice: ${selectedNarrator.name}`}
         >
@@ -226,7 +227,7 @@ export function AudioNarrationBar({
         <motion.button
           whileTap={{ scale: 0.92 }}
           onClick={() => setShowSettings(!showSettings)}
-          className={`p-1.5 rounded-lg text-xs transition-colors cursor-pointer ${
+          className={`w-10 h-10 flex items-center justify-center rounded-lg text-xs transition-colors cursor-pointer shrink-0 ${
             showSettings
               ? "bg-[#2A231D] text-[#F2C765]"
               : "text-[#857364] hover:text-[#F7F3EB] hover:bg-white/5"
@@ -255,7 +256,8 @@ export function AudioNarrationBar({
               step={0.05}
               value={narrationVolume}
               onChange={(e) => onSetNarrationVolume(Number(e.target.value))}
-              className="flex-1 accent-[#D9732B] h-1 cursor-pointer select-none touch-none"
+              data-no-swipe="true"
+              className="flex-1 accent-[#D9732B] h-2 cursor-pointer select-none touch-none no-swipe"
               aria-label="Narration volume"
             />
             <span className="text-[10px] font-mono text-[#857364] w-7 text-right">
@@ -264,13 +266,13 @@ export function AudioNarrationBar({
           </div>
 
           {/* Playback Speed selector */}
-          <div className="flex items-center gap-1 text-[11px] font-mono text-[#857364]">
+          <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#857364]">
             <span className="text-[10px] uppercase mr-1">Speed</span>
             {PLAYBACK_RATES.map((rate) => (
               <button
                 key={rate}
                 onClick={() => onSetRate(rate)}
-                className={`px-1.5 py-0.5 rounded text-[11px] transition-colors ${
+                className={`min-w-[32px] min-h-[32px] sm:min-w-[28px] sm:min-h-[28px] flex items-center justify-center px-1.5 py-1 rounded-lg text-xs transition-colors cursor-pointer ${
                   playbackRate === rate
                     ? "bg-[#D9732B] text-white font-bold"
                     : "hover:text-[#F7F3EB] hover:bg-white/5"

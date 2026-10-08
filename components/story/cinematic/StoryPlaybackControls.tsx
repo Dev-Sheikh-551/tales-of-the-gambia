@@ -70,7 +70,10 @@ export function StoryPlaybackControls({
   };
 
   return (
-    <div className="w-full bg-[#12100E]/95 backdrop-blur-md border-t border-white/10 px-4 sm:px-8 py-3.5 z-40 select-none">
+    <div
+      data-no-swipe="true"
+      className="w-full bg-[#12100E]/95 backdrop-blur-md border-t border-white/10 px-4 sm:px-8 py-2.5 sm:py-3.5 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] pl-[calc(1rem+env(safe-area-inset-left,0px))] pr-[calc(1rem+env(safe-area-inset-right,0px))] z-40 select-none"
+    >
       <div className="max-w-4xl mx-auto space-y-2.5">
         {/* Segmented Scene Progress Bar */}
         <div className="flex items-center gap-1.5 w-full">

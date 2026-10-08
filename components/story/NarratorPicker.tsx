@@ -14,6 +14,7 @@ import {
 import { Narrator } from "@/types/narrator";
 import { useNarrator } from "@/hooks/useNarrator";
 import { MOTION_EASINGS } from "@/lib/motion/tokens";
+import { registerBackButtonHandler } from "@/lib/native/backButton";
 
 export interface NarratorPickerProps {
   isOpen: boolean;
@@ -48,6 +49,15 @@ export function NarratorPicker({
     }, 4000);
     return () => clearTimeout(timer);
   }, [feedbackNotice]);
+
+  // Register native Android back-button handler
+  useEffect(() => {
+    if (!isOpen) return;
+    return registerBackButtonHandler(() => {
+      onClose();
+      return true;
+    });
+  }, [isOpen, onClose]);
 
   // Handle keyboard events (Escape to close)
   useEffect(() => {
@@ -147,15 +157,15 @@ export function NarratorPicker({
             initial="hidden"
             animate="visible"
             exit="exit"
-            className={`relative w-full sm:max-w-lg max-h-[85vh] sm:max-h-[80vh] flex flex-col bg-[#14100D] border border-white/10 rounded-t-2xl sm:rounded-2xl shadow-2xl overflow-hidden z-10 ${className}`}
+            className={`relative w-full sm:max-w-lg max-h-[88vh] sm:max-h-[80vh] flex flex-col bg-[#14100D] border border-white/10 rounded-t-3xl sm:rounded-2xl shadow-2xl overflow-hidden z-10 pb-[env(safe-area-inset-bottom,0px)] ${className}`}
           >
             {/* Grab Handle for Touch Devices */}
-            <div className="w-12 h-1 bg-white/20 rounded-full mx-auto mt-2.5 sm:hidden" />
+            <div className="w-12 h-1.5 bg-white/25 rounded-full mx-auto my-3 sm:hidden" />
 
             {/* Header */}
-            <header className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+            <header className="flex items-center justify-between px-5 py-3 sm:py-4 border-b border-white/10">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-[#D9732B]/15 border border-[#D9732B]/30 flex items-center justify-center text-[#F2C765]">
+                <div className="w-9 h-9 rounded-xl bg-[#D9732B]/15 border border-[#D9732B]/30 flex items-center justify-center text-[#F2C765]">
                   <Mic className="w-4 h-4" />
                 </div>
                 <div>
@@ -174,7 +184,7 @@ export function NarratorPicker({
               <button
                 ref={closeButtonRef}
                 onClick={onClose}
-                className="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-[#CBBCAE] hover:text-white transition-colors cursor-pointer"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-[#CBBCAE] hover:text-white transition-colors cursor-pointer"
                 aria-label="Close narrator selection"
               >
                 <X className="w-4 h-4" />
@@ -289,7 +299,7 @@ export function NarratorPicker({
             </div>
 
             {/* Footer */}
-            <footer className="px-5 py-3 border-t border-white/10 bg-black/20 flex items-center justify-between text-xs text-[#857364]">
+            <footer className="px-5 py-3 border-t border-white/10 bg-black/20 flex items-center justify-between text-xs text-[#857364] pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))]">
               <div className="flex items-center gap-1.5">
                 <Sparkles className="w-3 h-3 text-[#E0AB3A]" />
                 <span>Selected voice persists across stories and cinematic mode</span>

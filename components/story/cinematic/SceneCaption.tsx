@@ -78,7 +78,8 @@ export function SceneCaption({
           tabIndex={0}
           role="region"
           aria-label="Scene narration text"
-          className="max-h-[20vh] sm:max-h-[22vh] md:max-h-[25vh] lg:max-h-[28vh] overflow-y-auto pr-1.5 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent focus:outline-none focus-visible:ring-1 focus-visible:ring-[#E0AB3A]/40 rounded-lg overscroll-contain select-text"
+          data-no-swipe="true"
+          className="max-h-[18vh] sm:max-h-[22vh] md:max-h-[25vh] lg:max-h-[28vh] overflow-y-auto pr-1.5 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent focus:outline-none focus-visible:ring-1 focus-visible:ring-[#E0AB3A]/40 rounded-lg overscroll-contain select-text no-swipe"
         >
           <NarratedStoryText
             text={text}

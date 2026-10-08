@@ -294,9 +294,9 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   }, [isLoaded, progressList, stories]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-16 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))]">
       {/* 1. Header */}
-      <div className="max-w-3xl mb-10">
+      <div className="max-w-3xl mb-8 sm:mb-10">
         <div className="flex items-center gap-2 mb-2">
           <span className="text-xs uppercase tracking-widest text-[#E0AB3A] font-semibold">
             Oral Lore Archive
@@ -436,16 +436,16 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
           </div>
         </div>
 
-        {/* Category Filter Chips */}
+        {/* Category Filter Chips with Smooth Horizontal Scrolling on Mobile */}
         <div>
           <div className="text-[11px] uppercase tracking-wider text-[#857364] font-medium mb-2">
             Categories
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 sm:flex-wrap">
             <button
               type="button"
               onClick={() => handleCategoryChange("all")}
-              className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+              className={`shrink-0 px-3.5 py-1.5 min-h-[36px] rounded-full text-xs font-medium transition-all cursor-pointer ${
                 selectedCategory === "all" && !isOfflineOnly
                   ? "bg-[#D9732B] text-white shadow-sm"
                   : "bg-[#201B17] text-[#AB9784] border border-[#2E2721] hover:text-[#F7F3EB] hover:border-[#4A3E34]"
@@ -456,7 +456,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
             <button
               type="button"
               onClick={handleOfflineToggle}
-              className={`px-3 py-1 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 ${
+              className={`shrink-0 px-3.5 py-1.5 min-h-[36px] rounded-full text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
                 isOfflineOnly
                   ? "bg-emerald-600 text-white shadow-sm font-semibold"
                   : "bg-[#201B17] text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/60 hover:text-emerald-300"
@@ -473,7 +473,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
                   key={cat.id}
                   type="button"
                   onClick={() => handleCategoryChange(cat.id)}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+                  className={`shrink-0 px-3.5 py-1.5 min-h-[36px] rounded-full text-xs font-medium transition-all cursor-pointer ${
                     selectedCategory === cat.id
                       ? "bg-[#D9732B] text-white shadow-sm"
                       : "bg-[#201B17] text-[#AB9784] border border-[#2E2721] hover:text-[#F7F3EB] hover:border-[#4A3E34]"
@@ -496,7 +496,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
             <select
               value={selectedType}
               onChange={(e) => handleTypeChange(e.target.value as ContentType | "all")}
-              className="w-full px-3 py-2 rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
+              className="w-full px-3 py-2.5 min-h-[44px] rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
             >
               {CONTENT_TYPE_OPTIONS.map((opt) => (
                 <option key={opt.id} value={opt.id}>
@@ -514,7 +514,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
             <select
               value={selectedTradition}
               onChange={(e) => handleTraditionChange(e.target.value)}
-              className="w-full px-3 py-2 rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
+              className="w-full px-3 py-2.5 min-h-[44px] rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
             >
               <option value="all">All Traditions ({availableTraditions.length})</option>
               {availableTraditions.map((trad) => (
@@ -533,7 +533,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
             <select
               value={selectedAge}
               onChange={(e) => handleAgeChange(e.target.value)}
-              className="w-full px-3 py-2 rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
+              className="w-full px-3 py-2.5 min-h-[44px] rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
             >
               <option value="all">All Audiences</option>
               {availableAges.map((age) => (

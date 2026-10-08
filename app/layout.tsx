@@ -3,6 +3,7 @@ import { Newsreader, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { NativeBridgeInitializer } from "@/components/native/NativeBridgeInitializer";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export const viewport: Viewport = {
   themeColor: "#12100E",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -54,6 +56,7 @@ export default function RootLayout({
       className={`${newsreader.variable} ${plusJakarta.variable} dark scroll-smooth`}
     >
       <body className="min-h-screen flex flex-col bg-[#12100E] text-[#F7F3EB] antialiased selection:bg-[#D9732B]/30 selection:text-[#F2C765]">
+        <NativeBridgeInitializer />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

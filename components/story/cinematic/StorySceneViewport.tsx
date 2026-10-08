@@ -15,6 +15,7 @@ import { SceneForeground } from "./SceneForeground";
 import { SceneCaption } from "./SceneCaption";
 import { useSceneTimeline } from "@/lib/motion/useSceneTimeline";
 import { getStorySceneCues } from "@/data/audio/cues";
+import { useSceneSwipe } from "@/hooks/useSceneSwipe";
 
 interface StorySceneViewportProps {
   scene: Scene;
@@ -70,51 +71,13 @@ export function StorySceneViewport({
   const cues = explicitCues || (storySlug ? getStorySceneCues(storySlug, scene.sceneNumber) : scene.audio?.cues);
   const timelineState = useSceneTimeline(scene, currentTime, cues, isPaused);
 
-  // Touch gesture state for horizontal swipe navigation
-  const touchStartRef = React.useRef<{ x: number; y: number; time: number } | null>(null);
-  const isNavigatingRef = React.useRef(false);
-
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (e.touches.length !== 1) return;
-    const touch = e.touches[0];
-    touchStartRef.current = {
-      x: touch.clientX,
-      y: touch.clientY,
-      time: Date.now(),
-    };
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!touchStartRef.current || isNavigatingRef.current) return;
-    const touch = e.changedTouches[0];
-    const deltaX = touch.clientX - touchStartRef.current.x;
-    const deltaY = touch.clientY - touchStartRef.current.y;
-    const elapsed = Date.now() - touchStartRef.current.time;
-    touchStartRef.current = null;
-
-    // Minimum swipe threshold 48px, horizontal dominance factor 1.5x, max duration 800ms
-    if (
-      Math.abs(deltaX) > 48 &&
-      Math.abs(deltaX) > Math.abs(deltaY) * 1.5 &&
-      elapsed < 800
-    ) {
-      if (deltaX < 0 && onNext && scene.sceneNumber < totalScenes) {
-        // Swipe left -> advance to next scene
-        isNavigatingRef.current = true;
-        onNext();
-        setTimeout(() => {
-          isNavigatingRef.current = false;
-        }, 400);
-      } else if (deltaX > 0 && onPrevious && scene.sceneNumber > 1) {
-        // Swipe right -> return to previous scene
-        isNavigatingRef.current = true;
-        onPrevious();
-        setTimeout(() => {
-          isNavigatingRef.current = false;
-        }, 400);
-      }
-    }
-  };
+  // Standardized touch gesture swipe hook for horizontal scene navigation
+  const swipeHandlers = useSceneSwipe({
+    onNext: onNext,
+    onPrevious: onPrevious,
+    canNext: Boolean(onNext && scene.sceneNumber < totalScenes),
+    canPrevious: Boolean(onPrevious && scene.sceneNumber > 1),
+  });
 
   const activeTransition = resolveTransitionStyle(
     scene.transition?.type,
@@ -274,8 +237,7 @@ export function StorySceneViewport({
 
   return (
     <div
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      {...swipeHandlers}
       className="relative w-full h-full flex-1 flex flex-col justify-between overflow-hidden bg-[#0A0807] touch-pan-y"
     >
       {/* Visual Camera & Multi-Layer Parallax Viewport */}
