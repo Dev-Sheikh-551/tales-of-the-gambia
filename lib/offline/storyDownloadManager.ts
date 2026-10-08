@@ -16,7 +16,7 @@ import type {
   OfflineStorageQuota,
 } from "@/types/offline";
 import type { Story } from "@/types/story";
-import { getWebStorageAdapter } from "./webStorageAdapter";
+import { getOfflineStorageAdapter } from "./adapterProvider";
 import { generateStoryOfflineManifest } from "./manifest";
 import {
   createInitialOfflineState,
@@ -38,7 +38,7 @@ class StoryDownloadManager {
   private abortControllers = new Map<string, AbortController>();
 
   constructor(adapter?: OfflineStorageAdapter) {
-    this.adapter = adapter || getWebStorageAdapter();
+    this.adapter = adapter || getOfflineStorageAdapter();
   }
 
   /**
@@ -299,6 +299,24 @@ class StoryDownloadManager {
       const savedPkg = await this.adapter.getPackageMetadata(story.slug);
       if (!savedPkg) {
         throw new Error("Package verification failed: metadata could not be retrieved from storage.");
+      }
+
+      // Check package version and narrator alignment
+      if (savedPkg.version !== pkg.version) {
+        throw new Error(`Package verification failed: version mismatch (${savedPkg.version} !== ${pkg.version}).`);
+      }
+      if (savedPkg.narratorId !== narratorId) {
+        throw new Error(`Package verification failed: narrator mismatch (${savedPkg.narratorId} !== ${narratorId}).`);
+      }
+
+      // Verify all required assets are readable from storage adapter
+      for (const asset of pkg.assets) {
+        if (asset.required) {
+          const resolved = await this.adapter.getAssetUri(asset.url);
+          if (!resolved) {
+            throw new Error(`Package verification failed: required asset missing from storage (${asset.url}).`);
+          }
+        }
       }
 
       // 5. Finalize state
