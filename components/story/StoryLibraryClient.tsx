@@ -42,7 +42,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const searchParams = useSearchParams();
   const [, startTransition] = useTransition();
 
-  const { isFav, toggleFav, getProgress, progressList, isLoaded } = useStoryStorage();
+  const { favorites, isFav, toggleFav, getProgress, progressList, isLoaded } = useStoryStorage();
   const { downloadedSlugs } = useDownloadedStories();
 
   // Read initial filter values from URL query parameters
@@ -53,6 +53,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const initialAge = searchParams.get("age") || "all";
   const initialSort = (searchParams.get("sort") as SortOption) || "featured";
   const initialOffline = searchParams.get("offline") === "true";
+  const initialSaved = searchParams.get("saved") === "true";
 
   const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [selectedCategory, setSelectedCategory] = useState<StoryCategory | "all">(initialCategory);
@@ -61,6 +62,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const [selectedAge, setSelectedAge] = useState<string>(initialAge);
   const [selectedSort, setSelectedSort] = useState<SortOption>(initialSort);
   const [isOfflineOnly, setIsOfflineOnly] = useState<boolean>(initialOffline);
+  const [isSavedOnly, setIsSavedOnly] = useState<boolean>(initialSaved);
 
   // Sync state if URL searchParams change (e.g. browser back/forward)
   useEffect(() => {
@@ -71,6 +73,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     setSelectedAge(searchParams.get("age") || "all");
     setSelectedSort((searchParams.get("sort") as SortOption) || "featured");
     setIsOfflineOnly(searchParams.get("offline") === "true");
+    setIsSavedOnly(searchParams.get("saved") === "true");
   }, [searchParams]);
 
   // Helper to update URL params
@@ -177,6 +180,11 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     // Offline downloaded filter
     if (isOfflineOnly) {
       list = list.filter((s) => downloadedSlugs.has(s.slug));
+    }
+
+    // Saved favorites filter
+    if (isSavedOnly) {
+      list = list.filter((s) => favorites.includes(s.slug));
     }
 
     // Search query
@@ -294,269 +302,131 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   }, [isLoaded, progressList, stories]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-16 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))]">
-      {/* 1. Header */}
-      <div className="max-w-3xl mb-8 sm:mb-10">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="text-xs uppercase tracking-widest text-[#E0AB3A] font-semibold">
-            Oral Lore Archive
-          </span>
-          <span className="text-xs text-[#857364]">•</span>
-          <span className="text-xs text-[#AB9784] font-medium">
-            {stories.length} stories documented
-          </span>
-        </div>
-        <h1 className="font-story-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-[#F7F3EB] tracking-tight mb-4">
-          The Story Collection
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] space-y-6">
+      {/* 1. Header matching prototype Screenshot 2 */}
+      <div>
+        <h1 className="font-story-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[var(--text-primary)]">
+          Stories
         </h1>
-        <p className="text-base sm:text-lg text-[#CBBCAE] leading-relaxed">
-          Explore Gambian and Senegambian oral narratives, river legends, warrior epics,
-          animal fables, children&rsquo;s adventures, and calming bedtime lullabies — preserved
-          and retold with honesty and cultural care.
-        </p>
       </div>
 
-      {/* 2. Continue Reading Banner (Only if genuine progress exists) */}
-      {activeContinueStories.length > 0 && (
-        <div className="mb-12 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#221B16] via-[#1B1612] to-[#14100E] border border-[#3E352E] shadow-xl">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-lg bg-[#D9732B]/20 border border-[#D9732B]/40 flex items-center justify-center">
-                <Bookmark className="w-3.5 h-3.5 text-[#D9732B]" />
-              </div>
-              <h2 className="font-story-serif text-lg sm:text-xl text-[#F7F3EB] font-medium">
-                Continue Reading
-              </h2>
-            </div>
-            <span className="text-xs text-[#857364]">
-              {activeContinueStories.length} in progress
-            </span>
-          </div>
+      {/* 2. Search Bar matching prototype Screenshot 2 */}
+      <div className="relative">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-muted)]" />
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => handleSearchChange(e.target.value)}
+          placeholder="Search stories, characters, themes..."
+          className="w-full pl-11 pr-10 py-3 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] focus:border-[var(--accent-gold)] text-sm text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none transition-colors"
+        />
+        {searchQuery && (
+          <button
+            type="button"
+            onClick={() => handleSearchChange("")}
+            className="absolute right-3.5 top-1/2 -translate-y-1/2 p-1 text-[var(--text-muted)] hover:text-[var(--text-primary)] cursor-pointer"
+            aria-label="Clear search query"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        )}
+      </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {activeContinueStories.map(({ story, progress }) => (
-              <div
-                key={story.slug}
-                className="p-4 rounded-xl bg-[#16120F] border border-[#2A231D] hover:border-[#4A3E34] transition-all flex flex-col justify-between"
-              >
-                <div className="space-y-1.5 mb-3">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-[#E0AB3A] font-medium">
-                      Scene {progress.currentSceneNumber} of {progress.totalScenes}
-                    </span>
-                    <span className="text-[#857364]">{progress.percentComplete}% read</span>
-                  </div>
-                  <h3 className="font-story-serif text-base text-[#F7F3EB] font-medium leading-snug">
-                    {story.title}
-                  </h3>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="w-full h-1.5 bg-[#26201A] rounded-full overflow-hidden mb-3">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#D9732B] to-[#E0AB3A] rounded-full transition-all duration-300"
-                    style={{ width: `${progress.percentComplete}%` }}
-                  />
-                </div>
-
-                <div className="flex items-center justify-between pt-2 border-t border-[#26201A] text-xs">
-                  <span className="text-[#857364] flex items-center gap-1">
-                    <Clock className="w-3 h-3 text-[#D9732B]" />
-                    {story.readingTimeMinutes} min total
-                  </span>
-                  <Link
-                    href={`/stories/${story.slug}`}
-                    className="inline-flex items-center gap-1 font-medium text-[#F2C765] hover:text-white transition-colors"
-                  >
-                    <BookOpen className="w-3 h-3" />
-                    <span>Resume Scene {progress.currentSceneNumber}</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* 3. Discovery Toolbar */}
-      <div className="space-y-4 mb-10 p-5 sm:p-6 rounded-2xl bg-[#171310] border border-[#2E2721] shadow-lg">
-        {/* Search Bar & Reset */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-          <div className="relative flex-1">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[#857364]" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => handleSearchChange(e.target.value)}
-              placeholder="Search by title, character, theme, kingdom, tradition..."
-              className="w-full pl-10 pr-9 py-2.5 rounded-xl bg-[#201B17] border border-[#2E2721] focus:border-[#E0AB3A]/60 text-sm text-[#F7F3EB] placeholder-[#857364] outline-none transition-colors"
-            />
-            {searchQuery && (
-              <button
-                type="button"
-                onClick={() => handleSearchChange("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 text-[#857364] hover:text-[#F7F3EB]"
-                aria-label="Clear search query"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            )}
-          </div>
-
-          {/* Sort Selector */}
-          <div className="flex items-center gap-2 shrink-0">
-            <label htmlFor="sort-select" className="text-xs text-[#857364] whitespace-nowrap">
-              Sort:
-            </label>
-            <select
-              id="sort-select"
-              value={selectedSort}
-              onChange={(e) => handleSortChange(e.target.value as SortOption)}
-              className="px-3 py-2.5 rounded-xl bg-[#201B17] border border-[#2E2721] text-xs font-medium text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
-            >
-              <option value="featured">Featured Stories</option>
-              <option value="alphabetical">Alphabetical (A–Z)</option>
-              <option value="recent">Recently Added</option>
-              <option value="shortest">Shortest First</option>
-              <option value="longest">Longest First</option>
-            </select>
-
-            {hasActiveFilters && (
-              <button
-                type="button"
-                onClick={handleResetFilters}
-                className="px-3 py-2.5 rounded-xl bg-[#29221C] hover:bg-[#382E25] text-xs font-medium text-[#F2C765] border border-[#4A3E34] transition-colors flex items-center gap-1.5"
-                title="Reset all filters and sort"
-              >
-                <RotateCcw className="w-3 h-3" />
-                <span className="hidden sm:inline">Reset</span>
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Category Filter Chips with Smooth Horizontal Scrolling on Mobile */}
-        <div>
-          <div className="text-[11px] uppercase tracking-wider text-[#857364] font-medium mb-2">
-            Categories
-          </div>
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 sm:flex-wrap">
+      {/* 3. Category Filter Chips matching prototype Screenshot 2 */}
+      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+        <button
+          type="button"
+          onClick={() => handleCategoryChange("all")}
+          className={`shrink-0 px-4 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
+            selectedCategory === "all" && !isOfflineOnly
+              ? "bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] font-medium shadow-sm"
+              : "bg-transparent border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-prominent)]"
+          }`}
+        >
+          All
+        </button>
+        {CATEGORIES.map((cat) => {
+          const isActive = selectedCategory === cat.id && !isOfflineOnly;
+          return (
             <button
+              key={cat.id}
               type="button"
-              onClick={() => handleCategoryChange("all")}
-              className={`shrink-0 px-3.5 py-1.5 min-h-[36px] rounded-full text-xs font-medium transition-all cursor-pointer ${
-                selectedCategory === "all" && !isOfflineOnly
-                  ? "bg-[#D9732B] text-white shadow-sm"
-                  : "bg-[#201B17] text-[#AB9784] border border-[#2E2721] hover:text-[#F7F3EB] hover:border-[#4A3E34]"
+              onClick={() => handleCategoryChange(cat.id)}
+              className={`shrink-0 px-4 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
+                isActive
+                  ? "bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] font-medium shadow-sm"
+                  : "bg-transparent border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-prominent)]"
               }`}
             >
-              All Categories ({stories.length})
+              {cat.label}
             </button>
+          );
+        })}
+      </div>
+
+      {/* 4. Sub-toolbar: Saved only on left, Sort on right matching prototype Screenshot 2 */}
+      <div className="flex items-center justify-between pt-1 pb-1">
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => {
+              const next = !isSavedOnly;
+              setIsSavedOnly(next);
+              updateUrl({ saved: next ? "true" : null });
+            }}
+            className={`px-3.5 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
+              isSavedOnly
+                ? "bg-[var(--accent-ochre)] text-white font-medium shadow-sm"
+                : "bg-transparent border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-prominent)]"
+            }`}
+          >
+            Saved only
+          </button>
+
+          {downloadedSlugs.size > 0 && (
             <button
               type="button"
               onClick={handleOfflineToggle}
-              className={`shrink-0 px-3.5 py-1.5 min-h-[36px] rounded-full text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-full text-xs transition-all flex items-center gap-1.5 cursor-pointer ${
                 isOfflineOnly
-                  ? "bg-emerald-600 text-white shadow-sm font-semibold"
-                  : "bg-[#201B17] text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/60 hover:text-emerald-300"
+                  ? "bg-emerald-600 text-white font-medium shadow-sm"
+                  : "bg-transparent border border-[var(--border-subtle)] text-emerald-500 hover:border-emerald-500"
               }`}
-              title="Show only stories saved for offline reading and listening"
             >
-              <HardDriveDownload className="w-3.5 h-3.5" />
-              <span>Downloaded ({downloadedSlugs.size})</span>
+              <HardDriveDownload className="w-3 h-3" />
+              <span>Offline ({downloadedSlugs.size})</span>
             </button>
-            {CATEGORIES.map((cat) => {
-              const count = stories.filter((s) => s.category === cat.id).length;
-              return (
-                <button
-                  key={cat.id}
-                  type="button"
-                  onClick={() => handleCategoryChange(cat.id)}
-                  className={`shrink-0 px-3.5 py-1.5 min-h-[36px] rounded-full text-xs font-medium transition-all cursor-pointer ${
-                    selectedCategory === cat.id
-                      ? "bg-[#D9732B] text-white shadow-sm"
-                      : "bg-[#201B17] text-[#AB9784] border border-[#2E2721] hover:text-[#F7F3EB] hover:border-[#4A3E34]"
-                  }`}
-                >
-                  {cat.label} ({count})
-                </button>
-              );
-            })}
-          </div>
+          )}
         </div>
 
-        {/* Additional Filters: Content Type, Tradition, Age */}
-        <div className="pt-3 border-t border-[#26201A] grid grid-cols-1 sm:grid-cols-3 gap-3">
-          {/* Format / Content Type */}
-          <div>
-            <label className="block text-[11px] uppercase tracking-wider text-[#857364] font-medium mb-1.5">
-              Content Classification
-            </label>
-            <select
-              value={selectedType}
-              onChange={(e) => handleTypeChange(e.target.value as ContentType | "all")}
-              className="w-full px-3 py-2.5 min-h-[44px] rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
-            >
-              {CONTENT_TYPE_OPTIONS.map((opt) => (
-                <option key={opt.id} value={opt.id}>
-                  {opt.label}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Cultural Tradition (Dynamically built) */}
-          <div>
-            <label className="block text-[11px] uppercase tracking-wider text-[#857364] font-medium mb-1.5">
-              Cultural Tradition
-            </label>
-            <select
-              value={selectedTradition}
-              onChange={(e) => handleTraditionChange(e.target.value)}
-              className="w-full px-3 py-2.5 min-h-[44px] rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
-            >
-              <option value="all">All Traditions ({availableTraditions.length})</option>
-              {availableTraditions.map((trad) => (
-                <option key={trad} value={trad}>
-                  {trad}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Age Range Filter (Dynamically built) */}
-          <div>
-            <label className="block text-[11px] uppercase tracking-wider text-[#857364] font-medium mb-1.5">
-              Audience / Age
-            </label>
-            <select
-              value={selectedAge}
-              onChange={(e) => handleAgeChange(e.target.value)}
-              className="w-full px-3 py-2.5 min-h-[44px] rounded-xl bg-[#201B17] border border-[#2E2721] text-xs text-[#CBBCAE] hover:text-[#F7F3EB] outline-none cursor-pointer"
-            >
-              <option value="all">All Audiences</option>
-              {availableAges.map((age) => (
-                <option key={age} value={age}>
-                  {age === "all-ages"
-                    ? "All Ages"
-                    : age.charAt(0).toUpperCase() + age.slice(1)}
-                </option>
-              ))}
-            </select>
-          </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <label htmlFor="sort-select" className="text-xs text-[var(--text-muted)]">
+            Sort
+          </label>
+          <select
+            id="sort-select"
+            value={selectedSort}
+            onChange={(e) => handleSortChange(e.target.value as SortOption)}
+            className="px-3 py-1.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-subtle)] text-xs font-medium text-[var(--text-primary)] outline-none cursor-pointer"
+          >
+            <option value="featured">Featured</option>
+            <option value="alphabetical">Alphabetical</option>
+            <option value="recent">Recently Added</option>
+            <option value="shortest">Shortest</option>
+            <option value="longest">Longest</option>
+          </select>
         </div>
       </div>
 
       {/* Active Filter State Summary Bar */}
-      <div className="flex items-center justify-between mb-6 text-xs text-[#857364]">
+      <div className="flex items-center justify-between mb-2 text-xs text-[var(--text-muted)]">
         <div className="flex items-center gap-2">
           <span>
-            Showing <strong className="text-[#F7F3EB]">{filteredStories.length}</strong> of{" "}
+            Showing <strong className="text-[var(--text-primary)]">{filteredStories.length}</strong> of{" "}
             {stories.length} stories
           </span>
           {hasActiveFilters && (
-            <span className="px-2 py-0.5 rounded-md bg-[#29231E] text-[#E0AB3A] text-[11px]">
+            <span className="px-2 py-0.5 rounded-md bg-[var(--bg-card)] text-[var(--accent-ochre)] text-[11px] border border-[var(--border-subtle)]">
               Filtered
             </span>
           )}
@@ -566,7 +436,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
           <button
             type="button"
             onClick={handleResetFilters}
-            className="text-[#E0AB3A] hover:underline underline-offset-4"
+            className="text-[var(--accent-ochre)] hover:underline underline-offset-4 cursor-pointer"
           >
             Clear all filters
           </button>
@@ -575,14 +445,14 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
 
       {/* 4. Story Grid or Empty State */}
       {filteredStories.length === 0 ? (
-        <div className="text-center py-20 px-4 rounded-2xl bg-[#171310] border border-[#2E2721] space-y-4">
-          <div className="w-12 h-12 rounded-full bg-[#201B17] border border-[#3E352E] flex items-center justify-center mx-auto text-[#857364]">
+        <div className="text-center py-20 px-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] space-y-4">
+          <div className="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-center mx-auto text-[var(--text-muted)]">
             <Search className="w-6 h-6" />
           </div>
-          <h3 className="font-story-serif text-xl sm:text-2xl text-[#F7F3EB]">
+          <h3 className="font-story-serif text-xl sm:text-2xl text-[var(--text-primary)]">
             No stories match your criteria
           </h3>
-          <p className="text-sm text-[#AB9784] max-w-md mx-auto leading-relaxed">
+          <p className="text-sm text-[var(--text-secondary)] max-w-md mx-auto leading-relaxed">
             We couldn&rsquo;t find any stories matching your current search and filter combination.
             Try adjusting your search terms or resetting filters.
           </p>
@@ -590,7 +460,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
             <button
               type="button"
               onClick={handleResetFilters}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#D9732B] hover:bg-[#C45E1B] text-white text-xs font-semibold shadow-md transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--accent-ochre)] hover:opacity-90 text-white text-xs font-semibold shadow-md transition-all cursor-pointer"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset All Filters</span>

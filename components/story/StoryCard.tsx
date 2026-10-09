@@ -51,7 +51,7 @@ export function StoryCard({
       whileHover={{ y: -3 }}
       whileTap={{ scale: 0.985 }}
       transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
-      className="group relative flex flex-col justify-between rounded-xl bg-[#1A1613] border border-[#2A231D] hover:border-[#4A3E34] transition-colors p-4 overflow-hidden shadow-sm hover:shadow-xl hover:shadow-black/30 cursor-pointer"
+      className="group relative flex flex-col justify-between rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--border-prominent)] transition-all p-3.5 sm:p-4 overflow-hidden shadow-sm hover:shadow-md cursor-pointer"
     >
       {/* Full Card Tap Target Overlay */}
       <Link
@@ -64,21 +64,21 @@ export function StoryCard({
       {/* Top Media & Content */}
       <div className="space-y-3 relative z-10 pointer-events-none">
         {/* Visual Artwork Container */}
-        <div className="relative overflow-hidden rounded-lg pointer-events-auto">
+        <div className="relative overflow-hidden rounded-xl pointer-events-auto">
           <Link
             href={`/stories/${story.slug}`}
-            className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] rounded-lg"
+            className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] rounded-xl"
             tabIndex={-1}
             aria-hidden="true"
           >
             <StoryArt
               theme={story.coverImage.paletteTheme}
               size="sm"
-              className="rounded-lg transition-transform duration-300 group-hover:scale-103"
+              className="rounded-xl transition-transform duration-300 group-hover:scale-103"
             />
           </Link>
 
-          {/* Favorite Toggle Button with 40-44px Touch Target & Event Isolation */}
+          {/* Favorite Toggle Button matching prototype */}
           {onToggleFavorite && (
             <motion.button
               type="button"
@@ -90,10 +90,10 @@ export function StoryCard({
                 e.stopPropagation();
                 onToggleFavorite(story.slug);
               }}
-              className={`absolute top-1.5 right-1.5 min-w-[40px] min-h-[40px] flex items-center justify-center p-2 rounded-full backdrop-blur-md transition-colors cursor-pointer z-20 ${
+              className={`absolute top-2 right-2 min-w-[36px] min-h-[36px] flex items-center justify-center p-1.5 rounded-full backdrop-blur-md transition-colors cursor-pointer z-20 ${
                 isFavorite
-                  ? "bg-[#D9732B] text-white shadow-md shadow-[#D9732B]/30"
-                  : "bg-black/60 text-[#AB9784] hover:text-[#F7F3EB]"
+                  ? "bg-[var(--accent-ochre)] text-white shadow-md"
+                  : "bg-black/60 text-white/80 hover:text-white"
               }`}
               aria-label={
                 isFavorite
@@ -102,97 +102,95 @@ export function StoryCard({
               }
               title={isFavorite ? "Saved" : "Save"}
             >
-              <Bookmark className={`w-4 h-4 ${isFavorite ? "fill-current" : ""}`} />
+              <Bookmark className={`w-3.5 h-3.5 ${isFavorite ? "fill-current" : ""}`} />
             </motion.button>
           )}
 
-          {/* Minimal Reading Status Indicator */}
+          {/* Reading Status Indicator */}
           {isInProgress && (
-            <div className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/75 backdrop-blur-sm text-[10px] text-[#F2C765] font-mono">
+            <div className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/75 backdrop-blur-sm text-[10px] text-[var(--accent-gold)] font-mono">
               Scene {progress.currentSceneNumber} of {progress.totalScenes}
             </div>
           )}
 
           {isCompleted && (
-            <div className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-[#1B2F21]/90 backdrop-blur-sm text-[10px] text-[#97D6A7] flex items-center gap-1">
-              <CheckCircle2 className="w-3 h-3 text-[#97D6A7]" />
+            <div className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-emerald-950/80 backdrop-blur-sm text-[10px] text-emerald-300 flex items-center gap-1">
+              <CheckCircle2 className="w-3 h-3 text-emerald-300" />
               <span>Read</span>
             </div>
           )}
         </div>
 
-        {/* Minimal Category & Tradition Line (No Stacked Pills) */}
-        <div className="text-[11px] uppercase tracking-wider text-[#E0AB3A] font-semibold flex items-center gap-1.5">
+        {/* Minimal Category & Tradition Line matching prototype */}
+        <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[var(--accent-ochre)] font-semibold flex items-center gap-1.5">
           <span>{story.category}</span>
           {tradition && (
             <>
-              <span className="text-[#857364]">·</span>
-              <span className="text-[#AB9784] truncate">{tradition}</span>
+              <span className="text-[var(--text-muted)]">·</span>
+              <span className="text-[var(--text-secondary)] truncate">{tradition}</span>
             </>
           )}
         </div>
 
-        {/* Title and Subtitle */}
+        {/* Title and Subtitle matching prototype */}
         <div>
-          <h3 className="font-story-serif text-lg sm:text-xl text-[#F7F3EB] group-hover:text-[#F2C765] transition-colors leading-snug">
+          <h3 className="font-story-serif text-base sm:text-lg font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-ochre)] transition-colors leading-snug">
             <Link
               href={`/stories/${story.slug}`}
-              className="focus:outline-none focus-visible:underline decoration-[#E0AB3A] underline-offset-4"
+              className="focus:outline-none focus-visible:underline decoration-[var(--accent-gold)] underline-offset-4"
             >
               {story.title}
             </Link>
           </h3>
           {story.subtitle && (
-            <p className="font-story-serif text-xs italic text-[#857364] mt-0.5 line-clamp-1">
+            <p className="font-story-serif text-xs italic text-[var(--text-muted)] mt-0.5 line-clamp-1">
               &ldquo;{story.subtitle}&rdquo;
             </p>
           )}
         </div>
 
-        {/* Single Short Description */}
-        <p className="text-xs text-[#AB9784] line-clamp-2 leading-relaxed">
+        {/* Excerpt Description */}
+        <p className="text-xs text-[var(--text-secondary)] line-clamp-2 leading-relaxed">
           {story.description}
         </p>
       </div>
 
       {/* Footer Reading Action */}
-      <div className="mt-4 pt-3 border-t border-[#241F1A] flex items-center justify-between">
-        <div className="flex items-center gap-2 text-[11px] text-[#857364]">
+      <div className="mt-3.5 pt-2.5 border-t border-[var(--border-subtle)] flex items-center justify-between">
+        <div className="flex items-center gap-2.5 text-[11px] text-[var(--text-muted)]">
           <span className="flex items-center gap-1">
-            <Clock className="w-3 h-3 text-[#D9732B]" />
-            {story.readingTimeMinutes}m
+            <Clock className="w-3 h-3 text-[var(--accent-ochre)]" />
+            {story.readingTimeMinutes} min
           </span>
           {hasNarration && (
-            <span className="flex items-center gap-1 text-[#E0AB3A]" title="Narration audio available">
+            <span className="flex items-center gap-1 text-[var(--accent-gold)]" title="Narration audio available">
               <Volume2 className="w-3 h-3" />
               <span>Audio</span>
             </span>
           )}
           {isOfflineReady && (
-            <span className="flex items-center gap-1 text-emerald-400 font-medium" title="Saved offline">
+            <span className="flex items-center gap-1 text-emerald-500 font-medium" title="Saved offline">
               <CheckCircle2 className="w-3 h-3" />
               <span>Offline</span>
             </span>
           )}
         </div>
 
-        {/* Primary Action Button + Secondary Cinematic Icon */}
-        <div className="flex items-center gap-1.5 relative z-10">
+        <div className="flex items-center gap-1 relative z-10">
           <Link
             href={`/stories/${story.slug}?mode=cinematic`}
-            className="w-9 h-9 flex items-center justify-center rounded-lg text-[#857364] hover:text-[#E0AB3A] hover:bg-white/5 transition-colors cursor-pointer"
+            className="w-8 h-8 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--accent-gold)] hover:bg-[var(--bg-secondary)] transition-colors cursor-pointer"
             title="Cinematic Story Mode"
             aria-label={`Cinematic mode for ${story.title}`}
           >
-            <Play className="w-4 h-4 fill-current" />
+            <Play className="w-3.5 h-3.5 fill-current" />
           </Link>
 
           <Link
             href={`/stories/${story.slug}`}
-            className="inline-flex items-center gap-1.5 px-3 py-2 min-h-[36px] rounded-lg bg-[#D9732B]/15 hover:bg-[#D9732B]/25 text-[#F2C765] text-xs font-medium transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-[var(--accent-ochre)] hover:bg-[var(--bg-secondary)] text-xs font-semibold transition-colors cursor-pointer"
           >
-            <BookOpen className="w-3.5 h-3.5" />
-            <span>{hasNarration ? "Read & Listen" : "Read"}</span>
+            <span>Read</span>
           </Link>
         </div>
       </div>

@@ -218,185 +218,85 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
   return (
     <div
       data-theme={settings.theme}
-      className={`min-h-screen transition-colors duration-300 pb-20 ${
-        settings.theme === "parchment"
-          ? "bg-[#F9F6F0] text-[#1A1714]"
-          : settings.theme === "river-dusk"
-          ? "bg-[#0E181A] text-[#F0F6F7]"
-          : "bg-[#12100E] text-[#F7F3EB]"
-      }`}
+      className="min-h-screen transition-colors duration-300 pb-20 bg-[var(--bg-primary)] text-[var(--text-primary)]"
     >
-      {/* Top Subtle Reading Bar with Safe Area & 44px Touch Targets */}
-      <header className="sticky top-0 z-30 border-b border-white/10 backdrop-blur-md bg-black/40 px-3 sm:px-8 py-2 sm:py-3 pt-[calc(0.5rem+env(safe-area-inset-top,0px))]">
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-2">
-          <Link
-            href="/stories"
-            className="flex items-center gap-1.5 text-xs text-[#AB9784] hover:text-[#F7F3EB] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] rounded-xl px-2 min-h-[44px]"
+      {/* Sub-header Navigation matching prototype Screenshot 1 */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6 pb-2 flex items-center justify-between">
+        <Link
+          href="/stories"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] rounded-lg py-1 px-1 cursor-pointer"
+        >
+          <ChevronLeft className="w-4 h-4" />
+          <span>Library</span>
+        </Link>
+
+        {/* Action icons on right: Save Offline + Bookmark matching prototype */}
+        <div className="flex items-center gap-2 select-none shrink-0">
+          <StoryDownloadButton story={story} variant="compact" />
+
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            animate={isBookmarked ? { scale: [1, 1.25, 1] } : { scale: 1 }}
+            transition={{ duration: 0.3 }}
+            onClick={toggleBookmark}
+            className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors cursor-pointer border border-[var(--border-subtle)] ${
+              isBookmarked
+                ? "bg-[var(--accent-ochre)] text-white"
+                : "bg-[var(--bg-secondary)] text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+            }`}
+            aria-label={isBookmarked ? "Remove bookmark" : "Bookmark this story"}
+            title="Bookmark story"
           >
-            <ArrowLeft className="w-4 h-4" />
-            <span className="hidden sm:inline">All Stories</span>
-            <span className="sm:hidden">Stories</span>
-          </Link>
-
-          {/* Center Story Title snippet */}
-          <div className="text-center truncate max-w-[140px] sm:max-w-xs px-1">
-            <span className="font-story-serif text-xs sm:text-sm font-medium tracking-tight truncate block opacity-90">
-              {story.title}
-            </span>
-          </div>
-
-          {/* Action Icons */}
-          <div className="flex items-center gap-1 sm:gap-1.5 select-none shrink-0">
-            <button
-              onClick={handleEnterCinematic}
-              className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 min-h-[40px] sm:min-h-[44px] rounded-xl bg-gradient-to-r from-[#D9732B] to-[#C69224] text-white text-xs font-medium shadow-sm hover:opacity-95 transition-opacity cursor-pointer"
-              title="Cinematic Story Mode"
-              aria-label="Enter cinematic story mode"
-            >
-              <Play className="w-3.5 h-3.5 fill-current" />
-              <span className="hidden xs:inline sm:inline">Cinematic</span>
-            </button>
-
-            <button
-              onClick={() => setIsSettingsOpen(true)}
-              className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5 transition-colors cursor-pointer"
-              aria-label="Adjust reading typography and theme"
-              title="Reading display settings"
-            >
-              <Sliders className="w-4 h-4" />
-            </button>
-
-            <StoryDownloadButton story={story} variant="compact" />
-
-            <motion.button
-              whileTap={{ scale: 0.75 }}
-              animate={isBookmarked ? { scale: [1, 1.25, 1] } : { scale: 1 }}
-              transition={{ duration: 0.3 }}
-              onClick={toggleBookmark}
-              className={`w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl transition-colors cursor-pointer ${
-                isBookmarked
-                  ? "text-[#F2C765]"
-                  : "text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5"
-              }`}
-              aria-label={isBookmarked ? "Remove bookmark" : "Bookmark this story"}
-              title="Bookmark story"
-            >
-              <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current text-[#D9732B]" : ""}`} />
-            </motion.button>
-
-            <button
-              onClick={handleShare}
-              className="hidden sm:flex w-11 h-11 items-center justify-center rounded-xl text-[#AB9784] hover:text-[#F7F3EB] hover:bg-white/5 transition-colors relative cursor-pointer"
-              aria-label="Share story link"
-              title="Copy link"
-            >
-              <Share2 className="w-4 h-4" />
-              {shareFeedback && (
-                <span className="absolute -bottom-8 right-0 bg-[#D9732B] text-white text-[10px] px-2 py-0.5 rounded shadow whitespace-nowrap">
-                  Link Copied!
-                </span>
-              )}
-            </button>
-          </div>
+            <Bookmark className={`w-4 h-4 ${isBookmarked ? "fill-current" : ""}`} />
+          </motion.button>
         </div>
-      </header>
+      </div>
 
       {/* Main Editorial Reading Area */}
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-6 sm:pt-12 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))]">
-        {/* Story Header: Clean, Typography-First */}
-        <motion.header
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: MOTION_EASINGS.enter }}
-          className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8 text-center sm:text-left"
-        >
-          {/* Max 2 pieces of essential context: Category · Tradition */}
-          <div className="text-[11px] sm:text-xs uppercase tracking-widest text-[#E0AB3A] font-semibold flex items-center justify-center sm:justify-start gap-2 flex-wrap">
-            <span>{story.category}</span>
-            <span>·</span>
-            <span>{tradition}</span>
-            <span className="text-[#857364]">·</span>
-            <span className="text-[#857364] normal-case tracking-normal">{story.readingTimeMinutes} min read</span>
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-4 sm:pt-8 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))]">
+        {/* Story Header matching prototype Screenshot 1 */}
+        <header className="space-y-3 mb-6 sm:mb-8 text-left">
+          {/* Category Tag */}
+          <div className="text-[11px] uppercase tracking-widest text-[var(--accent-ochre)] font-semibold">
+            {story.category}
           </div>
 
-          <motion.h1
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.06, ease: MOTION_EASINGS.enter }}
-            className="font-story-serif text-2xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.18] sm:leading-[1.15] text-[#F7F3EB]"
-          >
+          {/* Title */}
+          <h1 className="font-story-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-tight text-[var(--text-primary)]">
             {story.title}
-          </motion.h1>
+          </h1>
 
-          {story.subtitle && (
-            <motion.p
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.12, ease: MOTION_EASINGS.enter }}
-              className="font-story-serif text-base sm:text-xl italic text-[#AB9784]"
+          {/* Enter Cinematic Mode Button matching prototype */}
+          <div className="pt-1">
+            <button
+              onClick={handleEnterCinematic}
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] text-xs sm:text-sm font-semibold shadow-sm hover:opacity-90 transition-all cursor-pointer"
+              title="Enter Cinematic Story Mode"
             >
-              &ldquo;{story.subtitle}&rdquo;
-            </motion.p>
-          )}
-        </motion.header>
+              <Play className="w-3.5 h-3.5 fill-current" />
+              <span>Enter Cinematic Mode</span>
+            </button>
+          </div>
 
-        {/* Audio Narration Bar: Integrated Reading Companion */}
-        <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.18, ease: MOTION_EASINGS.enter }}
-          className="mb-8 sm:mb-10"
-        >
-          <AudioNarrationBar
-            currentSceneTitle={`Scene ${activeScene.sceneNumber}: ${activeScene.title}`}
-            audioState={storyAudio.audioState}
-            currentTime={storyAudio.currentTime}
-            duration={storyAudio.duration || resolvedNarration.narrationDurationSeconds || activeScene.audio?.narrationDurationSeconds || activeScene.durationSeconds}
-            isPlaying={storyAudio.isPlaying}
-            hasAudio={storyAudio.hasAudio}
-            playbackRate={storyAudio.playbackRate}
-            narrationVolume={storyAudio.narrationVolume}
-            onPlay={storyAudio.play}
-            onPause={storyAudio.pause}
-            onSeek={storyAudio.seek}
-            onSetRate={storyAudio.setPlaybackRate}
-            onSetNarrationVolume={storyAudio.setNarrationVolume}
-            onRetry={storyAudio.retry}
-          />
-        </motion.div>
-
-        {/* Scene Navigation Strip: Clean, Horizontally Scrollable & Restrained */}
-        {story.scenes.length > 1 && (
-          <nav
-            aria-label="Scene selection"
-            className="flex items-center justify-between py-2.5 px-3 sm:px-4 rounded-xl bg-white/[0.03] border border-white/5 mb-6 sm:mb-8 select-none gap-2 overflow-x-auto no-scrollbar"
-          >
-            <div className="flex items-center gap-2 shrink-0">
-              <span className="text-[11px] uppercase tracking-wider text-[#857364]">Scene</span>
-              <div className="flex items-center gap-1">
-                {story.scenes.map((s, idx) => (
-                  <button
-                    key={s.id}
-                    onClick={() => setActiveSceneIndex(idx)}
-                    className={`min-w-[34px] h-8 sm:min-w-[32px] sm:h-7 px-1 rounded-lg text-xs font-mono transition-colors flex items-center justify-center cursor-pointer ${
-                      idx === activeSceneIndex
-                        ? "bg-[#D9732B] text-white font-semibold shadow-sm"
-                        : "text-[#857364] hover:text-[#F7F3EB] hover:bg-white/5"
-                    }`}
-                    aria-label={`Jump to scene ${idx + 1}: ${s.title}`}
-                    aria-current={idx === activeSceneIndex ? "true" : undefined}
-                  >
-                    {idx + 1}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="text-xs text-[#AB9784] font-story-serif italic truncate max-w-[130px] sm:max-w-xs text-right shrink-0">
-              {activeScene.title}
-            </div>
-          </nav>
-        )}
+          {/* Segmented Scene Progress Bars matching prototype */}
+          <div className="flex items-center gap-2 w-full pt-4">
+            {story.scenes.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveSceneIndex(idx)}
+                className={`h-1.5 flex-1 rounded-full transition-all cursor-pointer ${
+                  idx === activeSceneIndex
+                    ? "bg-[#1A1614] dark:bg-white"
+                    : idx < activeSceneIndex
+                    ? "bg-[#8A7E72] dark:bg-[#AB9784]"
+                    : "bg-[var(--border-subtle)]"
+                }`}
+                aria-label={`Jump to scene ${idx + 1}`}
+                title={`Scene ${idx + 1}`}
+              />
+            ))}
+          </div>
+        </header>
 
         {/* Editorial Story Text — Pure Storybook Page with Touch Swipe Navigation */}
         <article {...swipeHandlers} className="space-y-6 pt-1 touch-pan-y">
@@ -430,9 +330,9 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             </div>
           )}
 
-          {/* Narrative Body — Generous Editorial Typography */}
+          {/* Narrative Body — Generous Editorial Typography matching prototype */}
           <div
-            className={`story-dropcap font-story-serif font-normal select-text text-[#F7F3EB] space-y-5 ${textSizeClass}`}
+            className={`font-story-serif font-normal select-text text-[var(--text-primary)] space-y-5 ${textSizeClass}`}
           >
             <NarratedStoryText
               text={activeScene.text}
@@ -446,24 +346,50 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
           {/* Traditional Oral Closing Formula (Final Scene) */}
           {activeSceneIndex === story.scenes.length - 1 && story.narrative?.closingFormula && (
-            <blockquote className="border-l-2 border-[#D9732B] pl-4 py-1 italic font-story-serif text-base sm:text-lg text-[#F2C765]/90">
+            <blockquote className="border-l-2 border-[var(--accent-ochre)] pl-4 py-1 italic font-story-serif text-base sm:text-lg text-[var(--text-secondary)]">
               &ldquo;{story.narrative.closingFormula}&rdquo;
             </blockquote>
           )}
 
+          {/* Audio Narration Bar: Integrated Reading Companion matching Prototype Screenshot 1 */}
+          <div className="pt-6 pb-2">
+            <AudioNarrationBar
+              currentSceneTitle={`Scene ${activeScene.sceneNumber}: ${activeScene.title}`}
+              sceneNumber={activeSceneIndex + 1}
+              totalScenes={story.scenes.length}
+              onPreviousScene={() => setActiveSceneIndex((prev) => Math.max(0, prev - 1))}
+              onNextScene={() => setActiveSceneIndex((prev) => Math.min(story.scenes.length - 1, prev + 1))}
+              hasPreviousScene={activeSceneIndex > 0}
+              hasNextScene={activeSceneIndex < story.scenes.length - 1}
+              audioState={storyAudio.audioState}
+              currentTime={storyAudio.currentTime}
+              duration={storyAudio.duration || resolvedNarration.narrationDurationSeconds || activeScene.audio?.narrationDurationSeconds || activeScene.durationSeconds}
+              isPlaying={storyAudio.isPlaying}
+              hasAudio={storyAudio.hasAudio}
+              playbackRate={storyAudio.playbackRate}
+              narrationVolume={storyAudio.narrationVolume}
+              onPlay={storyAudio.play}
+              onPause={storyAudio.pause}
+              onSeek={storyAudio.seek}
+              onSetRate={storyAudio.setPlaybackRate}
+              onSetNarrationVolume={storyAudio.setNarrationVolume}
+              onRetry={storyAudio.retry}
+            />
+          </div>
+
           {/* Scene Stepper Bottom Controls */}
           {story.scenes.length > 1 && (
-            <div className="pt-8 border-t border-white/10 flex items-center justify-between select-none gap-2">
+            <div className="pt-6 border-t border-[var(--border-subtle)] flex items-center justify-between select-none gap-2">
               <button
                 disabled={activeSceneIndex === 0}
                 onClick={() => setActiveSceneIndex((prev) => Math.max(0, prev - 1))}
-                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 min-h-[44px] rounded-xl text-xs font-medium text-[#CBBCAE] disabled:opacity-20 disabled:cursor-not-allowed hover:text-white hover:bg-white/5 transition-all select-none cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 min-h-[40px] rounded-full text-xs font-medium text-[var(--text-secondary)] disabled:opacity-20 disabled:cursor-not-allowed hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] transition-all select-none cursor-pointer border border-[var(--border-subtle)]"
               >
                 <ChevronLeft className="w-4 h-4" />
                 <span>Previous</span>
               </button>
 
-              <span className="text-xs text-[#857364] font-mono select-none">
+              <span className="text-xs text-[var(--text-muted)] font-mono select-none">
                 {activeSceneIndex + 1} of {story.scenes.length}
               </span>
 
@@ -474,7 +400,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
                     Math.min(story.scenes.length - 1, prev + 1)
                   )
                 }
-                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 min-h-[44px] rounded-xl bg-[#D9732B] hover:bg-[#C45E1B] text-white text-xs font-medium disabled:opacity-20 disabled:cursor-not-allowed transition-all shadow-sm select-none cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 min-h-[40px] rounded-full bg-[var(--accent-ochre)] hover:opacity-90 text-white text-xs font-medium disabled:opacity-20 disabled:cursor-not-allowed transition-all shadow-sm select-none cursor-pointer"
               >
                 <span>Next</span>
                 <ChevronRight className="w-4 h-4" />

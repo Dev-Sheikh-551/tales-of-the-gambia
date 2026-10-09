@@ -42,14 +42,14 @@ export function MobileBottomNav({ onOpenSearch }: MobileBottomNavProps) {
   return (
     <nav
       aria-label="Mobile Navigation"
-      className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#14100E]/95 backdrop-blur-lg border-t border-[#2E2721] px-3 pt-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl transition-all"
+      className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[var(--bg-primary)]/95 backdrop-blur-lg border-t border-[var(--border-subtle)] px-3 pt-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl transition-all"
     >
       <div className="flex items-center justify-around max-w-md mx-auto">
         {/* 1. Home */}
         <Link
           href="/"
-          className={`relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] ${
-            isHomeActive ? "text-[#F2C765]" : "text-[#857364] hover:text-[#CBBCAE]"
+          className={`relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] ${
+            isHomeActive ? "text-[var(--accent-ochre)] font-semibold" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
           }`}
           aria-label="Home"
           aria-current={isHomeActive ? "page" : undefined}
@@ -57,7 +57,7 @@ export function MobileBottomNav({ onOpenSearch }: MobileBottomNavProps) {
           {isHomeActive && (
             <motion.div
               layoutId="mobile-nav-indicator"
-              className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-[#D9732B] to-[#E0AB3A]"
+              className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-[var(--accent-ochre)] to-[var(--accent-gold)]"
               transition={{ type: "spring", stiffness: 450, damping: 30 }}
             />
           )}
@@ -68,8 +68,8 @@ export function MobileBottomNav({ onOpenSearch }: MobileBottomNavProps) {
         {/* 2. Stories */}
         <Link
           href="/stories"
-          className={`relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] ${
-            isStoriesActive ? "text-[#F2C765]" : "text-[#857364] hover:text-[#CBBCAE]"
+          className={`relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] ${
+            isStoriesActive ? "text-[var(--accent-ochre)] font-semibold" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
           }`}
           aria-label="Story Library"
           aria-current={isStoriesActive ? "page" : undefined}
@@ -77,7 +77,7 @@ export function MobileBottomNav({ onOpenSearch }: MobileBottomNavProps) {
           {isStoriesActive && (
             <motion.div
               layoutId="mobile-nav-indicator"
-              className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-[#D9732B] to-[#E0AB3A]"
+              className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-[var(--accent-ochre)] to-[var(--accent-gold)]"
               transition={{ type: "spring", stiffness: 450, damping: 30 }}
             />
           )}
@@ -88,8 +88,8 @@ export function MobileBottomNav({ onOpenSearch }: MobileBottomNavProps) {
         {/* 3. Saved */}
         <Link
           href="/favorites"
-          className={`relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] ${
-            isSavedActive ? "text-[#F2C765]" : "text-[#857364] hover:text-[#CBBCAE]"
+          className={`relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] ${
+            isSavedActive ? "text-[var(--accent-ochre)] font-semibold" : "text-[var(--text-muted)] hover:text-[var(--text-primary)]"
           }`}
           aria-label={`Saved stories (${favoritesCount})`}
           aria-current={isSavedActive ? "page" : undefined}
@@ -97,14 +97,14 @@ export function MobileBottomNav({ onOpenSearch }: MobileBottomNavProps) {
           {isSavedActive && (
             <motion.div
               layoutId="mobile-nav-indicator"
-              className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-[#D9732B] to-[#E0AB3A]"
+              className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-[var(--accent-ochre)] to-[var(--accent-gold)]"
               transition={{ type: "spring", stiffness: 450, damping: 30 }}
             />
           )}
           <div className="relative">
             <Bookmark className={`w-5 h-5 mb-0.5 ${isSavedActive ? "fill-current" : ""}`} />
             {favoritesCount > 0 && (
-              <span className="absolute -top-1 -right-2.5 min-w-[16px] h-4 px-1 rounded-full bg-[#D9732B] text-white text-[9px] font-bold flex items-center justify-center shadow-sm">
+              <span className="absolute -top-1 -right-2.5 min-w-[16px] h-4 px-1 rounded-full bg-[var(--accent-ochre)] text-white text-[9px] font-bold flex items-center justify-center shadow-sm">
                 {favoritesCount}
               </span>
             )}
@@ -116,10 +116,10 @@ export function MobileBottomNav({ onOpenSearch }: MobileBottomNavProps) {
         <button
           type="button"
           onClick={onOpenSearch}
-          className="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl text-[#857364] hover:text-[#CBBCAE] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E0AB3A] cursor-pointer"
+          className="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 px-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] cursor-pointer"
           aria-label="Search stories"
         >
-          <Search className="w-5 h-5 mb-0.5 text-[#E0AB3A]" />
+          <Search className="w-5 h-5 mb-0.5 text-[var(--accent-gold)]" />
           <span className="text-[10px] font-medium tracking-tight">Search</span>
         </button>
       </div>

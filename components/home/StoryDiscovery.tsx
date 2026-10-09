@@ -1,19 +1,43 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { MOCK_STORIES } from "@/data/stories";
 import { StoryCategory } from "@/types/story";
 import { StoryCard } from "@/components/story/StoryCard";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 
-const CATEGORY_TABS: Array<{ id: StoryCategory | "all"; label: string }> = [
-  { id: "all", label: "All Stories" },
-  { id: "folktale", label: "Folktales" },
-  { id: "fable", label: "Fables" },
-  { id: "legend", label: "Legends" },
-  { id: "historical", label: "Historical" },
-  { id: "children", label: "Children" },
-  { id: "bedtime", label: "Bedtime" },
+const EXPLORE_CATEGORIES = [
+  {
+    id: "folktale",
+    label: "Folktales",
+    description: "Trickster tales and animal wisdom",
+  },
+  {
+    id: "legend",
+    label: "Legends",
+    description: "Rivers, spirits, and griots",
+  },
+  {
+    id: "historical",
+    label: "Historical",
+    description: "Warriors and kingdoms",
+  },
+  {
+    id: "fable",
+    label: "Fables",
+    description: "Lessons from the forest",
+  },
+  {
+    id: "children",
+    label: "Children",
+    description: "Stories to grow up with",
+  },
+  {
+    id: "bedtime",
+    label: "Bedtime",
+    description: "Gentle tales for sleep",
+  },
 ];
 
 export default function StoryDiscovery() {
@@ -26,51 +50,63 @@ export default function StoryDiscovery() {
       : MOCK_STORIES.filter((s) => s.category === selectedCategory);
 
   return (
-    <section id="explore-stories" className="py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Heading & Simple Category Filter Tabs */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
-          <div>
-            <h2 className="font-story-serif text-2xl sm:text-3xl font-medium text-[#F7F3EB]">
-              Story Collection
-            </h2>
-            <p className="text-xs text-[#857364] mt-1">
-              Explore {filteredStories.length} {filteredStories.length === 1 ? "tale" : "tales"} of oral heritage & wisdom
-            </p>
-          </div>
-
-          {/* Clean Horizontal Filter Bar */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 sm:pb-0 no-scrollbar">
-            {CATEGORY_TABS.map((tab) => {
-              const isActive = selectedCategory === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setSelectedCategory(tab.id)}
-                  className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
-                    isActive
-                      ? "bg-[#D9732B] text-white"
-                      : "bg-[#1A1613] text-[#AB9784] hover:text-[#F7F3EB] hover:bg-[#221D18] border border-[#2A231D]"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              );
-            })}
+    <section id="explore-stories" className="py-10 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        {/* Explore Stories Categories Grid matching Screenshot 3 */}
+        <div>
+          <h2 className="font-story-serif text-2xl sm:text-3xl font-normal text-[var(--text-primary)] mb-6">
+            Explore Stories
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {EXPLORE_CATEGORIES.map((cat) => (
+              <Link
+                key={cat.id}
+                href={`/stories?category=${cat.id}`}
+                className="p-5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--border-prominent)] hover:shadow-md transition-all group block cursor-pointer"
+              >
+                <h3 className="font-story-serif text-lg font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-ochre)] transition-colors">
+                  {cat.label}
+                </h3>
+                <p className="text-xs text-[var(--text-secondary)] mt-1">
+                  {cat.description}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
 
-        {/* Clean Unified Story Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredStories.map((story) => (
-            <StoryCard
-              key={story.id}
-              story={story}
-              progress={getProgress(story.slug)}
-              isFavorite={isFav(story.slug)}
-              onToggleFavorite={toggleFav}
-            />
-          ))}
+        {/* Story Collection Showcase */}
+        <div>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+            <div>
+              <h3 className="font-story-serif text-xl sm:text-2xl font-normal text-[var(--text-primary)]">
+                Latest Stories
+              </h3>
+              <p className="text-xs text-[var(--text-muted)] mt-1">
+                Showing {Math.min(filteredStories.length, 6)} of {filteredStories.length} oral stories
+              </p>
+            </div>
+
+            <Link
+              href="/stories"
+              className="text-xs font-semibold text-[var(--accent-ochre)] hover:underline underline-offset-4 flex items-center gap-1"
+            >
+              <span>View all 29 stories</span>
+              <span>→</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredStories.slice(0, 6).map((story) => (
+              <StoryCard
+                key={story.id}
+                story={story}
+                progress={getProgress(story.slug)}
+                isFavorite={isFav(story.slug)}
+                onToggleFavorite={toggleFav}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

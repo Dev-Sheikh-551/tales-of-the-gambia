@@ -6,8 +6,10 @@ import ContinueStorySection from "@/components/home/ContinueStorySection";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* 1. Atmospheric Hero */}
-      <HeroSection />
+      {/* 1. Atmospheric Hero (extends behind transparent navigation) */}
+      <div className="-mt-16 sm:-mt-20">
+        <HeroSection />
+      </div>
 
       {/* 2. Featured Story */}
       <FeaturedStory />

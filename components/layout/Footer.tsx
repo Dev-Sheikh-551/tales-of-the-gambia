@@ -5,35 +5,28 @@ import { Feather, Heart, Shield, Sparkles } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0D0B0A] border-t border-[#26201A] text-[#AB9784] pt-16 pb-24 sm:pb-12 pb-[calc(5rem+env(safe-area-inset-bottom,0px))]">
+    <footer className="w-full bg-[var(--bg-secondary)] border-t border-[var(--border-subtle)] text-[var(--text-secondary)] pt-16 pb-24 sm:pb-12 pb-[calc(5rem+env(safe-area-inset-bottom,0px))] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#1F1A15]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[var(--border-subtle)]">
           {/* Column 1: Brand & Mission */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#D9732B] to-[#8C4318] p-[1px]">
-                <div className="w-full h-full bg-[#171310] rounded-[7px] flex items-center justify-center">
-                  <span className="font-story-serif text-base font-bold text-[#F2C765]">
-                    TG
-                  </span>
-                </div>
-              </div>
-              <span className="font-story-serif text-xl font-medium text-[#F7F3EB]">
-                Tales of The Gambia
+              <span className="font-story-serif text-xl font-medium text-[var(--text-primary)]">
+                Tales of <span className="text-[var(--accent-ochre)] font-medium">The Gambia</span>
               </span>
             </div>
 
-            <p className="text-sm leading-relaxed text-[#AB9784] max-w-md">
+            <p className="text-sm leading-relaxed text-[var(--text-secondary)] max-w-md">
               A digital sanctuary dedicated to celebrating, preserving, and sharing the oral
               folktales, fables, historical memories, and legends of The Gambia. Stories carried
               through generations of elder storytellers and griots.
             </p>
 
             {/* Cultural Integrity Note */}
-            <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[#171310] border border-[#2E2721] text-xs text-[#AB9784]">
-              <Shield className="w-4 h-4 text-[#D9732B] shrink-0 mt-0.5" />
+            <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)] text-xs text-[var(--text-secondary)]">
+              <Shield className="w-4 h-4 text-[var(--accent-ochre)] shrink-0 mt-0.5" />
               <div>
-                <strong className="text-[#F7F3EB] font-medium block">
+                <strong className="text-[var(--text-primary)] font-medium block">
                   Cultural Stewardship & Integrity
                 </strong>
                 Traditional oral stories are living cultural inheritances. This platform distinguishes
