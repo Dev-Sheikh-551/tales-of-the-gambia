@@ -21,6 +21,7 @@ import { StoryCard } from "./StoryCard";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 import { useDownloadedStories } from "@/hooks/useOfflineStory";
 import { MotionReveal } from "@/components/motion/MotionReveal";
+import { usePlatform } from "@/hooks/usePlatform";
 
 interface StoryLibraryClientProps {
   stories: Story[];
@@ -44,6 +45,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
 
   const { favorites, isFav, toggleFav, getProgress, progressList, isLoaded } = useStoryStorage();
   const { downloadedSlugs } = useDownloadedStories();
+  const { isNative } = usePlatform();
 
   // Read initial filter values from URL query parameters
   const initialSearch = searchParams.get("search") || "";
@@ -302,7 +304,9 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   }, [isLoaded, progressList, stories]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] space-y-6">
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${
+      isNative ? "pt-4 sm:pt-6" : "py-6 sm:py-12"
+    } pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] space-y-6`}>
       {/* 1. Header matching prototype Screenshot 2 */}
       <div>
         <h1 className="font-story-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[var(--text-primary)]">

@@ -9,6 +9,7 @@ import { SearchModal } from "@/components/ui/SearchModal";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 import { MobileBottomNav } from "./MobileBottomNav";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { usePlatform } from "@/hooks/usePlatform";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -16,6 +17,7 @@ export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { favorites } = useStoryStorage();
   const favoritesCount = favorites.length;
+  const { isNative } = usePlatform();
 
   const isHome = pathname === "/";
 
@@ -33,7 +35,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header
+      {/* Top header: hidden inside Capacitor native apps (Android / iOS).
+          The native app uses the bottom navigation bar as its primary nav. */}
+      {!isNative && (
+        <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ease-out ${
           isTransparentOverHero
             ? "bg-transparent border-b border-transparent shadow-none py-4 sm:py-5 backdrop-blur-none [-webkit-backdrop-filter:none]"
@@ -158,8 +163,9 @@ export default function Navbar() {
           </div>
         </div>
       </header>
+      )}
 
-      {/* Search Modal */}
+      {/* Search Modal — always available (bottom nav search button on native) */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
       {/* Persistent Mobile Bottom Navigation (Home | Stories | Saved | Search) */}

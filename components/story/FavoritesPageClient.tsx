@@ -7,10 +7,12 @@ import { MOCK_STORIES } from "@/data/stories";
 import { StoryCard } from "./StoryCard";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 import { useDownloadedStories } from "@/hooks/useOfflineStory";
+import { usePlatform } from "@/hooks/usePlatform";
 
 export function FavoritesPageClient() {
   const { favorites, isFav, toggleFav, getProgress, isLoaded } = useStoryStorage();
   const { downloadedSlugs } = useDownloadedStories();
+  const { isNative } = usePlatform();
 
   const favoriteStories = useMemo(() => {
     return MOCK_STORIES.filter((s) => favorites.includes(s.slug));
@@ -21,7 +23,9 @@ export function FavoritesPageClient() {
   }, [downloadedSlugs]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 pb-28 space-y-12">
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${
+      isNative ? "pt-4 sm:pt-6" : "py-8 sm:py-14"
+    } pb-28 space-y-12`}>
       {/* Page Title matching prototype Screenshot 4 */}
       <div>
         <h1 className="font-story-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[var(--text-primary)]">

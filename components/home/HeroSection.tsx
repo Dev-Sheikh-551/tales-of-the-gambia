@@ -4,14 +4,18 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, Play } from "lucide-react";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
+import { usePlatform } from "@/hooks/usePlatform";
 
 export default function HeroSection() {
   const { progressList, isLoaded } = useStoryStorage();
+  const { isNative } = usePlatform();
   const lastReadStorySlug =
     isLoaded && progressList.length > 0 ? progressList[0].storySlug : null;
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#111618] via-[#141B1E] to-[#1A2529] text-[#F7F3EB] pt-28 sm:pt-36 pb-20 sm:pb-24">
+    <section className={`relative w-full overflow-hidden bg-gradient-to-b from-[#111618] via-[#141B1E] to-[#1A2529] text-[#F7F3EB] ${
+      isNative ? "pt-12 sm:pt-16" : "pt-28 sm:pt-36"
+    } pb-20 sm:pb-24`}>
       {/* Background Ambience: Subtle Stars, Moon Glow, and Silhouette */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
         {/* Soft Golden Moon Glow at top center */}
