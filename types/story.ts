@@ -191,7 +191,8 @@ export interface SceneCharacter {
     | "spider"
     | "kelefa"
     | "ninki-nanka"
-    | "samba";
+    | "samba"
+    | "hyena";
 }
 
 export interface EnvironmentMotion {
@@ -378,7 +379,8 @@ export interface CharacterProfile {
     | "spider"
     | "kelefa"
     | "ninki-nanka"
-    | "samba";
+    | "samba"
+    | "hyena";
 }
 
 export interface Story {

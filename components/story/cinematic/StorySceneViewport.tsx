@@ -28,6 +28,7 @@ interface StorySceneViewportProps {
   cues?: NarrationCue[];
   onNext?: () => void;
   onPrevious?: () => void;
+  hideCaption?: boolean;
 }
 
 /**
@@ -62,6 +63,7 @@ export function StorySceneViewport({
   cues: explicitCues,
   onNext,
   onPrevious,
+  hideCaption = false,
 }: StorySceneViewportProps) {
   const shouldReduceMotion = useReducedMotion();
   const quality = useDeviceMotionQuality();
@@ -300,20 +302,22 @@ export function StorySceneViewport({
         </AnimatePresence>
       </div>
 
-      {/* Layer 5: Floating Narrative Caption Card (z-30, high-contrast, strictly above visuals) */}
-      <SceneCaption
-        sceneId={scene.id}
-        title={scene.title}
-        text={scene.text}
-        narration={scene.narration}
-        sceneNumber={scene.sceneNumber}
-        totalScenes={totalScenes}
-        storySlug={storySlug}
-        currentTime={currentTime}
-        hasAudio={hasAudio}
-        isPaused={isPaused}
-        cues={cues}
-      />
+      {/* Layer 5: Floating Narrative Caption Card (rendered when hideCaption is false) */}
+      {!hideCaption && (
+        <SceneCaption
+          sceneId={scene.id}
+          title={scene.title}
+          text={scene.text}
+          narration={scene.narration}
+          sceneNumber={scene.sceneNumber}
+          totalScenes={totalScenes}
+          storySlug={storySlug}
+          currentTime={currentTime}
+          hasAudio={hasAudio}
+          isPaused={isPaused}
+          cues={cues}
+        />
+      )}
     </div>
   );
 }

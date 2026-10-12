@@ -121,6 +121,14 @@ export const cleverHareAndHyenaStory: Story = {
           motion: "subtle-float",
           avatarTheme: "hare",
         },
+        {
+          id: "bouki-hyena",
+          name: "Bouki",
+          position: "right",
+          expression: "hungry",
+          motion: "stand",
+          avatarTheme: "hyena",
+        },
       ],
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-01-narration.mp3",

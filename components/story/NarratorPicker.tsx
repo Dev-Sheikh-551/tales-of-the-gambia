@@ -2,18 +2,9 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import {
-  X,
-  Check,
-  Mic,
-  Clock,
-  Volume2,
-  Info,
-  Sparkles,
-} from "lucide-react";
+import { X, Check, Mic } from "lucide-react";
 import { Narrator } from "@/types/narrator";
 import { useNarrator } from "@/hooks/useNarrator";
-import { MOTION_EASINGS } from "@/lib/motion/tokens";
 import { registerBackButtonHandler } from "@/lib/native/backButton";
 
 export interface NarratorPickerProps {
@@ -32,21 +23,19 @@ export function NarratorPicker({
   const shouldReduceMotion = useReducedMotion();
   const {
     selectedNarratorId,
-    selectedNarrator,
     allNarrators,
     selectNarrator,
   } = useNarrator();
 
   const [feedbackNotice, setFeedbackNotice] = useState<string | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  // Auto-clear feedback notice after 4 seconds
+  // Auto-clear feedback notice after 3 seconds
   useEffect(() => {
     if (!feedbackNotice) return;
     const timer = setTimeout(() => {
       setFeedbackNotice(null);
-    }, 4000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [feedbackNotice]);
 
@@ -83,9 +72,7 @@ export function NarratorPicker({
 
   const handleSelect = (narrator: Narrator) => {
     if (!narrator.available) {
-      setFeedbackNotice(
-        `${narrator.name} is in production and coming soon. Narration currently uses ${selectedNarrator.name}.`
-      );
+      setFeedbackNotice(`${narrator.name} is coming soon`);
       return;
     }
 
@@ -93,38 +80,10 @@ export function NarratorPicker({
     if (result.success) {
       setFeedbackNotice(null);
       onNarratorChanged?.(narrator.id);
-      // Brief pause for visual confirmation before auto-closing on mobile
       setTimeout(() => {
         onClose();
-      }, 250);
+      }, 200);
     }
-  };
-
-  const backdropVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
-  const sheetVariants = {
-    hidden: shouldReduceMotion
-      ? { opacity: 0 }
-      : { opacity: 0, y: "100%", scale: 0.98 },
-    visible: shouldReduceMotion
-      ? { opacity: 1 }
-      : {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          transition: { duration: 0.35, ease: MOTION_EASINGS.organic },
-        },
-    exit: shouldReduceMotion
-      ? { opacity: 0 }
-      : {
-          opacity: 0,
-          y: "100%",
-          scale: 0.98,
-          transition: { duration: 0.25, ease: MOTION_EASINGS.exit },
-        },
   };
 
   return (
@@ -133,88 +92,72 @@ export function NarratorPicker({
         <div
           role="region"
           aria-label="Narrator Selection Modal Container"
-          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 select-none"
+          className="fixed inset-0 z-50 select-none"
         >
-          {/* Backdrop */}
+          {/* Subtle backdrop */}
           <motion.div
-            variants={backdropVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/75 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/40 backdrop-blur-[2px]"
             aria-hidden="true"
           />
 
-          {/* Modal / Bottom Sheet Panel */}
+          {/* Floating Narrator Card matching Prototype Screenshot 1 */}
           <motion.div
-            ref={containerRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="narrator-picker-title"
-            variants={sheetVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className={`relative w-full sm:max-w-lg max-h-[88vh] sm:max-h-[80vh] flex flex-col bg-[#14100D] border border-white/10 rounded-t-3xl sm:rounded-2xl shadow-2xl overflow-hidden z-10 pb-[env(safe-area-inset-bottom,0px)] ${className}`}
+            initial={
+              shouldReduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, scale: 0.94, y: 10 }
+            }
+            animate={
+              shouldReduceMotion
+                ? { opacity: 1 }
+                : { opacity: 1, scale: 1, y: 0 }
+            }
+            exit={
+              shouldReduceMotion
+                ? { opacity: 0 }
+                : { opacity: 0, scale: 0.94, y: 10 }
+            }
+            transition={{ duration: 0.22, ease: "easeOut" }}
+            className={`fixed top-6 right-4 left-4 sm:left-auto sm:top-12 sm:right-12 z-50 w-full max-w-[340px] mx-auto sm:mx-0 bg-[#FAF6F0] dark:bg-[#1C1713] border border-[#E8DFD3]/80 dark:border-white/10 rounded-3xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.18)] flex flex-col ${className}`}
           >
-            {/* Grab Handle for Touch Devices */}
-            <div className="w-12 h-1.5 bg-white/25 rounded-full mx-auto my-3 sm:hidden" />
-
-            {/* Header */}
-            <header className="flex items-center justify-between px-5 py-3 sm:py-4 border-b border-white/10">
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-[#D9732B]/15 border border-[#D9732B]/30 flex items-center justify-center text-[#F2C765]">
-                  <Mic className="w-4 h-4" />
-                </div>
-                <div>
-                  <h2
-                    id="narrator-picker-title"
-                    className="font-story-serif text-base sm:text-lg font-semibold text-[#F7F3EB]"
-                  >
-                    Storyteller Voice
-                  </h2>
-                  <p className="text-xs text-[#857364]">
-                    Choose the voice that brings this tale to life
-                  </p>
-                </div>
-              </div>
-
+            {/* Header: Title on Left, Close button on Right */}
+            <div className="flex items-center justify-between mb-4">
+              <h2
+                id="narrator-picker-title"
+                className="font-story-serif text-lg font-medium text-[#2C241E] dark:text-[#F7F3EB]"
+              >
+                Narrator
+              </h2>
               <button
                 ref={closeButtonRef}
                 onClick={onClose}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-[#CBBCAE] hover:text-white transition-colors cursor-pointer"
+                className="w-7 h-7 rounded-full flex items-center justify-center text-[#8C7D6F] hover:text-[#2C241E] dark:text-[#A8988B] dark:hover:text-white transition-colors cursor-pointer focus:outline-none"
                 aria-label="Close narrator selection"
               >
                 <X className="w-4 h-4" />
               </button>
-            </header>
-
-            {/* Notification / Feedback Banner */}
-            <AnimatePresence>
-              {feedbackNotice && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="px-5 py-2.5 bg-[#D9732B]/15 border-b border-[#D9732B]/30 flex items-start gap-2 text-xs text-[#F2C765]"
-                >
-                  <Info className="w-4 h-4 shrink-0 mt-0.5 text-[#E0AB3A]" />
-                  <p className="leading-snug">{feedbackNotice}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            </div>
 
             {/* Narrator Options List */}
             <div
               role="radiogroup"
               aria-label="Available Storytellers"
-              className="p-4 sm:p-5 space-y-3 overflow-y-auto flex-1 overscroll-contain"
+              className="space-y-2.5"
             >
               {allNarrators.map((narrator) => {
                 const isSelected = narrator.id === selectedNarratorId;
                 const isAvailable = narrator.available;
+                const subtitle = isAvailable
+                  ? "Warm storyteller"
+                  : "Coming soon";
 
                 return (
                   <div
@@ -225,87 +168,72 @@ export function NarratorPicker({
                     tabIndex={isAvailable ? 0 : -1}
                     onClick={() => handleSelect(narrator)}
                     onKeyDown={(e) => {
-                      if (isAvailable && (e.key === "Enter" || e.key === " ")) {
+                      if (e.key === "Enter" || e.key === " ") {
                         e.preventDefault();
                         handleSelect(narrator);
                       }
                     }}
-                    className={`group relative p-3.5 sm:p-4 rounded-xl border transition-all select-none ${
+                    className={`p-3 rounded-2xl flex items-center justify-between transition-all select-none cursor-pointer ${
                       isSelected
-                        ? "bg-[#D9732B]/15 border-[#D9732B] shadow-[0_0_20px_rgba(217,115,43,0.18)]"
-                        : isAvailable
-                        ? "bg-white/[0.02] border-white/10 hover:border-[#D9732B]/50 hover:bg-white/[0.04] cursor-pointer"
-                        : "bg-white/[0.01] border-white/5 opacity-55 cursor-not-allowed"
+                        ? "border border-[#7A3E1D] dark:border-[#D9732B] bg-[#F7F1E6] dark:bg-[#2A1F18]"
+                        : "bg-[#F5EFE6]/70 dark:bg-white/[0.04] border border-transparent hover:bg-[#EFE8DD] dark:hover:bg-white/[0.07] opacity-85"
                     }`}
                   >
-                    {/* Top Row: Name, Title & Status Badge */}
-                    <div className="flex items-center justify-between gap-2 mb-1.5">
-                      <div className="flex items-center gap-2">
-                        <span className="font-story-serif text-sm sm:text-base font-semibold text-[#F7F3EB] group-hover:text-[#F2C765] transition-colors">
+                    {/* Left: Round circle icon & Text details */}
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 ${
+                          isSelected
+                            ? "bg-[#EADDC9] dark:bg-white/10 text-[#5A4E42] dark:text-[#E0AB3A]"
+                            : "bg-[#ECE4D8] dark:bg-white/5 text-[#9E9083] dark:text-[#6E5F53]"
+                        }`}
+                      >
+                        <Mic className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <div
+                          className={`text-sm ${
+                            isSelected
+                              ? "font-semibold text-[#2C241E] dark:text-[#F7F3EB]"
+                              : "font-medium text-[#6C5E51] dark:text-[#C5B7A8]"
+                          }`}
+                        >
                           {narrator.name}
-                        </span>
-                        {narrator.title && (
-                          <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[#AB9784]">
-                            {narrator.title}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Status / Selection Indicator */}
-                      <div className="shrink-0 flex items-center gap-1.5">
-                        {isSelected ? (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#D9732B] text-white text-[11px] font-semibold tracking-wide shadow-sm">
-                            <Check className="w-3 h-3 stroke-[2.5]" />
-                            <span>Active</span>
-                          </span>
-                        ) : isAvailable ? (
-                          <span className="text-[11px] font-medium text-[#AB9784] group-hover:text-[#F2C765] transition-colors">
-                            Select
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono text-[#857364]">
-                            <Clock className="w-2.5 h-2.5" />
-                            <span>Coming Soon</span>
-                          </span>
-                        )}
+                        </div>
+                        <div
+                          className={`text-xs ${
+                            isSelected
+                              ? "text-[#7A6C5D] dark:text-[#AB9784]"
+                              : "text-[#A39587] dark:text-[#7A6A5D]"
+                          }`}
+                        >
+                          {subtitle}
+                        </div>
                       </div>
                     </div>
 
-                    {/* Factual Description */}
-                    <p className="text-xs text-[#AB9784] leading-relaxed mb-2.5">
-                      {narrator.description}
-                    </p>
-
-                    {/* Bottom Metadata Badges */}
-                    <div className="flex flex-wrap items-center gap-2 text-[10px] font-mono text-[#857364]">
-                      <span className="flex items-center gap-1">
-                        <Volume2 className="w-3 h-3" />
-                        <span>{narrator.accent}</span>
-                      </span>
-                      <span>•</span>
-                      <span>{narrator.language}</span>
-                      {narrator.credits && (
-                        <>
-                          <span>•</span>
-                          <span className="text-[#6E5F53] truncate max-w-[200px]">
-                            {narrator.credits}
-                          </span>
-                        </>
-                      )}
-                    </div>
+                    {/* Right: Checkmark on active */}
+                    {isSelected && (
+                      <Check className="w-4 h-4 text-[#7A3E1D] dark:text-[#D9732B] stroke-[2.5] shrink-0" />
+                    )}
                   </div>
                 );
               })}
             </div>
 
-            {/* Footer */}
-            <footer className="px-5 py-3 border-t border-white/10 bg-black/20 flex items-center justify-between text-xs text-[#857364] pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))]">
-              <div className="flex items-center gap-1.5">
-                <Sparkles className="w-3 h-3 text-[#E0AB3A]" />
-                <span>Selected voice persists across stories and cinematic mode</span>
-              </div>
-              <span className="font-mono text-[10px] text-[#6E5F53]">V2.0</span>
-            </footer>
+            {/* Subtle Feedback Banner if Coming Soon tapped */}
+            <AnimatePresence>
+              {feedbackNotice && (
+                <motion.div
+                  initial={{ opacity: 0, y: -4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -4 }}
+                  className="mt-3 text-center text-xs text-[#7A6C5D] dark:text-[#AB9784]"
+                >
+                  {feedbackNotice}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </div>
       )}

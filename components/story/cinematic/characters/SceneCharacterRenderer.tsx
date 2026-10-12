@@ -11,6 +11,7 @@ import { BoatmanFigure } from "./BoatmanFigure";
 import { NinkiNankaFigure } from "./NinkiNankaFigure";
 import { GriotFigure } from "./GriotFigure";
 import { KelefaSaaneFigure } from "./KelefaSaaneFigure";
+import { HyenaFigure } from "./HyenaFigure";
 
 interface SceneCharacterRendererProps {
   characters?: SceneCharacter[];
@@ -33,17 +34,17 @@ export function SceneCharacterRenderer({
   const getStagePositionClasses = (pos: SceneCharacter["position"]) => {
     switch (pos) {
       case "far-left":
-        return "left-2 sm:left-6 md:left-12 lg:left-16 bottom-28 sm:bottom-32 md:bottom-36 lg:bottom-40";
+        return "left-4 sm:left-12 bottom-3 sm:bottom-5";
       case "left":
-        return "left-4 sm:left-12 md:left-24 lg:left-32 bottom-28 sm:bottom-32 md:bottom-36 lg:bottom-40";
+        return "left-8 sm:left-24 md:left-32 bottom-3 sm:bottom-5";
       case "center":
-        return "left-1/2 -translate-x-1/2 bottom-32 sm:bottom-36 md:bottom-40 lg:bottom-44";
+        return "left-1/2 -translate-x-1/2 bottom-3 sm:bottom-5";
       case "right":
-        return "right-4 sm:right-12 md:right-24 lg:right-32 bottom-28 sm:bottom-32 md:bottom-36 lg:bottom-40";
+        return "right-8 sm:right-24 md:right-32 bottom-3 sm:bottom-5";
       case "far-right":
-        return "right-2 sm:right-6 md:right-12 lg:right-16 bottom-28 sm:bottom-32 md:bottom-36 lg:bottom-40";
+        return "right-4 sm:right-12 bottom-3 sm:bottom-5";
       default:
-        return "left-1/2 -translate-x-1/2 bottom-32 sm:bottom-36 md:bottom-40 lg:bottom-44";
+        return "left-1/2 -translate-x-1/2 bottom-3 sm:bottom-5";
     }
   };
 
@@ -133,7 +134,32 @@ export function SceneCharacterRenderer({
             isPaused={isPaused}
           />
         );
+      case "hyena":
+        return (
+          <HyenaFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
       default:
+        // Check if character name or ID matches Hyena / Bouki
+        if (
+          char.id.includes("hyena") ||
+          char.id.includes("bouki") ||
+          char.name.toLowerCase().includes("hyena") ||
+          char.name.toLowerCase().includes("bouki")
+        ) {
+          return (
+            <HyenaFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
         // Check if character name or ID matches Kelefa
         if (char.id.includes("kelefa") || char.name.toLowerCase().includes("kelefa")) {
           return (
@@ -197,13 +223,6 @@ export function SceneCharacterRenderer({
           >
             {/* The Actual Illustrated Character */}
             {renderFigure(char, currentAction)}
-
-            {/* Subtle, elegant character name label underneath feet without heavy card background */}
-            <div className="text-center mt-1 select-none pointer-events-none">
-              <span className="inline-block px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/10 font-story-sans text-[10px] sm:text-xs text-[#F7F3EB]/90 tracking-wide">
-                {char.name}
-              </span>
-            </div>
           </motion.div>
         );
       })}
