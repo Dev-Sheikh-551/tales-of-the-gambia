@@ -34,6 +34,7 @@ import {
   recordRecentStory,
   getStoryProgress,
 } from "@/lib/storyStorage";
+import { useTheme } from "@/components/theme/ThemeContext";
 
 interface StoryReaderShellProps {
   story: Story;
@@ -41,6 +42,7 @@ interface StoryReaderShellProps {
 
 export default function StoryReaderShell({ story }: StoryReaderShellProps) {
   const shouldReduceMotion = useReducedMotion();
+  const { resolvedTheme } = useTheme();
   const [activeSceneIndex, setActiveSceneIndex] = useState(0);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -49,10 +51,17 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
   const [settings, setSettings] = useState<ReadingSettings>({
     fontSize: "base",
-    theme: "midnight",
+    theme: resolvedTheme === "light" ? "parchment" : "midnight",
     lineHeight: "relaxed",
     reducedMotion: false,
   });
+
+  useEffect(() => {
+    setSettings((prev) => ({
+      ...prev,
+      theme: resolvedTheme === "light" ? "parchment" : "midnight",
+    }));
+  }, [resolvedTheme]);
 
   // Record recent story and check initial progress on mount
   useEffect(() => {
@@ -270,7 +279,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           <div className="pt-1">
             <button
               onClick={handleEnterCinematic}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] text-xs sm:text-sm font-semibold shadow-sm hover:opacity-90 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] text-xs sm:text-sm font-semibold shadow-sm hover:opacity-90 transition-all cursor-pointer"
               title="Enter Cinematic Story Mode"
             >
               <Play className="w-3.5 h-3.5 fill-current" />
@@ -286,9 +295,9 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
                 onClick={() => setActiveSceneIndex(idx)}
                 className={`h-1.5 flex-1 rounded-full transition-all cursor-pointer ${
                   idx === activeSceneIndex
-                    ? "bg-[#1A1614] dark:bg-white"
+                    ? "bg-[var(--text-primary)]"
                     : idx < activeSceneIndex
-                    ? "bg-[#8A7E72] dark:bg-[#AB9784]"
+                    ? "bg-[var(--text-muted)]"
                     : "bg-[var(--border-subtle)]"
                 }`}
                 aria-label={`Jump to scene ${idx + 1}`}
@@ -304,12 +313,12 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           <div ref={sceneTopRef} aria-hidden="true" />
 
           {/* Scene Title Cue with Narration Indicator */}
-          <div className="flex items-center justify-between border-b border-white/10 pb-3">
-            <h2 className="font-story-serif text-xl sm:text-3xl font-medium text-[#F7F3EB]">
+          <div className="flex items-center justify-between border-b border-[var(--border-subtle)] pb-3">
+            <h2 className="font-story-serif text-xl sm:text-3xl font-medium text-[var(--text-primary)]">
               {activeScene.title}
             </h2>
             {storyAudio.isPlaying && (
-              <span className="inline-flex items-center gap-1.5 text-xs text-[#E0AB3A] font-mono select-none">
+              <span className="inline-flex items-center gap-1.5 text-xs text-[var(--accent-gold)] font-mono select-none">
                 <Volume2 className="w-3.5 h-3.5 animate-pulse" />
                 <span className="hidden sm:inline">Narrating</span>
               </span>
@@ -318,14 +327,14 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
           {/* Traditional Oral Opening Formula (Scene 1) */}
           {activeSceneIndex === 0 && story.narrative?.openingFormula && (
-            <blockquote className="border-l-2 border-[#E0AB3A] pl-4 py-1 italic font-story-serif text-base sm:text-lg text-[#F2C765]/90">
+            <blockquote className="border-l-2 border-[var(--accent-gold)] pl-4 py-1 italic font-story-serif text-base sm:text-lg text-[var(--accent-gold)]">
               &ldquo;{story.narrative.openingFormula}&rdquo;
             </blockquote>
           )}
 
           {/* Spoken Narration Prompt */}
           {activeScene.narration && (
-            <div className="text-xs sm:text-sm italic text-[#AB9784] font-story-serif border-l border-white/20 pl-3">
+            <div className="text-xs sm:text-sm italic text-[var(--text-muted)] font-story-serif border-l border-[var(--border-subtle)] pl-3">
               &ldquo;{activeScene.narration}&rdquo;
             </div>
           )}

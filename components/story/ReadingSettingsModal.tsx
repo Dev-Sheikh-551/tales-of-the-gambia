@@ -42,19 +42,19 @@ export function ReadingSettingsModal({
         role="dialog"
         aria-modal="true"
         aria-label="Reading Controls & Preferences"
-        className="relative w-full sm:max-w-md bg-[#1C1713] border border-[#3E352E] rounded-t-3xl sm:rounded-2xl p-5 sm:p-6 shadow-2xl z-10 space-y-5 sm:space-y-6 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] max-h-[85vh] overflow-y-auto overscroll-contain"
+        className="relative w-full sm:max-w-md bg-[var(--bg-card)] border border-[var(--border-prominent)] rounded-t-3xl sm:rounded-2xl p-5 sm:p-6 shadow-2xl z-10 space-y-5 sm:space-y-6 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] max-h-[85vh] overflow-y-auto overscroll-contain"
       >
         {/* Grab Handle for Touch Devices */}
-        <div className="w-12 h-1.5 bg-white/25 rounded-full mx-auto -mt-1 mb-2 sm:hidden" />
+        <div className="w-12 h-1.5 bg-[var(--text-muted)]/25 rounded-full mx-auto -mt-1 mb-2 sm:hidden" />
 
-        <div className="flex items-center justify-between border-b border-[#2E2721] pb-3">
+        <div className="flex items-center justify-between border-b border-[var(--border-subtle)] pb-3">
           <div className="flex items-center gap-2">
-            <Type className="w-4 h-4 text-[#E0AB3A]" />
-            <h3 className="font-story-serif text-base sm:text-lg text-[#F7F3EB]">Reading Experience</h3>
+            <Type className="w-4 h-4 text-[var(--accent-gold)]" />
+            <h3 className="font-story-serif text-base sm:text-lg text-[var(--text-primary)]">Reading Experience</h3>
           </div>
           <button
             onClick={onClose}
-            className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 text-[#CBBCAE] hover:text-white transition-colors cursor-pointer"
+            className="w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg-secondary)] hover:bg-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
             aria-label="Close settings"
           >
             <X className="w-5 h-5" />
@@ -63,7 +63,7 @@ export function ReadingSettingsModal({
 
         {/* Font Size Adjuster */}
         <div className="space-y-2">
-          <label className="text-xs uppercase tracking-wider text-[#857364] font-medium block">
+          <label className="text-xs uppercase tracking-wider text-[var(--text-muted)] font-medium block">
             Story Text Size
           </label>
           <div className="grid grid-cols-4 gap-2">
@@ -73,8 +73,8 @@ export function ReadingSettingsModal({
                 onClick={() => onUpdateSettings({ fontSize: size })}
                 className={`py-2.5 sm:py-2 px-3 min-h-[44px] rounded-xl border text-center transition-all cursor-pointer ${
                   settings.fontSize === size
-                    ? "bg-[#D9732B] border-[#D9732B] text-white font-bold shadow-sm"
-                    : "bg-[#241F1A] border-[#3A3026] text-[#AB9784] hover:text-[#F7F3EB]"
+                    ? "bg-[var(--accent-ochre)] border-[var(--accent-ochre)] text-white font-bold shadow-sm"
+                    : "bg-[var(--bg-secondary)] border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                 }`}
               >
                 <span className={size === "sm" ? "text-xs" : size === "base" ? "text-sm" : size === "lg" ? "text-base" : "text-lg"}>
@@ -87,7 +87,7 @@ export function ReadingSettingsModal({
 
         {/* Atmosphere Theme Selector */}
         <div className="space-y-2">
-          <label className="text-xs uppercase tracking-wider text-[#857364] font-medium block">
+          <label className="text-xs uppercase tracking-wider text-[var(--text-muted)] font-medium block">
             Reading Palette Mood
           </label>
           <div className="grid grid-cols-3 gap-2">
@@ -148,16 +148,16 @@ export function ReadingSettingsModal({
         </div>
 
         {/* Accessibility reduced motion switch */}
-        <div className="pt-2 border-t border-[#2E2721] flex items-center justify-between">
+        <div className="pt-2 border-t border-[var(--border-subtle)] flex items-center justify-between">
           <div>
-            <div className="text-xs font-medium text-[#F7F3EB]">Reduced Interface Motion</div>
-            <div className="text-[10px] text-[#857364]">Calmer transitions for reading</div>
+            <div className="text-xs font-medium text-[var(--text-primary)]">Reduced Interface Motion</div>
+            <div className="text-[10px] text-[var(--text-muted)]">Calmer transitions for reading</div>
           </div>
           <input
             type="checkbox"
             checked={settings.reducedMotion}
             onChange={(e) => onUpdateSettings({ reducedMotion: e.target.checked })}
-            className="w-4 h-4 accent-[#D9732B] rounded cursor-pointer"
+            className="w-4 h-4 accent-[var(--accent-ochre)] rounded cursor-pointer"
           />
         </div>
       </div>

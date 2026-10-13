@@ -65,7 +65,7 @@ export function FavoritesPageClient() {
             <div className="pt-2">
               <Link
                 href="/stories"
-                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] text-xs font-semibold shadow-sm hover:opacity-90 transition-all cursor-pointer"
+                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] text-xs font-semibold shadow-sm hover:opacity-90 transition-all cursor-pointer"
               >
                 Browse Stories
               </Link>

@@ -16,8 +16,33 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        release {
+            def keystorePropertiesFile = rootProject.file("signing.properties")
+            def keystoreProperties = new Properties()
+            if (keystorePropertiesFile.exists()) {
+                keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+            }
+
+            def envStoreFile = System.getenv("KEY_STORE_FILE") ?: System.getenv("TOTG_STORE_FILE") ?: keystoreProperties['storeFile']
+            def envStorePassword = System.getenv("KEY_STORE_PASSWORD") ?: System.getenv("TOTG_STORE_PASSWORD") ?: keystoreProperties['storePassword']
+            def envKeyAlias = System.getenv("KEY_ALIAS") ?: System.getenv("TOTG_KEY_ALIAS") ?: keystoreProperties['keyAlias']
+            def envKeyPassword = System.getenv("KEY_PASSWORD") ?: System.getenv("TOTG_KEY_PASSWORD") ?: keystoreProperties['keyPassword']
+
+            def resolvedStoreFile = envStoreFile ? file(envStoreFile) : null
+            if (resolvedStoreFile && resolvedStoreFile.exists()) {
+                storeFile resolvedStoreFile
+                storePassword envStorePassword
+                keyAlias envKeyAlias
+                keyPassword envKeyPassword
+            }
+        }
+    }
     buildTypes {
         release {
+            if (signingConfigs.release.storeFile && signingConfigs.release.storeFile.exists()) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

@@ -32,25 +32,25 @@ export default function ContinueStorySection() {
   }
 
   return (
-    <section id="continue-reading" className="py-10 border-t border-[#26201A]">
+    <section id="continue-reading" className="py-10 border-t border-[var(--border-subtle)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#D9732B]/15 border border-[#D9732B]/30 flex items-center justify-center">
-              <Bookmark className="w-4 h-4 text-[#D9732B]" />
+            <div className="w-8 h-8 rounded-lg bg-[var(--accent-ochre)]/10 border border-[var(--accent-ochre)]/25 flex items-center justify-center">
+              <Bookmark className="w-4 h-4 text-[var(--accent-ochre)]" />
             </div>
             <div>
-              <h3 className="font-story-serif text-xl sm:text-2xl font-medium text-[#F7F3EB]">
+              <h3 className="font-story-serif text-xl sm:text-2xl font-medium text-[var(--text-primary)]">
                 Continue Your Journey
               </h3>
-              <p className="text-xs text-[#857364]">Pick up where you left off</p>
+              <p className="text-xs text-[var(--text-muted)]">Pick up where you left off</p>
             </div>
           </div>
 
           <button
             type="button"
             onClick={clearReadingProgress}
-            className="text-xs text-[#857364] hover:text-[#CBBCAE] flex items-center gap-1 transition-colors cursor-pointer"
+            className="text-xs text-[var(--text-muted)] hover:text-[var(--text-secondary)] flex items-center gap-1 transition-colors cursor-pointer"
             title="Reset active bookmarks"
           >
             <RotateCcw className="w-3 h-3" />
@@ -62,41 +62,41 @@ export default function ContinueStorySection() {
           {activeProgress.map(({ story, progress }) => {
             return (
               <MotionReveal key={story.slug} delay={0.05} direction="up">
-                <div className="p-4 sm:p-5 rounded-xl bg-[#1B1714] border border-[#2E2721] hover:border-[#4A3E34] transition-all flex flex-col justify-between space-y-4">
+                <div className="p-4 sm:p-5 rounded-xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--border-prominent)] transition-all flex flex-col justify-between space-y-4">
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <CategoryBadge category={story.category} />
-                      <span className="text-xs text-[#E0AB3A] font-medium">
+                      <span className="text-xs text-[var(--accent-gold)] font-medium">
                         Scene {progress.currentSceneNumber} of {progress.totalScenes}
                       </span>
                     </div>
 
-                    <h4 className="font-story-serif text-lg text-[#F7F3EB] font-medium leading-snug">
+                    <h4 className="font-story-serif text-lg text-[var(--text-primary)] font-medium leading-snug">
                       {story.title}
                     </h4>
-                    <p className="text-xs text-[#AB9784] line-clamp-1 mt-1">
+                    <p className="text-xs text-[var(--text-secondary)] line-clamp-1 mt-1">
                       {story.subtitle}
                     </p>
                   </div>
 
                   {/* Progress Bar */}
                   <div className="space-y-2">
-                    <div className="w-full h-1.5 bg-[#26201A] rounded-full overflow-hidden">
+                    <div className="w-full h-1.5 bg-[var(--border-subtle)] rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-[#D9732B] to-[#E0AB3A] rounded-full transition-all duration-500"
+                        className="h-full bg-gradient-to-r from-[var(--accent-ochre)] to-[var(--accent-gold)] rounded-full transition-all duration-500"
                         style={{ width: `${progress.percentComplete}%` }}
                       />
                     </div>
 
-                    <div className="flex items-center justify-between text-xs text-[#857364]">
+                    <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
                       <span className="flex items-center gap-1">
-                        <Clock className="w-3 h-3 text-[#D9732B]" />
+                        <Clock className="w-3 h-3 text-[var(--accent-ochre)]" />
                         {story.readingTimeMinutes} min story
                       </span>
 
                       <Link
                         href={`/stories/${story.slug}`}
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#F2C765] hover:text-white transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--accent-gold)] hover:text-[var(--accent-ochre)] transition-colors"
                       >
                         <BookOpen className="w-3.5 h-3.5" />
                         <span>Continue Story (Scene {progress.currentSceneNumber})</span>

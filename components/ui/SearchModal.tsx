@@ -138,24 +138,24 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: -8 }}
             transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
-            className="relative w-full max-w-2xl h-[100dvh] sm:h-auto sm:max-h-[80vh] flex flex-col overflow-hidden sm:rounded-2xl bg-[#1B1714] border-0 sm:border border-[#3E352E] shadow-2xl z-10"
+            className="relative w-full max-w-2xl h-[100dvh] sm:h-auto sm:max-h-[80vh] flex flex-col overflow-hidden sm:rounded-2xl bg-[var(--bg-primary)] border-0 sm:border border-[var(--border-prominent)] shadow-2xl z-10"
           >
         {/* Search Input Bar with Safe Area Top */}
-        <div className="flex items-center px-4 py-3 sm:py-3.5 border-b border-[#2E2721] bg-[#171310] pt-[calc(0.75rem+env(safe-area-inset-top,0px))] sm:pt-3.5">
-          <Search className="w-5 h-5 text-[#E0AB3A] mr-3 shrink-0" />
+        <div className="flex items-center px-4 py-3 sm:py-3.5 border-b border-[var(--border-subtle)] bg-[var(--bg-secondary)] pt-[calc(0.75rem+env(safe-area-inset-top,0px))] sm:pt-3.5">
+          <Search className="w-5 h-5 text-[var(--accent-gold)] mr-3 shrink-0" />
           <input
             ref={inputRef}
             type="text"
             placeholder="Search folktales, fables, epics, traditions, characters..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full bg-transparent text-sm md:text-base text-[#F7F3EB] placeholder-[#857364] outline-none"
+            className="w-full bg-transparent text-sm md:text-base text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none"
           />
           {query && (
             <button
               type="button"
               onClick={() => setQuery("")}
-              className="w-10 h-10 flex items-center justify-center text-[#857364] hover:text-[#F7F3EB] transition-colors cursor-pointer"
+              className="w-10 h-10 flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
               aria-label="Clear query"
             >
               <X className="w-4 h-4" />
@@ -164,7 +164,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           <button
             type="button"
             onClick={onClose}
-            className="ml-1 px-3 py-1.5 min-h-[40px] flex items-center justify-center text-xs rounded-xl border border-[#3E352E] text-[#AB9784] hover:bg-[#29231E] hover:text-[#F7F3EB] transition-colors cursor-pointer"
+            className="ml-1 px-3 py-1.5 min-h-[40px] flex items-center justify-center text-xs rounded-xl border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:bg-[var(--bg-card)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
           >
             Close
           </button>
@@ -172,7 +172,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
         {/* Results List */}
         <div className="max-h-[60vh] overflow-y-auto p-4 space-y-2">
-          <div className="flex items-center justify-between text-xs uppercase tracking-wider text-[#857364] font-medium px-2 py-1">
+          <div className="flex items-center justify-between text-xs uppercase tracking-wider text-[var(--text-muted)] font-medium px-2 py-1">
             <span>
               {query.trim()
                 ? `Found ${filteredStories.length} ${
@@ -184,7 +184,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <Link
                 href={`/stories?search=${encodeURIComponent(query.trim())}`}
                 onClick={onClose}
-                className="text-[#E0AB3A] hover:underline normal-case flex items-center gap-1 font-normal"
+                className="text-[var(--accent-gold)] hover:underline normal-case flex items-center gap-1 font-normal"
               >
                 <span>View in Library</span>
                 <ArrowRight className="w-3 h-3" />
@@ -194,10 +194,10 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
           {filteredStories.length === 0 ? (
             <div className="text-center py-10 px-4 space-y-2">
-              <p className="text-sm text-[#AB9784]">
+              <p className="text-sm text-[var(--text-secondary)]">
                 No stories found matching &ldquo;{query}&rdquo;.
               </p>
-              <p className="text-xs text-[#857364]">
+              <p className="text-xs text-[var(--text-muted)]">
                 Try searching for &ldquo;Mandinka&rdquo;, &ldquo;hare&rdquo;, &ldquo;kora&rdquo;,
                 &ldquo;river&rdquo;, or &ldquo;Pulaaku&rdquo;.
               </p>
@@ -205,7 +205,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 <Link
                   href="/stories"
                   onClick={onClose}
-                  className="inline-flex items-center gap-1.5 text-xs text-[#F2C765] hover:underline"
+                  className="inline-flex items-center gap-1.5 text-xs text-[var(--accent-gold)] hover:underline"
                 >
                   <span>Browse all stories in library</span>
                   <ArrowRight className="w-3 h-3" />
@@ -233,15 +233,15 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     onMouseEnter={() => setSelectedIndex(idx)}
                     className={`group flex items-center justify-between p-3 rounded-xl border transition-all ${
                       isSelected
-                        ? "bg-[#28221C] border-[#E0AB3A]/40 shadow-sm"
-                        : "bg-[#221D18] hover:bg-[#28221C] border-transparent"
+                        ? "bg-[var(--bg-card-hover)] border-[var(--accent-gold)]/40 shadow-sm"
+                        : "bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border-transparent"
                     }`}
                   >
                     <div className="space-y-1.5 pr-3">
                       <div className="flex flex-wrap items-center gap-2">
                         <span
                           className={`font-story-serif text-base transition-colors ${
-                            isSelected ? "text-[#F2C765]" : "text-[#F7F3EB]"
+                            isSelected ? "text-[var(--accent-gold)]" : "text-[var(--text-primary)]"
                           }`}
                         >
                           {story.title}
@@ -254,24 +254,24 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                           </Badge>
                         )}
                       </div>
-                      <p className="text-xs text-[#AB9784] line-clamp-1">{story.subtitle}</p>
-                      <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#857364]">
+                      <p className="text-xs text-[var(--text-secondary)] line-clamp-1">{story.subtitle}</p>
+                      <div className="flex flex-wrap items-center gap-3 text-[11px] text-[var(--text-muted)]">
                         <span className="flex items-center gap-1">
-                          <BookOpen className="w-3 h-3 text-[#D9732B]" />
+                          <BookOpen className="w-3 h-3 text-[var(--accent-ochre)]" />
                           {story.readingTimeMinutes} min read
                         </span>
                         <span className="flex items-center gap-1">
-                          <Volume2 className="w-3 h-3 text-[#E0AB3A]" />
+                          <Volume2 className="w-3 h-3 text-[var(--accent-gold)]" />
                           {Math.round(story.listeningDurationSeconds / 60)} min audio
                         </span>
                         <span>{story.scenes.length} scenes</span>
-                        <span className="text-[#AB9784]">• {story.origin.region}</span>
+                        <span className="text-[var(--text-secondary)]">• {story.origin.region}</span>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-2 shrink-0">
                       {isSelected && (
-                        <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-[#857364] px-1.5 py-0.5 rounded bg-[#1B1714] border border-[#3E352E]">
+                        <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-[var(--text-muted)] px-1.5 py-0.5 rounded bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
                           <span>Enter</span>
                           <CornerDownLeft className="w-2.5 h-2.5" />
                         </span>
@@ -279,8 +279,8 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       <ArrowRight
                         className={`w-4 h-4 transition-all ${
                           isSelected
-                            ? "text-[#F2C765] translate-x-1"
-                            : "text-[#857364] group-hover:text-[#F2C765]"
+                            ? "text-[var(--accent-gold)] translate-x-1"
+                            : "text-[var(--text-muted)] group-hover:text-[var(--accent-gold)]"
                         }`}
                       />
                     </div>
@@ -292,7 +292,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
         </div>
 
         {/* Modal Footer Note with Safe Area Bottom */}
-        <div className="px-4 py-2.5 bg-[#14100E] border-t border-[#2E2721] flex items-center justify-between text-[11px] text-[#857364] pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:pb-2.5">
+        <div className="px-4 py-2.5 bg-[var(--bg-secondary)] border-t border-[var(--border-subtle)] flex items-center justify-between text-[11px] text-[var(--text-muted)] pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:pb-2.5">
           <div className="flex items-center gap-3">
             <span>↑↓ Navigate</span>
             <span>↵ Select</span>
@@ -301,7 +301,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           <Link
             href="/stories"
             onClick={onClose}
-            className="text-[#E0AB3A] hover:underline"
+            className="text-[var(--accent-gold)] hover:underline"
           >
             Explore all {MOCK_STORIES.length} stories →
           </Link>

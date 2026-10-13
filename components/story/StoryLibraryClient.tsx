@@ -343,7 +343,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
           onClick={() => handleCategoryChange("all")}
           className={`shrink-0 px-4 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
             selectedCategory === "all" && !isOfflineOnly
-              ? "bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] font-medium shadow-sm"
+              ? "bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium shadow-sm"
               : "bg-transparent border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-prominent)]"
           }`}
         >
@@ -358,7 +358,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
               onClick={() => handleCategoryChange(cat.id)}
               className={`shrink-0 px-4 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
                 isActive
-                  ? "bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] font-medium shadow-sm"
+                  ? "bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium shadow-sm"
                   : "bg-transparent border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-prominent)]"
               }`}
             >

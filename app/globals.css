@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, [data-theme="dark"], [data-theme="midnight"], :where(.dark, [data-theme="dark"], [data-theme="midnight"]) *));
+
 @theme {
   --font-serif: var(--font-newsreader), Georgia, serif;
   --font-sans: var(--font-jakarta), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -51,7 +53,8 @@
 
 :root,
 .dark,
-[data-theme="dark"] {
+[data-theme="dark"],
+[data-theme="midnight"] {
   --bg-primary: #12100E;
   --bg-secondary: #1B1714;
   --bg-card: #221D18;

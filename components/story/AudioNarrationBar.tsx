@@ -204,7 +204,7 @@ export function AudioNarrationBar({
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.92 }}
           onClick={cycleRate}
-          className="w-9 h-9 rounded-full bg-[#1A1614] text-white dark:bg-white dark:text-[#12100E] text-xs font-semibold flex items-center justify-center transition-all cursor-pointer shadow-sm"
+          className="w-9 h-9 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] text-xs font-semibold flex items-center justify-center transition-all cursor-pointer shadow-sm"
           title={`Speed: ${playbackRate}x. Click to change.`}
           aria-label={`Playback speed ${playbackRate}x`}
         >
