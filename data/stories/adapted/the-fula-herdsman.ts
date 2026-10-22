@@ -123,7 +123,8 @@ export const theFullaHerdsmanStory: Story = {
       culturalSignificance:
         "A Fula herdsman embodying the tension between natural anger and the demands of Pulaaku.",
       traits: ["patient", "dignified", "proud", "honourable"],
-      avatarTheme: "elephant",
+      // Demba is a Fula herdsman — human figure (HumanSilhouetteFigure variant="default").
+      avatarTheme: "human",
     },
     {
       id: "elder",
@@ -137,7 +138,7 @@ export const theFullaHerdsmanStory: Story = {
   ],
 
   coverImage: {
-    src: "/images/stories/fula-herdsman-cover.jpg",
+    src: "/images/stories/the-fula-herdsman.jpg",
     alt: "A Fula herdsman stands among his cattle at dusk, the Gambia River shimmering in the distance",
     paletteTheme: "earth",
   },
@@ -171,7 +172,7 @@ And Demba's cattle were the finest in three villages.`,
           expression: "proud",
           motion: "breathing",
           scale: 1.0,
-          avatarTheme: "elephant",
+          avatarTheme: "human",
         },
       ],
       visual: {
@@ -230,7 +231,7 @@ What would he do?`,
           expression: "still",
           motion: "still",
           scale: 1.05,
-          avatarTheme: "elephant",
+          avatarTheme: "human",
         },
       ],
       visual: {
@@ -299,7 +300,7 @@ The old man nodded slowly. "Then you already know what to do."`,
           expression: "conflicted",
           motion: "still",
           scale: 1.0,
-          avatarTheme: "elephant",
+          avatarTheme: "human",
         },
         {
           id: "elder",
@@ -369,7 +370,7 @@ And that — that stillness, that patience, that refusal to be provoked — was 
           expression: "composed",
           motion: "subtle-float",
           scale: 1.0,
-          avatarTheme: "elephant",
+          avatarTheme: "human",
         },
       ],
       visual: {
@@ -430,7 +431,7 @@ Demba sat beside him and watched the village go about its business.
           expression: "calm",
           motion: "breathing",
           scale: 1.0,
-          avatarTheme: "elephant",
+          avatarTheme: "human",
         },
         {
           id: "elder",
@@ -500,7 +501,7 @@ And everything was as it should be.`,
           expression: "peaceful",
           motion: "breathing",
           scale: 1.0,
-          avatarTheme: "elephant",
+          avatarTheme: "human",
         },
       ],
       visual: {

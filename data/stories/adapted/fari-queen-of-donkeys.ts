@@ -63,8 +63,42 @@ export const fariQueenOfDonkeysStory: Story = {
   listeningDurationSeconds: 420,
   themes: ["Identity", "Humor", "Vanity", "Self-Acceptance"],
   characters: ["Queen Fari", "The King", "The Royal Griot", "The Donkey Council"],
+  characterProfiles: [
+    {
+      id: "queen-fari",
+      name: "Queen Fari",
+      role: "protagonist",
+      culturalSignificance:
+        "The witty and rebellious queen of wild donkeys whose vanity leads to a courtly transformation and a joyous return to freedom.",
+      avatarTheme: "donkey",
+    },
+    {
+      id: "donkey-council",
+      name: "The Donkey Council",
+      role: "chorus",
+      culturalSignificance:
+        "The long-eared savanna companions who weary of village burdens and strike for royal honor and sweet salt.",
+      avatarTheme: "donkey",
+    },
+    {
+      id: "the-king",
+      name: "The King",
+      role: "elder",
+      culturalSignificance:
+        "The dignified palace sovereign who welcomes the mysterious foreign princesses with royal hospitality and drumming.",
+      avatarTheme: "human",
+    },
+    {
+      id: "royal-griot",
+      name: "The Royal Griot",
+      role: "chorus",
+      culturalSignificance:
+        "The master palace praise singer and oral historian who celebrates royal guests and witnesses the hilarious revelation.",
+      avatarTheme: "griot",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/clever-hare.svg",
+    src: "/images/stories/fari-queen-of-the-wild-donkeys.jpg",
     alt: "A graceful queen in flowing gold damask garments looking back toward a peaceful herd of wild donkeys in the savanna",
     paletteTheme: "gold",
   },
@@ -92,6 +126,24 @@ export const fariQueenOfDonkeysStory: Story = {
         intensity: "subtle",
       },
       characters: ["Queen Fari", "The Donkey Council"],
+      charactersData: [
+        {
+          id: "queen-fari",
+          name: "Queen Fari",
+          avatarTheme: "donkey",
+          position: "left",
+          scale: 1.05,
+          motion: "gesture",
+        },
+        {
+          id: "donkey-council",
+          name: "The Donkey Council",
+          avatarTheme: "donkey",
+          position: "right",
+          scale: 0.95,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-01-narration.mp3",
         narrationDurationSeconds: 36.42,
@@ -121,6 +173,16 @@ export const fariQueenOfDonkeysStory: Story = {
         intensity: "subtle",
       },
       characters: ["Queen Fari"],
+      charactersData: [
+        {
+          id: "queen-fari",
+          name: "Queen Fari",
+          avatarTheme: "spirit",
+          position: "center",
+          scale: 1.0,
+          motion: "still",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-02-narration.mp3",
         narrationDurationSeconds: 34.38,
@@ -150,6 +212,24 @@ export const fariQueenOfDonkeysStory: Story = {
         intensity: "subtle",
       },
       characters: ["Queen Fari", "The King"],
+      charactersData: [
+        {
+          id: "queen-fari",
+          name: "Queen Fari",
+          avatarTheme: "spirit",
+          position: "left",
+          scale: 1.0,
+          motion: "still",
+        },
+        {
+          id: "the-king",
+          name: "The King",
+          avatarTheme: "human",
+          position: "right",
+          scale: 1.05,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-03-narration.mp3",
         narrationDurationSeconds: 35.35,
@@ -179,6 +259,16 @@ export const fariQueenOfDonkeysStory: Story = {
         intensity: "gentle",
       },
       characters: ["Queen Fari"],
+      charactersData: [
+        {
+          id: "queen-fari",
+          name: "Queen Fari",
+          avatarTheme: "spirit",
+          position: "center",
+          scale: 1.0,
+          motion: "walk",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-04-narration.mp3",
         narrationDurationSeconds: 33.98,
@@ -208,6 +298,32 @@ export const fariQueenOfDonkeysStory: Story = {
         intensity: "gentle",
       },
       characters: ["Queen Fari", "The King", "The Royal Griot"],
+      charactersData: [
+        {
+          id: "the-king",
+          name: "The King",
+          avatarTheme: "human",
+          position: "left",
+          scale: 1.0,
+          motion: "concern",
+        },
+        {
+          id: "queen-fari",
+          name: "Queen Fari",
+          avatarTheme: "donkey",
+          position: "center",
+          scale: 1.1,
+          motion: "singing",
+        },
+        {
+          id: "royal-griot",
+          name: "The Royal Griot",
+          avatarTheme: "griot",
+          position: "right",
+          scale: 0.95,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-05-narration.mp3",
         narrationDurationSeconds: 38.55,

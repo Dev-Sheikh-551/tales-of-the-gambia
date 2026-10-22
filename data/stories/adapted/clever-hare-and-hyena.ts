@@ -84,7 +84,7 @@ export const cleverHareAndHyenaStory: Story = {
     },
   ],
   coverImage: {
-    src: "/images/stories/hare-drought.svg",
+    src: "/images/stories/the-clever-hare-and-the-hyena.jpg",
     alt: "Leuk the Hare looking thoughtfully at a sprawling groundnut field while Bouki rests in the distance",
     paletteTheme: "ochre",
   },
@@ -198,6 +198,24 @@ export const cleverHareAndHyenaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Leuk the Hare", "Bouki the Hyena"],
+      charactersData: [
+        {
+          id: "leuk-hare",
+          name: "Leuk",
+          position: "left",
+          expression: "observant",
+          motion: "stand",
+          avatarTheme: "hare",
+        },
+        {
+          id: "bouki-hyena",
+          name: "Bouki",
+          position: "right",
+          expression: "greedy",
+          motion: "approach",
+          avatarTheme: "hyena",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-03-narration.mp3",
         narrationDurationSeconds: 36.38,
@@ -227,6 +245,16 @@ export const cleverHareAndHyenaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Bouki the Hyena"],
+      charactersData: [
+        {
+          id: "bouki-hyena",
+          name: "Bouki",
+          position: "center",
+          expression: "cunning",
+          motion: "step",
+          avatarTheme: "hyena",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-04-narration.mp3",
         narrationDurationSeconds: 28.32,
@@ -256,6 +284,16 @@ export const cleverHareAndHyenaStory: Story = {
         intensity: "gentle",
       },
       characters: ["Bouki the Hyena"],
+      charactersData: [
+        {
+          id: "bouki-hyena",
+          name: "Bouki",
+          position: "center",
+          expression: "surprised",
+          motion: "still",
+          avatarTheme: "hyena",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-05-narration.mp3",
         narrationDurationSeconds: 28.5,

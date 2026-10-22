@@ -64,8 +64,34 @@ export const twoKumbasStory: Story = {
   listeningDurationSeconds: 480,
   themes: ["Humility", "Kindness", "Respect for Elders", "Justice"],
   characters: ["Kumba the Gentle", "The Stepmother", "The Old Woman of the Bush", "The Talking Baobab"],
+  characterProfiles: [
+    {
+      id: "kumba-gentle",
+      name: "Kumba the Gentle",
+      role: "protagonist",
+      culturalSignificance: "Humble and Patient Orphan Daughter",
+      traits: ["humble", "kind", "patient"],
+      avatarTheme: "human",
+    },
+    {
+      id: "stepmother",
+      name: "The Stepmother",
+      role: "antagonist",
+      culturalSignificance: "Harsh Household Matriarch",
+      traits: ["envious", "demanding", "strict"],
+      avatarTheme: "human",
+    },
+    {
+      id: "old-woman-bush",
+      name: "The Old Woman of the Bush",
+      role: "elder",
+      culturalSignificance: "Mystical Ancestral Elder of Daayaan",
+      traits: ["mystical", "wise", "rewarding"],
+      avatarTheme: "ancestor",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/spider-wisdom.svg",
+    src: "/images/stories/the-two-kumbas.jpg",
     alt: "A young girl carrying an earthenware vessel through a sunlit baobab grove toward a shimmering river",
     paletteTheme: "gold",
   },
@@ -93,6 +119,16 @@ export const twoKumbasStory: Story = {
         intensity: "subtle",
       },
       characters: ["Kumba the Gentle"],
+      charactersData: [
+        {
+          id: "kumba-gentle",
+          name: "Kumba the Gentle",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-01-narration.mp3",
         narrationDurationSeconds: 29.2,
@@ -122,6 +158,24 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle", "The Stepmother"],
+      charactersData: [
+        {
+          id: "stepmother",
+          name: "The Stepmother",
+          avatarTheme: "human",
+          position: "left",
+          scale: 1.0,
+          motion: "gesture",
+        },
+        {
+          id: "kumba-gentle",
+          name: "Kumba the Gentle",
+          avatarTheme: "human",
+          position: "right",
+          scale: 0.95,
+          motion: "still",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-02-narration.mp3",
         narrationDurationSeconds: 27.75,
@@ -151,6 +205,16 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle", "The Talking Baobab"],
+      charactersData: [
+        {
+          id: "kumba-gentle",
+          name: "Kumba the Gentle",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-03-narration.mp3",
         narrationDurationSeconds: 35.33,
@@ -180,6 +244,24 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle", "The Old Woman of the Bush"],
+      charactersData: [
+        {
+          id: "kumba-gentle",
+          name: "Kumba the Gentle",
+          avatarTheme: "human",
+          position: "left",
+          scale: 0.95,
+          motion: "still",
+        },
+        {
+          id: "old-woman-bush",
+          name: "The Old Woman of the Bush",
+          avatarTheme: "ancestor",
+          position: "right",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-04-narration.mp3",
         narrationDurationSeconds: 28.35,
@@ -209,6 +291,16 @@ export const twoKumbasStory: Story = {
         intensity: "gentle",
       },
       characters: ["Kumba the Gentle"],
+      charactersData: [
+        {
+          id: "kumba-gentle",
+          name: "Kumba the Gentle",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-05-narration.mp3",
         narrationDurationSeconds: 33.12,
@@ -238,6 +330,16 @@ export const twoKumbasStory: Story = {
         intensity: "subtle",
       },
       characters: ["Kumba the Gentle"],
+      charactersData: [
+        {
+          id: "kumba-gentle",
+          name: "Kumba the Gentle",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-06-narration.mp3",
         narrationDurationSeconds: 29.48,

@@ -62,8 +62,38 @@ export const maisStolenNianyaaStory: Story = {
   listeningDurationSeconds: 360,
   themes: ["Family Reconciliation", "Honesty", "Wisdom of Elders", "Forgiveness"],
   characters: ["Mai the Bride", "Binta her Sister", "Grandmother Awa", "The Goldsmith"],
+  characterProfiles: [
+    {
+      id: "mai-bride",
+      name: "Mai the Bride",
+      role: "protagonist",
+      culturalSignificance: "Gentle Bride-to-be of the Compound whose patience preserves familial unity.",
+      avatarTheme: "human",
+    },
+    {
+      id: "binta-sister",
+      name: "Binta",
+      role: "antagonist",
+      culturalSignificance: "Envious Half-Sister whose remorse leads to mutual forgiveness and reconciliation.",
+      avatarTheme: "human",
+    },
+    {
+      id: "grandmother-awa",
+      name: "Grandmother Awa",
+      role: "elder",
+      culturalSignificance: "Wise Family Matriarch and Peacemaker who uses ancestral wisdom rather than punishment.",
+      avatarTheme: "griot",
+    },
+    {
+      id: "goldsmith",
+      name: "The Goldsmith",
+      role: "chorus",
+      culturalSignificance: "Village Artisan and custodian of traditional craftsmanship.",
+      avatarTheme: "human",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/griot-baobab.svg",
+    src: "/images/stories/mais-stolen-nianyaa.jpg",
     alt: "A beautifully carved wooden jewelry box holding glistening amber beads and filigree silver beside traditional woven cloths",
     paletteTheme: "gold",
   },
@@ -91,6 +121,24 @@ export const maisStolenNianyaaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Grandmother Awa", "Mai the Bride", "Binta her Sister"],
+      charactersData: [
+        {
+          id: "grandmother-awa",
+          name: "Grandmother Awa",
+          avatarTheme: "griot",
+          position: "left",
+          scale: 1.0,
+          motion: "gesture",
+        },
+        {
+          id: "mai-bride",
+          name: "Mai the Bride",
+          avatarTheme: "human",
+          position: "right",
+          scale: 0.95,
+          motion: "still",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-01-narration.mp3",
         narrationDurationSeconds: 35.8,
@@ -120,6 +168,24 @@ export const maisStolenNianyaaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Mai the Bride", "Binta her Sister"],
+      charactersData: [
+        {
+          id: "mai-bride",
+          name: "Mai the Bride",
+          avatarTheme: "human",
+          position: "left",
+          scale: 0.95,
+          motion: "still",
+        },
+        {
+          id: "binta-sister",
+          name: "Binta",
+          avatarTheme: "human",
+          position: "right",
+          scale: 0.95,
+          motion: "still",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-02-narration.mp3",
         narrationDurationSeconds: 32.27,
@@ -149,6 +215,16 @@ export const maisStolenNianyaaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Grandmother Awa"],
+      charactersData: [
+        {
+          id: "grandmother-awa",
+          name: "Grandmother Awa",
+          avatarTheme: "griot",
+          position: "center",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-03-narration.mp3",
         narrationDurationSeconds: 35.65,
@@ -178,6 +254,24 @@ export const maisStolenNianyaaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Mai the Bride", "Binta her Sister", "Grandmother Awa"],
+      charactersData: [
+        {
+          id: "mai-bride",
+          name: "Mai the Bride",
+          avatarTheme: "human",
+          position: "left",
+          scale: 0.95,
+          motion: "gesture",
+        },
+        {
+          id: "binta-sister",
+          name: "Binta",
+          avatarTheme: "human",
+          position: "right",
+          scale: 0.95,
+          motion: "walk",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-04-narration.mp3",
         narrationDurationSeconds: 38.75,

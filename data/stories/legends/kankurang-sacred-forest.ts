@@ -64,8 +64,34 @@ export const kankurangSacredForestStory: Story = {
   listeningDurationSeconds: 420,
   themes: ["Cultural Heritage", "Protection", "Ecological Balance", "Initiation"],
   characters: ["The Initiates", "Elder Bakary", "The Spirit of the Kankurang"],
+  characterProfiles: [
+    {
+      id: "elder-bakary",
+      name: "Elder Bakary",
+      role: "elder",
+      culturalSignificance: "Venerable Elder and Guardian of Tradition",
+      traits: ["venerable", "wise", "guardian"],
+      avatarTheme: "griot",
+    },
+    {
+      id: "kankurang-spirit",
+      name: "The Kankurang",
+      role: "guardian",
+      culturalSignificance: "Ancestral Red Bark Guardian",
+      traits: ["sacred", "protective", "vigilant"],
+      avatarTheme: "spirit",
+    },
+    {
+      id: "initiates",
+      name: "The Initiates",
+      role: "chorus",
+      culturalSignificance: "Young Novices of the Sacred Camp",
+      traits: ["reverent", "learning", "courageous"],
+      avatarTheme: "human",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/griot-baobab.svg",
+    src: "/images/stories/the-kankurang-and-the-sacred-forest.jpg",
     alt: "The silhouette of the masked Kankurang draped in red fibers against a deep sunset by the Gambia River",
     paletteTheme: "ochre",
   },
@@ -93,6 +119,16 @@ export const kankurangSacredForestStory: Story = {
         intensity: "gentle",
       },
       characters: ["Elder Bakary"],
+      charactersData: [
+        {
+          id: "elder-bakary",
+          name: "Elder Bakary",
+          avatarTheme: "griot",
+          position: "center",
+          scale: 1.0,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-narration.mp3",
         narrationDurationSeconds: 39.4,
@@ -122,6 +158,16 @@ export const kankurangSacredForestStory: Story = {
         intensity: "gentle",
       },
       characters: ["The Spirit of the Kankurang"],
+      charactersData: [
+        {
+          id: "kankurang-spirit",
+          name: "The Kankurang",
+          avatarTheme: "spirit",
+          position: "center",
+          scale: 1.1,
+          motion: "subtle-float",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-narration.mp3",
         narrationDurationSeconds: 38.42,
@@ -151,6 +197,16 @@ export const kankurangSacredForestStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Spirit of the Kankurang"],
+      charactersData: [
+        {
+          id: "kankurang-spirit",
+          name: "The Kankurang",
+          avatarTheme: "spirit",
+          position: "center",
+          scale: 1.15,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-narration.mp3",
         narrationDurationSeconds: 39.2,
@@ -180,6 +236,24 @@ export const kankurangSacredForestStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Initiates", "The Spirit of the Kankurang"],
+      charactersData: [
+        {
+          id: "initiates",
+          name: "The Initiates",
+          avatarTheme: "human",
+          position: "left",
+          scale: 0.9,
+          motion: "still",
+        },
+        {
+          id: "kankurang-spirit",
+          name: "The Kankurang",
+          avatarTheme: "spirit",
+          position: "right",
+          scale: 1.1,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-narration.mp3",
         narrationDurationSeconds: 41.8,
@@ -209,6 +283,16 @@ export const kankurangSacredForestStory: Story = {
         intensity: "gentle",
       },
       characters: ["The Initiates"],
+      charactersData: [
+        {
+          id: "initiates",
+          name: "The Initiates",
+          avatarTheme: "human",
+          position: "center",
+          scale: 0.95,
+          motion: "walk",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-narration.mp3",
         narrationDurationSeconds: 41.48,

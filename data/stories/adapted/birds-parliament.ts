@@ -62,8 +62,42 @@ export const birdsParliamentStory: Story = {
   listeningDurationSeconds: 360,
   themes: ["Ecology", "Fairness", "Dialogue", "Coexistence", "Wisdom"],
   characters: ["The Little Kingfisher", "The Great Fish Eagle", "The Sacred Ibis", "The Marabou Stork"],
+  characterProfiles: [
+    {
+      id: "kingfisher",
+      name: "The Little Kingfisher",
+      role: "protagonist",
+      culturalSignificance:
+        "The fearless, clever pied kingfisher whose plea for mutual survival and ecological coexistence preserves the river delta.",
+      avatarTheme: "kingfisher",
+    },
+    {
+      id: "fish-eagle",
+      name: "The Great Fish Eagle",
+      role: "elder",
+      culturalSignificance:
+        "The mighty sky lord of the River Gambia whose supreme strength yields to reason and communal justice.",
+      avatarTheme: "fish-eagle",
+    },
+    {
+      id: "ibis",
+      name: "The Sacred Ibis",
+      role: "guardian",
+      culturalSignificance:
+        "The venerable river messenger whose sickle bill strikes the waters to convene the grand feathered parliament.",
+      avatarTheme: "ibis",
+    },
+    {
+      id: "stork",
+      name: "The Marabou Stork",
+      role: "antagonist",
+      culturalSignificance:
+        "The greedy hunched scavenger who demands the deepest fish pools, clattering his massive bill in selfish appetite.",
+      avatarTheme: "stork",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/ninki-nanka.svg",
+    src: "/images/stories/the-birds-parliament.jpg",
     alt: "A diverse flock of colorful river birds perched along a sunlit sandbank in the River Gambia while an eagle circles above",
     paletteTheme: "river",
   },
@@ -91,6 +125,24 @@ export const birdsParliamentStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Little Kingfisher", "The Great Fish Eagle"],
+      charactersData: [
+        {
+          id: "kingfisher",
+          name: "The Little Kingfisher",
+          avatarTheme: "kingfisher",
+          position: "left",
+          scale: 0.9,
+          motion: "still",
+        },
+        {
+          id: "fish-eagle",
+          name: "The Great Fish Eagle",
+          avatarTheme: "fish-eagle",
+          position: "right",
+          scale: 1.05,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-01-narration.mp3",
         narrationDurationSeconds: 29.45,
@@ -120,6 +172,32 @@ export const birdsParliamentStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Sacred Ibis", "The Great Fish Eagle", "The Marabou Stork"],
+      charactersData: [
+        {
+          id: "ibis",
+          name: "The Sacred Ibis",
+          avatarTheme: "ibis",
+          position: "left",
+          scale: 0.95,
+          motion: "gesture",
+        },
+        {
+          id: "fish-eagle",
+          name: "The Great Fish Eagle",
+          avatarTheme: "fish-eagle",
+          position: "center",
+          scale: 1.1,
+          motion: "stand",
+        },
+        {
+          id: "stork",
+          name: "The Marabou Stork",
+          avatarTheme: "stork",
+          position: "right",
+          scale: 1.05,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-02-narration.mp3",
         narrationDurationSeconds: 33.23,
@@ -149,6 +227,24 @@ export const birdsParliamentStory: Story = {
         intensity: "gentle",
       },
       characters: ["The Great Fish Eagle", "The Marabou Stork"],
+      charactersData: [
+        {
+          id: "fish-eagle",
+          name: "The Great Fish Eagle",
+          avatarTheme: "fish-eagle",
+          position: "left",
+          scale: 1.15,
+          motion: "gesture",
+        },
+        {
+          id: "stork",
+          name: "The Marabou Stork",
+          avatarTheme: "stork",
+          position: "right",
+          scale: 1.1,
+          motion: "mock",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-03-narration.mp3",
         narrationDurationSeconds: 26.05,
@@ -178,6 +274,24 @@ export const birdsParliamentStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Little Kingfisher", "The Great Fish Eagle"],
+      charactersData: [
+        {
+          id: "kingfisher",
+          name: "The Little Kingfisher",
+          avatarTheme: "kingfisher",
+          position: "left",
+          scale: 0.95,
+          motion: "gesture",
+        },
+        {
+          id: "fish-eagle",
+          name: "The Great Fish Eagle",
+          avatarTheme: "fish-eagle",
+          position: "right",
+          scale: 1.1,
+          motion: "concern",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-04-narration.mp3",
         narrationDurationSeconds: 38.62,

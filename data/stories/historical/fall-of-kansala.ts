@@ -73,8 +73,37 @@ export const fallOfKansalaStory: Story = {
   listeningDurationSeconds: 480,
   themes: ["Imperial History", "Honor", "Courage", "Kora Heritage", "Remembrance"],
   characters: ["Mansa Dianke Wali Sanneh", "The Royal Jali", "The Nyancho Guard"],
+  characterProfiles: [
+    {
+      id: "dianke-wali",
+      name: "Mansa Dianke Wali Sanneh",
+      role: "protagonist",
+      culturalSignificance:
+        "The last sovereign Emperor of Kaabu, whose defiance at Kansala in 1867 is immortalized in Senegambian kora epics.",
+      traits: ["unyielding", "noble", "courageous", "sovereign"],
+      avatarTheme: "kelefa",
+    },
+    {
+      id: "royal-jali",
+      name: "The Royal Jali",
+      role: "chorus",
+      culturalSignificance:
+        "The master kora bard of Kaabu who preserved the names of the Nyanchos and composed the sacred melody 'Kansala'.",
+      traits: ["poetic", "devoted", "truth-teller"],
+      avatarTheme: "griot",
+    },
+    {
+      id: "nyancho-guard",
+      name: "The Nyancho Guard",
+      role: "guardian",
+      culturalSignificance:
+        "The elite warrior aristocracy of Kaabu bound by an oath never to retreat in battle.",
+      traits: ["fearless", "loyal", "martial"],
+      avatarTheme: "warrior",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/kelefa-saane.svg",
+    src: "/images/stories/the-fall-of-kansala.jpg",
     alt: "A fortified red clay fortress standing against a dramatic amber sunset while a griot holds a kora before the gate",
     paletteTheme: "ochre",
   },
@@ -102,6 +131,26 @@ export const fallOfKansalaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Mansa Dianke Wali Sanneh", "The Nyancho Guard"],
+      charactersData: [
+        {
+          id: "dianke-wali",
+          name: "Mansa Dianke Wali Sanneh",
+          position: "center",
+          expression: "commanding",
+          motion: "stand",
+          scale: 1.05,
+          avatarTheme: "kelefa",
+        },
+        {
+          id: "nyancho-guard",
+          name: "The Nyancho Guard",
+          position: "left",
+          expression: "vigilant",
+          motion: "stand",
+          scale: 0.95,
+          avatarTheme: "warrior",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-fall-of-kansala/scene-01-narration.mp3",
         narrationDurationSeconds: 37.88,
@@ -131,6 +180,17 @@ export const fallOfKansalaStory: Story = {
         intensity: "gentle",
       },
       characters: ["Mansa Dianke Wali Sanneh"],
+      charactersData: [
+        {
+          id: "dianke-wali",
+          name: "Mansa Dianke Wali Sanneh",
+          position: "center",
+          expression: "defiant",
+          motion: "gesture",
+          scale: 1.05,
+          avatarTheme: "kelefa",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-fall-of-kansala/scene-02-narration.mp3",
         narrationDurationSeconds: 39.7,
@@ -160,6 +220,26 @@ export const fallOfKansalaStory: Story = {
         intensity: "gentle",
       },
       characters: ["Mansa Dianke Wali Sanneh", "The Nyancho Guard"],
+      charactersData: [
+        {
+          id: "dianke-wali",
+          name: "Mansa Dianke Wali Sanneh",
+          position: "right",
+          expression: "focused",
+          motion: "walk",
+          scale: 1.0,
+          avatarTheme: "kelefa",
+        },
+        {
+          id: "nyancho-guard",
+          name: "The Nyancho Guard",
+          position: "left",
+          expression: "resolute",
+          motion: "stand",
+          scale: 0.95,
+          avatarTheme: "warrior",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-fall-of-kansala/scene-03-narration.mp3",
         narrationDurationSeconds: 39.25,
@@ -189,6 +269,17 @@ export const fallOfKansalaStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Royal Jali"],
+      charactersData: [
+        {
+          id: "royal-jali",
+          name: "The Royal Jali",
+          position: "center",
+          expression: "solemn",
+          motion: "gesture",
+          scale: 1.0,
+          avatarTheme: "griot",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-fall-of-kansala/scene-04-narration.mp3",
         narrationDurationSeconds: 38.55,
@@ -218,6 +309,17 @@ export const fallOfKansalaStory: Story = {
         intensity: "gentle",
       },
       characters: ["Mansa Dianke Wali Sanneh"],
+      charactersData: [
+        {
+          id: "dianke-wali",
+          name: "Mansa Dianke Wali Sanneh",
+          position: "center",
+          expression: "solemn",
+          motion: "still",
+          scale: 1.05,
+          avatarTheme: "kelefa",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-fall-of-kansala/scene-05-narration.mp3",
         narrationDurationSeconds: 37.75,
@@ -247,6 +349,17 @@ export const fallOfKansalaStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Royal Jali"],
+      charactersData: [
+        {
+          id: "royal-jali",
+          name: "The Royal Jali",
+          position: "center",
+          expression: "peaceful",
+          motion: "breathing",
+          scale: 1.0,
+          avatarTheme: "griot",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-fall-of-kansala/scene-06-narration.mp3",
         narrationDurationSeconds: 34.45,

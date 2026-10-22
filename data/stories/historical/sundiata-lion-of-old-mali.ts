@@ -165,7 +165,7 @@ export const sundiataStory: Story = {
       culturalSignificance:
         "Historical founder of the Mali Empire; central figure in the most widely performed oral epic in West Africa.",
       traits: ["destined", "patient", "powerful", "humble-origins"],
-      avatarTheme: "shadow",
+      avatarTheme: "warrior",
     },
     {
       id: "sogolon",
@@ -179,7 +179,7 @@ export const sundiataStory: Story = {
   ],
 
   coverImage: {
-    src: "/images/stories/sundiata-cover.jpg",
+    src: "/images/stories/sundiata-lion-of-old-mali.jpg",
     alt: "A young boy rises to his feet beneath the vast sky of the Mali savanna, a kora playing in the distance",
     paletteTheme: "gold",
   },
@@ -314,7 +314,7 @@ The griot says: *The whole of Mali stood with him.*`,
           expression: "straining",
           motion: "still",
           scale: 1.2,
-          avatarTheme: "shadow",
+          avatarTheme: "warrior",
         },
       ],
       visual: { type: "gradient", paletteTheme: "ochre" },
@@ -358,7 +358,7 @@ He was learning the world from the outside. And that, the griots say, was part o
           expression: "watchful",
           motion: "breathing",
           scale: 1.1,
-          avatarTheme: "shadow",
+          avatarTheme: "warrior",
         },
         {
           id: "sogolon",
@@ -411,7 +411,7 @@ The details of how Soumaoro's power was finally broken are told differently in d
           expression: "commanding",
           motion: "still",
           scale: 1.2,
-          avatarTheme: "shadow",
+          avatarTheme: "warrior",
         },
       ],
       visual: { type: "gradient", paletteTheme: "ochre" },

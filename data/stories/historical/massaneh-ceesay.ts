@@ -70,8 +70,46 @@ export const massanehCeesayStory: Story = {
   listeningDurationSeconds: 420,
   themes: ["Pride and Humility", "Destiny", "Integrity", "Sacred Vows"],
   characters: ["Massaneh Ceesay", "Bakary Niuminko", "Fatou", "The Village Jali"],
+  characterProfiles: [
+    {
+      id: "massaneh",
+      name: "Massaneh Ceesay",
+      role: "protagonist",
+      culturalSignificance:
+        "Legendary wealthy 19th-century merchant whose sudden death on his wedding morning inspired one of the most famous songs in Gambian history.",
+      traits: ["proud", "opulent", "ambitious"],
+      avatarTheme: "human",
+    },
+    {
+      id: "bakary",
+      name: "Bakary Niuminko",
+      role: "protagonist",
+      culturalSignificance:
+        "The humble river fisherman who kept faith and sacred vows along the Bintang Bolong.",
+      traits: ["honest", "faithful", "patient"],
+      avatarTheme: "boatman",
+    },
+    {
+      id: "fatou",
+      name: "Fatou",
+      role: "chorus",
+      culturalSignificance:
+        "The cherished maiden at the center of the famous ballad.",
+      traits: ["graceful", "dignified"],
+      avatarTheme: "human",
+    },
+    {
+      id: "village-jali",
+      name: "The Village Jali",
+      role: "elder",
+      culturalSignificance:
+        "The master griot whose kora lament warned against vanity and preserved the moral truth of destiny.",
+      traits: ["wise", "truth-teller", "musical"],
+      avatarTheme: "griot",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/stone-circles.svg",
+    src: "/images/stories/the-ballad-of-massaneh-ceesay.jpg",
     alt: "A wealthy merchant draped in fine embroidered robes standing beside the winding waters of the Bintang Bolong",
     paletteTheme: "ochre",
   },
@@ -99,6 +137,17 @@ export const massanehCeesayStory: Story = {
         intensity: "subtle",
       },
       characters: ["Massaneh Ceesay"],
+      charactersData: [
+        {
+          id: "massaneh",
+          name: "Massaneh Ceesay",
+          position: "center",
+          expression: "proud",
+          motion: "walk",
+          scale: 1.05,
+          avatarTheme: "human",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-narration.mp3",
         narrationDurationSeconds: 38.77,
@@ -128,6 +177,26 @@ export const massanehCeesayStory: Story = {
         intensity: "subtle",
       },
       characters: ["Bakary Niuminko", "Fatou"],
+      charactersData: [
+        {
+          id: "bakary",
+          name: "Bakary Niuminko",
+          position: "left",
+          expression: "patient",
+          motion: "stand",
+          scale: 1.0,
+          avatarTheme: "boatman",
+        },
+        {
+          id: "fatou",
+          name: "Fatou",
+          position: "right",
+          expression: "serene",
+          motion: "still",
+          scale: 0.95,
+          avatarTheme: "human",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-narration.mp3",
         narrationDurationSeconds: 38.25,
@@ -157,6 +226,26 @@ export const massanehCeesayStory: Story = {
         intensity: "subtle",
       },
       characters: ["Massaneh Ceesay", "Fatou"],
+      charactersData: [
+        {
+          id: "massaneh",
+          name: "Massaneh Ceesay",
+          position: "left",
+          expression: "proud",
+          motion: "gesture",
+          scale: 1.05,
+          avatarTheme: "human",
+        },
+        {
+          id: "fatou",
+          name: "Fatou",
+          position: "right",
+          expression: "conflicted",
+          motion: "still",
+          scale: 0.95,
+          avatarTheme: "human",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-narration.mp3",
         narrationDurationSeconds: 40.27,
@@ -186,6 +275,26 @@ export const massanehCeesayStory: Story = {
         intensity: "subtle",
       },
       characters: ["Massaneh Ceesay", "The Village Jali"],
+      charactersData: [
+        {
+          id: "village-jali",
+          name: "The Village Jali",
+          position: "left",
+          expression: "solemn",
+          motion: "gesture",
+          scale: 1.0,
+          avatarTheme: "griot",
+        },
+        {
+          id: "massaneh",
+          name: "Massaneh Ceesay",
+          position: "right",
+          expression: "proud",
+          motion: "still",
+          scale: 1.05,
+          avatarTheme: "human",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-narration.mp3",
         narrationDurationSeconds: 39.48,
@@ -215,6 +324,17 @@ export const massanehCeesayStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Village Jali"],
+      charactersData: [
+        {
+          id: "village-jali",
+          name: "The Village Jali",
+          position: "center",
+          expression: "peaceful",
+          motion: "breathing",
+          scale: 1.0,
+          avatarTheme: "griot",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-narration.mp3",
         narrationDurationSeconds: 44.2,

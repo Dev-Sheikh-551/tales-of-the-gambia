@@ -62,8 +62,34 @@ export const koochiBaramaStory: Story = {
   listeningDurationSeconds: 360,
   themes: ["Truth and Integrity", "Community Peace", "Reconciliation", "Honesty"],
   characters: ["Koochi Barama", "Elder Sékou", "The Village Council"],
+  characterProfiles: [
+    {
+      id: "koochi-barama",
+      name: "Koochi Barama",
+      role: "trickster",
+      culturalSignificance: "Charming but Untruthful Storyteller",
+      traits: ["clever", "silver-tongued", "reformed"],
+      avatarTheme: "human",
+    },
+    {
+      id: "elder-sekou",
+      name: "Elder Sékou",
+      role: "elder",
+      culturalSignificance: "Revered Elder and Judge of the Valley",
+      traits: ["revered", "just", "discerning"],
+      avatarTheme: "griot",
+    },
+    {
+      id: "village-council",
+      name: "The Village Council",
+      role: "chorus",
+      culturalSignificance: "Elders and Witnesses of the Crossing",
+      traits: ["vigilant", "peace-seeking"],
+      avatarTheme: "human",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/spider-wisdom.svg",
+    src: "/images/stories/koochi-barama-and-the-river-of-truth.jpg",
     alt: "A young Jola youth standing at a sacred shallow river crossing between dense palm trees with village elders waiting on both banks",
     paletteTheme: "river",
   },
@@ -91,6 +117,16 @@ export const koochiBaramaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Koochi Barama"],
+      charactersData: [
+        {
+          id: "koochi-barama",
+          name: "Koochi Barama",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-narration.mp3",
         narrationDurationSeconds: 34.95,
@@ -120,6 +156,24 @@ export const koochiBaramaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Koochi Barama", "Elder Sékou"],
+      charactersData: [
+        {
+          id: "elder-sekou",
+          name: "Elder Sékou",
+          avatarTheme: "griot",
+          position: "left",
+          scale: 1.0,
+          motion: "stand",
+        },
+        {
+          id: "koochi-barama",
+          name: "Koochi Barama",
+          avatarTheme: "human",
+          position: "right",
+          scale: 0.95,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-narration.mp3",
         narrationDurationSeconds: 41.62,
@@ -149,6 +203,24 @@ export const koochiBaramaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Koochi Barama", "Elder Sékou", "The Village Council"],
+      charactersData: [
+        {
+          id: "koochi-barama",
+          name: "Koochi Barama",
+          avatarTheme: "human",
+          position: "left",
+          scale: 0.95,
+          motion: "still",
+        },
+        {
+          id: "elder-sekou",
+          name: "Elder Sékou",
+          avatarTheme: "griot",
+          position: "right",
+          scale: 1.0,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-narration.mp3",
         narrationDurationSeconds: 37.02,
@@ -178,6 +250,24 @@ export const koochiBaramaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Koochi Barama", "Elder Sékou"],
+      charactersData: [
+        {
+          id: "koochi-barama",
+          name: "Koochi Barama",
+          avatarTheme: "human",
+          position: "left",
+          scale: 0.95,
+          motion: "walk",
+        },
+        {
+          id: "elder-sekou",
+          name: "Elder Sékou",
+          avatarTheme: "griot",
+          position: "right",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-narration.mp3",
         narrationDurationSeconds: 45.55,

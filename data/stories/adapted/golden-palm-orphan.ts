@@ -62,8 +62,42 @@ export const goldenPalmOrphanStory: Story = {
   listeningDurationSeconds: 360,
   themes: ["Compassion", "Integrity", "Perseverance", "Divine Justice"],
   characters: ["Young Alieu", "The Selfish Uncle", "The Old Wayfarer", "The Golden Weaver Bird"],
+  characterProfiles: [
+    {
+      id: "alieu",
+      name: "Young Alieu",
+      role: "protagonist",
+      culturalSignificance:
+        "The patient orphan herder whose selfless compassion and charity in the blazing savanna are rewarded by divine justice.",
+      avatarTheme: "child",
+    },
+    {
+      id: "selfish-uncle",
+      name: "The Selfish Uncle",
+      role: "antagonist",
+      culturalSignificance:
+        "The greedy guardian who seizes the orphan's inheritance and exiles him to the dry scrub, embodying moral failure.",
+      avatarTheme: "human",
+    },
+    {
+      id: "weaver-bird",
+      name: "The Golden Weaver Bird",
+      role: "guardian",
+      culturalSignificance:
+        "The parched savanna bird revived by Alieu, whose crystal melody guides him into the miraculous hidden grove.",
+      avatarTheme: "weaver-bird",
+    },
+    {
+      id: "old-wayfarer",
+      name: "The Old Wayfarer",
+      role: "elder",
+      culturalSignificance:
+        "A mysterious traveling elder whose thirst tests the hearts of mortals, revealing ancestral wisdom and blessings.",
+      avatarTheme: "ancestor",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/spider-wisdom.svg",
+    src: "/images/stories/the-golden-palm-and-the-orphan-boy.jpg",
     alt: "A young boy carrying a herder's staff beneath a majestic glowing golden palm tree surrounded by gentle savanna creatures",
     paletteTheme: "gold",
   },
@@ -91,6 +125,24 @@ export const goldenPalmOrphanStory: Story = {
         intensity: "subtle",
       },
       characters: ["Young Alieu", "The Selfish Uncle"],
+      charactersData: [
+        {
+          id: "alieu",
+          name: "Young Alieu",
+          avatarTheme: "child",
+          position: "left",
+          scale: 0.95,
+          motion: "walk",
+        },
+        {
+          id: "selfish-uncle",
+          name: "The Selfish Uncle",
+          avatarTheme: "human",
+          position: "right",
+          scale: 1.05,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-01-narration.mp3",
         narrationDurationSeconds: 27.55,
@@ -120,6 +172,32 @@ export const goldenPalmOrphanStory: Story = {
         intensity: "subtle",
       },
       characters: ["Young Alieu", "The Golden Weaver Bird", "The Old Wayfarer"],
+      charactersData: [
+        {
+          id: "weaver-bird",
+          name: "The Golden Weaver Bird",
+          avatarTheme: "weaver-bird",
+          position: "left",
+          scale: 0.85,
+          motion: "singing",
+        },
+        {
+          id: "alieu",
+          name: "Young Alieu",
+          avatarTheme: "child",
+          position: "center",
+          scale: 0.95,
+          motion: "gesture",
+        },
+        {
+          id: "old-wayfarer",
+          name: "The Old Wayfarer",
+          avatarTheme: "ancestor",
+          position: "right",
+          scale: 1.0,
+          motion: "still",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-02-narration.mp3",
         narrationDurationSeconds: 37.45,
@@ -149,6 +227,32 @@ export const goldenPalmOrphanStory: Story = {
         intensity: "subtle",
       },
       characters: ["Young Alieu", "The Old Wayfarer", "The Golden Weaver Bird"],
+      charactersData: [
+        {
+          id: "weaver-bird",
+          name: "The Golden Weaver Bird",
+          avatarTheme: "weaver-bird",
+          position: "far-left",
+          scale: 0.85,
+          motion: "walk",
+        },
+        {
+          id: "alieu",
+          name: "Young Alieu",
+          avatarTheme: "child",
+          position: "center",
+          scale: 0.95,
+          motion: "still",
+        },
+        {
+          id: "old-wayfarer",
+          name: "The Old Wayfarer",
+          avatarTheme: "ancestor",
+          position: "right",
+          scale: 1.05,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-03-narration.mp3",
         narrationDurationSeconds: 33.88,
@@ -178,6 +282,24 @@ export const goldenPalmOrphanStory: Story = {
         intensity: "subtle",
       },
       characters: ["Young Alieu", "The Selfish Uncle"],
+      charactersData: [
+        {
+          id: "alieu",
+          name: "Young Alieu",
+          avatarTheme: "child",
+          position: "left",
+          scale: 1.0,
+          motion: "triumphant",
+        },
+        {
+          id: "selfish-uncle",
+          name: "The Selfish Uncle",
+          avatarTheme: "human",
+          position: "right",
+          scale: 1.05,
+          motion: "concern",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-04-narration.mp3",
         narrationDurationSeconds: 32.45,

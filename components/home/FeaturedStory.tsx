@@ -24,6 +24,8 @@ export default function FeaturedStory() {
             <div className="md:col-span-6 relative h-[260px] sm:h-[320px] md:h-[400px]">
               <StoryArt
                 theme={story.coverImage.paletteTheme}
+                src={story.coverImage.src}
+                alt={story.coverImage.alt}
                 size="hero"
                 className="w-full h-full rounded-none border-0"
               />

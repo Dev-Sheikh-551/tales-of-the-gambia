@@ -57,8 +57,18 @@ export const nightfallJanjanburehStory: Story = {
   listeningDurationSeconds: 360,
   themes: ["Tranquility", "Night Sky", "River Currents", "Rest"],
   characters: ["The River Ferryman", "The Nightjar Bird"],
+  characterProfiles: [
+    {
+      id: "ferryman",
+      name: "The Ferryman",
+      role: "guardian",
+      culturalSignificance:
+        "The gentle river navigator of Janjanbureh Island whose peaceful presence accompanies the nocturnal lullaby.",
+      avatarTheme: "boatman",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/janjanbureh-night.svg",
+    src: "/images/stories/nightfall-over-janjanbureh.jpg",
     alt: "Full moon reflecting on the calm surface of the Gambia River near Janjanbureh Island",
     paletteTheme: "river",
   },

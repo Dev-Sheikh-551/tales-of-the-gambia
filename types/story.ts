@@ -172,6 +172,34 @@ export interface CharacterMotionConfig {
   duration?: number;
 }
 
+export type AvatarTheme =
+  | "hare"
+  | "elephant"
+  | "tortoise"
+  | "griot"
+  | "boatman"
+  | "shadow"
+  | "pangolin"
+  | "spider"
+  | "kelefa"
+  | "ninki-nanka"
+  | "samba"
+  | "hyena"
+  | "cow"
+  | "lion"
+  | "human"
+  | "spirit"
+  | "warrior"
+  | "hunter"
+  | "ancestor"
+  | "child"
+  | "weaver-bird"
+  | "kingfisher"
+  | "fish-eagle"
+  | "ibis"
+  | "stork"
+  | "donkey";
+
 export interface SceneCharacter {
   id: string;
   name: string;
@@ -180,19 +208,7 @@ export interface SceneCharacter {
   motion?: CharacterMotionPreset;
   motionConfig?: CharacterMotionConfig;
   scale?: number;
-  avatarTheme?:
-    | "hare"
-    | "elephant"
-    | "tortoise"
-    | "griot"
-    | "boatman"
-    | "shadow"
-    | "pangolin"
-    | "spider"
-    | "kelefa"
-    | "ninki-nanka"
-    | "samba"
-    | "hyena";
+  avatarTheme?: AvatarTheme;
 }
 
 export interface EnvironmentMotion {
@@ -368,19 +384,7 @@ export interface CharacterProfile {
   role: "protagonist" | "antagonist" | "trickster" | "elder" | "guardian" | "chorus";
   culturalSignificance?: string;
   traits?: string[];
-  avatarTheme?:
-    | "hare"
-    | "elephant"
-    | "tortoise"
-    | "griot"
-    | "boatman"
-    | "shadow"
-    | "pangolin"
-    | "spider"
-    | "kelefa"
-    | "ninki-nanka"
-    | "samba"
-    | "hyena";
+  avatarTheme?: AvatarTheme;
 }
 
 export interface Story {

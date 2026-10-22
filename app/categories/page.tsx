@@ -117,6 +117,8 @@ export default function CategoriesPage() {
                           <Link href={`/stories/${story.slug}`} tabIndex={-1}>
                             <StoryArt
                               theme={story.coverImage.paletteTheme}
+                              src={story.coverImage.src}
+                              alt={story.coverImage.alt}
                               size="sm"
                               className="rounded-xl shadow-md transition-transform duration-300 group-hover:scale-102"
                             />

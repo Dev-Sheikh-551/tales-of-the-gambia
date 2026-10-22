@@ -93,7 +93,7 @@ export const hareDroughtStory: Story = {
     },
   ],
   coverImage: {
-    src: "/images/stories/hare-drought.svg",
+    src: "/images/stories/the-clever-hare-and-the-great-drought.jpg",
     alt: "Silhouette of animals gathering beneath an ancient tree under an amber dusk sky",
     paletteTheme: "ochre",
   },

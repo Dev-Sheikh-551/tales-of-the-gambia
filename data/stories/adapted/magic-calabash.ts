@@ -63,8 +63,34 @@ export const magicCalabashStory: Story = {
   listeningDurationSeconds: 420,
   themes: ["Contentment", "Humility", "Urban Folklore", "Temptation", "Integrity"],
   characters: ["Erubami the Carter", "Modupeh his Wife", "The Old Water-Carrier"],
+  characterProfiles: [
+    {
+      id: "erubami-carter",
+      name: "Erubami the Carter",
+      role: "protagonist",
+      culturalSignificance: "Hardworking Market Handcart Operator",
+      traits: ["honest", "hardworking", "contented"],
+      avatarTheme: "human",
+    },
+    {
+      id: "modupeh-wife",
+      name: "Modupeh",
+      role: "guardian",
+      culturalSignificance: "Devoted Wife and Home Keeper",
+      traits: ["devoted", "patient", "supportive"],
+      avatarTheme: "human",
+    },
+    {
+      id: "water-carrier",
+      name: "The Old Water-Carrier",
+      role: "elder",
+      culturalSignificance: "Wise Neighborhood Elder",
+      traits: ["venerable", "wise"],
+      avatarTheme: "griot",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/spider-wisdom.svg",
+    src: "/images/stories/the-magic-calabash-of-banjul.jpg",
     alt: "A smooth carved calabash glowing with gentle golden light on an old wooden table in a lantern-lit Banjul room",
     paletteTheme: "gold",
   },
@@ -92,6 +118,16 @@ export const magicCalabashStory: Story = {
         intensity: "subtle",
       },
       characters: ["Erubami the Carter"],
+      charactersData: [
+        {
+          id: "erubami-carter",
+          name: "Erubami the Carter",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "walk",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-01-narration.mp3",
         narrationDurationSeconds: 31.6,
@@ -121,6 +157,16 @@ export const magicCalabashStory: Story = {
         intensity: "gentle",
       },
       characters: ["Erubami the Carter"],
+      charactersData: [
+        {
+          id: "erubami-carter",
+          name: "Erubami the Carter",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-02-narration.mp3",
         narrationDurationSeconds: 37.92,
@@ -150,6 +196,24 @@ export const magicCalabashStory: Story = {
         intensity: "subtle",
       },
       characters: ["Erubami the Carter", "Modupeh his Wife"],
+      charactersData: [
+        {
+          id: "erubami-carter",
+          name: "Erubami the Carter",
+          avatarTheme: "human",
+          position: "left",
+          scale: 1.0,
+          motion: "gesture",
+        },
+        {
+          id: "modupeh-wife",
+          name: "Modupeh",
+          avatarTheme: "human",
+          position: "right",
+          scale: 0.95,
+          motion: "still",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-03-narration.mp3",
         narrationDurationSeconds: 35.85,
@@ -179,6 +243,16 @@ export const magicCalabashStory: Story = {
         intensity: "subtle",
       },
       characters: ["Erubami the Carter"],
+      charactersData: [
+        {
+          id: "erubami-carter",
+          name: "Erubami the Carter",
+          avatarTheme: "human",
+          position: "center",
+          scale: 1.0,
+          motion: "still",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-04-narration.mp3",
         narrationDurationSeconds: 34.83,
@@ -208,6 +282,24 @@ export const magicCalabashStory: Story = {
         intensity: "subtle",
       },
       characters: ["Erubami the Carter", "Modupeh his Wife"],
+      charactersData: [
+        {
+          id: "erubami-carter",
+          name: "Erubami the Carter",
+          avatarTheme: "human",
+          position: "left",
+          scale: 1.0,
+          motion: "stand",
+        },
+        {
+          id: "modupeh-wife",
+          name: "Modupeh",
+          avatarTheme: "human",
+          position: "right",
+          scale: 0.95,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-05-narration.mp3",
         narrationDurationSeconds: 39.27,

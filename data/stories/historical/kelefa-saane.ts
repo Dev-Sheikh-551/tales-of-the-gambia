@@ -159,7 +159,7 @@ export const kelafeaSaaneStory: Story = {
   ],
 
   coverImage: {
-    src: "/images/stories/kelefa-saane-cover.jpg",
+    src: "/images/stories/kelefa-saane.jpg",
     alt: "A lone warrior stands at the edge of the Gambia River at dusk, kora strings vibrating in the distance",
     paletteTheme: "ochre",
   },

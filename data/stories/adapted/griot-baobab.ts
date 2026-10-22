@@ -95,7 +95,7 @@ export const griotBaobabStory: Story = {
     },
   ],
   coverImage: {
-    src: "/images/stories/griot-baobab.svg",
+    src: "/images/stories/the-griot-under-the-baobab.jpg",
     alt: "Elder griot seated beneath a massive baobab playing a calabash kora",
     paletteTheme: "earth",
   },

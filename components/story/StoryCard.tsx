@@ -73,6 +73,8 @@ export function StoryCard({
           >
             <StoryArt
               theme={story.coverImage.paletteTheme}
+              src={story.coverImage.src}
+              alt={story.coverImage.alt}
               size="sm"
               className="rounded-xl transition-transform duration-300 group-hover:scale-103"
             />

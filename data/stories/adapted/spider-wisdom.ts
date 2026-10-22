@@ -79,7 +79,7 @@ export const spiderWisdomStory: Story = {
     },
   ],
   coverImage: {
-    src: "/images/stories/spider-wisdom.svg",
+    src: "/images/stories/the-spider-and-the-pot-of-wisdom.jpg",
     alt: "Stylized clay pot cracking open atop an oil palm tree, scattering golden sparks",
     paletteTheme: "gold",
   },

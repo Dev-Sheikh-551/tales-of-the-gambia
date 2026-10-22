@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 interface StoryArtProps {
@@ -5,9 +7,12 @@ interface StoryArtProps {
   title?: string;
   className?: string;
   size?: "sm" | "md" | "lg" | "hero";
+  src?: string;
+  alt?: string;
 }
 
-export function StoryArt({ theme, className = "", size = "md" }: StoryArtProps) {
+export function StoryArt({ theme, title, className = "", size = "md", src, alt }: StoryArtProps) {
+  const [imageError, setImageError] = React.useState(false);
   // Height and aspect classes based on size
   const sizeClasses = {
     sm: "h-32 md:h-40",
@@ -20,8 +25,19 @@ export function StoryArt({ theme, className = "", size = "md" }: StoryArtProps) 
     <div
       className={`relative w-full overflow-hidden rounded-xl bg-[#181410] border border-[#2E2721] flex items-center justify-center select-none ${sizeClasses} ${className}`}
     >
-      {/* Background artwork tailored to Gambian storytelling motifs */}
-      {theme === "ochre" && (
+      {/* Real cover image with graceful fallback */}
+      {src && !imageError ? (
+        <img
+          src={src}
+          alt={alt || title || "Story cover"}
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          onError={() => setImageError(true)}
+        />
+      ) : null}
+
+      {/* Background artwork tailored to Gambian storytelling motifs (fallback or decorative) */}
+      {(!src || imageError) && theme === "ochre" && (
         <svg
           viewBox="0 0 800 600"
           className="absolute inset-0 w-full h-full object-cover"
@@ -66,7 +82,7 @@ export function StoryArt({ theme, className = "", size = "md" }: StoryArtProps) 
         </svg>
       )}
 
-      {theme === "river" && (
+      {(!src || imageError) && theme === "river" && (
         <svg
           viewBox="0 0 800 600"
           className="absolute inset-0 w-full h-full object-cover"
@@ -115,7 +131,7 @@ export function StoryArt({ theme, className = "", size = "md" }: StoryArtProps) 
         </svg>
       )}
 
-      {theme === "earth" && (
+      {(!src || imageError) && theme === "earth" && (
         <svg
           viewBox="0 0 800 600"
           className="absolute inset-0 w-full h-full object-cover"
@@ -156,7 +172,7 @@ export function StoryArt({ theme, className = "", size = "md" }: StoryArtProps) 
         </svg>
       )}
 
-      {theme === "forest" && (
+      {(!src || imageError) && theme === "forest" && (
         <svg
           viewBox="0 0 800 600"
           className="absolute inset-0 w-full h-full object-cover"
@@ -188,7 +204,7 @@ export function StoryArt({ theme, className = "", size = "md" }: StoryArtProps) 
         </svg>
       )}
 
-      {theme === "gold" && (
+      {(!src || imageError) && theme === "gold" && (
         <svg
           viewBox="0 0 800 600"
           className="absolute inset-0 w-full h-full object-cover"

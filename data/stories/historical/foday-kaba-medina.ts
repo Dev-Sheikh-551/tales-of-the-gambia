@@ -72,8 +72,37 @@ export const fodayKabaMedinaStory: Story = {
   listeningDurationSeconds: 420,
   themes: ["Resistance", "Tactical Genius", "Landscape Mastery", "Sovereignty"],
   characters: ["Foday Kaba Dumbuya", "Commander Sanneh", "The Kiang Scout"],
+  characterProfiles: [
+    {
+      id: "foday-kaba",
+      name: "Foday Kaba Dumbuya",
+      role: "protagonist",
+      culturalSignificance:
+        "Historic anti-colonial leader who built the timber fortress of Medina and defended Gambian sovereignty.",
+      traits: ["tactical", "unyielding", "sovereign", "devout"],
+      avatarTheme: "warrior",
+    },
+    {
+      id: "commander-sanneh",
+      name: "Commander Sanneh",
+      role: "guardian",
+      culturalSignificance:
+        "Chief military captain of the Medina citadel who coordinated interior defenses.",
+      traits: ["resolute", "disciplined", "courageous"],
+      avatarTheme: "warrior",
+    },
+    {
+      id: "kiang-scout",
+      name: "The Kiang Scout",
+      role: "guardian",
+      culturalSignificance:
+        "Skilled tracker who mastered the mangrove labyrinths and tidal creeks of Kiang.",
+      traits: ["stealthy", "vigilant", "expert navigator"],
+      avatarTheme: "hunter",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/stone-circles.svg",
+    src: "/images/stories/foday-kaba-and-the-stockade-of-medina.jpg",
     alt: "A fortified wooden stockade constructed from heavy timber palisades surrounded by thick green mangrove waterways",
     paletteTheme: "forest",
   },
@@ -101,6 +130,17 @@ export const fodayKabaMedinaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Foday Kaba Dumbuya"],
+      charactersData: [
+        {
+          id: "foday-kaba",
+          name: "Foday Kaba Dumbuya",
+          position: "center",
+          expression: "commanding",
+          motion: "stand",
+          scale: 1.05,
+          avatarTheme: "warrior",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-narration.mp3",
         narrationDurationSeconds: 41.6,
@@ -130,6 +170,17 @@ export const fodayKabaMedinaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Foday Kaba Dumbuya"],
+      charactersData: [
+        {
+          id: "foday-kaba",
+          name: "Foday Kaba Dumbuya",
+          position: "left",
+          expression: "resolute",
+          motion: "gesture",
+          scale: 1.05,
+          avatarTheme: "warrior",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-narration.mp3",
         narrationDurationSeconds: 42.0,
@@ -159,6 +210,26 @@ export const fodayKabaMedinaStory: Story = {
         intensity: "subtle",
       },
       characters: ["The Kiang Scout", "Commander Sanneh"],
+      charactersData: [
+        {
+          id: "kiang-scout",
+          name: "The Kiang Scout",
+          position: "center",
+          expression: "vigilant",
+          motion: "walk",
+          scale: 1.0,
+          avatarTheme: "hunter",
+        },
+        {
+          id: "commander-sanneh",
+          name: "Commander Sanneh",
+          position: "left",
+          expression: "focused",
+          motion: "stand",
+          scale: 0.95,
+          avatarTheme: "warrior",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-narration.mp3",
         narrationDurationSeconds: 39.75,
@@ -188,6 +259,26 @@ export const fodayKabaMedinaStory: Story = {
         intensity: "gentle",
       },
       characters: ["Foday Kaba Dumbuya", "Commander Sanneh"],
+      charactersData: [
+        {
+          id: "foday-kaba",
+          name: "Foday Kaba Dumbuya",
+          position: "right",
+          expression: "defiant",
+          motion: "stand",
+          scale: 1.05,
+          avatarTheme: "warrior",
+        },
+        {
+          id: "commander-sanneh",
+          name: "Commander Sanneh",
+          position: "left",
+          expression: "resolute",
+          motion: "stand",
+          scale: 0.95,
+          avatarTheme: "warrior",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-narration.mp3",
         narrationDurationSeconds: 45.0,
@@ -217,6 +308,17 @@ export const fodayKabaMedinaStory: Story = {
         intensity: "subtle",
       },
       characters: ["Foday Kaba Dumbuya"],
+      charactersData: [
+        {
+          id: "foday-kaba",
+          name: "Foday Kaba Dumbuya",
+          position: "center",
+          expression: "peaceful",
+          motion: "breathing",
+          scale: 1.05,
+          avatarTheme: "warrior",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-narration.mp3",
         narrationDurationSeconds: 31.62,

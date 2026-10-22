@@ -68,6 +68,8 @@ export default function NativeMobileHome() {
               <div className="shrink-0 w-16 h-16 rounded-xl overflow-hidden">
                 <StoryArt
                   theme={continueItem.story.coverImage.paletteTheme}
+                  src={continueItem.story.coverImage.src}
+                  alt={continueItem.story.coverImage.alt}
                   size="sm"
                   className="w-full h-full"
                 />
@@ -103,6 +105,8 @@ export default function NativeMobileHome() {
             <div className="relative h-44">
               <StoryArt
                 theme={featured.coverImage.paletteTheme}
+                src={featured.coverImage.src}
+                alt={featured.coverImage.alt}
                 size="hero"
                 className="w-full h-full rounded-none border-0"
               />

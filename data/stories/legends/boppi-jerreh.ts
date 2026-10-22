@@ -62,8 +62,34 @@ export const boppiJerrehStory: Story = {
   listeningDurationSeconds: 360,
   themes: ["Respect for Nature", "Maritime Heritage", "Elders' Wisdom", "Humility"],
   characters: ["Lamin the Navigator", "Elder Baboucar", "The Guardian of the Shoal"],
+  characterProfiles: [
+    {
+      id: "elder-baboucar",
+      name: "Elder Baboucar",
+      role: "elder",
+      culturalSignificance: "Venerable Master Fisherman of Barra",
+      traits: ["wise", "reverent", "master navigator"],
+      avatarTheme: "griot",
+    },
+    {
+      id: "lamin-navigator",
+      name: "Lamin the Navigator",
+      role: "protagonist",
+      culturalSignificance: "Daring Young Pirogue Captain",
+      traits: ["daring", "proud", "swift oarsman"],
+      avatarTheme: "boatman",
+    },
+    {
+      id: "shoal-guardian",
+      name: "Guardian of the Shoal",
+      role: "guardian",
+      culturalSignificance: "Ancient Water Guardian Spirit",
+      traits: ["mystical", "oceanic", "sovereign"],
+      avatarTheme: "spirit",
+    },
+  ],
   coverImage: {
-    src: "/images/stories/ninki-nanka.svg",
+    src: "/images/stories/boppi-jerreh-spirits-of-dog-island.jpg",
     alt: "A traditional wooden fishing boat sailing through mist past the dark silhouette of Dog Island in the River Gambia estuary",
     paletteTheme: "river",
   },
@@ -91,6 +117,16 @@ export const boppiJerrehStory: Story = {
         intensity: "subtle",
       },
       characters: ["Elder Baboucar"],
+      charactersData: [
+        {
+          id: "elder-baboucar",
+          name: "Elder Baboucar",
+          avatarTheme: "griot",
+          position: "center",
+          scale: 1.0,
+          motion: "stand",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-narration.mp3",
         narrationDurationSeconds: 37.98,
@@ -120,6 +156,24 @@ export const boppiJerrehStory: Story = {
         intensity: "gentle",
       },
       characters: ["Lamin the Navigator", "Elder Baboucar"],
+      charactersData: [
+        {
+          id: "elder-baboucar",
+          name: "Elder Baboucar",
+          avatarTheme: "griot",
+          position: "left",
+          scale: 1.0,
+          motion: "still",
+        },
+        {
+          id: "lamin-navigator",
+          name: "Lamin the Navigator",
+          avatarTheme: "boatman",
+          position: "right",
+          scale: 1.0,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-narration.mp3",
         narrationDurationSeconds: 39.2,
@@ -149,6 +203,24 @@ export const boppiJerrehStory: Story = {
         intensity: "subtle",
       },
       characters: ["Lamin the Navigator", "The Guardian of the Shoal"],
+      charactersData: [
+        {
+          id: "lamin-navigator",
+          name: "Lamin the Navigator",
+          avatarTheme: "boatman",
+          position: "left",
+          scale: 0.95,
+          motion: "still",
+        },
+        {
+          id: "shoal-guardian",
+          name: "Guardian of the Shoal",
+          avatarTheme: "spirit",
+          position: "right",
+          scale: 1.1,
+          motion: "subtle-float",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-narration.mp3",
         narrationDurationSeconds: 38.17,
@@ -178,6 +250,24 @@ export const boppiJerrehStory: Story = {
         intensity: "subtle",
       },
       characters: ["Lamin the Navigator", "Elder Baboucar"],
+      charactersData: [
+        {
+          id: "elder-baboucar",
+          name: "Elder Baboucar",
+          avatarTheme: "griot",
+          position: "left",
+          scale: 1.0,
+          motion: "stand",
+        },
+        {
+          id: "lamin-navigator",
+          name: "Lamin the Navigator",
+          avatarTheme: "boatman",
+          position: "right",
+          scale: 0.95,
+          motion: "gesture",
+        },
+      ],
       audio: {
         narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-narration.mp3",
         narrationDurationSeconds: 41.5,

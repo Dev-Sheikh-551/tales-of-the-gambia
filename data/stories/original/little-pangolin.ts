@@ -69,7 +69,7 @@ export const littlePangolinStory: Story = {
     },
   ],
   coverImage: {
-    src: "/images/stories/little-pangolin.svg",
+    src: "/images/stories/the-little-pangolin-who-counted-stars.jpg",
     alt: "Cute little pangolin resting peacefully on a branch beneath bright African night stars",
     paletteTheme: "forest",
   },

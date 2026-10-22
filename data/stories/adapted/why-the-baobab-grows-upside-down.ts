@@ -123,12 +123,13 @@ export const baobabUpsideDownStory: Story = {
       culturalSignificance:
         "The baobab is one of the most culturally significant trees in West Africa — its unusual appearance has generated explanatory traditions across the region.",
       traits: ["proud", "beautiful", "ungrateful", "transformed"],
-      avatarTheme: "elephant",
+      // The baobab is represented directly in the environment canvas (AnimatedEnvironmentCanvas),
+      // so no character figure avatarTheme is assigned.
     },
   ],
 
   coverImage: {
-    src: "/images/stories/baobab-upside-down-cover.jpg",
+    src: "/images/stories/why-the-baobab-grows-upside-down.jpg",
     alt: "A vast ancient baobab tree stands against an orange Gambian sky, its bare branches reaching toward the earth like roots",
     paletteTheme: "ochre",
   },
@@ -161,17 +162,8 @@ The baobab was given everything. A trunk like a palace. Bark smooth as ceremony.
 And the baobab knew it.`,
       backgroundGradient: "linear-gradient(135deg, #1a0800 0%, #4d2000 50%, #8b3a00 100%)",
       characters: ["The Baobab Tree"],
-      charactersData: [
-        {
-          id: "baobab",
-          name: "The Baobab",
-          position: "center",
-          expression: "proud",
-          motion: "subtle-float",
-          scale: 1.1,
-          avatarTheme: "elephant",
-        },
-      ],
+      // The baobab is represented by AnimatedEnvironmentCanvas; no character figure overlay.
+      charactersData: [],
       visual: { type: "gradient", paletteTheme: "ochre" },
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 8 },
       environmentMotion: { type: "wind", intensity: "subtle" },
@@ -207,17 +199,8 @@ The Creator, who had made everything from the silence of the world and knew the 
 And then decided the baobab had been beautiful for long enough in its current configuration.`,
       backgroundGradient: "linear-gradient(135deg, #2d1500 0%, #6b3000 50%, #9b4500 100%)",
       characters: ["The Baobab Tree"],
-      charactersData: [
-        {
-          id: "baobab",
-          name: "The Baobab",
-          position: "left",
-          expression: "haughty",
-          motion: "breathing",
-          scale: 1.0,
-          avatarTheme: "elephant",
-        },
-      ],
+      // The baobab is represented by AnimatedEnvironmentCanvas; no character figure overlay.
+      charactersData: [],
       visual: { type: "gradient", paletteTheme: "earth" },
       cameraMotion: { preset: "pan-right", intensity: "subtle", durationSeconds: 9 },
       environmentMotion: { type: "wind", intensity: "subtle" },
@@ -259,17 +242,8 @@ It was, without any question at all, the strangest-looking thing in the world.
 And the baobab had no one to blame but itself.`,
       backgroundGradient: "linear-gradient(135deg, #0d1a0d 0%, #1a3d1a 50%, #2d6b2d 100%)",
       characters: ["The Baobab Tree"],
-      charactersData: [
-        {
-          id: "baobab",
-          name: "The Baobab",
-          position: "center",
-          expression: "stunned",
-          motion: "still",
-          scale: 1.1,
-          avatarTheme: "elephant",
-        },
-      ],
+      // The baobab is represented by AnimatedEnvironmentCanvas; no character figure overlay.
+      charactersData: [],
       visual: { type: "gradient", paletteTheme: "forest" },
       cameraMotion: { preset: "zoom-out", intensity: "medium", durationSeconds: 10 },
       environmentMotion: { type: "wind", intensity: "gentle" },
@@ -307,17 +281,8 @@ And the baobab, for the first time, felt something it had never felt when it was
 It felt necessary.`,
       backgroundGradient: "linear-gradient(135deg, #1a1000 0%, #3d2800 50%, #6b4800 100%)",
       characters: ["The Baobab Tree", "The Other Trees"],
-      charactersData: [
-        {
-          id: "baobab",
-          name: "The Baobab",
-          position: "center",
-          expression: "thoughtful",
-          motion: "subtle-float",
-          scale: 1.0,
-          avatarTheme: "elephant",
-        },
-      ],
+      // The baobab is represented by AnimatedEnvironmentCanvas; no character figure overlay.
+      charactersData: [],
       visual: { type: "gradient", paletteTheme: "earth" },
       cameraMotion: { preset: "pan-left", intensity: "subtle", durationSeconds: 11 },
       environmentMotion: { type: "wind", intensity: "subtle" },
@@ -357,17 +322,8 @@ And some say — though this is not official doctrine — that on very still nig
 Laughing, softly, at itself.`,
       backgroundGradient: "linear-gradient(135deg, #0a0500 0%, #1a1000 50%, #3d2200 100%)",
       characters: ["The Baobab Tree"],
-      charactersData: [
-        {
-          id: "baobab",
-          name: "The Baobab",
-          position: "center",
-          expression: "content",
-          motion: "breathing",
-          scale: 1.05,
-          avatarTheme: "elephant",
-        },
-      ],
+      // The baobab is represented by AnimatedEnvironmentCanvas; no character figure overlay.
+      charactersData: [],
       visual: { type: "gradient", paletteTheme: "gold" },
       cameraMotion: { preset: "zoom-out", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },

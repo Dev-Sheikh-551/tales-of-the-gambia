@@ -12,6 +12,18 @@ import { NinkiNankaFigure } from "./NinkiNankaFigure";
 import { GriotFigure } from "./GriotFigure";
 import { KelefaSaaneFigure } from "./KelefaSaaneFigure";
 import { HyenaFigure } from "./HyenaFigure";
+import { PangolinFigure } from "./PangolinFigure";
+import { SpiderFigure } from "./SpiderFigure";
+import { CowFigure } from "./CowFigure";
+import { LionFigure } from "./LionFigure";
+import { HumanSilhouetteFigure } from "./HumanSilhouetteFigure";
+import { ChildFigure } from "./ChildFigure";
+import { WeaverBirdFigure } from "./WeaverBirdFigure";
+import { KingfisherFigure } from "./KingfisherFigure";
+import { FishEagleFigure } from "./FishEagleFigure";
+import { IbisFigure } from "./IbisFigure";
+import { StorkFigure } from "./StorkFigure";
+import { DonkeyFigure } from "./DonkeyFigure";
 
 interface SceneCharacterRendererProps {
   characters?: SceneCharacter[];
@@ -34,15 +46,15 @@ export function SceneCharacterRenderer({
   const getStagePositionClasses = (pos: SceneCharacter["position"]) => {
     switch (pos) {
       case "far-left":
-        return "left-4 sm:left-12 bottom-3 sm:bottom-5";
+        return "left-[8%] -translate-x-1/2 bottom-3 sm:bottom-5";
       case "left":
-        return "left-8 sm:left-24 md:left-32 bottom-3 sm:bottom-5";
+        return "left-[26%] -translate-x-1/2 bottom-3 sm:bottom-5";
       case "center":
         return "left-1/2 -translate-x-1/2 bottom-3 sm:bottom-5";
       case "right":
-        return "right-8 sm:right-24 md:right-32 bottom-3 sm:bottom-5";
+        return "left-[74%] -translate-x-1/2 bottom-3 sm:bottom-5";
       case "far-right":
-        return "right-4 sm:right-12 bottom-3 sm:bottom-5";
+        return "left-[88%] -translate-x-1/2 bottom-3 sm:bottom-5";
       default:
         return "left-1/2 -translate-x-1/2 bottom-3 sm:bottom-5";
     }
@@ -90,12 +102,128 @@ export function SceneCharacterRenderer({
           />
         );
       case "shadow":
+        // Preserve Ninki Nanka if character name or ID matches the mythical river guardian
+        if (
+          char.id.includes("ninki") ||
+          char.id.includes("river-shadow") ||
+          char.name.toLowerCase().includes("ninki")
+        ) {
+          return (
+            <NinkiNankaFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Sundiata warrior shadow
+        if (
+          char.id.includes("sundiata") ||
+          char.name.toLowerCase().includes("sundiata")
+        ) {
+          return (
+            <HumanSilhouetteFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+              variant="warrior"
+            />
+          );
+        }
+        // Hunter shadow (e.g. Koriang)
+        if (
+          char.id.includes("koriang") ||
+          char.id.includes("hunter") ||
+          char.name.toLowerCase().includes("hunter") ||
+          char.name.toLowerCase().includes("koriang")
+        ) {
+          return (
+            <HumanSilhouetteFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+              variant="hunter"
+            />
+          );
+        }
+        // Spiritual / Ancestor shadow
+        if (
+          char.id.includes("spirit") ||
+          char.name.toLowerCase().includes("spirit") ||
+          char.id.includes("ancestor") ||
+          char.name.toLowerCase().includes("ancestor")
+        ) {
+          return (
+            <HumanSilhouetteFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+              variant="spirit"
+            />
+          );
+        }
+        // Default shadow maps to dignified human silhouette
         return (
-          <NinkiNankaFigure
+          <HumanSilhouetteFigure
             action={currentAction}
             facing={facing}
             scale={char.scale || 1}
             isPaused={isPaused}
+            variant="default"
+          />
+        );
+      case "human":
+        return (
+          <HumanSilhouetteFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+            variant="default"
+          />
+        );
+      case "warrior":
+        return (
+          <HumanSilhouetteFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+            variant="warrior"
+          />
+        );
+      case "hunter":
+        return (
+          <HumanSilhouetteFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+            variant="hunter"
+          />
+        );
+      case "spirit":
+        return (
+          <HumanSilhouetteFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+            variant="spirit"
+          />
+        );
+      case "ancestor":
+        return (
+          <HumanSilhouetteFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+            variant="ancestor"
           />
         );
       case "griot":
@@ -143,6 +271,105 @@ export function SceneCharacterRenderer({
             isPaused={isPaused}
           />
         );
+      case "cow":
+        return (
+          <CowFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "lion":
+        return (
+          <LionFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "pangolin":
+        return (
+          <PangolinFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "spider":
+        return (
+          <SpiderFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "child":
+        return (
+          <ChildFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "weaver-bird":
+        return (
+          <WeaverBirdFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "kingfisher":
+        return (
+          <KingfisherFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "fish-eagle":
+        return (
+          <FishEagleFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "ibis":
+        return (
+          <IbisFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "stork":
+        return (
+          <StorkFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
+      case "donkey":
+        return (
+          <DonkeyFigure
+            action={currentAction}
+            facing={facing}
+            scale={char.scale || 1}
+            isPaused={isPaused}
+          />
+        );
       default:
         // Check if character name or ID matches Hyena / Bouki
         if (
@@ -184,6 +411,138 @@ export function SceneCharacterRenderer({
         if (char.id.includes("samba") || char.name.toLowerCase().includes("samba")) {
           return (
             <BoatmanFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Check if character name or ID matches Sundiata (Warrior)
+        if (char.id.includes("sundiata") || char.name.toLowerCase().includes("sundiata")) {
+          return (
+            <HumanSilhouetteFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+              variant="warrior"
+            />
+          );
+        }
+        // Check if character name or ID matches Koriang / Hunter
+        if (
+          char.id.includes("koriang") ||
+          char.id.includes("hunter") ||
+          char.name.toLowerCase().includes("hunter") ||
+          char.name.toLowerCase().includes("koriang")
+        ) {
+          return (
+            <HumanSilhouetteFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+              variant="hunter"
+            />
+          );
+        }
+        // Check if character name or ID matches Spirit or Ancestor
+        if (
+          char.id.includes("spirit") ||
+          char.name.toLowerCase().includes("spirit") ||
+          char.id.includes("ancestor") ||
+          char.name.toLowerCase().includes("ancestor")
+        ) {
+          return (
+            <HumanSilhouetteFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+              variant="spirit"
+            />
+          );
+        }
+        // Check for Child / Alieu
+        if (
+          char.id.includes("child") ||
+          char.id.includes("alieu") ||
+          char.name.toLowerCase().includes("child") ||
+          char.name.toLowerCase().includes("alieu")
+        ) {
+          return (
+            <ChildFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Check for Weaver bird
+        if (char.id.includes("weaver") || char.name.toLowerCase().includes("weaver")) {
+          return (
+            <WeaverBirdFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Check for Kingfisher
+        if (char.id.includes("kingfisher") || char.name.toLowerCase().includes("kingfisher")) {
+          return (
+            <KingfisherFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Check for Fish Eagle
+        if (char.id.includes("eagle") || char.name.toLowerCase().includes("eagle")) {
+          return (
+            <FishEagleFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Check for Ibis
+        if (char.id.includes("ibis") || char.name.toLowerCase().includes("ibis")) {
+          return (
+            <IbisFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Check for Stork
+        if (char.id.includes("stork") || char.name.toLowerCase().includes("stork")) {
+          return (
+            <StorkFigure
+              action={currentAction}
+              facing={facing}
+              scale={char.scale || 1}
+              isPaused={isPaused}
+            />
+          );
+        }
+        // Check for Donkey / Fari
+        if (
+          char.id.includes("donkey") ||
+          char.id.includes("fari") ||
+          char.name.toLowerCase().includes("donkey")
+        ) {
+          return (
+            <DonkeyFigure
               action={currentAction}
               facing={facing}
               scale={char.scale || 1}

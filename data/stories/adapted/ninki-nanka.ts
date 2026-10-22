@@ -76,11 +76,11 @@ export const ninkiNankaStory: Story = {
       culturalSignificance:
         "The primordial spirit of the river maintaining ecological justice and balance.",
       traits: ["Majestic", "Mysterious", "Ancient"],
-      avatarTheme: "shadow",
+      avatarTheme: "ninki-nanka",
     },
   ],
   coverImage: {
-    src: "/images/stories/river-ninki.svg",
+    src: "/images/stories/the-whispering-waters-of-ninki-nanka.jpg",
     alt: "Canoe gently gliding across mist-covered mangrove channels at twilight",
     paletteTheme: "river",
   },
@@ -187,7 +187,7 @@ export const ninkiNankaStory: Story = {
           expression: "imposing",
           motion: "rise",
           scale: 1.15,
-          avatarTheme: "shadow",
+          avatarTheme: "ninki-nanka",
         },
       ],
       timeline: {
