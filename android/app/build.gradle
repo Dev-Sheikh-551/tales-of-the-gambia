@@ -35,6 +35,8 @@ android {
                 storePassword envStorePassword
                 keyAlias envKeyAlias
                 keyPassword envKeyPassword
+                v1SigningEnabled true
+                v2SigningEnabled true
             }
         }
     }

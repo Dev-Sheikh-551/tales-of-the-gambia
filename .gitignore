@@ -52,4 +52,7 @@ scripts/audio/.venv/
 scripts/audio/output_test/
 *.wav
 *.tmp
+/release/
+*.apk
+*.aab
 
