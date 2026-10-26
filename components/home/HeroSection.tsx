@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Smartphone } from "lucide-react";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 import { usePlatform } from "@/hooks/usePlatform";
 
@@ -76,6 +76,17 @@ export default function HeroSection() {
             <Play className="w-3.5 h-3.5 fill-current" />
             <span>Continue Reading</span>
           </Link>
+                    {!isNative && (
+            <a
+              href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.0.apk"
+              download
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#1F292E]/80 hover:bg-[#28353B] border border-[#3E4F57] text-[#E0AB3A] hover:text-[#FFEAA7] text-sm font-semibold transition-all shadow-md cursor-pointer backdrop-blur-sm"
+              title="Download Android APK (Direct install)"
+            >
+              <Smartphone className="w-4 h-4 text-[#4ADE80]" />
+              <span>Get Android App</span>
+            </a>
+          )}
         </div>
       </div>
     </section>

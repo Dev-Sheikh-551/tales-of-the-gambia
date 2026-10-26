@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { CATEGORIES } from "@/data/stories";
-import { Feather, Heart, Shield, Sparkles } from "lucide-react";
+import { Feather, Heart, Shield, Sparkles, Smartphone, Download } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -70,6 +70,17 @@ export default function Footer() {
                 <Link href="/about#kora" className="hover:text-[#F2C765] transition-colors">
                   The Kora & River Songs
                 </Link>
+              </li>
+                            <li>
+                <a
+                  href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.0.apk"
+                  download
+                  className="inline-flex items-center gap-1.5 text-[var(--accent-ochre)] hover:text-[#FFEAA7] font-medium transition-colors"
+                  title="Download Android APK (Direct install)"
+                >
+                  <Smartphone className="w-3.5 h-3.5 text-[#4ADE80]" />
+                  <span>Android App (Free APK)</span>
+                </a>
               </li>
               <li>
                 <Link href="/about#preservation" className="hover:text-[#F2C765] transition-colors">

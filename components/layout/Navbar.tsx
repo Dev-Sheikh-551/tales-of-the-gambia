@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Bookmark, Search } from "lucide-react";
+import { Bookmark, Search, Download } from "lucide-react";
 import { SearchModal } from "@/components/ui/SearchModal";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
 import { MobileBottomNav } from "./MobileBottomNav";
@@ -111,6 +111,19 @@ export default function Navbar() {
 
           {/* Action Affordances: Search, Favorites, Theme Toggle */}
           <div className="flex items-center gap-2 sm:gap-3">
+                        {/* Android App Direct Download */}
+            {!isNative && (
+              <a
+                href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.0.apk"
+                download
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all bg-[var(--accent-ochre)]/10 hover:bg-[var(--accent-ochre)]/20 border-[var(--accent-ochre)]/30 text-[var(--accent-ochre)] hover:text-[#FFEAA7]"
+                title="Download Android APK (Direct install)"
+              >
+                <Download className="w-3.5 h-3.5 text-[#4ADE80]" />
+                <span>Android App</span>
+              </a>
+            )}
+
             {/* Search Trigger */}
             <motion.button
               whileHover={{ scale: 1.05 }}
