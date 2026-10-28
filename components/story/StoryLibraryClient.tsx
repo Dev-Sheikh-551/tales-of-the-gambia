@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, useTransition } from "react";
+import React, { useState, useMemo, useEffect, useRef, useTransition } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
   X,
@@ -13,13 +14,14 @@ import {
   Clock,
   Sparkles,
   Bookmark,
-  HardDriveDownload,
+  ChevronDown,
+  Check,
+  ArrowUpDown,
 } from "lucide-react";
 import { Story, StoryCategory, ContentType } from "@/types/story";
 import { CATEGORIES } from "@/data/categories";
 import { StoryCard } from "./StoryCard";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
-import { useDownloadedStories } from "@/hooks/useOfflineStory";
 import { MotionReveal } from "@/components/motion/MotionReveal";
 import { usePlatform } from "@/hooks/usePlatform";
 
@@ -28,6 +30,14 @@ interface StoryLibraryClientProps {
 }
 
 type SortOption = "featured" | "alphabetical" | "recent" | "shortest" | "longest";
+
+const SORT_OPTIONS: { id: SortOption; label: string }[] = [
+  { id: "featured", label: "Featured" },
+  { id: "alphabetical", label: "Alphabetical" },
+  { id: "recent", label: "Recently Added" },
+  { id: "shortest", label: "Shortest" },
+  { id: "longest", label: "Longest" },
+];
 
 const CONTENT_TYPE_OPTIONS: { id: ContentType | "all"; label: string }[] = [
   { id: "all", label: "All Formats" },
@@ -44,8 +54,24 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const [, startTransition] = useTransition();
 
   const { favorites, isFav, toggleFav, getProgress, progressList, isLoaded } = useStoryStorage();
-  const { downloadedSlugs } = useDownloadedStories();
   const { isNative } = usePlatform();
+
+  // Sort dropdown state
+  const [isSortOpen, setIsSortOpen] = useState(false);
+  const sortRef = useRef<HTMLDivElement>(null);
+
+  // Close sort menu on click outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (sortRef.current && !sortRef.current.contains(e.target as Node)) {
+        setIsSortOpen(false);
+      }
+    };
+    if (isSortOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isSortOpen]);
 
   // Read initial filter values from URL query parameters
   const initialSearch = searchParams.get("search") || "";
@@ -54,7 +80,6 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const initialTradition = searchParams.get("tradition") || "all";
   const initialAge = searchParams.get("age") || "all";
   const initialSort = (searchParams.get("sort") as SortOption) || "featured";
-  const initialOffline = searchParams.get("offline") === "true";
   const initialSaved = searchParams.get("saved") === "true";
 
   const [searchQuery, setSearchQuery] = useState(initialSearch);
@@ -63,7 +88,6 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
   const [selectedTradition, setSelectedTradition] = useState<string>(initialTradition);
   const [selectedAge, setSelectedAge] = useState<string>(initialAge);
   const [selectedSort, setSelectedSort] = useState<SortOption>(initialSort);
-  const [isOfflineOnly, setIsOfflineOnly] = useState<boolean>(initialOffline);
   const [isSavedOnly, setIsSavedOnly] = useState<boolean>(initialSaved);
 
   // Sync state if URL searchParams change (e.g. browser back/forward)
@@ -74,7 +98,6 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     setSelectedTradition(searchParams.get("tradition") || "all");
     setSelectedAge(searchParams.get("age") || "all");
     setSelectedSort((searchParams.get("sort") as SortOption) || "featured");
-    setIsOfflineOnly(searchParams.get("offline") === "true");
     setIsSavedOnly(searchParams.get("saved") === "true");
   }, [searchParams]);
 
@@ -147,12 +170,6 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     updateUrl({ sort: sort });
   };
 
-  const handleOfflineToggle = () => {
-    const nextVal = !isOfflineOnly;
-    setIsOfflineOnly(nextVal);
-    updateUrl({ offline: nextVal ? "true" : null });
-  };
-
   const handleResetFilters = () => {
     setSearchQuery("");
     setSelectedCategory("all");
@@ -160,7 +177,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     setSelectedTradition("all");
     setSelectedAge("all");
     setSelectedSort("featured");
-    setIsOfflineOnly(false);
+    setIsSavedOnly(false);
     startTransition(() => {
       router.replace(pathname, { scroll: false });
     });
@@ -173,16 +190,11 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     selectedTradition !== "all" ||
     selectedAge !== "all" ||
     selectedSort !== "featured" ||
-    isOfflineOnly;
+    isSavedOnly;
 
   // Filter and sort the stories
   const filteredStories = useMemo(() => {
     let list = [...stories];
-
-    // Offline downloaded filter
-    if (isOfflineOnly) {
-      list = list.filter((s) => downloadedSlugs.has(s.slug));
-    }
 
     // Saved favorites filter
     if (isSavedOnly) {
@@ -287,34 +299,22 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
     selectedTradition,
     selectedAge,
     selectedSort,
-    isOfflineOnly,
-    downloadedSlugs,
+    isSavedOnly,
+    favorites,
   ]);
-
-  // Active in-progress stories for the Continue Reading top section
-  const activeContinueStories = useMemo(() => {
-    if (!isLoaded || progressList.length === 0) return [];
-    return progressList
-      .map((p) => {
-        const story = stories.find((s) => s.slug === p.storySlug);
-        if (!story || p.percentComplete >= 100) return null;
-        return { story, progress: p };
-      })
-      .filter((item): item is { story: Story; progress: (typeof progressList)[0] } => item !== null);
-  }, [isLoaded, progressList, stories]);
 
   return (
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${
-      isNative ? "pt-4 sm:pt-6" : "py-6 sm:py-12"
+      isNative ? "pt-[calc(max(env(safe-area-inset-top,0px),1.25rem)+0.5rem)]" : "py-6 sm:py-12"
     } pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] space-y-6`}>
-      {/* 1. Header matching prototype Screenshot 2 */}
+      {/* 1. Header */}
       <div>
         <h1 className="font-story-serif text-3xl sm:text-4xl lg:text-5xl font-normal text-[var(--text-primary)]">
           Stories
         </h1>
       </div>
 
-      {/* 2. Search Bar matching prototype Screenshot 2 */}
+      {/* 2. Search Bar */}
       <div className="relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--text-muted)]" />
         <input
@@ -336,13 +336,13 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
         )}
       </div>
 
-      {/* 3. Category Filter Chips matching prototype Screenshot 2 */}
+      {/* 3. Category Filter Chips */}
       <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
         <button
           type="button"
           onClick={() => handleCategoryChange("all")}
           className={`shrink-0 px-4 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
-            selectedCategory === "all" && !isOfflineOnly
+            selectedCategory === "all"
               ? "bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium shadow-sm"
               : "bg-transparent border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-prominent)]"
           }`}
@@ -350,7 +350,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
           All
         </button>
         {CATEGORIES.map((cat) => {
-          const isActive = selectedCategory === cat.id && !isOfflineOnly;
+          const isActive = selectedCategory === cat.id;
           return (
             <button
               key={cat.id}
@@ -368,7 +368,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
         })}
       </div>
 
-      {/* 4. Sub-toolbar: Saved only on left, Sort on right matching prototype Screenshot 2 */}
+      {/* 4. Sub-toolbar: Saved only on left, Redesigned Sort on right */}
       <div className="flex items-center justify-between pt-1 pb-1">
         <div className="flex items-center gap-2">
           <button
@@ -386,39 +386,58 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
           >
             Saved only
           </button>
-
-          {downloadedSlugs.size > 0 && (
-            <button
-              type="button"
-              onClick={handleOfflineToggle}
-              className={`px-3.5 py-1.5 rounded-full text-xs transition-all flex items-center gap-1.5 cursor-pointer ${
-                isOfflineOnly
-                  ? "bg-emerald-600 text-white font-medium shadow-sm"
-                  : "bg-transparent border border-[var(--border-subtle)] text-emerald-500 hover:border-emerald-500"
-              }`}
-            >
-              <HardDriveDownload className="w-3 h-3" />
-              <span>Offline ({downloadedSlugs.size})</span>
-            </button>
-          )}
         </div>
 
-        <div className="flex items-center gap-2 shrink-0">
-          <label htmlFor="sort-select" className="text-xs text-[var(--text-muted)]">
-            Sort
-          </label>
-          <select
-            id="sort-select"
-            value={selectedSort}
-            onChange={(e) => handleSortChange(e.target.value as SortOption)}
-            className="px-3 py-1.5 rounded-lg bg-[var(--bg-card)] border border-[var(--border-subtle)] text-xs font-medium text-[var(--text-primary)] outline-none cursor-pointer"
+        {/* Polished Compact Sorting Control */}
+        <div className="relative shrink-0" ref={sortRef}>
+          <button
+            type="button"
+            onClick={() => setIsSortOpen((prev) => !prev)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--border-prominent)] text-xs font-medium text-[var(--text-primary)] transition-all cursor-pointer active:scale-95 shadow-sm"
+            aria-expanded={isSortOpen}
+            aria-haspopup="listbox"
+            aria-label="Sort stories"
           >
-            <option value="featured">Featured</option>
-            <option value="alphabetical">Alphabetical</option>
-            <option value="recent">Recently Added</option>
-            <option value="shortest">Shortest</option>
-            <option value="longest">Longest</option>
-          </select>
+            <ArrowUpDown className="w-3.5 h-3.5 text-[var(--accent-gold)]" />
+            <span>{SORT_OPTIONS.find((o) => o.id === selectedSort)?.label}</span>
+            <ChevronDown className={`w-3.5 h-3.5 text-[var(--text-muted)] transition-transform duration-200 ${isSortOpen ? "rotate-180" : ""}`} />
+          </button>
+
+          <AnimatePresence>
+            {isSortOpen && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95, y: -4 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95, y: -4 }}
+                transition={{ duration: 0.15 }}
+                role="listbox"
+                className="absolute right-0 top-full mt-1.5 w-44 rounded-xl bg-[var(--bg-card)] border border-[var(--border-prominent)] shadow-2xl py-1.5 z-30 overflow-hidden"
+              >
+                {SORT_OPTIONS.map((opt) => {
+                  const isSelected = selectedSort === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      role="option"
+                      aria-selected={isSelected}
+                      onClick={() => {
+                        handleSortChange(opt.id);
+                        setIsSortOpen(false);
+                      }}
+                      className={`w-full flex items-center justify-between px-3.5 py-2 text-xs transition-colors cursor-pointer ${
+                        isSelected
+                          ? "text-[var(--accent-gold)] bg-[var(--accent-gold)]/10 font-semibold"
+                          : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
+                      }`}
+                    >
+                      <span>{opt.label}</span>
+                      {isSelected && <Check className="w-3.5 h-3.5 text-[var(--accent-gold)]" />}
+                    </button>
+                  );
+                })}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
@@ -447,7 +466,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
         )}
       </div>
 
-      {/* 4. Story Grid or Empty State */}
+      {/* Story Grid or Empty State */}
       {filteredStories.length === 0 ? (
         <div className="text-center py-20 px-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] space-y-4">
           <div className="w-12 h-12 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-center mx-auto text-[var(--text-muted)]">

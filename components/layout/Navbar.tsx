@@ -124,12 +124,12 @@ export default function Navbar() {
               </a>
             )}
 
-            {/* Search Trigger */}
+            {/* Search Trigger (Desktop only — mobile uses bottom nav) */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsSearchOpen(true)}
-              className={`p-2 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] cursor-pointer ${
+              className={`hidden md:inline-flex p-2 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] cursor-pointer ${
                 isTransparentOverHero
                   ? "text-[#CBBCAE] hover:text-white hover:bg-white/10"
                   : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
@@ -140,8 +140,8 @@ export default function Navbar() {
               <Search className="w-5 h-5" />
             </motion.button>
 
-            {/* Saved / Favorites Trigger */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            {/* Saved / Favorites Trigger (Desktop only — mobile uses bottom nav) */}
+            <motion.div className="hidden md:inline-flex" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/favorites"
                 className={`relative block p-2 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] ${

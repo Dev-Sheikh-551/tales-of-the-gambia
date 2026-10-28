@@ -4,9 +4,9 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, X, BookOpen, Volume2, ArrowRight, CornerDownLeft } from "lucide-react";
+import { Search, X, ArrowRight, CornerDownLeft } from "lucide-react";
 import { MOCK_STORIES } from "@/data/stories";
-import { CategoryBadge, ContentTypeBadge, Badge } from "./Badge";
+import { StoryArt } from "@/components/ui/StoryArt";
 import { MOTION_EASINGS } from "@/lib/motion/tokens";
 import { registerBackButtonHandler } from "@/lib/native/backButton";
 
@@ -55,7 +55,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           story.scenes.some((s) => s.narration && s.narration.toLowerCase().includes(q))
         );
       })
-    : MOCK_STORIES.slice(0, 5);
+    : MOCK_STORIES.slice(0, 6);
 
   // Reset selected index when query changes
   useEffect(() => {
@@ -140,174 +140,192 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
             className="relative w-full max-w-2xl h-[100dvh] sm:h-auto sm:max-h-[80vh] flex flex-col overflow-hidden sm:rounded-2xl bg-[var(--bg-primary)] border-0 sm:border border-[var(--border-prominent)] shadow-2xl z-10"
           >
-        {/* Search Input Bar with Safe Area Top */}
-        <div className="flex items-center px-4 py-3 sm:py-3.5 border-b border-[var(--border-subtle)] bg-[var(--bg-secondary)] pt-[calc(0.75rem+env(safe-area-inset-top,0px))] sm:pt-3.5">
-          <Search className="w-5 h-5 text-[var(--accent-gold)] mr-3 shrink-0" />
-          <input
-            ref={inputRef}
-            type="text"
-            placeholder="Search folktales, fables, epics, traditions, characters..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="w-full bg-transparent text-sm md:text-base text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none"
-          />
-          {query && (
-            <button
-              type="button"
-              onClick={() => setQuery("")}
-              className="w-10 h-10 flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
-              aria-label="Clear query"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={onClose}
-            className="ml-1 px-3 py-1.5 min-h-[40px] flex items-center justify-center text-xs rounded-xl border border-[var(--border-subtle)] text-[var(--text-secondary)] hover:bg-[var(--bg-card)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
-          >
-            Close
-          </button>
-        </div>
-
-        {/* Results List */}
-        <div className="max-h-[60vh] overflow-y-auto p-4 space-y-2">
-          <div className="flex items-center justify-between text-xs uppercase tracking-wider text-[var(--text-muted)] font-medium px-2 py-1">
-            <span>
-              {query.trim()
-                ? `Found ${filteredStories.length} ${
-                    filteredStories.length === 1 ? "story" : "stories"
-                  }`
-                : "Suggested Stories"}
-            </span>
-            {query.trim() && filteredStories.length > 0 && (
-              <Link
-                href={`/stories?search=${encodeURIComponent(query.trim())}`}
+            {/* Search Input Bar with Safe Area Top */}
+            <div className="flex items-center px-4 py-3 sm:py-3.5 border-b border-[var(--border-subtle)] bg-[var(--bg-secondary)] pt-[calc(max(env(safe-area-inset-top,0px),0.75rem)+0.5rem)] sm:pt-3.5">
+              <Search className="w-5 h-5 text-[var(--accent-gold)] mr-3 shrink-0" />
+              <input
+                ref={inputRef}
+                type="text"
+                placeholder="Search folktales, fables, epics, traditions..."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                className="w-full bg-transparent text-sm md:text-base text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none"
+              />
+              {query && (
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="w-8 h-8 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card)] transition-colors cursor-pointer mr-1"
+                  aria-label="Clear query text"
+                  title="Clear text"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+              <button
+                type="button"
                 onClick={onClose}
-                className="text-[var(--accent-gold)] hover:underline normal-case flex items-center gap-1 font-normal"
+                className="ml-1 w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-xl text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-card)] border border-[var(--border-subtle)] transition-all cursor-pointer active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)]"
+                aria-label="Close search"
+                title="Close search"
               >
-                <span>View in Library</span>
-                <ArrowRight className="w-3 h-3" />
-              </Link>
-            )}
-          </div>
-
-          {filteredStories.length === 0 ? (
-            <div className="text-center py-10 px-4 space-y-2">
-              <p className="text-sm text-[var(--text-secondary)]">
-                No stories found matching &ldquo;{query}&rdquo;.
-              </p>
-              <p className="text-xs text-[var(--text-muted)]">
-                Try searching for &ldquo;Mandinka&rdquo;, &ldquo;hare&rdquo;, &ldquo;kora&rdquo;,
-                &ldquo;river&rdquo;, or &ldquo;Pulaaku&rdquo;.
-              </p>
-              <div className="pt-2">
-                <Link
-                  href="/stories"
-                  onClick={onClose}
-                  className="inline-flex items-center gap-1.5 text-xs text-[var(--accent-gold)] hover:underline"
-                >
-                  <span>Browse all stories in library</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
+                <X className="w-5 h-5" />
+              </button>
             </div>
-          ) : (
-            filteredStories.map((story, idx) => {
-              const isSelected = idx === selectedIndex;
-              const tradition =
-                story.origin.community ||
-                story.origin.ethnicGroup ||
-                story.provenance?.community;
 
-              return (
-                <motion.div
-                  key={story.id}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: Math.min(0.12, idx * 0.025), duration: 0.22 }}
-                >
+            {/* Results List */}
+            <div className="max-h-[60vh] overflow-y-auto p-4 space-y-2">
+              <div className="flex items-center justify-between text-xs uppercase tracking-wider text-[var(--text-muted)] font-medium px-2 py-1">
+                <span>
+                  {query.trim()
+                    ? `Found ${filteredStories.length} ${
+                        filteredStories.length === 1 ? "story" : "stories"
+                      }`
+                    : "Suggested Stories"}
+                </span>
+                {query.trim() && filteredStories.length > 0 && (
                   <Link
-                    href={`/stories/${story.slug}`}
+                    href={`/stories?search=${encodeURIComponent(query.trim())}`}
                     onClick={onClose}
-                    onMouseEnter={() => setSelectedIndex(idx)}
-                    className={`group flex items-center justify-between p-3 rounded-xl border transition-all ${
-                      isSelected
-                        ? "bg-[var(--bg-card-hover)] border-[var(--accent-gold)]/40 shadow-sm"
-                        : "bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border-transparent"
-                    }`}
+                    className="text-[var(--accent-gold)] hover:underline normal-case flex items-center gap-1 font-normal"
                   >
-                    <div className="space-y-1.5 pr-3">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span
-                          className={`font-story-serif text-base transition-colors ${
-                            isSelected ? "text-[var(--accent-gold)]" : "text-[var(--text-primary)]"
-                          }`}
-                        >
-                          {story.title}
-                        </span>
-                        <CategoryBadge category={story.category} />
-                        <ContentTypeBadge type={story.contentType} />
-                        {tradition && (
-                          <Badge variant="gold" size="sm">
-                            {tradition}
-                          </Badge>
-                        )}
-                      </div>
-                      <p className="text-xs text-[var(--text-secondary)] line-clamp-1">{story.subtitle}</p>
-                      <div className="flex flex-wrap items-center gap-3 text-[11px] text-[var(--text-muted)]">
-                        <span className="flex items-center gap-1">
-                          <BookOpen className="w-3 h-3 text-[var(--accent-ochre)]" />
-                          {story.readingTimeMinutes} min read
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Volume2 className="w-3 h-3 text-[var(--accent-gold)]" />
-                          {Math.round(story.listeningDurationSeconds / 60)} min audio
-                        </span>
-                        <span>{story.scenes.length} scenes</span>
-                        <span className="text-[var(--text-secondary)]">• {story.origin.region}</span>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-2 shrink-0">
-                      {isSelected && (
-                        <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-[var(--text-muted)] px-1.5 py-0.5 rounded bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
-                          <span>Enter</span>
-                          <CornerDownLeft className="w-2.5 h-2.5" />
-                        </span>
-                      )}
-                      <ArrowRight
-                        className={`w-4 h-4 transition-all ${
-                          isSelected
-                            ? "text-[var(--accent-gold)] translate-x-1"
-                            : "text-[var(--text-muted)] group-hover:text-[var(--accent-gold)]"
-                        }`}
-                      />
-                    </div>
+                    <span>View in Library</span>
+                    <ArrowRight className="w-3 h-3" />
                   </Link>
-                </motion.div>
-              );
-            })
-          )}
-        </div>
+                )}
+              </div>
 
-        {/* Modal Footer Note with Safe Area Bottom */}
-        <div className="px-4 py-2.5 bg-[var(--bg-secondary)] border-t border-[var(--border-subtle)] flex items-center justify-between text-[11px] text-[var(--text-muted)] pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:pb-2.5">
-          <div className="flex items-center gap-3">
-            <span>↑↓ Navigate</span>
-            <span>↵ Select</span>
-            <span>ESC Close</span>
-          </div>
-          <Link
-            href="/stories"
-            onClick={onClose}
-            className="text-[var(--accent-gold)] hover:underline"
-          >
-            Explore all {MOCK_STORIES.length} stories →
-          </Link>
+              {filteredStories.length === 0 ? (
+                <div className="text-center py-12 px-4 space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-subtle)] flex items-center justify-center mx-auto text-[var(--text-muted)]">
+                    <Search className="w-5 h-5" />
+                  </div>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">
+                    No stories found matching &ldquo;{query}&rdquo;
+                  </p>
+                  <p className="text-xs text-[var(--text-secondary)] max-w-sm mx-auto leading-relaxed">
+                    Try searching for &ldquo;Mandinka&rdquo;, &ldquo;hare&rdquo;, &ldquo;kora&rdquo;, &ldquo;river&rdquo;, or &ldquo;baobab&rdquo;.
+                  </p>
+                  <div className="pt-2 flex items-center justify-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setQuery("")}
+                      className="text-xs text-[var(--accent-ochre)] hover:underline cursor-pointer"
+                    >
+                      Clear search
+                    </button>
+                    <span className="text-[var(--border-prominent)]">•</span>
+                    <Link
+                      href="/stories"
+                      onClick={onClose}
+                      className="inline-flex items-center gap-1 text-xs text-[var(--accent-gold)] hover:underline"
+                    >
+                      <span>Browse all stories</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                filteredStories.map((story, idx) => {
+                  const isSelected = idx === selectedIndex;
+                  const tradition =
+                    story.origin.community ||
+                    story.origin.ethnicGroup ||
+                    story.provenance?.community;
+
+                  return (
+                    <motion.div
+                      key={story.id}
+                      initial={{ opacity: 0, y: 6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: Math.min(0.12, idx * 0.025), duration: 0.2 }}
+                    >
+                      <Link
+                        href={`/stories/${story.slug}`}
+                        onClick={onClose}
+                        onMouseEnter={() => setSelectedIndex(idx)}
+                        className={`group flex items-center justify-between p-2.5 sm:p-3 rounded-xl border transition-all ${
+                          isSelected
+                            ? "bg-[var(--bg-card-hover)] border-[var(--accent-gold)]/40 shadow-sm"
+                            : "bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] border-transparent"
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 min-w-0 pr-2">
+                          {/* Compact Artwork Thumbnail */}
+                          <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-[var(--border-subtle)] bg-[var(--bg-secondary)]">
+                            <StoryArt
+                              theme={story.coverImage.paletteTheme}
+                              src={story.coverImage.src}
+                              alt={story.coverImage.alt}
+                              size="sm"
+                              className="w-full h-full object-cover rounded-none border-0"
+                            />
+                          </div>
+
+                          {/* Title & Metadata */}
+                          <div className="min-w-0 flex-1">
+                            <h4
+                              className={`font-story-serif text-sm font-semibold truncate transition-colors ${
+                                isSelected ? "text-[var(--accent-gold)]" : "text-[var(--text-primary)]"
+                              }`}
+                            >
+                              {story.title}
+                            </h4>
+                            <div className="flex items-center gap-2 text-[11px] text-[var(--text-muted)] mt-0.5">
+                              <span className="text-[var(--accent-ochre)] font-medium capitalize">
+                                {story.category}
+                              </span>
+                              <span>•</span>
+                              <span>{story.readingTimeMinutes} min read</span>
+                              {tradition && (
+                                <>
+                                  <span>•</span>
+                                  <span className="truncate max-w-[120px]">{tradition}</span>
+                                </>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-2 shrink-0">
+                          {isSelected && (
+                            <span className="hidden sm:inline-flex items-center gap-1 text-[10px] text-[var(--text-muted)] px-1.5 py-0.5 rounded bg-[var(--bg-secondary)] border border-[var(--border-subtle)]">
+                              <span>Enter</span>
+                              <CornerDownLeft className="w-2.5 h-2.5" />
+                            </span>
+                          )}
+                          <ArrowRight
+                            className={`w-4 h-4 transition-all ${
+                              isSelected
+                                ? "text-[var(--accent-gold)] translate-x-1"
+                                : "text-[var(--text-muted)] group-hover:text-[var(--accent-gold)]"
+                            }`}
+                          />
+                        </div>
+                      </Link>
+                    </motion.div>
+                  );
+                })
+              )}
+            </div>
+
+            {/* Modal Footer Note with Safe Area Bottom */}
+            <div className="px-4 py-2.5 bg-[var(--bg-secondary)] border-t border-[var(--border-subtle)] flex items-center justify-between text-[11px] text-[var(--text-muted)] pb-[calc(max(env(safe-area-inset-bottom,0px),0.75rem)+0.5rem)] sm:pb-2.5">
+              <div className="hidden sm:flex items-center gap-3">
+                <span>↑↓ Navigate</span>
+                <span>↵ Select</span>
+                <span>ESC Close</span>
+              </div>
+              <Link
+                href="/stories"
+                onClick={onClose}
+                className="text-[var(--accent-gold)] hover:underline"
+              >
+                Explore all {MOCK_STORIES.length} stories →
+              </Link>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-    </div>
       )}
     </AnimatePresence>
   );

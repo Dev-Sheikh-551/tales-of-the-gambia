@@ -4,10 +4,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import {
-  ArrowLeft,
   Bookmark,
-  Sliders,
-  Share2,
   ChevronRight,
   ChevronLeft,
   Volume2,
@@ -21,11 +18,8 @@ import { StoryCinematicMode } from "./cinematic/StoryCinematicMode";
 import { StoryProvenanceCard } from "./StoryProvenanceCard";
 import { NarratedStoryText } from "./NarratedStoryText";
 import { getStorySceneCues } from "@/data/audio/cues";
-import { MOTION_EASINGS } from "@/lib/motion/tokens";
 import { useNarrator } from "@/hooks/useNarrator";
 import { resolveSceneNarration } from "@/lib/narrators/resolver";
-import { useOfflineStory } from "@/hooks/useOfflineStory";
-import { StoryDownloadButton } from "./StoryDownloadButton";
 import { useSceneSwipe } from "@/hooks/useSceneSwipe";
 import {
   isFavorite,
@@ -46,7 +40,6 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
   const [activeSceneIndex, setActiveSceneIndex] = useState(0);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [shareFeedback, setShareFeedback] = useState(false);
   const [isCinematicOpen, setIsCinematicOpen] = useState(false);
 
   const [settings, setSettings] = useState<ReadingSettings>({
@@ -105,36 +98,8 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
   const { selectedNarratorId } = useNarrator();
   const resolvedNarration = resolveSceneNarration(activeScene.audio, selectedNarratorId);
 
-  // Offline asset resolution: if the story is downloaded offline, resolve cached audio URI
-  const { isOfflineReady, resolveAssetUri } = useOfflineStory(story);
-  const [effectiveAudioSrc, setEffectiveAudioSrc] = useState<string | undefined>(
-    resolvedNarration.narrationUrl
-  );
-
-  useEffect(() => {
-    let isMounted = true;
-    if (!resolvedNarration.narrationUrl) {
-      setEffectiveAudioSrc(undefined);
-      return;
-    }
-
-    if (isOfflineReady) {
-      resolveAssetUri(resolvedNarration.narrationUrl).then((localUri) => {
-        if (isMounted) {
-          setEffectiveAudioSrc(localUri || resolvedNarration.narrationUrl);
-        }
-      });
-    } else {
-      setEffectiveAudioSrc(resolvedNarration.narrationUrl);
-    }
-
-    return () => {
-      isMounted = false;
-    };
-  }, [resolvedNarration.narrationUrl, isOfflineReady, resolveAssetUri]);
-
   const storyAudio = useStoryAudio({
-    narrationSrc: effectiveAudioSrc,
+    narrationSrc: resolvedNarration.narrationUrl,
     onNarrationEnded: handleNarrationEnded,
   });
 
@@ -201,14 +166,6 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
     setIsBookmarked(newState);
   };
 
-  const handleShare = () => {
-    if (typeof window !== "undefined") {
-      navigator.clipboard?.writeText(window.location.href);
-      setShareFeedback(true);
-      setTimeout(() => setShareFeedback(false), 2000);
-    }
-  };
-
   // Text size classes based on settings
   const textSizeClass = {
     sm: "text-base sm:text-lg leading-relaxed",
@@ -217,20 +174,13 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
     xl: "text-2xl sm:text-3xl leading-loose",
   }[settings.fontSize];
 
-  // Essential metadata: Category + Tradition (max 2 items)
-  const tradition =
-    story.origin.community ||
-    story.origin.ethnicGroup ||
-    story.provenance?.community ||
-    story.origin.region;
-
   return (
     <div
       data-theme={settings.theme}
       className="min-h-screen transition-colors duration-300 pb-20 bg-[var(--bg-primary)] text-[var(--text-primary)]"
     >
-      {/* Sub-header Navigation matching prototype Screenshot 1 */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6 pb-2 flex items-center justify-between">
+      {/* Sub-header Navigation with Safe Area Top Spacing */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-[calc(max(env(safe-area-inset-top,0px),1rem)+0.5rem)] pb-2 flex items-center justify-between">
         <Link
           href="/stories"
           className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] rounded-lg py-1 px-1 cursor-pointer"
@@ -239,10 +189,8 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
           <span>Library</span>
         </Link>
 
-        {/* Action icons on right: Save Offline + Bookmark matching prototype */}
+        {/* Action icons on right: Bookmark with micro-animation */}
         <div className="flex items-center gap-2 select-none shrink-0">
-          <StoryDownloadButton story={story} variant="compact" />
-
           <motion.button
             whileTap={{ scale: 0.8 }}
             animate={isBookmarked ? { scale: [1, 1.25, 1] } : { scale: 1 }}
@@ -250,7 +198,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             onClick={toggleBookmark}
             className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors cursor-pointer border border-[var(--border-subtle)] ${
               isBookmarked
-                ? "bg-[var(--accent-ochre)] text-white"
+                ? "bg-[var(--accent-ochre)] text-white shadow-md"
                 : "bg-[var(--bg-secondary)] text-[var(--text-muted)] hover:text-[var(--text-primary)]"
             }`}
             aria-label={isBookmarked ? "Remove bookmark" : "Bookmark this story"}
@@ -263,7 +211,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
 
       {/* Main Editorial Reading Area */}
       <main className="max-w-3xl mx-auto px-4 sm:px-6 pt-4 sm:pt-8 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))]">
-        {/* Story Header matching prototype Screenshot 1 */}
+        {/* Story Header */}
         <header className="space-y-3 mb-6 sm:mb-8 text-left">
           {/* Category Tag */}
           <div className="text-[11px] uppercase tracking-widest text-[var(--accent-ochre)] font-semibold">
@@ -275,11 +223,11 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             {story.title}
           </h1>
 
-          {/* Enter Cinematic Mode Button matching prototype */}
+          {/* Enter Cinematic Mode Button */}
           <div className="pt-1">
             <button
               onClick={handleEnterCinematic}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] text-xs sm:text-sm font-semibold shadow-sm hover:opacity-90 transition-all cursor-pointer"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--text-primary)] text-[var(--bg-primary)] text-xs sm:text-sm font-semibold shadow-sm hover:opacity-90 transition-all cursor-pointer active:scale-95"
               title="Enter Cinematic Story Mode"
             >
               <Play className="w-3.5 h-3.5 fill-current" />
@@ -287,7 +235,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             </button>
           </div>
 
-          {/* Segmented Scene Progress Bars matching prototype */}
+          {/* Segmented Scene Progress Bars */}
           <div className="flex items-center gap-2 w-full pt-4">
             {story.scenes.map((_, idx) => (
               <button
@@ -339,7 +287,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             </div>
           )}
 
-          {/* Narrative Body — Generous Editorial Typography matching prototype */}
+          {/* Narrative Body — Generous Editorial Typography */}
           <div
             className={`font-story-serif font-normal select-text text-[var(--text-primary)] space-y-5 ${textSizeClass}`}
           >
@@ -360,7 +308,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
             </blockquote>
           )}
 
-          {/* Audio Narration Bar: Integrated Reading Companion matching Prototype Screenshot 1 */}
+          {/* Audio Narration Bar: Integrated Reading Companion */}
           <div className="pt-6 pb-2">
             <AudioNarrationBar
               currentSceneTitle={`Scene ${activeScene.sceneNumber}: ${activeScene.title}`}
@@ -392,7 +340,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
               <button
                 disabled={activeSceneIndex === 0}
                 onClick={() => setActiveSceneIndex((prev) => Math.max(0, prev - 1))}
-                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 min-h-[40px] rounded-full text-xs font-medium text-[var(--text-secondary)] disabled:opacity-20 disabled:cursor-not-allowed hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] transition-all select-none cursor-pointer border border-[var(--border-subtle)]"
+                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 min-h-[40px] rounded-full text-xs font-medium text-[var(--text-secondary)] disabled:opacity-20 disabled:cursor-not-allowed hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] transition-all select-none cursor-pointer border border-[var(--border-subtle)] active:scale-95"
               >
                 <ChevronLeft className="w-4 h-4" />
                 <span>Previous</span>
@@ -409,7 +357,7 @@ export default function StoryReaderShell({ story }: StoryReaderShellProps) {
                     Math.min(story.scenes.length - 1, prev + 1)
                   )
                 }
-                className="inline-flex items-center gap-1.5 px-4 py-2 min-h-[40px] rounded-full bg-[var(--accent-ochre)] hover:opacity-90 text-white text-xs font-medium disabled:opacity-20 disabled:cursor-not-allowed transition-all shadow-sm select-none cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 min-h-[40px] rounded-full bg-[var(--accent-ochre)] hover:opacity-90 text-white text-xs font-medium disabled:opacity-20 disabled:cursor-not-allowed transition-all shadow-sm select-none cursor-pointer active:scale-95"
               >
                 <span>Next</span>
                 <ChevronRight className="w-4 h-4" />

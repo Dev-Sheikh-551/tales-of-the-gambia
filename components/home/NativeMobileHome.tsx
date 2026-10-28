@@ -2,11 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Play, BookOpen } from "lucide-react";
+import { ArrowRight, Play, BookOpen, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { useStoryStorage } from "@/hooks/useStoryStorage";
-import { getFeaturedStory } from "@/data/stories";
-import { MOCK_STORIES } from "@/data/stories";
+import { getFeaturedStory, MOCK_STORIES } from "@/data/stories";
 import { StoryCard } from "@/components/story/StoryCard";
 import { StoryArt } from "@/components/ui/StoryArt";
 
@@ -33,14 +33,14 @@ export default function NativeMobileHome() {
     return active ?? null;
   }, [isLoaded, progressList]);
 
-  // Recent stories for the discovery grid (skip featured)
-  const recentStories = MOCK_STORIES.filter((s) => s.slug !== featured.slug).slice(0, 6);
+  // Recent stories for the discovery carousel (skip featured)
+  const recentStories = MOCK_STORIES.filter((s) => s.slug !== featured.slug).slice(0, 8);
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] pb-28">
 
-      {/* ── Compact Brand Header ─────────────────────────────── */}
-      <header className="px-5 pt-6 pb-4 flex items-center justify-between">
+      {/* ── Compact Brand Header with Safe Area Spacing ───────── */}
+      <header className="px-5 pt-[calc(max(env(safe-area-inset-top,0px),1.25rem)+0.5rem)] pb-4 flex items-center justify-between">
         <div>
           <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--accent-gold)] font-semibold mb-0.5">
             Tales of The Gambia
@@ -100,20 +100,20 @@ export default function NativeMobileHome() {
           <h2 className="font-story-serif text-lg font-medium text-[var(--text-primary)] mb-3">
             Featured Story
           </h2>
-          <div className="rounded-2xl overflow-hidden bg-[var(--bg-card)] border border-[var(--border-subtle)]">
+          <div className="rounded-2xl overflow-hidden bg-[var(--bg-card)] border border-[var(--border-subtle)] shadow-sm">
             {/* Artwork banner */}
-            <div className="relative h-44">
+            <div className="relative h-44 sm:h-52">
               <StoryArt
                 theme={featured.coverImage.paletteTheme}
                 src={featured.coverImage.src}
                 alt={featured.coverImage.alt}
                 size="hero"
-                className="w-full h-full rounded-none border-0"
+                className="w-full h-full rounded-none border-0 object-cover"
               />
               {/* Cinematic button overlaid */}
               <Link
                 href={`/stories/${featured.slug}?mode=cinematic`}
-                className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs font-medium transition-colors"
+                className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-medium hover:bg-black/80 transition-all active:scale-95"
               >
                 <Play className="w-3 h-3 fill-current text-[#E0AB3A]" />
                 <span>Cinematic</span>
@@ -127,44 +127,53 @@ export default function NativeMobileHome() {
               <h3 className="font-story-serif text-xl font-semibold text-[var(--text-primary)] leading-snug">
                 {featured.title}
               </h3>
-              <p className="text-xs text-[var(--text-secondary)] line-clamp-2 leading-relaxed">
-                {featured.description}
-              </p>
-              <Link
-                href={`/stories/${featured.slug}`}
-                className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-gold)] hover:underline underline-offset-4"
-              >
-                <BookOpen className="w-4 h-4" />
-                <span>Read Story</span>
-              </Link>
+              <div className="pt-1">
+                <Link
+                  href={`/stories/${featured.slug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent-gold)] hover:underline underline-offset-4"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  <span>Read Story</span>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── Story Discovery ──────────────────────────────────── */}
+        {/* ── Story Discovery Carousel (Spacious Layout) ───────── */}
         <section>
           <div className="flex items-center justify-between mb-3">
-            <h2 className="font-story-serif text-lg font-medium text-[var(--text-primary)]">
-              Explore Stories
-            </h2>
+            <div>
+              <h2 className="font-story-serif text-lg font-medium text-[var(--text-primary)]">
+                Explore Stories
+              </h2>
+              <p className="text-[11px] text-[var(--text-muted)]">
+                Swipe to browse oral tales & fables
+              </p>
+            </div>
             <Link
               href="/stories"
-              className="text-xs font-semibold text-[var(--accent-ochre)] flex items-center gap-1"
+              className="text-xs font-semibold text-[var(--accent-ochre)] flex items-center gap-1 hover:underline underline-offset-4"
             >
-              <span>All stories</span>
-              <ArrowRight className="w-3 h-3" />
+              <span>View all ({MOCK_STORIES.length})</span>
+              <ChevronRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            {recentStories.slice(0, 4).map((story) => (
-              <StoryCard
+          {/* Polished horizontal story carousel with snap points */}
+          <div className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory -mx-4 px-4 pb-2">
+            {recentStories.map((story) => (
+              <div
                 key={story.id}
-                story={story}
-                progress={getProgress(story.slug)}
-                isFavorite={isFav(story.slug)}
-                onToggleFavorite={toggleFav}
-              />
+                className="w-[260px] sm:w-[280px] shrink-0 snap-start"
+              >
+                <StoryCard
+                  story={story}
+                  progress={getProgress(story.slug)}
+                  isFavorite={isFav(story.slug)}
+                  onToggleFavorite={toggleFav}
+                />
+              </div>
             ))}
           </div>
         </section>

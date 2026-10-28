@@ -48,11 +48,6 @@ export default function FeaturedStory() {
                 </Link>
               </h3>
 
-              {/* Excerpt */}
-              <p className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed line-clamp-3">
-                {story.description}
-              </p>
-
               {/* Read Time */}
               <div className="flex items-center gap-1.5 text-xs text-[var(--text-muted)] pt-1">
                 <Clock className="w-3.5 h-3.5 text-[var(--accent-ochre)]" />

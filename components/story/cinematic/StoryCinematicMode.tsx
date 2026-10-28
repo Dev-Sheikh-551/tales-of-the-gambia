@@ -8,7 +8,6 @@ import { useStoryPlayback } from "@/hooks/useStoryPlayback";
 import { useStoryAudio } from "@/hooks/useStoryAudio";
 import { useNarrator } from "@/hooks/useNarrator";
 import { resolveSceneNarration } from "@/lib/narrators/resolver";
-import { useOfflineStory } from "@/hooks/useOfflineStory";
 import { NarratorPicker } from "../NarratorPicker";
 import { StorySceneViewport } from "./StorySceneViewport";
 import { StoryCompletionView } from "./StoryCompletionView";
@@ -67,36 +66,8 @@ export function StoryCinematicMode({
     selectedNarratorId
   );
 
-  // Offline asset resolution
-  const { isOfflineReady, resolveAssetUri } = useOfflineStory(story);
-  const [effectiveAudioSrc, setEffectiveAudioSrc] = useState<string | undefined>(
-    resolvedNarration.narrationUrl
-  );
-
-  useEffect(() => {
-    let isMounted = true;
-    if (!resolvedNarration.narrationUrl) {
-      setEffectiveAudioSrc(undefined);
-      return;
-    }
-
-    if (isOfflineReady) {
-      resolveAssetUri(resolvedNarration.narrationUrl).then((localUri) => {
-        if (isMounted) {
-          setEffectiveAudioSrc(localUri || resolvedNarration.narrationUrl);
-        }
-      });
-    } else {
-      setEffectiveAudioSrc(resolvedNarration.narrationUrl);
-    }
-
-    return () => {
-      isMounted = false;
-    };
-  }, [resolvedNarration.narrationUrl, isOfflineReady, resolveAssetUri]);
-
   const storyAudio = useStoryAudio({
-    narrationSrc: effectiveAudioSrc,
+    narrationSrc: resolvedNarration.narrationUrl,
     onNarrationEnded: () => {
       if (isAutoAdvanceEnabled) {
         goToNextScene();
@@ -189,8 +160,8 @@ export function StoryCinematicMode({
       aria-label="Cinematic Story Mode"
       className="fixed inset-0 z-50 flex flex-col bg-[#0D0B0A] text-[#F7F3EB] overflow-hidden select-none animate-in fade-in duration-300"
     >
-      {/* Top Segmented Progress Bar matching Prototype Screenshot 2 */}
-      <div className="w-full flex items-center gap-1.5 px-4 sm:px-6 pt-2.5 pb-1 z-40 select-none">
+      {/* Top Segmented Progress Bar with Safe Area Top Spacing */}
+      <div className="w-full flex items-center gap-1.5 px-4 sm:px-6 pt-[calc(max(env(safe-area-inset-top,0px),0.75rem)+0.5rem)] pb-1 z-40 select-none">
         {Array.from({ length: totalScenes }).map((_, idx) => {
           const isPast = idx < currentSceneIndex;
           const isCurrent = idx === currentSceneIndex;
