@@ -28,6 +28,24 @@ import { magicCalabashStory } from "./adapted/magic-calabash";
 import { whirlingSpiritKumpoStory } from "./legends/whirling-spirit-kumpo";
 import { birdsParliamentStory } from "./adapted/birds-parliament";
 import { goldenPalmOrphanStory } from "./adapted/golden-palm-orphan";
+import { burrNjaiTakesAnotherWifeStory } from "./traditional/burr-njai-takes-another-wife";
+import { howTheGriotCameToBeStory } from "./traditional/how-the-griot-came-to-be";
+import { obstinateFarmerOfNjaiyen } from "./traditional/obstinate-farmer-of-njaiyen";
+import { lollyTheWitchStory } from "./traditional/lolly-the-witch";
+import { sambaBecomesfriendsWithGaindehNjieStory } from "./traditional/samba-becomes-friends-with-gaindeh-njie";
+import { gorguiAndHisFourWivesStory } from "./traditional/gorgui-and-his-four-wives";
+import { hyenaAndTheHareStory } from "./traditional/hyena-and-the-hare";
+import { threeMenOfTanganaStory } from "./traditional/three-men-of-tangana";
+import { twoHalfSistersStory } from "./traditional/two-half-sisters";
+import { sicketStartsAJourneyToMeccaStory } from "./traditional/sicket-starts-a-journey-to-mecca";
+import { hassanHalfBrothersStory } from "./traditional/hassan-half-brothers";
+import { childlessWomansPrayersStory } from "./traditional/childless-womans-prayers";
+import { hyenaAndHareGoOutInSearchForFoodStory } from "./traditional/hyena-and-hare-go-out-in-search-for-food";
+import { manWhoWantedToBeAPolicemanStory } from "./traditional/man-who-wanted-to-be-a-policeman";
+import { cowHyenaLionAndHareShareAHomeStory } from "./traditional/cow-hyena-lion-and-hare-share-a-home";
+import { catReturnsFromPilgrimageToMeccaStory } from "./traditional/cat-returns-from-pilgrimage-to-mecca";
+import { soloWinsThePrizedBullStory } from "./traditional/solo-wins-the-prized-bull";
+import { hatabAndTheStrangeHeadStory } from "./traditional/hatab-and-the-strange-head";
 
 export const STORIES: Story[] = [
   hareDroughtStory,
@@ -59,6 +77,24 @@ export const STORIES: Story[] = [
   whirlingSpiritKumpoStory,
   birdsParliamentStory,
   goldenPalmOrphanStory,
+  burrNjaiTakesAnotherWifeStory,
+  howTheGriotCameToBeStory,
+  obstinateFarmerOfNjaiyen,
+  lollyTheWitchStory,
+  sambaBecomesfriendsWithGaindehNjieStory,
+  gorguiAndHisFourWivesStory,
+  hyenaAndTheHareStory,
+  threeMenOfTanganaStory,
+  twoHalfSistersStory,
+  sicketStartsAJourneyToMeccaStory,
+  hassanHalfBrothersStory,
+  childlessWomansPrayersStory,
+  hyenaAndHareGoOutInSearchForFoodStory,
+  manWhoWantedToBeAPolicemanStory,
+  cowHyenaLionAndHareShareAHomeStory,
+  catReturnsFromPilgrimageToMeccaStory,
+  soloWinsThePrizedBullStory,
+  hatabAndTheStrangeHeadStory,
 ];
 
 /** Backward-compatible alias */
