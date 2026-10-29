@@ -41,7 +41,7 @@ export function StoryCard({
       whileHover={{ y: -4 }}
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.22, ease: MOTION_EASINGS.standard }}
-      className="group relative flex flex-col justify-end rounded-2xl bg-[var(--bg-card)] border border-[var(--border-subtle)] hover:border-[var(--accent-gold)]/60 transition-all overflow-hidden shadow-sm hover:shadow-xl cursor-pointer min-h-[300px] sm:min-h-[340px] aspect-[3/4]"
+      className="group relative flex flex-col justify-end rounded-2xl bg-[var(--bg-card)] border border-[var(--accent-gold)]/60 md:border-[var(--border-subtle)] md:hover:border-[var(--accent-gold)]/60 transition-all overflow-hidden shadow-sm hover:shadow-xl cursor-pointer min-h-[300px] sm:min-h-[340px] aspect-[3/4]"
     >
       {/* Full Card Tap Target Link */}
       <Link
