@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.13,
+    "text": "By mid-afternoon, the heat rose in shimmering waves off the cracked clay.",
+    "charStart": 0,
+    "charEnd": 73
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.13,
+    "endSeconds": 7.48,
+    "text": "'You will find only bones down there!'",
+    "charStart": 74,
+    "charEnd": 112
+  },
+  {
+    "index": 2,
+    "startSeconds": 7.48,
+    "endSeconds": 10.3,
+    "text": "the Hare called out mockingly from his shade.",
+    "charStart": 113,
+    "charEnd": 158
+  },
+  {
+    "index": 3,
+    "startSeconds": 10.3,
+    "endSeconds": 14.54,
+    "text": "'Why sweat like oxen when tomorrow the sky may weep rain on its own?'",
+    "charStart": 159,
+    "charEnd": 228
+  },
+  {
+    "index": 4,
+    "startSeconds": 14.54,
+    "endSeconds": 16.88,
+    "text": "But the animals did not pause.",
+    "charStart": 229,
+    "charEnd": 259
+  },
+  {
+    "index": 5,
+    "startSeconds": 16.88,
+    "endSeconds": 25.2,
+    "text": "In their silence lived the ancient truth: community is built not with advice from the shade, but with blistered hands in the sun.",
+    "charStart": 260,
+    "charEnd": 389
+  }
+]

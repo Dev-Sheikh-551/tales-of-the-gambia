@@ -31,14 +31,14 @@ export function useOfflineStory(story?: Story): UseOfflineStoryReturn {
   const { selectedNarratorId } = useNarrator();
   const storySlug = story?.slug;
 
-  const [state, setState] = useState<StoryOfflineState>({
+  const [state, setState] = useState<StoryOfflineState>(() => ({
     storySlug: storySlug || "",
     status: "available",
     progressPercent: 0,
     downloadedBytes: 0,
     totalBytes: 0,
     lastUpdatedTimestamp: Date.now(),
-  });
+  }));
 
   const isMountedRef = useRef(true);
 

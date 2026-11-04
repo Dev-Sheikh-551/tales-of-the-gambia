@@ -4,6 +4,21 @@ import kankurangScene02 from "@/data/audio/cues/kankurang/scene-02.json";
 import kankurangScene03 from "@/data/audio/cues/kankurang/scene-03.json";
 import kankurangScene04 from "@/data/audio/cues/kankurang/scene-04.json";
 import kankurangScene05 from "@/data/audio/cues/kankurang/scene-05.json";
+import kankurangAmaraScene01 from "@/data/audio/cues/kankurang/scene-01-amara.json";
+import kankurangAmaraScene02 from "@/data/audio/cues/kankurang/scene-02-amara.json";
+import kankurangAmaraScene03 from "@/data/audio/cues/kankurang/scene-03-amara.json";
+import kankurangAmaraScene04 from "@/data/audio/cues/kankurang/scene-04-amara.json";
+import kankurangAmaraScene05 from "@/data/audio/cues/kankurang/scene-05-amara.json";
+import kankurangBaboucarScene01 from "@/data/audio/cues/kankurang/scene-01-baboucar.json";
+import kankurangBaboucarScene02 from "@/data/audio/cues/kankurang/scene-02-baboucar.json";
+import kankurangBaboucarScene03 from "@/data/audio/cues/kankurang/scene-03-baboucar.json";
+import kankurangBaboucarScene04 from "@/data/audio/cues/kankurang/scene-04-baboucar.json";
+import kankurangBaboucarScene05 from "@/data/audio/cues/kankurang/scene-05-baboucar.json";
+import kankurangKaddyScene01 from "@/data/audio/cues/kankurang/scene-01-kaddy.json";
+import kankurangKaddyScene02 from "@/data/audio/cues/kankurang/scene-02-kaddy.json";
+import kankurangKaddyScene03 from "@/data/audio/cues/kankurang/scene-03-kaddy.json";
+import kankurangKaddyScene04 from "@/data/audio/cues/kankurang/scene-04-kaddy.json";
+import kankurangKaddyScene05 from "@/data/audio/cues/kankurang/scene-05-kaddy.json";
 
 
 export const kankurangSacredForestStory: Story = {
@@ -130,9 +145,36 @@ export const kankurangSacredForestStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-narration.mp3",
-        narrationDurationSeconds: 39.4,
-        cues: kankurangScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-amara.mp3",
+        narrationDurationSeconds: 35.2,
+        cues: kankurangAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-amara.mp3",
+            narrationDurationSeconds: 35.2,
+            cues: kankurangAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-narration.mp3",
+            narrationDurationSeconds: 39.4,
+            cues: kankurangScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 35.73,
+            cues: kankurangBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 37.62,
+            cues: kankurangKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -169,9 +211,36 @@ export const kankurangSacredForestStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-narration.mp3",
-        narrationDurationSeconds: 38.42,
-        cues: kankurangScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-amara.mp3",
+        narrationDurationSeconds: 34.02,
+        cues: kankurangAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-amara.mp3",
+            narrationDurationSeconds: 34.02,
+            cues: kankurangAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-narration.mp3",
+            narrationDurationSeconds: 38.42,
+            cues: kankurangScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 34.58,
+            cues: kankurangBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 36.75,
+            cues: kankurangKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -208,9 +277,36 @@ export const kankurangSacredForestStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-narration.mp3",
-        narrationDurationSeconds: 39.2,
-        cues: kankurangScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-amara.mp3",
+        narrationDurationSeconds: 34.5,
+        cues: kankurangAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-amara.mp3",
+            narrationDurationSeconds: 34.5,
+            cues: kankurangAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-narration.mp3",
+            narrationDurationSeconds: 39.2,
+            cues: kankurangScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 34.88,
+            cues: kankurangBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 37.12,
+            cues: kankurangKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -255,9 +351,36 @@ export const kankurangSacredForestStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-narration.mp3",
-        narrationDurationSeconds: 41.8,
-        cues: kankurangScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-amara.mp3",
+        narrationDurationSeconds: 36.67,
+        cues: kankurangAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-amara.mp3",
+            narrationDurationSeconds: 36.67,
+            cues: kankurangAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-narration.mp3",
+            narrationDurationSeconds: 41.8,
+            cues: kankurangScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 36.92,
+            cues: kankurangBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 39.73,
+            cues: kankurangKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -294,9 +417,36 @@ export const kankurangSacredForestStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-narration.mp3",
-        narrationDurationSeconds: 41.48,
-        cues: kankurangScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-amara.mp3",
+        narrationDurationSeconds: 36.55,
+        cues: kankurangAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-amara.mp3",
+            narrationDurationSeconds: 36.55,
+            cues: kankurangAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-narration.mp3",
+            narrationDurationSeconds: 41.48,
+            cues: kankurangScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 37.58,
+            cues: kankurangBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-kankurang-and-the-sacred-forest/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 39.17,
+            cues: kankurangKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

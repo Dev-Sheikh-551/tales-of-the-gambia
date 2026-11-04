@@ -5,6 +5,24 @@ import sundiataScene03 from "@/data/audio/cues/sundiata/scene-03.json";
 import sundiataScene04 from "@/data/audio/cues/sundiata/scene-04.json";
 import sundiataScene05 from "@/data/audio/cues/sundiata/scene-05.json";
 import sundiataScene06 from "@/data/audio/cues/sundiata/scene-06.json";
+import sundiataAmaraScene01 from "@/data/audio/cues/sundiata/scene-01-amara.json";
+import sundiataAmaraScene02 from "@/data/audio/cues/sundiata/scene-02-amara.json";
+import sundiataAmaraScene03 from "@/data/audio/cues/sundiata/scene-03-amara.json";
+import sundiataAmaraScene04 from "@/data/audio/cues/sundiata/scene-04-amara.json";
+import sundiataAmaraScene05 from "@/data/audio/cues/sundiata/scene-05-amara.json";
+import sundiataAmaraScene06 from "@/data/audio/cues/sundiata/scene-06-amara.json";
+import sundiataBaboucarScene01 from "@/data/audio/cues/sundiata/scene-01-baboucar.json";
+import sundiataBaboucarScene02 from "@/data/audio/cues/sundiata/scene-02-baboucar.json";
+import sundiataBaboucarScene03 from "@/data/audio/cues/sundiata/scene-03-baboucar.json";
+import sundiataBaboucarScene04 from "@/data/audio/cues/sundiata/scene-04-baboucar.json";
+import sundiataBaboucarScene05 from "@/data/audio/cues/sundiata/scene-05-baboucar.json";
+import sundiataBaboucarScene06 from "@/data/audio/cues/sundiata/scene-06-baboucar.json";
+import sundiataKaddyScene01 from "@/data/audio/cues/sundiata/scene-01-kaddy.json";
+import sundiataKaddyScene02 from "@/data/audio/cues/sundiata/scene-02-kaddy.json";
+import sundiataKaddyScene03 from "@/data/audio/cues/sundiata/scene-03-kaddy.json";
+import sundiataKaddyScene04 from "@/data/audio/cues/sundiata/scene-04-kaddy.json";
+import sundiataKaddyScene05 from "@/data/audio/cues/sundiata/scene-05-kaddy.json";
+import sundiataKaddyScene06 from "@/data/audio/cues/sundiata/scene-06-kaddy.json";
 
 
 
@@ -225,9 +243,36 @@ At the royal court of Niani, in the kingdom of the Mandinka, a king received a p
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 8 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-01-narration.mp3",
-        narrationDurationSeconds: 65.42,
-        cues: sundiataScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-01-amara.mp3",
+        narrationDurationSeconds: 57.9,
+        cues: sundiataAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-01-amara.mp3",
+            narrationDurationSeconds: 57.9,
+            cues: sundiataAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-01-narration.mp3",
+            narrationDurationSeconds: 65.42,
+            cues: sundiataScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 59.17,
+            cues: sundiataBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 62.05,
+            cues: sundiataKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -273,9 +318,36 @@ She always believed it.`,
       cameraMotion: { preset: "pan-right", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-02-narration.mp3",
-        narrationDurationSeconds: 68.7,
-        cues: sundiataScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-02-amara.mp3",
+        narrationDurationSeconds: 59.92,
+        cues: sundiataAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-02-amara.mp3",
+            narrationDurationSeconds: 59.92,
+            cues: sundiataAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-02-narration.mp3",
+            narrationDurationSeconds: 68.7,
+            cues: sundiataScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 61.67,
+            cues: sundiataBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 65.9,
+            cues: sundiataKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -321,9 +393,36 @@ The griot says: *The whole of Mali stood with him.*`,
       cameraMotion: { preset: "zoom-in", intensity: "medium", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "gentle" },
       audio: {
-        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-03-narration.mp3",
-        narrationDurationSeconds: 74.85,
-        cues: sundiataScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-03-amara.mp3",
+        narrationDurationSeconds: 65.9,
+        cues: sundiataAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-03-amara.mp3",
+            narrationDurationSeconds: 65.9,
+            cues: sundiataAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-03-narration.mp3",
+            narrationDurationSeconds: 74.85,
+            cues: sundiataScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 67.35,
+            cues: sundiataBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 72.05,
+            cues: sundiataKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -374,9 +473,36 @@ He was learning the world from the outside. And that, the griots say, was part o
       cameraMotion: { preset: "pan-left", intensity: "subtle", durationSeconds: 12 },
       environmentMotion: { type: "wind", intensity: "gentle" },
       audio: {
-        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-04-narration.mp3",
-        narrationDurationSeconds: 78.7,
-        cues: sundiataScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-04-amara.mp3",
+        narrationDurationSeconds: 69.8,
+        cues: sundiataAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-04-amara.mp3",
+            narrationDurationSeconds: 69.8,
+            cues: sundiataAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-04-narration.mp3",
+            narrationDurationSeconds: 78.7,
+            cues: sundiataScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 70.0,
+            cues: sundiataBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 75.3,
+            cues: sundiataKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -418,9 +544,36 @@ The details of how Soumaoro's power was finally broken are told differently in d
       cameraMotion: { preset: "zoom-out", intensity: "medium", durationSeconds: 14 },
       environmentMotion: { type: "dust-particles", intensity: "gentle" },
       audio: {
-        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-05-narration.mp3",
-        narrationDurationSeconds: 81.17,
-        cues: sundiataScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-05-amara.mp3",
+        narrationDurationSeconds: 72.03,
+        cues: sundiataAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-05-amara.mp3",
+            narrationDurationSeconds: 72.03,
+            cues: sundiataAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-05-narration.mp3",
+            narrationDurationSeconds: 81.17,
+            cues: sundiataScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 72.97,
+            cues: sundiataBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 77.1,
+            cues: sundiataKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 120,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -468,9 +621,36 @@ The empire that began with a single iron rod driven into the earth.
       cameraMotion: { preset: "drift", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-06-narration.mp3",
-        narrationDurationSeconds: 97.7,
-        cues: sundiataScene06 as NarrationCue[],
+        narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-06-amara.mp3",
+        narrationDurationSeconds: 85.85,
+        cues: sundiataAmaraScene06 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-06-amara.mp3",
+            narrationDurationSeconds: 85.85,
+            cues: sundiataAmaraScene06 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-06-narration.mp3",
+            narrationDurationSeconds: 97.7,
+            cues: sundiataScene06 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-06-baboucar.mp3",
+            narrationDurationSeconds: 87.3,
+            cues: sundiataBaboucarScene06 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/sundiata-lion-of-old-mali/scene-06-kaddy.mp3",
+            narrationDurationSeconds: 93.12,
+            cues: sundiataKaddyScene06 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 140,
       transition: { type: "fade", durationSeconds: 3 },

@@ -1,0 +1,138 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.85,
+    "text": "The Mandinka say: A taa ko kelen te kelen ye.",
+    "charStart": 0,
+    "charEnd": 45
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.85,
+    "endSeconds": 7.28,
+    "text": "What is spoken once is not spoken only once.",
+    "charStart": 46,
+    "charEnd": 90
+  },
+  {
+    "index": 2,
+    "startSeconds": 7.28,
+    "endSeconds": 11.09,
+    "text": "Kelefa Saane has been spoken ten thousand times.",
+    "charStart": 92,
+    "charEnd": 140
+  },
+  {
+    "index": 3,
+    "startSeconds": 11.09,
+    "endSeconds": 13.31,
+    "text": "In Banjul and Ziguinchor.",
+    "charStart": 141,
+    "charEnd": 166
+  },
+  {
+    "index": 4,
+    "startSeconds": 13.31,
+    "endSeconds": 15.2,
+    "text": "In London and Dakar.",
+    "charStart": 167,
+    "charEnd": 187
+  },
+  {
+    "index": 5,
+    "startSeconds": 15.2,
+    "endSeconds": 17.71,
+    "text": "On stages and by firesides.",
+    "charStart": 188,
+    "charEnd": 215
+  },
+  {
+    "index": 6,
+    "startSeconds": 17.71,
+    "endSeconds": 26.45,
+    "text": "On recordings and in living rooms where someone plays a kora for the first time and feels, without knowing why, that something important is happening.",
+    "charStart": 216,
+    "charEnd": 366
+  },
+  {
+    "index": 7,
+    "startSeconds": 26.45,
+    "endSeconds": 28.77,
+    "text": "His story is not complete.",
+    "charStart": 368,
+    "charEnd": 394
+  },
+  {
+    "index": 8,
+    "startSeconds": 28.77,
+    "endSeconds": 32.42,
+    "text": "It is not complete because the griots are still singing it.",
+    "charStart": 396,
+    "charEnd": 455
+  },
+  {
+    "index": 9,
+    "startSeconds": 32.42,
+    "endSeconds": 34.87,
+    "text": "Because scholars are still studying it.",
+    "charStart": 456,
+    "charEnd": 495
+  },
+  {
+    "index": 10,
+    "startSeconds": 34.87,
+    "endSeconds": 47.99,
+    "text": "Because children in the Gambia still hear his name and know — the way you know certain things in your bones before you understand them in your mind — that this was someone who mattered.",
+    "charStart": 496,
+    "charEnd": 681
+  },
+  {
+    "index": 11,
+    "startSeconds": 47.99,
+    "endSeconds": 50.49,
+    "text": "The Kaabu Empire is history.",
+    "charStart": 683,
+    "charEnd": 711
+  },
+  {
+    "index": 12,
+    "startSeconds": 50.49,
+    "endSeconds": 51.66,
+    "text": "Kelefa Saane is memory.",
+    "charStart": 713,
+    "charEnd": 736
+  },
+  {
+    "index": 13,
+    "startSeconds": 51.66,
+    "endSeconds": 58.79,
+    "text": "And memory, as any jali will tell you, is the thing that time cannot touch.",
+    "charStart": 738,
+    "charEnd": 813
+  },
+  {
+    "index": 14,
+    "startSeconds": 58.79,
+    "endSeconds": 59.4,
+    "text": "I ko Kelefa.",
+    "charStart": 815,
+    "charEnd": 827
+  },
+  {
+    "index": 15,
+    "startSeconds": 59.4,
+    "endSeconds": 60.04,
+    "text": "They say Kelefa.",
+    "charStart": 828,
+    "charEnd": 844
+  },
+  {
+    "index": 16,
+    "startSeconds": 60.04,
+    "endSeconds": 60.7,
+    "text": "They always will.",
+    "charStart": 846,
+    "charEnd": 863
+  }
+]

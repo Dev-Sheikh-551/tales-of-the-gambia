@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.2,
+    "text": "Beneath the spreading canopy, the beasts of the savanna gathered in solemn council.",
+    "charStart": 0,
+    "charEnd": 83
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.2,
+    "endSeconds": 14.56,
+    "text": "Wise Elephant raised her broad ears and spoke with the measured cadence of an elder: 'Brothers and sisters, lamenting will not bring clouds to our sky.",
+    "charStart": 84,
+    "charEnd": 235
+  },
+  {
+    "index": 2,
+    "startSeconds": 14.56,
+    "endSeconds": 17.43,
+    "text": "Deep within the riverbed sleeps sweet water.",
+    "charStart": 236,
+    "charEnd": 280
+  },
+  {
+    "index": 3,
+    "startSeconds": 17.43,
+    "endSeconds": 22.77,
+    "text": "If every creature gives paw, tusk, or claw, we shall drink before twilight.'",
+    "charStart": 281,
+    "charEnd": 357
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.77,
+    "endSeconds": 29.02,
+    "text": "Beside her, the Hare smoothed his whiskers, looking sideways with quiet cunning.",
+    "charStart": 358,
+    "charEnd": 438
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.83,
+    "text": "At sunset, she reached the crystal waters of Daayaan.",
+    "charStart": 0,
+    "charEnd": 53
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.83,
+    "endSeconds": 8.8,
+    "text": "Beside the reeds sat a frail old woman whose back was bent with centuries of age.",
+    "charStart": 54,
+    "charEnd": 135
+  },
+  {
+    "index": 2,
+    "startSeconds": 8.8,
+    "endSeconds": 14.74,
+    "text": "'Daughter,' the elder croaked with a parched voice, 'my head aches and my hair is tangled with dust.",
+    "charStart": 136,
+    "charEnd": 236
+  },
+  {
+    "index": 3,
+    "startSeconds": 14.74,
+    "endSeconds": 16.11,
+    "text": "Will you comb it for me?'",
+    "charStart": 237,
+    "charEnd": 262
+  },
+  {
+    "index": 4,
+    "startSeconds": 16.11,
+    "endSeconds": 18.92,
+    "text": "Kumba knelt in the sand with deep reverence.",
+    "charStart": 263,
+    "charEnd": 307
+  },
+  {
+    "index": 5,
+    "startSeconds": 18.92,
+    "endSeconds": 29.85,
+    "text": "She washed the elder's hair with cool river water, spoke words of comfort, and prepared a simple porridge with her dried baobab fruit, offering the first bite to the grandmother.",
+    "charStart": 308,
+    "charEnd": 486
+  }
+]

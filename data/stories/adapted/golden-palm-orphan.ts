@@ -3,6 +3,18 @@ import goldenPalmScene01 from "@/data/audio/cues/golden-palm-orphan/scene-01.jso
 import goldenPalmScene02 from "@/data/audio/cues/golden-palm-orphan/scene-02.json";
 import goldenPalmScene03 from "@/data/audio/cues/golden-palm-orphan/scene-03.json";
 import goldenPalmScene04 from "@/data/audio/cues/golden-palm-orphan/scene-04.json";
+import goldenPalmFodayScene01 from "@/data/audio/cues/golden-palm-orphan/scene-01-foday.json";
+import goldenPalmFodayScene02 from "@/data/audio/cues/golden-palm-orphan/scene-02-foday.json";
+import goldenPalmFodayScene03 from "@/data/audio/cues/golden-palm-orphan/scene-03-foday.json";
+import goldenPalmFodayScene04 from "@/data/audio/cues/golden-palm-orphan/scene-04-foday.json";
+import goldenPalmBaboucarScene01 from "@/data/audio/cues/golden-palm-orphan/scene-01-baboucar.json";
+import goldenPalmBaboucarScene02 from "@/data/audio/cues/golden-palm-orphan/scene-02-baboucar.json";
+import goldenPalmBaboucarScene03 from "@/data/audio/cues/golden-palm-orphan/scene-03-baboucar.json";
+import goldenPalmBaboucarScene04 from "@/data/audio/cues/golden-palm-orphan/scene-04-baboucar.json";
+import goldenPalmKaddyScene01 from "@/data/audio/cues/golden-palm-orphan/scene-01-kaddy.json";
+import goldenPalmKaddyScene02 from "@/data/audio/cues/golden-palm-orphan/scene-02-kaddy.json";
+import goldenPalmKaddyScene03 from "@/data/audio/cues/golden-palm-orphan/scene-03-kaddy.json";
+import goldenPalmKaddyScene04 from "@/data/audio/cues/golden-palm-orphan/scene-04-kaddy.json";
 
 
 export const goldenPalmOrphanStory: Story = {
@@ -147,6 +159,33 @@ export const goldenPalmOrphanStory: Story = {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-01-narration.mp3",
         narrationDurationSeconds: 27.55,
         cues: goldenPalmScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-01-narration.mp3",
+            narrationDurationSeconds: 27.55,
+            cues: goldenPalmScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-01-foday.mp3",
+            narrationDurationSeconds: 30.73,
+            cues: goldenPalmFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 27.27,
+            cues: goldenPalmBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 28.4,
+            cues: goldenPalmKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -202,6 +241,33 @@ export const goldenPalmOrphanStory: Story = {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-02-narration.mp3",
         narrationDurationSeconds: 37.45,
         cues: goldenPalmScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-02-narration.mp3",
+            narrationDurationSeconds: 37.45,
+            cues: goldenPalmScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-02-foday.mp3",
+            narrationDurationSeconds: 42.3,
+            cues: goldenPalmFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 37.67,
+            cues: goldenPalmBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 40.0,
+            cues: goldenPalmKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -257,6 +323,33 @@ export const goldenPalmOrphanStory: Story = {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-03-narration.mp3",
         narrationDurationSeconds: 33.88,
         cues: goldenPalmScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-03-narration.mp3",
+            narrationDurationSeconds: 33.88,
+            cues: goldenPalmScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-03-foday.mp3",
+            narrationDurationSeconds: 37.9,
+            cues: goldenPalmFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 33.65,
+            cues: goldenPalmBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 36.38,
+            cues: goldenPalmKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -304,6 +397,33 @@ export const goldenPalmOrphanStory: Story = {
         narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-04-narration.mp3",
         narrationDurationSeconds: 32.45,
         cues: goldenPalmScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-04-narration.mp3",
+            narrationDurationSeconds: 32.45,
+            cues: goldenPalmScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-04-foday.mp3",
+            narrationDurationSeconds: 36.83,
+            cues: goldenPalmFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 33.08,
+            cues: goldenPalmBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-golden-palm-and-the-orphan-boy/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 34.88,
+            cues: goldenPalmKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

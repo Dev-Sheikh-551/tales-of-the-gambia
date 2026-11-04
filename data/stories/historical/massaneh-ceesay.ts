@@ -4,6 +4,21 @@ import massanehScene02 from "@/data/audio/cues/massaneh-ceesay/scene-02.json";
 import massanehScene03 from "@/data/audio/cues/massaneh-ceesay/scene-03.json";
 import massanehScene04 from "@/data/audio/cues/massaneh-ceesay/scene-04.json";
 import massanehScene05 from "@/data/audio/cues/massaneh-ceesay/scene-05.json";
+import massanehAmaraScene01 from "@/data/audio/cues/massaneh-ceesay/scene-01-amara.json";
+import massanehAmaraScene02 from "@/data/audio/cues/massaneh-ceesay/scene-02-amara.json";
+import massanehAmaraScene03 from "@/data/audio/cues/massaneh-ceesay/scene-03-amara.json";
+import massanehAmaraScene04 from "@/data/audio/cues/massaneh-ceesay/scene-04-amara.json";
+import massanehAmaraScene05 from "@/data/audio/cues/massaneh-ceesay/scene-05-amara.json";
+import massanehBaboucarScene01 from "@/data/audio/cues/massaneh-ceesay/scene-01-baboucar.json";
+import massanehBaboucarScene02 from "@/data/audio/cues/massaneh-ceesay/scene-02-baboucar.json";
+import massanehBaboucarScene03 from "@/data/audio/cues/massaneh-ceesay/scene-03-baboucar.json";
+import massanehBaboucarScene04 from "@/data/audio/cues/massaneh-ceesay/scene-04-baboucar.json";
+import massanehBaboucarScene05 from "@/data/audio/cues/massaneh-ceesay/scene-05-baboucar.json";
+import massanehKaddyScene01 from "@/data/audio/cues/massaneh-ceesay/scene-01-kaddy.json";
+import massanehKaddyScene02 from "@/data/audio/cues/massaneh-ceesay/scene-02-kaddy.json";
+import massanehKaddyScene03 from "@/data/audio/cues/massaneh-ceesay/scene-03-kaddy.json";
+import massanehKaddyScene04 from "@/data/audio/cues/massaneh-ceesay/scene-04-kaddy.json";
+import massanehKaddyScene05 from "@/data/audio/cues/massaneh-ceesay/scene-05-kaddy.json";
 
 
 export const massanehCeesayStory: Story = {
@@ -149,9 +164,36 @@ export const massanehCeesayStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-narration.mp3",
-        narrationDurationSeconds: 38.77,
-        cues: massanehScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-amara.mp3",
+        narrationDurationSeconds: 34.42,
+        cues: massanehAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-amara.mp3",
+            narrationDurationSeconds: 34.42,
+            cues: massanehAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-narration.mp3",
+            narrationDurationSeconds: 38.77,
+            cues: massanehScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 34.62,
+            cues: massanehBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 36.62,
+            cues: massanehKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -198,9 +240,36 @@ export const massanehCeesayStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-narration.mp3",
-        narrationDurationSeconds: 38.25,
-        cues: massanehScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-amara.mp3",
+        narrationDurationSeconds: 33.73,
+        cues: massanehAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-amara.mp3",
+            narrationDurationSeconds: 33.73,
+            cues: massanehAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-narration.mp3",
+            narrationDurationSeconds: 38.25,
+            cues: massanehScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 33.7,
+            cues: massanehBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 36.05,
+            cues: massanehKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -247,9 +316,36 @@ export const massanehCeesayStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-narration.mp3",
-        narrationDurationSeconds: 40.27,
-        cues: massanehScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-amara.mp3",
+        narrationDurationSeconds: 35.75,
+        cues: massanehAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-amara.mp3",
+            narrationDurationSeconds: 35.75,
+            cues: massanehAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-narration.mp3",
+            narrationDurationSeconds: 40.27,
+            cues: massanehScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 36.3,
+            cues: massanehBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 38.27,
+            cues: massanehKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -296,9 +392,36 @@ export const massanehCeesayStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-narration.mp3",
-        narrationDurationSeconds: 39.48,
-        cues: massanehScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-amara.mp3",
+        narrationDurationSeconds: 34.95,
+        cues: massanehAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-amara.mp3",
+            narrationDurationSeconds: 34.95,
+            cues: massanehAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-narration.mp3",
+            narrationDurationSeconds: 39.48,
+            cues: massanehScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 35.05,
+            cues: massanehBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 37.62,
+            cues: massanehKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -336,9 +459,36 @@ export const massanehCeesayStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-narration.mp3",
-        narrationDurationSeconds: 44.2,
-        cues: massanehScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-amara.mp3",
+        narrationDurationSeconds: 38.9,
+        cues: massanehAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-amara.mp3",
+            narrationDurationSeconds: 38.9,
+            cues: massanehAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-narration.mp3",
+            narrationDurationSeconds: 44.2,
+            cues: massanehScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 39.35,
+            cues: massanehBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-ballad-of-massaneh-ceesay/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 41.4,
+            cues: massanehKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

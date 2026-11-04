@@ -4,6 +4,21 @@ import yanmeyScene02 from "@/data/audio/cues/queen-yanmey/scene-02.json";
 import yanmeyScene03 from "@/data/audio/cues/queen-yanmey/scene-03.json";
 import yanmeyScene04 from "@/data/audio/cues/queen-yanmey/scene-04.json";
 import yanmeyScene05 from "@/data/audio/cues/queen-yanmey/scene-05.json";
+import yanmeyFodayScene01 from "@/data/audio/cues/queen-yanmey/scene-01-foday.json";
+import yanmeyFodayScene02 from "@/data/audio/cues/queen-yanmey/scene-02-foday.json";
+import yanmeyFodayScene03 from "@/data/audio/cues/queen-yanmey/scene-03-foday.json";
+import yanmeyFodayScene04 from "@/data/audio/cues/queen-yanmey/scene-04-foday.json";
+import yanmeyFodayScene05 from "@/data/audio/cues/queen-yanmey/scene-05-foday.json";
+import yanmeyBaboucarScene01 from "@/data/audio/cues/queen-yanmey/scene-01-baboucar.json";
+import yanmeyBaboucarScene02 from "@/data/audio/cues/queen-yanmey/scene-02-baboucar.json";
+import yanmeyBaboucarScene03 from "@/data/audio/cues/queen-yanmey/scene-03-baboucar.json";
+import yanmeyBaboucarScene04 from "@/data/audio/cues/queen-yanmey/scene-04-baboucar.json";
+import yanmeyBaboucarScene05 from "@/data/audio/cues/queen-yanmey/scene-05-baboucar.json";
+import yanmeyKaddyScene01 from "@/data/audio/cues/queen-yanmey/scene-01-kaddy.json";
+import yanmeyKaddyScene02 from "@/data/audio/cues/queen-yanmey/scene-02-kaddy.json";
+import yanmeyKaddyScene03 from "@/data/audio/cues/queen-yanmey/scene-03-kaddy.json";
+import yanmeyKaddyScene04 from "@/data/audio/cues/queen-yanmey/scene-04-kaddy.json";
+import yanmeyKaddyScene05 from "@/data/audio/cues/queen-yanmey/scene-05-kaddy.json";
 
 
 export const queenYanmeyStory: Story = {
@@ -149,6 +164,33 @@ export const queenYanmeyStory: Story = {
         narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-01-narration.mp3",
         narrationDurationSeconds: 37.5,
         cues: yanmeyScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-01-narration.mp3",
+            narrationDurationSeconds: 37.5,
+            cues: yanmeyScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-01-foday.mp3",
+            narrationDurationSeconds: 42.23,
+            cues: yanmeyFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 37.23,
+            cues: yanmeyBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 39.8,
+            cues: yanmeyKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -196,6 +238,33 @@ export const queenYanmeyStory: Story = {
         narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-02-narration.mp3",
         narrationDurationSeconds: 34.48,
         cues: yanmeyScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-02-narration.mp3",
+            narrationDurationSeconds: 34.48,
+            cues: yanmeyScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-02-foday.mp3",
+            narrationDurationSeconds: 39.27,
+            cues: yanmeyFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 34.6,
+            cues: yanmeyBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 36.45,
+            cues: yanmeyKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -243,6 +312,33 @@ export const queenYanmeyStory: Story = {
         narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-03-narration.mp3",
         narrationDurationSeconds: 32.58,
         cues: yanmeyScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-03-narration.mp3",
+            narrationDurationSeconds: 32.58,
+            cues: yanmeyScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-03-foday.mp3",
+            narrationDurationSeconds: 37.0,
+            cues: yanmeyFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 32.85,
+            cues: yanmeyBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 34.4,
+            cues: yanmeyKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -290,6 +386,33 @@ export const queenYanmeyStory: Story = {
         narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-04-narration.mp3",
         narrationDurationSeconds: 33.42,
         cues: yanmeyScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-04-narration.mp3",
+            narrationDurationSeconds: 33.42,
+            cues: yanmeyScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-04-foday.mp3",
+            narrationDurationSeconds: 37.62,
+            cues: yanmeyFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 33.0,
+            cues: yanmeyBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 35.27,
+            cues: yanmeyKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -337,6 +460,33 @@ export const queenYanmeyStory: Story = {
         narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-05-narration.mp3",
         narrationDurationSeconds: 37.27,
         cues: yanmeyScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-05-narration.mp3",
+            narrationDurationSeconds: 37.27,
+            cues: yanmeyScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-05-foday.mp3",
+            narrationDurationSeconds: 42.3,
+            cues: yanmeyFodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 37.3,
+            cues: yanmeyBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/queen-yanmey-and-the-sovereign-river/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 39.77,
+            cues: yanmeyKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

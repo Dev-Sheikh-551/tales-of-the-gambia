@@ -3,6 +3,18 @@ import kumpoScene01 from "@/data/audio/cues/whirling-spirit-kumpo/scene-01.json"
 import kumpoScene02 from "@/data/audio/cues/whirling-spirit-kumpo/scene-02.json";
 import kumpoScene03 from "@/data/audio/cues/whirling-spirit-kumpo/scene-03.json";
 import kumpoScene04 from "@/data/audio/cues/whirling-spirit-kumpo/scene-04.json";
+import kumpoAmaraScene01 from "@/data/audio/cues/whirling-spirit-kumpo/scene-01-amara.json";
+import kumpoAmaraScene02 from "@/data/audio/cues/whirling-spirit-kumpo/scene-02-amara.json";
+import kumpoAmaraScene03 from "@/data/audio/cues/whirling-spirit-kumpo/scene-03-amara.json";
+import kumpoAmaraScene04 from "@/data/audio/cues/whirling-spirit-kumpo/scene-04-amara.json";
+import kumpoBaboucarScene01 from "@/data/audio/cues/whirling-spirit-kumpo/scene-01-baboucar.json";
+import kumpoBaboucarScene02 from "@/data/audio/cues/whirling-spirit-kumpo/scene-02-baboucar.json";
+import kumpoBaboucarScene03 from "@/data/audio/cues/whirling-spirit-kumpo/scene-03-baboucar.json";
+import kumpoBaboucarScene04 from "@/data/audio/cues/whirling-spirit-kumpo/scene-04-baboucar.json";
+import kumpoKaddyScene01 from "@/data/audio/cues/whirling-spirit-kumpo/scene-01-kaddy.json";
+import kumpoKaddyScene02 from "@/data/audio/cues/whirling-spirit-kumpo/scene-02-kaddy.json";
+import kumpoKaddyScene03 from "@/data/audio/cues/whirling-spirit-kumpo/scene-03-kaddy.json";
+import kumpoKaddyScene04 from "@/data/audio/cues/whirling-spirit-kumpo/scene-04-kaddy.json";
 
 
 export const whirlingSpiritKumpoStory: Story = {
@@ -136,9 +148,36 @@ export const whirlingSpiritKumpoStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-01-narration.mp3",
-        narrationDurationSeconds: 35.77,
-        cues: kumpoScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-01-amara.mp3",
+        narrationDurationSeconds: 31.52,
+        cues: kumpoAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-01-amara.mp3",
+            narrationDurationSeconds: 31.52,
+            cues: kumpoAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-01-narration.mp3",
+            narrationDurationSeconds: 35.77,
+            cues: kumpoScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 31.48,
+            cues: kumpoBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 33.8,
+            cues: kumpoKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -183,9 +222,36 @@ export const whirlingSpiritKumpoStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-02-narration.mp3",
-        narrationDurationSeconds: 33.48,
-        cues: kumpoScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-02-amara.mp3",
+        narrationDurationSeconds: 30.18,
+        cues: kumpoAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-02-amara.mp3",
+            narrationDurationSeconds: 30.18,
+            cues: kumpoAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-02-narration.mp3",
+            narrationDurationSeconds: 33.48,
+            cues: kumpoScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 29.65,
+            cues: kumpoBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 31.82,
+            cues: kumpoKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -230,9 +296,36 @@ export const whirlingSpiritKumpoStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-03-narration.mp3",
-        narrationDurationSeconds: 42.98,
-        cues: kumpoScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-03-amara.mp3",
+        narrationDurationSeconds: 39.17,
+        cues: kumpoAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-03-amara.mp3",
+            narrationDurationSeconds: 39.17,
+            cues: kumpoAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-03-narration.mp3",
+            narrationDurationSeconds: 42.98,
+            cues: kumpoScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 38.3,
+            cues: kumpoBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 41.73,
+            cues: kumpoKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -277,9 +370,36 @@ export const whirlingSpiritKumpoStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-04-narration.mp3",
-        narrationDurationSeconds: 38.23,
-        cues: kumpoScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-04-amara.mp3",
+        narrationDurationSeconds: 34.3,
+        cues: kumpoAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-04-amara.mp3",
+            narrationDurationSeconds: 34.3,
+            cues: kumpoAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-04-narration.mp3",
+            narrationDurationSeconds: 38.23,
+            cues: kumpoScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 34.25,
+            cues: kumpoBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-whirling-spirit-of-the-fromager/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 36.42,
+            cues: kumpoKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

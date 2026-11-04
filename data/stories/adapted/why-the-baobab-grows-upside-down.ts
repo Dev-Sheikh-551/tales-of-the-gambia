@@ -4,6 +4,21 @@ import baobabScene02 from "@/data/audio/cues/baobab-upside-down/scene-02.json";
 import baobabScene03 from "@/data/audio/cues/baobab-upside-down/scene-03.json";
 import baobabScene04 from "@/data/audio/cues/baobab-upside-down/scene-04.json";
 import baobabScene05 from "@/data/audio/cues/baobab-upside-down/scene-05.json";
+import baobabFodayScene01 from "@/data/audio/cues/baobab-upside-down/scene-01-foday.json";
+import baobabFodayScene02 from "@/data/audio/cues/baobab-upside-down/scene-02-foday.json";
+import baobabFodayScene03 from "@/data/audio/cues/baobab-upside-down/scene-03-foday.json";
+import baobabFodayScene04 from "@/data/audio/cues/baobab-upside-down/scene-04-foday.json";
+import baobabFodayScene05 from "@/data/audio/cues/baobab-upside-down/scene-05-foday.json";
+import baobabBaboucarScene01 from "@/data/audio/cues/baobab-upside-down/scene-01-baboucar.json";
+import baobabBaboucarScene02 from "@/data/audio/cues/baobab-upside-down/scene-02-baboucar.json";
+import baobabBaboucarScene03 from "@/data/audio/cues/baobab-upside-down/scene-03-baboucar.json";
+import baobabBaboucarScene04 from "@/data/audio/cues/baobab-upside-down/scene-04-baboucar.json";
+import baobabBaboucarScene05 from "@/data/audio/cues/baobab-upside-down/scene-05-baboucar.json";
+import baobabKaddyScene01 from "@/data/audio/cues/baobab-upside-down/scene-01-kaddy.json";
+import baobabKaddyScene02 from "@/data/audio/cues/baobab-upside-down/scene-02-kaddy.json";
+import baobabKaddyScene03 from "@/data/audio/cues/baobab-upside-down/scene-03-kaddy.json";
+import baobabKaddyScene04 from "@/data/audio/cues/baobab-upside-down/scene-04-kaddy.json";
+import baobabKaddyScene05 from "@/data/audio/cues/baobab-upside-down/scene-05-kaddy.json";
 
 
 /**
@@ -171,6 +186,33 @@ And the baobab knew it.`,
         narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-01-narration.mp3",
         narrationDurationSeconds: 57.95,
         cues: baobabScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-01-narration.mp3",
+            narrationDurationSeconds: 57.95,
+            cues: baobabScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-01-foday.mp3",
+            narrationDurationSeconds: 65.78,
+            cues: baobabFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 59.73,
+            cues: baobabBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 63.17,
+            cues: baobabKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 80,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -208,6 +250,33 @@ And then decided the baobab had been beautiful for long enough in its current co
         narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-02-narration.mp3",
         narrationDurationSeconds: 60.73,
         cues: baobabScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-02-narration.mp3",
+            narrationDurationSeconds: 60.73,
+            cues: baobabScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-02-foday.mp3",
+            narrationDurationSeconds: 68.8,
+            cues: baobabFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 62.27,
+            cues: baobabBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 66.0,
+            cues: baobabKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -251,6 +320,33 @@ And the baobab had no one to blame but itself.`,
         narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-03-narration.mp3",
         narrationDurationSeconds: 65.1,
         cues: baobabScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-03-narration.mp3",
+            narrationDurationSeconds: 65.1,
+            cues: baobabScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-03-foday.mp3",
+            narrationDurationSeconds: 74.85,
+            cues: baobabFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 68.85,
+            cues: baobabBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 71.72,
+            cues: baobabKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -290,6 +386,33 @@ It felt necessary.`,
         narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-04-narration.mp3",
         narrationDurationSeconds: 71.72,
         cues: baobabScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-04-narration.mp3",
+            narrationDurationSeconds: 71.72,
+            cues: baobabScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-04-foday.mp3",
+            narrationDurationSeconds: 80.25,
+            cues: baobabFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 72.75,
+            cues: baobabBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 77.3,
+            cues: baobabKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -331,6 +454,33 @@ Laughing, softly, at itself.`,
         narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-05-narration.mp3",
         narrationDurationSeconds: 81.65,
         cues: baobabScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-05-narration.mp3",
+            narrationDurationSeconds: 81.65,
+            cues: baobabScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-05-foday.mp3",
+            narrationDurationSeconds: 91.75,
+            cues: baobabFodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 82.28,
+            cues: baobabBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/why-the-baobab-grows-upside-down/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 88.0,
+            cues: baobabKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "fade", durationSeconds: 3 },

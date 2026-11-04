@@ -3,6 +3,18 @@ import birdsScene01 from "@/data/audio/cues/birds-parliament/scene-01.json";
 import birdsScene02 from "@/data/audio/cues/birds-parliament/scene-02.json";
 import birdsScene03 from "@/data/audio/cues/birds-parliament/scene-03.json";
 import birdsScene04 from "@/data/audio/cues/birds-parliament/scene-04.json";
+import birdsFodayScene01 from "@/data/audio/cues/birds-parliament/scene-01-foday.json";
+import birdsFodayScene02 from "@/data/audio/cues/birds-parliament/scene-02-foday.json";
+import birdsFodayScene03 from "@/data/audio/cues/birds-parliament/scene-03-foday.json";
+import birdsFodayScene04 from "@/data/audio/cues/birds-parliament/scene-04-foday.json";
+import birdsBaboucarScene01 from "@/data/audio/cues/birds-parliament/scene-01-baboucar.json";
+import birdsBaboucarScene02 from "@/data/audio/cues/birds-parliament/scene-02-baboucar.json";
+import birdsBaboucarScene03 from "@/data/audio/cues/birds-parliament/scene-03-baboucar.json";
+import birdsBaboucarScene04 from "@/data/audio/cues/birds-parliament/scene-04-baboucar.json";
+import birdsKaddyScene01 from "@/data/audio/cues/birds-parliament/scene-01-kaddy.json";
+import birdsKaddyScene02 from "@/data/audio/cues/birds-parliament/scene-02-kaddy.json";
+import birdsKaddyScene03 from "@/data/audio/cues/birds-parliament/scene-03-kaddy.json";
+import birdsKaddyScene04 from "@/data/audio/cues/birds-parliament/scene-04-kaddy.json";
 
 
 export const birdsParliamentStory: Story = {
@@ -147,6 +159,33 @@ export const birdsParliamentStory: Story = {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-01-narration.mp3",
         narrationDurationSeconds: 29.45,
         cues: birdsScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-01-narration.mp3",
+            narrationDurationSeconds: 29.45,
+            cues: birdsScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-01-foday.mp3",
+            narrationDurationSeconds: 32.65,
+            cues: birdsFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 29.5,
+            cues: birdsBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 31.45,
+            cues: birdsKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -202,6 +241,33 @@ export const birdsParliamentStory: Story = {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-02-narration.mp3",
         narrationDurationSeconds: 33.23,
         cues: birdsScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-02-narration.mp3",
+            narrationDurationSeconds: 33.23,
+            cues: birdsScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-02-foday.mp3",
+            narrationDurationSeconds: 37.55,
+            cues: birdsFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 33.52,
+            cues: birdsBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 35.98,
+            cues: birdsKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -249,6 +315,33 @@ export const birdsParliamentStory: Story = {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-03-narration.mp3",
         narrationDurationSeconds: 26.05,
         cues: birdsScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-03-narration.mp3",
+            narrationDurationSeconds: 26.05,
+            cues: birdsScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-03-foday.mp3",
+            narrationDurationSeconds: 29.4,
+            cues: birdsFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 25.62,
+            cues: birdsBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 27.62,
+            cues: birdsKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -296,6 +389,33 @@ export const birdsParliamentStory: Story = {
         narrationUrl: "/audio/stories/the-birds-parliament/scene-04-narration.mp3",
         narrationDurationSeconds: 38.62,
         cues: birdsScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-04-narration.mp3",
+            narrationDurationSeconds: 38.62,
+            cues: birdsScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-04-foday.mp3",
+            narrationDurationSeconds: 44.12,
+            cues: birdsFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 39.45,
+            cues: birdsBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-birds-parliament/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 41.5,
+            cues: birdsKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

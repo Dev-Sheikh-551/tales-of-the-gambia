@@ -5,6 +5,24 @@ import hareHyenaScene03 from "@/data/audio/cues/clever-hare-hyena/scene-03.json"
 import hareHyenaScene04 from "@/data/audio/cues/clever-hare-hyena/scene-04.json";
 import hareHyenaScene05 from "@/data/audio/cues/clever-hare-hyena/scene-05.json";
 import hareHyenaScene06 from "@/data/audio/cues/clever-hare-hyena/scene-06.json";
+import hareHyenaFodayScene01 from "@/data/audio/cues/clever-hare-hyena/scene-01-foday.json";
+import hareHyenaFodayScene02 from "@/data/audio/cues/clever-hare-hyena/scene-02-foday.json";
+import hareHyenaFodayScene03 from "@/data/audio/cues/clever-hare-hyena/scene-03-foday.json";
+import hareHyenaFodayScene04 from "@/data/audio/cues/clever-hare-hyena/scene-04-foday.json";
+import hareHyenaFodayScene05 from "@/data/audio/cues/clever-hare-hyena/scene-05-foday.json";
+import hareHyenaFodayScene06 from "@/data/audio/cues/clever-hare-hyena/scene-06-foday.json";
+import hareHyenaBaboucarScene01 from "@/data/audio/cues/clever-hare-hyena/scene-01-baboucar.json";
+import hareHyenaBaboucarScene02 from "@/data/audio/cues/clever-hare-hyena/scene-02-baboucar.json";
+import hareHyenaBaboucarScene03 from "@/data/audio/cues/clever-hare-hyena/scene-03-baboucar.json";
+import hareHyenaBaboucarScene04 from "@/data/audio/cues/clever-hare-hyena/scene-04-baboucar.json";
+import hareHyenaBaboucarScene05 from "@/data/audio/cues/clever-hare-hyena/scene-05-baboucar.json";
+import hareHyenaBaboucarScene06 from "@/data/audio/cues/clever-hare-hyena/scene-06-baboucar.json";
+import hareHyenaKaddyScene01 from "@/data/audio/cues/clever-hare-hyena/scene-01-kaddy.json";
+import hareHyenaKaddyScene02 from "@/data/audio/cues/clever-hare-hyena/scene-02-kaddy.json";
+import hareHyenaKaddyScene03 from "@/data/audio/cues/clever-hare-hyena/scene-03-kaddy.json";
+import hareHyenaKaddyScene04 from "@/data/audio/cues/clever-hare-hyena/scene-04-kaddy.json";
+import hareHyenaKaddyScene05 from "@/data/audio/cues/clever-hare-hyena/scene-05-kaddy.json";
+import hareHyenaKaddyScene06 from "@/data/audio/cues/clever-hare-hyena/scene-06-kaddy.json";
 
 
 export const cleverHareAndHyenaStory: Story = {
@@ -134,6 +152,33 @@ export const cleverHareAndHyenaStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-01-narration.mp3",
         narrationDurationSeconds: 41.62,
         cues: hareHyenaScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-01-narration.mp3",
+            narrationDurationSeconds: 41.62,
+            cues: hareHyenaScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-01-foday.mp3",
+            narrationDurationSeconds: 46.98,
+            cues: hareHyenaFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 42.5,
+            cues: hareHyenaBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 45.15,
+            cues: hareHyenaKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -173,6 +218,33 @@ export const cleverHareAndHyenaStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-02-narration.mp3",
         narrationDurationSeconds: 37.77,
         cues: hareHyenaScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-02-narration.mp3",
+            narrationDurationSeconds: 37.77,
+            cues: hareHyenaScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-02-foday.mp3",
+            narrationDurationSeconds: 42.58,
+            cues: hareHyenaFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 37.7,
+            cues: hareHyenaBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 40.73,
+            cues: hareHyenaKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -220,6 +292,33 @@ export const cleverHareAndHyenaStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-03-narration.mp3",
         narrationDurationSeconds: 36.38,
         cues: hareHyenaScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-03-narration.mp3",
+            narrationDurationSeconds: 36.38,
+            cues: hareHyenaScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-03-foday.mp3",
+            narrationDurationSeconds: 40.88,
+            cues: hareHyenaFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 37.0,
+            cues: hareHyenaBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 38.98,
+            cues: hareHyenaKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -259,6 +358,33 @@ export const cleverHareAndHyenaStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-04-narration.mp3",
         narrationDurationSeconds: 28.32,
         cues: hareHyenaScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-04-narration.mp3",
+            narrationDurationSeconds: 28.32,
+            cues: hareHyenaScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-04-foday.mp3",
+            narrationDurationSeconds: 31.38,
+            cues: hareHyenaFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 28.12,
+            cues: hareHyenaBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 29.65,
+            cues: hareHyenaKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -298,6 +424,33 @@ export const cleverHareAndHyenaStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-05-narration.mp3",
         narrationDurationSeconds: 28.5,
         cues: hareHyenaScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-05-narration.mp3",
+            narrationDurationSeconds: 28.5,
+            cues: hareHyenaScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-05-foday.mp3",
+            narrationDurationSeconds: 31.73,
+            cues: hareHyenaFodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 28.23,
+            cues: hareHyenaBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 30.23,
+            cues: hareHyenaKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -337,6 +490,33 @@ export const cleverHareAndHyenaStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-06-narration.mp3",
         narrationDurationSeconds: 28.38,
         cues: hareHyenaScene06 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-06-narration.mp3",
+            narrationDurationSeconds: 28.38,
+            cues: hareHyenaScene06 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-06-foday.mp3",
+            narrationDurationSeconds: 31.3,
+            cues: hareHyenaFodayScene06 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-06-baboucar.mp3",
+            narrationDurationSeconds: 27.85,
+            cues: hareHyenaBaboucarScene06 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-hyena/scene-06-kaddy.mp3",
+            narrationDurationSeconds: 30.27,
+            cues: hareHyenaKaddyScene06 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

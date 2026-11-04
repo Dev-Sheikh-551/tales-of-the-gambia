@@ -280,7 +280,7 @@ class StoryDownloadManager {
           accumulatedBytes += actualBytes;
           currentState = updateDownloadProgress(currentState, accumulatedBytes, totalBytes);
           this.notifyState(currentState);
-        } catch (assetErr: any) {
+        } catch (assetErr) {
           if (abortController.signal.aborted) throw assetErr;
           if (asset.required) {
             throw assetErr;
@@ -331,10 +331,11 @@ class StoryDownloadManager {
         packageVersion: pkg.version,
       };
       this.notifyState(finalState);
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : "Failed to download story package.";
       const failState = recordDownloadFailure(
         currentState,
-        err.message || "Failed to download story package."
+        errorMessage
       );
       this.notifyState(failState);
       throw err;

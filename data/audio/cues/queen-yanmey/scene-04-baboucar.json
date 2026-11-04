@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.91,
+    "text": "Two weeks later, the merchant brig returned downriver, laden with beeswax, ivory, and groundnuts.",
+    "charStart": 0,
+    "charEnd": 97
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.91,
+    "endSeconds": 9.9,
+    "text": "But as it approached the Barra narrows, the crew stopped dead in their tracks.",
+    "charStart": 98,
+    "charEnd": 176
+  },
+  {
+    "index": 2,
+    "startSeconds": 9.9,
+    "endSeconds": 19.32,
+    "text": "Spanning the entire channel from Barra Point to the shoals were thirty massive Nuimi royal war-canoes, each manned by forty seasoned oarsmen and armed riflemen.",
+    "charStart": 177,
+    "charEnd": 337
+  },
+  {
+    "index": 3,
+    "startSeconds": 19.32,
+    "endSeconds": 22.83,
+    "text": "Drums sounded from both shores in thunderous unison.",
+    "charStart": 338,
+    "charEnd": 390
+  },
+  {
+    "index": 4,
+    "startSeconds": 22.83,
+    "endSeconds": 29.6,
+    "text": "Queen Yanmey herself stood at the prow of the flagship canoe, holding aloft the royal staff of Nuimi.",
+    "charStart": 391,
+    "charEnd": 492
+  },
+  {
+    "index": 5,
+    "startSeconds": 29.6,
+    "endSeconds": 33.0,
+    "text": "The ship’s sails were dropped within minutes.",
+    "charStart": 493,
+    "charEnd": 538
+  }
+]

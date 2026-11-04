@@ -2,6 +2,15 @@ import { Story, NarrationCue } from "@/types/story";
 import ninkiCues01 from "@/data/audio/cues/ninki-nanka/scene-01.json";
 import ninkiCues02 from "@/data/audio/cues/ninki-nanka/scene-02.json";
 import ninkiCues03 from "@/data/audio/cues/ninki-nanka/scene-03.json";
+import ninkiAmaraScene01 from "@/data/audio/cues/ninki-nanka/scene-01-amara.json";
+import ninkiAmaraScene02 from "@/data/audio/cues/ninki-nanka/scene-02-amara.json";
+import ninkiAmaraScene03 from "@/data/audio/cues/ninki-nanka/scene-03-amara.json";
+import ninkiBaboucarScene01 from "@/data/audio/cues/ninki-nanka/scene-01-baboucar.json";
+import ninkiBaboucarScene02 from "@/data/audio/cues/ninki-nanka/scene-02-baboucar.json";
+import ninkiBaboucarScene03 from "@/data/audio/cues/ninki-nanka/scene-03-baboucar.json";
+import ninkiKaddyScene01 from "@/data/audio/cues/ninki-nanka/scene-01-kaddy.json";
+import ninkiKaddyScene02 from "@/data/audio/cues/ninki-nanka/scene-02-kaddy.json";
+import ninkiKaddyScene03 from "@/data/audio/cues/ninki-nanka/scene-03-kaddy.json";
 
 export const ninkiNankaStory: Story = {
   id: "story-2",
@@ -142,9 +151,36 @@ export const ninkiNankaStory: Story = {
         ],
       },
       audio: {
-        narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-narration.mp3",
-        narrationDurationSeconds: 25.18,
-        cues: ninkiCues01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-amara.mp3",
+        narrationDurationSeconds: 22.5,
+        cues: ninkiAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-amara.mp3",
+            narrationDurationSeconds: 22.5,
+            cues: ninkiAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-narration.mp3",
+            narrationDurationSeconds: 25.18,
+            cues: ninkiCues01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 22.9,
+            cues: ninkiBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 24.15,
+            cues: ninkiKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -242,9 +278,36 @@ export const ninkiNankaStory: Story = {
         ],
       },
       audio: {
-        narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-narration.mp3",
-        narrationDurationSeconds: 24.98,
-        cues: ninkiCues02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-amara.mp3",
+        narrationDurationSeconds: 22.5,
+        cues: ninkiAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-amara.mp3",
+            narrationDurationSeconds: 22.5,
+            cues: ninkiAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-narration.mp3",
+            narrationDurationSeconds: 24.98,
+            cues: ninkiCues02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 22.52,
+            cues: ninkiBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 24.32,
+            cues: ninkiKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -314,9 +377,36 @@ export const ninkiNankaStory: Story = {
         ],
       },
       audio: {
-        narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-narration.mp3",
-        narrationDurationSeconds: 24.57,
-        cues: ninkiCues03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-amara.mp3",
+        narrationDurationSeconds: 21.77,
+        cues: ninkiAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-amara.mp3",
+            narrationDurationSeconds: 21.77,
+            cues: ninkiAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-narration.mp3",
+            narrationDurationSeconds: 24.57,
+            cues: ninkiCues03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 21.85,
+            cues: ninkiBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-whispering-waters-of-ninki-nanka/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 23.45,
+            cues: ninkiKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

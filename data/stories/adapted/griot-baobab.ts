@@ -2,6 +2,15 @@ import { Story, NarrationCue } from "@/types/story";
 import griotScene01 from "@/data/audio/cues/griot-baobab/scene-01.json";
 import griotScene02 from "@/data/audio/cues/griot-baobab/scene-02.json";
 import griotScene03 from "@/data/audio/cues/griot-baobab/scene-03.json";
+import griotAmaraScene01 from "@/data/audio/cues/griot-baobab/scene-01-amara.json";
+import griotAmaraScene02 from "@/data/audio/cues/griot-baobab/scene-02-amara.json";
+import griotAmaraScene03 from "@/data/audio/cues/griot-baobab/scene-03-amara.json";
+import griotBaboucarScene01 from "@/data/audio/cues/griot-baobab/scene-01-baboucar.json";
+import griotBaboucarScene02 from "@/data/audio/cues/griot-baobab/scene-02-baboucar.json";
+import griotBaboucarScene03 from "@/data/audio/cues/griot-baobab/scene-03-baboucar.json";
+import griotKaddyScene01 from "@/data/audio/cues/griot-baobab/scene-01-kaddy.json";
+import griotKaddyScene02 from "@/data/audio/cues/griot-baobab/scene-02-kaddy.json";
+import griotKaddyScene03 from "@/data/audio/cues/griot-baobab/scene-03-kaddy.json";
 
 
 export const griotBaobabStory: Story = {
@@ -133,9 +142,36 @@ export const griotBaobabStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-01-narration.mp3",
-        narrationDurationSeconds: 21.8,
-        cues: griotScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-01-amara.mp3",
+        narrationDurationSeconds: 19.18,
+        cues: griotAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-01-amara.mp3",
+            narrationDurationSeconds: 19.18,
+            cues: griotAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-01-narration.mp3",
+            narrationDurationSeconds: 21.8,
+            cues: griotScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 19.88,
+            cues: griotBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 20.88,
+            cues: griotKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -172,9 +208,36 @@ export const griotBaobabStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-02-narration.mp3",
-        narrationDurationSeconds: 25.48,
-        cues: griotScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-02-amara.mp3",
+        narrationDurationSeconds: 22.88,
+        cues: griotAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-02-amara.mp3",
+            narrationDurationSeconds: 22.88,
+            cues: griotAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-02-narration.mp3",
+            narrationDurationSeconds: 25.48,
+            cues: griotScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 22.82,
+            cues: griotBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 24.55,
+            cues: griotKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -211,9 +274,36 @@ export const griotBaobabStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-03-narration.mp3",
-        narrationDurationSeconds: 21.68,
-        cues: griotScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-03-amara.mp3",
+        narrationDurationSeconds: 19.25,
+        cues: griotAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-03-amara.mp3",
+            narrationDurationSeconds: 19.25,
+            cues: griotAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-03-narration.mp3",
+            narrationDurationSeconds: 21.68,
+            cues: griotScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 19.6,
+            cues: griotBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-griot-under-the-baobab/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 20.65,
+            cues: griotKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

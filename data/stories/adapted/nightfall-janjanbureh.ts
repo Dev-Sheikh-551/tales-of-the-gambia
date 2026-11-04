@@ -1,6 +1,12 @@
 import { Story, NarrationCue } from "@/types/story";
 import nightfallScene01 from "@/data/audio/cues/nightfall-janjanbureh/scene-01.json";
 import nightfallScene02 from "@/data/audio/cues/nightfall-janjanbureh/scene-02.json";
+import nightfallFodayScene01 from "@/data/audio/cues/nightfall-janjanbureh/scene-01-foday.json";
+import nightfallFodayScene02 from "@/data/audio/cues/nightfall-janjanbureh/scene-02-foday.json";
+import nightfallBaboucarScene01 from "@/data/audio/cues/nightfall-janjanbureh/scene-01-baboucar.json";
+import nightfallBaboucarScene02 from "@/data/audio/cues/nightfall-janjanbureh/scene-02-baboucar.json";
+import nightfallKaddyScene01 from "@/data/audio/cues/nightfall-janjanbureh/scene-01-kaddy.json";
+import nightfallKaddyScene02 from "@/data/audio/cues/nightfall-janjanbureh/scene-02-kaddy.json";
 
 
 export const nightfallJanjanburehStory: Story = {
@@ -109,6 +115,33 @@ export const nightfallJanjanburehStory: Story = {
         narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-01-narration.mp3",
         narrationDurationSeconds: 20.23,
         cues: nightfallScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-01-narration.mp3",
+            narrationDurationSeconds: 20.23,
+            cues: nightfallScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-01-foday.mp3",
+            narrationDurationSeconds: 22.43,
+            cues: nightfallFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 19.6,
+            cues: nightfallBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 21.07,
+            cues: nightfallKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -148,6 +181,33 @@ export const nightfallJanjanburehStory: Story = {
         narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-02-narration.mp3",
         narrationDurationSeconds: 18.45,
         cues: nightfallScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-02-narration.mp3",
+            narrationDurationSeconds: 18.45,
+            cues: nightfallScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-02-foday.mp3",
+            narrationDurationSeconds: 20.43,
+            cues: nightfallFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 18.02,
+            cues: nightfallBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/nightfall-over-janjanbureh/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 19.15,
+            cues: nightfallKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

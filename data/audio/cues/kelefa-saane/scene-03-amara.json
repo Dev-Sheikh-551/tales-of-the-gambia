@@ -1,0 +1,106 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.19,
+    "text": "The morning Kelefa left for the North Bank, his mother prepared his food herself.",
+    "charStart": 0,
+    "charEnd": 81
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.19,
+    "endSeconds": 10.61,
+    "text": "This is what the griot tells us — that she cooked for him, served him, and watched him eat.",
+    "charStart": 83,
+    "charEnd": 174
+  },
+  {
+    "index": 2,
+    "startSeconds": 10.61,
+    "endSeconds": 13.03,
+    "text": "And when he was done, she did not weep.",
+    "charStart": 175,
+    "charEnd": 214
+  },
+  {
+    "index": 3,
+    "startSeconds": 13.03,
+    "endSeconds": 14.84,
+    "text": "She did not beg him to stay.",
+    "charStart": 215,
+    "charEnd": 243
+  },
+  {
+    "index": 4,
+    "startSeconds": 14.84,
+    "endSeconds": 20.35,
+    "text": "She simply placed her hand on his chest, felt his heart beating beneath her palm, and nodded.",
+    "charStart": 244,
+    "charEnd": 337
+  },
+  {
+    "index": 5,
+    "startSeconds": 20.35,
+    "endSeconds": 23.14,
+    "text": "Go, she said.",
+    "charStart": 339,
+    "charEnd": 352
+  },
+  {
+    "index": 6,
+    "startSeconds": 23.14,
+    "endSeconds": 28.13,
+    "text": "Go and be what you are.",
+    "charStart": 353,
+    "charEnd": 376
+  },
+  {
+    "index": 7,
+    "startSeconds": 28.13,
+    "endSeconds": 31.82,
+    "text": "Because she understood something that the young and the comfortable do not always understand: that some people are made by fate as much as by choice.",
+    "charStart": 378,
+    "charEnd": 527
+  },
+  {
+    "index": 8,
+    "startSeconds": 31.82,
+    "endSeconds": 42.02,
+    "text": "That there are lives which have a shape to them — a trajectory — and that fighting the shape of your life is its own kind of dishonour.",
+    "charStart": 528,
+    "charEnd": 663
+  },
+  {
+    "index": 9,
+    "startSeconds": 42.02,
+    "endSeconds": 45.14,
+    "text": "Kelefa Saane had a shape.",
+    "charStart": 665,
+    "charEnd": 690
+  },
+  {
+    "index": 10,
+    "startSeconds": 45.14,
+    "endSeconds": 52.05,
+    "text": "He was a warrior-prince of the Kaabu Empire, and somewhere across the wide Gambia River, there was a battle waiting for him.",
+    "charStart": 692,
+    "charEnd": 816
+  },
+  {
+    "index": 11,
+    "startSeconds": 52.05,
+    "endSeconds": 52.94,
+    "text": "He crossed the river.",
+    "charStart": 818,
+    "charEnd": 839
+  },
+  {
+    "index": 12,
+    "startSeconds": 52.94,
+    "endSeconds": 54.02,
+    "text": "He did not come back.",
+    "charStart": 841,
+    "charEnd": 862
+  }
+]

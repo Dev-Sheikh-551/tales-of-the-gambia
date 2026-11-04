@@ -4,6 +4,21 @@ import stoneCirclesScene02 from "@/data/audio/cues/stone-circles/scene-02.json";
 import stoneCirclesScene03 from "@/data/audio/cues/stone-circles/scene-03.json";
 import stoneCirclesScene04 from "@/data/audio/cues/stone-circles/scene-04.json";
 import stoneCirclesScene05 from "@/data/audio/cues/stone-circles/scene-05.json";
+import stoneCirclesAmaraScene01 from "@/data/audio/cues/stone-circles/scene-01-amara.json";
+import stoneCirclesAmaraScene02 from "@/data/audio/cues/stone-circles/scene-02-amara.json";
+import stoneCirclesAmaraScene03 from "@/data/audio/cues/stone-circles/scene-03-amara.json";
+import stoneCirclesAmaraScene04 from "@/data/audio/cues/stone-circles/scene-04-amara.json";
+import stoneCirclesAmaraScene05 from "@/data/audio/cues/stone-circles/scene-05-amara.json";
+import stoneCirclesBaboucarScene01 from "@/data/audio/cues/stone-circles/scene-01-baboucar.json";
+import stoneCirclesBaboucarScene02 from "@/data/audio/cues/stone-circles/scene-02-baboucar.json";
+import stoneCirclesBaboucarScene03 from "@/data/audio/cues/stone-circles/scene-03-baboucar.json";
+import stoneCirclesBaboucarScene04 from "@/data/audio/cues/stone-circles/scene-04-baboucar.json";
+import stoneCirclesBaboucarScene05 from "@/data/audio/cues/stone-circles/scene-05-baboucar.json";
+import stoneCirclesKaddyScene01 from "@/data/audio/cues/stone-circles/scene-01-kaddy.json";
+import stoneCirclesKaddyScene02 from "@/data/audio/cues/stone-circles/scene-02-kaddy.json";
+import stoneCirclesKaddyScene03 from "@/data/audio/cues/stone-circles/scene-03-kaddy.json";
+import stoneCirclesKaddyScene04 from "@/data/audio/cues/stone-circles/scene-04-kaddy.json";
+import stoneCirclesKaddyScene05 from "@/data/audio/cues/stone-circles/scene-05-kaddy.json";
 
 
 /**
@@ -195,9 +210,36 @@ Before all of that, someone was building.`,
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 9 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-01-narration.mp3",
-        narrationDurationSeconds: 85.35,
-        cues: stoneCirclesScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-01-amara.mp3",
+        narrationDurationSeconds: 75.33,
+        cues: stoneCirclesAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-01-amara.mp3",
+            narrationDurationSeconds: 75.33,
+            cues: stoneCirclesAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-01-narration.mp3",
+            narrationDurationSeconds: 85.35,
+            cues: stoneCirclesScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 76.55,
+            cues: stoneCirclesBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 80.85,
+            cues: stoneCirclesKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -239,9 +281,36 @@ Every one of the 1,000-plus stone circles is someone's way of saying: *here. Thi
       cameraMotion: { preset: "pan-right", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "gentle" },
       audio: {
-        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-02-narration.mp3",
-        narrationDurationSeconds: 85.08,
-        cues: stoneCirclesScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-02-amara.mp3",
+        narrationDurationSeconds: 75.83,
+        cues: stoneCirclesAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-02-amara.mp3",
+            narrationDurationSeconds: 75.83,
+            cues: stoneCirclesAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-02-narration.mp3",
+            narrationDurationSeconds: 85.08,
+            cues: stoneCirclesScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 76.17,
+            cues: stoneCirclesBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 81.25,
+            cues: stoneCirclesKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -289,9 +358,36 @@ But we know they were here. The stones make that impossible to forget.`,
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "river-ripples", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-03-narration.mp3",
-        narrationDurationSeconds: 81.4,
-        cues: stoneCirclesScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-03-amara.mp3",
+        narrationDurationSeconds: 71.2,
+        cues: stoneCirclesAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-03-amara.mp3",
+            narrationDurationSeconds: 71.2,
+            cues: stoneCirclesAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-03-narration.mp3",
+            narrationDurationSeconds: 81.4,
+            cues: stoneCirclesScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 74.33,
+            cues: stoneCirclesBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 78.45,
+            cues: stoneCirclesKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -324,9 +420,36 @@ Who were they? And what did they believe was worth building in stone?`,
       cameraMotion: { preset: "drift", intensity: "subtle", durationSeconds: 12 },
       environmentMotion: { type: "wind", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-04-narration.mp3",
-        narrationDurationSeconds: 84.78,
-        cues: stoneCirclesScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-04-amara.mp3",
+        narrationDurationSeconds: 75.25,
+        cues: stoneCirclesAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-04-amara.mp3",
+            narrationDurationSeconds: 75.25,
+            cues: stoneCirclesAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-04-narration.mp3",
+            narrationDurationSeconds: 84.78,
+            cues: stoneCirclesScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 75.95,
+            cues: stoneCirclesBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 80.25,
+            cues: stoneCirclesKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -374,9 +497,36 @@ You don't need to have an answer. You just need to hear it.`,
       cameraMotion: { preset: "zoom-out", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-05-narration.mp3",
-        narrationDurationSeconds: 91.12,
-        cues: stoneCirclesScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-05-amara.mp3",
+        narrationDurationSeconds: 79.7,
+        cues: stoneCirclesAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-05-amara.mp3",
+            narrationDurationSeconds: 79.7,
+            cues: stoneCirclesAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-05-narration.mp3",
+            narrationDurationSeconds: 91.12,
+            cues: stoneCirclesScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 81.62,
+            cues: stoneCirclesBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/stone-circles-of-wassu/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 86.25,
+            cues: stoneCirclesKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 130,
       transition: { type: "fade", durationSeconds: 3 },

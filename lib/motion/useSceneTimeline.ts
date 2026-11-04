@@ -28,7 +28,7 @@ export function useSceneTimeline(
   scene: Scene,
   currentTime: number = 0,
   cues?: NarrationCue[],
-  isPaused: boolean = false
+  _isPaused: boolean = false
 ): SceneTimelineState {
   return useMemo(() => {
     // 1. Identify active narration cue index
@@ -99,5 +99,5 @@ export function useSceneTimeline(
       environmentOverride,
       activeEffects,
     };
-  }, [scene, currentTime, cues, isPaused]);
+  }, [scene, currentTime, cues]);
 }

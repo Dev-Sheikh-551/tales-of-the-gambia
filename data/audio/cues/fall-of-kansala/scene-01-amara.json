@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.69,
+    "text": "For more than six hundred years, the sun had never set upon an empire as proud as Kaabu.",
+    "charStart": 0,
+    "charEnd": 88
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.69,
+    "endSeconds": 13.72,
+    "text": "From the banks of the River Gambia south to the highlands of Fouta Djallon, thirty-two vassal kingdoms paid tribute to Kansala.",
+    "charStart": 89,
+    "charEnd": 216
+  },
+  {
+    "index": 2,
+    "startSeconds": 13.72,
+    "endSeconds": 21.15,
+    "text": "Its ramparts were built of thick, sun-baked red clay, ringed by triple moats and deep thorn palisades.",
+    "charStart": 217,
+    "charEnd": 319
+  },
+  {
+    "index": 3,
+    "startSeconds": 21.15,
+    "endSeconds": 33.25,
+    "text": "Within its courtyards walked the Nyanchos—nobles who wore silk amulets, rode stallions groomed with sweet river oil, and swore never to take a single step backward in battle.",
+    "charStart": 320,
+    "charEnd": 494
+  }
+]

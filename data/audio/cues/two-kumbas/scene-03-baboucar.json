@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 10.38,
+    "text": "As she walked through the heat, an ancient baobab tree bent its thick branches and groaned in the wind: 'Young traveler, my bark is choked with dry parasite vines.",
+    "charStart": 0,
+    "charEnd": 163
+  },
+  {
+    "index": 1,
+    "startSeconds": 10.38,
+    "endSeconds": 12.61,
+    "text": "Will you free me?'",
+    "charStart": 164,
+    "charEnd": 182
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.61,
+    "endSeconds": 18.67,
+    "text": "Most travelers would have hurried past, but Kumba climbed the trunk and patiently stripped the choking vines away.",
+    "charStart": 183,
+    "charEnd": 297
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.67,
+    "endSeconds": 23.07,
+    "text": "'May your steps be blessed,' the baobab whispered, showering sweet white fruit into her apron.",
+    "charStart": 298,
+    "charEnd": 392
+  },
+  {
+    "index": 4,
+    "startSeconds": 23.07,
+    "endSeconds": 35.83,
+    "text": "Further along, a small herd of gazelles was trapped in thorny brambles; Kumba gently parted the thorns, accepting nothing but their grateful eyes before continuing her lonely trek.",
+    "charStart": 393,
+    "charEnd": 573
+  }
+]

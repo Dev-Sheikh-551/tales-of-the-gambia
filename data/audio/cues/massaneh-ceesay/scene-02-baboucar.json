@@ -1,0 +1,34 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 9.94,
+    "text": "In the same river village lived Bakary Niuminko, a young fisherman whose wealth consisted only of his dugout canoe, his cast net, and his upright word.",
+    "charStart": 0,
+    "charEnd": 151
+  },
+  {
+    "index": 1,
+    "startSeconds": 9.94,
+    "endSeconds": 15.97,
+    "text": "For years, Bakary had courted Fatou, a woman whose grace was spoken of across the district.",
+    "charStart": 152,
+    "charEnd": 243
+  },
+  {
+    "index": 2,
+    "startSeconds": 15.97,
+    "endSeconds": 22.86,
+    "text": "Their families had shared the ceremonial kola nuts, sealing a sacred betrothal before the village elders.",
+    "charStart": 244,
+    "charEnd": 349
+  },
+  {
+    "index": 3,
+    "startSeconds": 22.86,
+    "endSeconds": 33.7,
+    "text": "Though Bakary brought only the fresh harvest of the tides, Fatou's mother had accepted the pledge, knowing that an honest man's labor is a house that does not crumble.",
+    "charStart": 350,
+    "charEnd": 517
+  }
+]

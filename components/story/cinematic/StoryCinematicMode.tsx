@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { X, Sparkles, Play, Pause, SkipBack, SkipForward, Mic } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Story } from "@/types/story";
@@ -75,6 +75,9 @@ export function StoryCinematicMode({
     },
   });
 
+  const storyAudioRef = useRef(storyAudio);
+  storyAudioRef.current = storyAudio;
+
   // Synchronize audio playback with story playback state
   useEffect(() => {
     if (
@@ -90,6 +93,7 @@ export function StoryCinematicMode({
     ) {
       storyAudio.pause();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playbackState, storyAudio.hasAudio, storyAudio.audioState, currentSceneIndex]);
 
   // Lock body scroll when in cinematic mode
@@ -98,7 +102,7 @@ export function StoryCinematicMode({
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = originalStyle;
-      storyAudio.pause();
+      storyAudioRef.current.pause();
     };
   }, []);
 

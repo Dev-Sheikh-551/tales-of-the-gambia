@@ -4,6 +4,21 @@ import firstKoraScene02 from "@/data/audio/cues/first-kora/scene-02.json";
 import firstKoraScene03 from "@/data/audio/cues/first-kora/scene-03.json";
 import firstKoraScene04 from "@/data/audio/cues/first-kora/scene-04.json";
 import firstKoraScene05 from "@/data/audio/cues/first-kora/scene-05.json";
+import firstKoraAmaraScene01 from "@/data/audio/cues/first-kora/scene-01-amara.json";
+import firstKoraAmaraScene02 from "@/data/audio/cues/first-kora/scene-02-amara.json";
+import firstKoraAmaraScene03 from "@/data/audio/cues/first-kora/scene-03-amara.json";
+import firstKoraAmaraScene04 from "@/data/audio/cues/first-kora/scene-04-amara.json";
+import firstKoraAmaraScene05 from "@/data/audio/cues/first-kora/scene-05-amara.json";
+import firstKoraBaboucarScene01 from "@/data/audio/cues/first-kora/scene-01-baboucar.json";
+import firstKoraBaboucarScene02 from "@/data/audio/cues/first-kora/scene-02-baboucar.json";
+import firstKoraBaboucarScene03 from "@/data/audio/cues/first-kora/scene-03-baboucar.json";
+import firstKoraBaboucarScene04 from "@/data/audio/cues/first-kora/scene-04-baboucar.json";
+import firstKoraBaboucarScene05 from "@/data/audio/cues/first-kora/scene-05-baboucar.json";
+import firstKoraKaddyScene01 from "@/data/audio/cues/first-kora/scene-01-kaddy.json";
+import firstKoraKaddyScene02 from "@/data/audio/cues/first-kora/scene-02-kaddy.json";
+import firstKoraKaddyScene03 from "@/data/audio/cues/first-kora/scene-03-kaddy.json";
+import firstKoraKaddyScene04 from "@/data/audio/cues/first-kora/scene-04-kaddy.json";
+import firstKoraKaddyScene05 from "@/data/audio/cues/first-kora/scene-05-kaddy.json";
 
 
 /**
@@ -178,9 +193,36 @@ These qualities — the griots note — were also what made him capable of recei
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 8 },
       environmentMotion: { type: "wind", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/the-first-kora/scene-01-narration.mp3",
-        narrationDurationSeconds: 62.83,
-        cues: firstKoraScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-first-kora/scene-01-amara.mp3",
+        narrationDurationSeconds: 55.2,
+        cues: firstKoraAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-first-kora/scene-01-amara.mp3",
+            narrationDurationSeconds: 55.2,
+            cues: firstKoraAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-first-kora/scene-01-narration.mp3",
+            narrationDurationSeconds: 62.83,
+            cues: firstKoraScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-first-kora/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 57.0,
+            cues: firstKoraBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-first-kora/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 60.4,
+            cues: firstKoraKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 80,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -237,9 +279,36 @@ And when the playing stopped, the player turned and saw him.`,
       cameraMotion: { preset: "pan-left", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "wind", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/the-first-kora/scene-02-narration.mp3",
-        narrationDurationSeconds: 86.7,
-        cues: firstKoraScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-first-kora/scene-02-amara.mp3",
+        narrationDurationSeconds: 76.4,
+        cues: firstKoraAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-first-kora/scene-02-amara.mp3",
+            narrationDurationSeconds: 76.4,
+            cues: firstKoraAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-first-kora/scene-02-narration.mp3",
+            narrationDurationSeconds: 86.7,
+            cues: firstKoraScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-first-kora/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 77.9,
+            cues: firstKoraBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-first-kora/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 82.75,
+            cues: firstKoraKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -294,9 +363,36 @@ Koriang sat with the spirit in that clearing until dawn. And when the light bega
       cameraMotion: { preset: "still", intensity: "subtle", durationSeconds: 11 },
       environmentMotion: { type: "wind", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/the-first-kora/scene-03-narration.mp3",
-        narrationDurationSeconds: 88.22,
-        cues: firstKoraScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-first-kora/scene-03-amara.mp3",
+        narrationDurationSeconds: 78.08,
+        cues: firstKoraAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-first-kora/scene-03-amara.mp3",
+            narrationDurationSeconds: 78.08,
+            cues: firstKoraAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-first-kora/scene-03-narration.mp3",
+            narrationDurationSeconds: 88.22,
+            cues: firstKoraScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-first-kora/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 79.72,
+            cues: firstKoraBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-first-kora/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 85.65,
+            cues: firstKoraKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 120,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -338,9 +434,36 @@ In The Gambia today, the Suso, Kouyaté, Jobarteh, and Diabaté families are amo
       cameraMotion: { preset: "zoom-in", intensity: "subtle", durationSeconds: 10 },
       environmentMotion: { type: "dust-particles", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/the-first-kora/scene-04-narration.mp3",
-        narrationDurationSeconds: 86.33,
-        cues: firstKoraScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-first-kora/scene-04-amara.mp3",
+        narrationDurationSeconds: 77.22,
+        cues: firstKoraAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-first-kora/scene-04-amara.mp3",
+            narrationDurationSeconds: 77.22,
+            cues: firstKoraAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-first-kora/scene-04-narration.mp3",
+            narrationDurationSeconds: 86.33,
+            cues: firstKoraScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-first-kora/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 77.55,
+            cues: firstKoraBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-first-kora/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 83.2,
+            cues: firstKoraKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -384,9 +507,36 @@ You can still hear it.`,
       cameraMotion: { preset: "zoom-out", intensity: "subtle", durationSeconds: 14 },
       environmentMotion: { type: "night-stars", intensity: "subtle" },
       audio: {
-        narrationUrl: "/audio/stories/the-first-kora/scene-05-narration.mp3",
-        narrationDurationSeconds: 98.0,
-        cues: firstKoraScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-first-kora/scene-05-amara.mp3",
+        narrationDurationSeconds: 87.95,
+        cues: firstKoraAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-first-kora/scene-05-amara.mp3",
+            narrationDurationSeconds: 87.95,
+            cues: firstKoraAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-first-kora/scene-05-narration.mp3",
+            narrationDurationSeconds: 98.0,
+            cues: firstKoraScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-first-kora/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 88.03,
+            cues: firstKoraBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-first-kora/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 94.08,
+            cues: firstKoraKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 130,
       transition: { type: "fade", durationSeconds: 3 },

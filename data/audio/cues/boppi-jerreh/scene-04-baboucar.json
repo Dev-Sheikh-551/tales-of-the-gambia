@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.69,
+    "text": "Remembering the words of the elders in that terrifying hour, Lamin dropped to his knees in the bilge.",
+    "charStart": 0,
+    "charEnd": 101
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.69,
+    "endSeconds": 7.4,
+    "text": "He did not fight the current.",
+    "charStart": 102,
+    "charEnd": 131
+  },
+  {
+    "index": 2,
+    "startSeconds": 7.4,
+    "endSeconds": 16.68,
+    "text": "Instead, he lifted his hands, poured his crew's fresh drinking water into the sea as a libation, and spoke words of humble repentance to Boppi Jerreh.",
+    "charStart": 132,
+    "charEnd": 282
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.68,
+    "endSeconds": 19.02,
+    "text": "The grip upon the keel relaxed.",
+    "charStart": 283,
+    "charEnd": 314
+  },
+  {
+    "index": 4,
+    "startSeconds": 19.02,
+    "endSeconds": 24.66,
+    "text": "A gentle swell lifted the battered boat and carried it safely toward the shallows of Barra.",
+    "charStart": 315,
+    "charEnd": 406
+  },
+  {
+    "index": 5,
+    "startSeconds": 24.66,
+    "endSeconds": 36.75,
+    "text": "From that night on, Lamin never crossed into the estuary without honoring the guardians, teaching every young sailor that courage without reverence is only folly in the eyes of the sea.",
+    "charStart": 407,
+    "charEnd": 592
+  }
+]

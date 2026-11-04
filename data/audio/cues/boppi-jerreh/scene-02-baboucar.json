@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 3.64,
+    "text": "Young Lamin was the swiftest oarsman on the Barra shore.",
+    "charStart": 0,
+    "charEnd": 56
+  },
+  {
+    "index": 1,
+    "startSeconds": 3.64,
+    "endSeconds": 11.54,
+    "text": "His carved pirogue cut through the surf like a flying fish, and his holds always returned brimming with barracuda and silver bonga.",
+    "charStart": 57,
+    "charEnd": 188
+  },
+  {
+    "index": 2,
+    "startSeconds": 11.54,
+    "endSeconds": 18.64,
+    "text": "'The elders speak of spirits because their arms have grown weak,' Lamin boasted to the young crewmen gathered on the beach.",
+    "charStart": 189,
+    "charEnd": 312
+  },
+  {
+    "index": 3,
+    "startSeconds": 18.64,
+    "endSeconds": 24.54,
+    "text": "'The fish at Sita Nunku belong to whoever has the courage to drop a net into the dark water.'",
+    "charStart": 313,
+    "charEnd": 406
+  },
+  {
+    "index": 4,
+    "startSeconds": 24.54,
+    "endSeconds": 35.0,
+    "text": "Despite Elder Baboucar’s solemn warning that the equinox moon stirred forces no net could hold, Lamin pushed his boat out into the gathering swell.",
+    "charStart": 407,
+    "charEnd": 554
+  }
+]

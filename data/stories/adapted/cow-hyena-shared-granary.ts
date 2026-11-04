@@ -3,6 +3,18 @@ import cowHyenaGranaryScene01 from "@/data/audio/cues/cow-hyena-granary/scene-01
 import cowHyenaGranaryScene02 from "@/data/audio/cues/cow-hyena-granary/scene-02.json";
 import cowHyenaGranaryScene03 from "@/data/audio/cues/cow-hyena-granary/scene-03.json";
 import cowHyenaGranaryScene04 from "@/data/audio/cues/cow-hyena-granary/scene-04.json";
+import cowHyenaGranaryFodayScene01 from "@/data/audio/cues/cow-hyena-granary/scene-01-foday.json";
+import cowHyenaGranaryFodayScene02 from "@/data/audio/cues/cow-hyena-granary/scene-02-foday.json";
+import cowHyenaGranaryFodayScene03 from "@/data/audio/cues/cow-hyena-granary/scene-03-foday.json";
+import cowHyenaGranaryFodayScene04 from "@/data/audio/cues/cow-hyena-granary/scene-04-foday.json";
+import cowHyenaGranaryBaboucarScene01 from "@/data/audio/cues/cow-hyena-granary/scene-01-baboucar.json";
+import cowHyenaGranaryBaboucarScene02 from "@/data/audio/cues/cow-hyena-granary/scene-02-baboucar.json";
+import cowHyenaGranaryBaboucarScene03 from "@/data/audio/cues/cow-hyena-granary/scene-03-baboucar.json";
+import cowHyenaGranaryBaboucarScene04 from "@/data/audio/cues/cow-hyena-granary/scene-04-baboucar.json";
+import cowHyenaGranaryKaddyScene01 from "@/data/audio/cues/cow-hyena-granary/scene-01-kaddy.json";
+import cowHyenaGranaryKaddyScene02 from "@/data/audio/cues/cow-hyena-granary/scene-02-kaddy.json";
+import cowHyenaGranaryKaddyScene03 from "@/data/audio/cues/cow-hyena-granary/scene-03-kaddy.json";
+import cowHyenaGranaryKaddyScene04 from "@/data/audio/cues/cow-hyena-granary/scene-04-kaddy.json";
 
 
 export const cowHyenaSharedGranaryStory: Story = {
@@ -159,6 +171,33 @@ export const cowHyenaSharedGranaryStory: Story = {
         narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-01-narration.mp3",
         narrationDurationSeconds: 35.73,
         cues: cowHyenaGranaryScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-01-narration.mp3",
+            narrationDurationSeconds: 35.73,
+            cues: cowHyenaGranaryScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-01-foday.mp3",
+            narrationDurationSeconds: 40.42,
+            cues: cowHyenaGranaryFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 36.3,
+            cues: cowHyenaGranaryBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 38.73,
+            cues: cowHyenaGranaryKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -214,6 +253,33 @@ export const cowHyenaSharedGranaryStory: Story = {
         narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-02-narration.mp3",
         narrationDurationSeconds: 33.45,
         cues: cowHyenaGranaryScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-02-narration.mp3",
+            narrationDurationSeconds: 33.45,
+            cues: cowHyenaGranaryScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-02-foday.mp3",
+            narrationDurationSeconds: 37.62,
+            cues: cowHyenaGranaryFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 34.08,
+            cues: cowHyenaGranaryBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 36.38,
+            cues: cowHyenaGranaryKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -253,6 +319,33 @@ export const cowHyenaSharedGranaryStory: Story = {
         narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-03-narration.mp3",
         narrationDurationSeconds: 34.55,
         cues: cowHyenaGranaryScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-03-narration.mp3",
+            narrationDurationSeconds: 34.55,
+            cues: cowHyenaGranaryScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-03-foday.mp3",
+            narrationDurationSeconds: 38.55,
+            cues: cowHyenaGranaryFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 34.75,
+            cues: cowHyenaGranaryBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 37.25,
+            cues: cowHyenaGranaryKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -316,6 +409,33 @@ export const cowHyenaSharedGranaryStory: Story = {
         narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-04-narration.mp3",
         narrationDurationSeconds: 37.08,
         cues: cowHyenaGranaryScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-04-narration.mp3",
+            narrationDurationSeconds: 37.08,
+            cues: cowHyenaGranaryScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-04-foday.mp3",
+            narrationDurationSeconds: 41.58,
+            cues: cowHyenaGranaryFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 37.23,
+            cues: cowHyenaGranaryBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-cow-the-hyena-and-the-shared-granary/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 39.8,
+            cues: cowHyenaGranaryKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

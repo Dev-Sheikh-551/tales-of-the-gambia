@@ -4,6 +4,21 @@ import morLamScene02 from "@/data/audio/cues/bone-of-mor-lam/scene-02.json";
 import morLamScene03 from "@/data/audio/cues/bone-of-mor-lam/scene-03.json";
 import morLamScene04 from "@/data/audio/cues/bone-of-mor-lam/scene-04.json";
 import morLamScene05 from "@/data/audio/cues/bone-of-mor-lam/scene-05.json";
+import morLamFodayScene01 from "@/data/audio/cues/bone-of-mor-lam/scene-01-foday.json";
+import morLamFodayScene02 from "@/data/audio/cues/bone-of-mor-lam/scene-02-foday.json";
+import morLamFodayScene03 from "@/data/audio/cues/bone-of-mor-lam/scene-03-foday.json";
+import morLamFodayScene04 from "@/data/audio/cues/bone-of-mor-lam/scene-04-foday.json";
+import morLamFodayScene05 from "@/data/audio/cues/bone-of-mor-lam/scene-05-foday.json";
+import morLamBaboucarScene01 from "@/data/audio/cues/bone-of-mor-lam/scene-01-baboucar.json";
+import morLamBaboucarScene02 from "@/data/audio/cues/bone-of-mor-lam/scene-02-baboucar.json";
+import morLamBaboucarScene03 from "@/data/audio/cues/bone-of-mor-lam/scene-03-baboucar.json";
+import morLamBaboucarScene04 from "@/data/audio/cues/bone-of-mor-lam/scene-04-baboucar.json";
+import morLamBaboucarScene05 from "@/data/audio/cues/bone-of-mor-lam/scene-05-baboucar.json";
+import morLamKaddyScene01 from "@/data/audio/cues/bone-of-mor-lam/scene-01-kaddy.json";
+import morLamKaddyScene02 from "@/data/audio/cues/bone-of-mor-lam/scene-02-kaddy.json";
+import morLamKaddyScene03 from "@/data/audio/cues/bone-of-mor-lam/scene-03-kaddy.json";
+import morLamKaddyScene04 from "@/data/audio/cues/bone-of-mor-lam/scene-04-kaddy.json";
+import morLamKaddyScene05 from "@/data/audio/cues/bone-of-mor-lam/scene-05-kaddy.json";
 
 
 export const boneOfMorLamStory: Story = {
@@ -144,6 +159,33 @@ export const boneOfMorLamStory: Story = {
         narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-01-narration.mp3",
         narrationDurationSeconds: 29.18,
         cues: morLamScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-01-narration.mp3",
+            narrationDurationSeconds: 29.18,
+            cues: morLamScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-01-foday.mp3",
+            narrationDurationSeconds: 32.75,
+            cues: morLamFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 28.95,
+            cues: morLamBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 30.62,
+            cues: morLamKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -191,6 +233,33 @@ export const boneOfMorLamStory: Story = {
         narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-02-narration.mp3",
         narrationDurationSeconds: 29.3,
         cues: morLamScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-02-narration.mp3",
+            narrationDurationSeconds: 29.3,
+            cues: morLamScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-02-foday.mp3",
+            narrationDurationSeconds: 33.15,
+            cues: morLamFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 29.2,
+            cues: morLamBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 31.07,
+            cues: morLamKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -238,6 +307,33 @@ export const boneOfMorLamStory: Story = {
         narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-03-narration.mp3",
         narrationDurationSeconds: 28.4,
         cues: morLamScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-03-narration.mp3",
+            narrationDurationSeconds: 28.4,
+            cues: morLamScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-03-foday.mp3",
+            narrationDurationSeconds: 31.38,
+            cues: morLamFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 28.32,
+            cues: morLamBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 30.5,
+            cues: morLamKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -285,6 +381,33 @@ export const boneOfMorLamStory: Story = {
         narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-04-narration.mp3",
         narrationDurationSeconds: 28.8,
         cues: morLamScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-04-narration.mp3",
+            narrationDurationSeconds: 28.8,
+            cues: morLamScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-04-foday.mp3",
+            narrationDurationSeconds: 32.48,
+            cues: morLamFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 28.5,
+            cues: morLamBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 30.8,
+            cues: morLamKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -332,6 +455,33 @@ export const boneOfMorLamStory: Story = {
         narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-05-narration.mp3",
         narrationDurationSeconds: 37.95,
         cues: morLamScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-05-narration.mp3",
+            narrationDurationSeconds: 37.95,
+            cues: morLamScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-05-foday.mp3",
+            narrationDurationSeconds: 42.77,
+            cues: morLamFodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 38.25,
+            cues: morLamBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-bone-of-mor-lam/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 40.58,
+            cues: morLamKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

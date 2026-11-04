@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 2.91,
+    "text": "'Father!'",
+    "charStart": 0,
+    "charEnd": 9
+  },
+  {
+    "index": 1,
+    "startSeconds": 2.91,
+    "endSeconds": 6.01,
+    "text": "Ntikuma called up softly.",
+    "charStart": 10,
+    "charEnd": 35
+  },
+  {
+    "index": 2,
+    "startSeconds": 6.01,
+    "endSeconds": 7.68,
+    "text": "'Would it not be easier to climb if you strapped the pot to your back?'",
+    "charStart": 36,
+    "charEnd": 107
+  },
+  {
+    "index": 3,
+    "startSeconds": 7.68,
+    "endSeconds": 10.88,
+    "text": "Anansi froze.",
+    "charStart": 108,
+    "charEnd": 121
+  },
+  {
+    "index": 4,
+    "startSeconds": 10.88,
+    "endSeconds": 13.59,
+    "text": "Even with all the wisdom of the earth trapped inside his jar, he had not possessed the basic sense of a child.",
+    "charStart": 122,
+    "charEnd": 232
+  },
+  {
+    "index": 5,
+    "startSeconds": 13.59,
+    "endSeconds": 17.31,
+    "text": "Enraged by his own folly, he flung the clay jar down.",
+    "charStart": 233,
+    "charEnd": 286
+  },
+  {
+    "index": 6,
+    "startSeconds": 17.31,
+    "endSeconds": 25.95,
+    "text": "It shattered against the river stones into a thousand shards, and wisdom drifted on the breeze into every household, free for everyone to share.",
+    "charStart": 287,
+    "charEnd": 431
+  }
+]

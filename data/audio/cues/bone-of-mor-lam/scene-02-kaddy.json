@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 5.74,
+    "text": "Just as Awa was reaching for the wooden ladle, a cheerful cough sounded at the compound gate.",
+    "charStart": 0,
+    "charEnd": 93
+  },
+  {
+    "index": 1,
+    "startSeconds": 5.74,
+    "endSeconds": 12.82,
+    "text": "It was Moussa—Mor Lam's inseparable childhood friend, who possessed an uncanny sixth sense for boiling pots.",
+    "charStart": 94,
+    "charEnd": 202
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.82,
+    "endSeconds": 17.95,
+    "text": "By the sacred laws of Teranga, no guest could be turned away without an overflowing bowl.",
+    "charStart": 203,
+    "charEnd": 292
+  },
+  {
+    "index": 3,
+    "startSeconds": 17.95,
+    "endSeconds": 21.1,
+    "text": "Mor Lam froze, horror dawning upon his face.",
+    "charStart": 293,
+    "charEnd": 337
+  },
+  {
+    "index": 4,
+    "startSeconds": 21.1,
+    "endSeconds": 25.62,
+    "text": "'If Moussa enters,' he hissed to his wife, 'half of my marrow is gone!",
+    "charStart": 338,
+    "charEnd": 408
+  },
+  {
+    "index": 5,
+    "startSeconds": 25.62,
+    "endSeconds": 27.78,
+    "text": "Tell him I have fallen terribly ill!",
+    "charStart": 409,
+    "charEnd": 445
+  },
+  {
+    "index": 6,
+    "startSeconds": 27.78,
+    "endSeconds": 31.07,
+    "text": "Tell him my soul is hovering near the threshold!'",
+    "charStart": 446,
+    "charEnd": 495
+  }
+]

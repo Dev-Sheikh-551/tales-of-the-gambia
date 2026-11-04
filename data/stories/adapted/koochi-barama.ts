@@ -3,6 +3,18 @@ import koochiScene01 from "@/data/audio/cues/koochi-barama/scene-01.json";
 import koochiScene02 from "@/data/audio/cues/koochi-barama/scene-02.json";
 import koochiScene03 from "@/data/audio/cues/koochi-barama/scene-03.json";
 import koochiScene04 from "@/data/audio/cues/koochi-barama/scene-04.json";
+import koochiAmaraScene01 from "@/data/audio/cues/koochi-barama/scene-01-amara.json";
+import koochiAmaraScene02 from "@/data/audio/cues/koochi-barama/scene-02-amara.json";
+import koochiAmaraScene03 from "@/data/audio/cues/koochi-barama/scene-03-amara.json";
+import koochiAmaraScene04 from "@/data/audio/cues/koochi-barama/scene-04-amara.json";
+import koochiBaboucarScene01 from "@/data/audio/cues/koochi-barama/scene-01-baboucar.json";
+import koochiBaboucarScene02 from "@/data/audio/cues/koochi-barama/scene-02-baboucar.json";
+import koochiBaboucarScene03 from "@/data/audio/cues/koochi-barama/scene-03-baboucar.json";
+import koochiBaboucarScene04 from "@/data/audio/cues/koochi-barama/scene-04-baboucar.json";
+import koochiKaddyScene01 from "@/data/audio/cues/koochi-barama/scene-01-kaddy.json";
+import koochiKaddyScene02 from "@/data/audio/cues/koochi-barama/scene-02-kaddy.json";
+import koochiKaddyScene03 from "@/data/audio/cues/koochi-barama/scene-03-kaddy.json";
+import koochiKaddyScene04 from "@/data/audio/cues/koochi-barama/scene-04-kaddy.json";
 
 
 export const koochiBaramaStory: Story = {
@@ -128,9 +140,36 @@ export const koochiBaramaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-narration.mp3",
-        narrationDurationSeconds: 34.95,
-        cues: koochiScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-amara.mp3",
+        narrationDurationSeconds: 31.4,
+        cues: koochiAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-amara.mp3",
+            narrationDurationSeconds: 31.4,
+            cues: koochiAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-narration.mp3",
+            narrationDurationSeconds: 34.95,
+            cues: koochiScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 31.4,
+            cues: koochiBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 33.05,
+            cues: koochiKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -175,9 +214,36 @@ export const koochiBaramaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-narration.mp3",
-        narrationDurationSeconds: 41.62,
-        cues: koochiScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-amara.mp3",
+        narrationDurationSeconds: 37.83,
+        cues: koochiAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-amara.mp3",
+            narrationDurationSeconds: 37.83,
+            cues: koochiAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-narration.mp3",
+            narrationDurationSeconds: 41.62,
+            cues: koochiScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 38.25,
+            cues: koochiBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 40.08,
+            cues: koochiKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -222,9 +288,36 @@ export const koochiBaramaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-narration.mp3",
-        narrationDurationSeconds: 37.02,
-        cues: koochiScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-amara.mp3",
+        narrationDurationSeconds: 33.45,
+        cues: koochiAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-amara.mp3",
+            narrationDurationSeconds: 33.45,
+            cues: koochiAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-narration.mp3",
+            narrationDurationSeconds: 37.02,
+            cues: koochiScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 33.62,
+            cues: koochiBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 35.5,
+            cues: koochiKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -269,9 +362,36 @@ export const koochiBaramaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-narration.mp3",
-        narrationDurationSeconds: 45.55,
-        cues: koochiScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-amara.mp3",
+        narrationDurationSeconds: 40.85,
+        cues: koochiAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-amara.mp3",
+            narrationDurationSeconds: 40.85,
+            cues: koochiAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-narration.mp3",
+            narrationDurationSeconds: 45.55,
+            cues: koochiScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 40.85,
+            cues: koochiBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/koochi-barama-and-the-river-of-truth/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 43.95,
+            cues: koochiKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

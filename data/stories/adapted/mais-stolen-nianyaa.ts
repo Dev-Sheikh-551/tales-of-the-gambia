@@ -3,6 +3,18 @@ import maiScene01 from "@/data/audio/cues/mais-nianyaa/scene-01.json";
 import maiScene02 from "@/data/audio/cues/mais-nianyaa/scene-02.json";
 import maiScene03 from "@/data/audio/cues/mais-nianyaa/scene-03.json";
 import maiScene04 from "@/data/audio/cues/mais-nianyaa/scene-04.json";
+import maiFodayScene01 from "@/data/audio/cues/mais-nianyaa/scene-01-foday.json";
+import maiFodayScene02 from "@/data/audio/cues/mais-nianyaa/scene-02-foday.json";
+import maiFodayScene03 from "@/data/audio/cues/mais-nianyaa/scene-03-foday.json";
+import maiFodayScene04 from "@/data/audio/cues/mais-nianyaa/scene-04-foday.json";
+import maiBaboucarScene01 from "@/data/audio/cues/mais-nianyaa/scene-01-baboucar.json";
+import maiBaboucarScene02 from "@/data/audio/cues/mais-nianyaa/scene-02-baboucar.json";
+import maiBaboucarScene03 from "@/data/audio/cues/mais-nianyaa/scene-03-baboucar.json";
+import maiBaboucarScene04 from "@/data/audio/cues/mais-nianyaa/scene-04-baboucar.json";
+import maiKaddyScene01 from "@/data/audio/cues/mais-nianyaa/scene-01-kaddy.json";
+import maiKaddyScene02 from "@/data/audio/cues/mais-nianyaa/scene-02-kaddy.json";
+import maiKaddyScene03 from "@/data/audio/cues/mais-nianyaa/scene-03-kaddy.json";
+import maiKaddyScene04 from "@/data/audio/cues/mais-nianyaa/scene-04-kaddy.json";
 
 
 export const maisStolenNianyaaStory: Story = {
@@ -143,6 +155,33 @@ export const maisStolenNianyaaStory: Story = {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-01-narration.mp3",
         narrationDurationSeconds: 35.8,
         cues: maiScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-01-narration.mp3",
+            narrationDurationSeconds: 35.8,
+            cues: maiScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-01-foday.mp3",
+            narrationDurationSeconds: 40.1,
+            cues: maiFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 36.17,
+            cues: maiBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 37.92,
+            cues: maiKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -190,6 +229,33 @@ export const maisStolenNianyaaStory: Story = {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-02-narration.mp3",
         narrationDurationSeconds: 32.27,
         cues: maiScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-02-narration.mp3",
+            narrationDurationSeconds: 32.27,
+            cues: maiScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-02-foday.mp3",
+            narrationDurationSeconds: 36.67,
+            cues: maiFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 32.55,
+            cues: maiBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 34.8,
+            cues: maiKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -229,6 +295,33 @@ export const maisStolenNianyaaStory: Story = {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-03-narration.mp3",
         narrationDurationSeconds: 35.65,
         cues: maiScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-03-narration.mp3",
+            narrationDurationSeconds: 35.65,
+            cues: maiScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-03-foday.mp3",
+            narrationDurationSeconds: 40.08,
+            cues: maiFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 35.55,
+            cues: maiBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 37.6,
+            cues: maiKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -276,6 +369,33 @@ export const maisStolenNianyaaStory: Story = {
         narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-04-narration.mp3",
         narrationDurationSeconds: 38.75,
         cues: maiScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-04-narration.mp3",
+            narrationDurationSeconds: 38.75,
+            cues: maiScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-04-foday.mp3",
+            narrationDurationSeconds: 44.12,
+            cues: maiFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 39.12,
+            cues: maiBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/mais-stolen-nianyaa/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 41.33,
+            cues: maiKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

@@ -4,6 +4,21 @@ import fariScene02 from "@/data/audio/cues/fari-queen/scene-02.json";
 import fariScene03 from "@/data/audio/cues/fari-queen/scene-03.json";
 import fariScene04 from "@/data/audio/cues/fari-queen/scene-04.json";
 import fariScene05 from "@/data/audio/cues/fari-queen/scene-05.json";
+import fariFodayScene01 from "@/data/audio/cues/fari-queen/scene-01-foday.json";
+import fariFodayScene02 from "@/data/audio/cues/fari-queen/scene-02-foday.json";
+import fariFodayScene03 from "@/data/audio/cues/fari-queen/scene-03-foday.json";
+import fariFodayScene04 from "@/data/audio/cues/fari-queen/scene-04-foday.json";
+import fariFodayScene05 from "@/data/audio/cues/fari-queen/scene-05-foday.json";
+import fariBaboucarScene01 from "@/data/audio/cues/fari-queen/scene-01-baboucar.json";
+import fariBaboucarScene02 from "@/data/audio/cues/fari-queen/scene-02-baboucar.json";
+import fariBaboucarScene03 from "@/data/audio/cues/fari-queen/scene-03-baboucar.json";
+import fariBaboucarScene04 from "@/data/audio/cues/fari-queen/scene-04-baboucar.json";
+import fariBaboucarScene05 from "@/data/audio/cues/fari-queen/scene-05-baboucar.json";
+import fariKaddyScene01 from "@/data/audio/cues/fari-queen/scene-01-kaddy.json";
+import fariKaddyScene02 from "@/data/audio/cues/fari-queen/scene-02-kaddy.json";
+import fariKaddyScene03 from "@/data/audio/cues/fari-queen/scene-03-kaddy.json";
+import fariKaddyScene04 from "@/data/audio/cues/fari-queen/scene-04-kaddy.json";
+import fariKaddyScene05 from "@/data/audio/cues/fari-queen/scene-05-kaddy.json";
 
 
 export const fariQueenOfDonkeysStory: Story = {
@@ -148,6 +163,33 @@ export const fariQueenOfDonkeysStory: Story = {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-01-narration.mp3",
         narrationDurationSeconds: 36.42,
         cues: fariScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-01-narration.mp3",
+            narrationDurationSeconds: 36.42,
+            cues: fariScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-01-foday.mp3",
+            narrationDurationSeconds: 41.6,
+            cues: fariFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 36.9,
+            cues: fariBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 39.17,
+            cues: fariKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -187,6 +229,33 @@ export const fariQueenOfDonkeysStory: Story = {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-02-narration.mp3",
         narrationDurationSeconds: 34.38,
         cues: fariScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-02-narration.mp3",
+            narrationDurationSeconds: 34.38,
+            cues: fariScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-02-foday.mp3",
+            narrationDurationSeconds: 38.88,
+            cues: fariFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 34.75,
+            cues: fariBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 36.98,
+            cues: fariKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -234,6 +303,33 @@ export const fariQueenOfDonkeysStory: Story = {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-03-narration.mp3",
         narrationDurationSeconds: 35.35,
         cues: fariScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-03-narration.mp3",
+            narrationDurationSeconds: 35.35,
+            cues: fariScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-03-foday.mp3",
+            narrationDurationSeconds: 40.02,
+            cues: fariFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 35.73,
+            cues: fariBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 37.73,
+            cues: fariKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -273,6 +369,33 @@ export const fariQueenOfDonkeysStory: Story = {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-04-narration.mp3",
         narrationDurationSeconds: 33.98,
         cues: fariScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-04-narration.mp3",
+            narrationDurationSeconds: 33.98,
+            cues: fariScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-04-foday.mp3",
+            narrationDurationSeconds: 38.2,
+            cues: fariFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 34.1,
+            cues: fariBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 36.65,
+            cues: fariKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -328,6 +451,33 @@ export const fariQueenOfDonkeysStory: Story = {
         narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-05-narration.mp3",
         narrationDurationSeconds: 38.55,
         cues: fariScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-05-narration.mp3",
+            narrationDurationSeconds: 38.55,
+            cues: fariScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-05-foday.mp3",
+            narrationDurationSeconds: 43.48,
+            cues: fariFodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 38.67,
+            cues: fariBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/fari-queen-of-the-wild-donkeys/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 41.4,
+            cues: fariKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

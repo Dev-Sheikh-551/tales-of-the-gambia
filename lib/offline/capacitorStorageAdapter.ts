@@ -20,7 +20,7 @@
  */
 
 import { Capacitor } from "@capacitor/core";
-import { Filesystem, Directory } from "@capacitor/filesystem";
+import { Filesystem, Directory, Encoding } from "@capacitor/filesystem";
 import { Preferences } from "@capacitor/preferences";
 import type {
   OfflineStorageAdapter,
@@ -183,7 +183,7 @@ export class CapacitorStorageAdapter implements OfflineStorageAdapter {
       directory: Directory.Data,
       path: packagePath,
       data: JSON.stringify(pkg),
-      encoding: "utf8" as any,
+      encoding: Encoding.UTF8,
       recursive: true,
     });
 
@@ -210,7 +210,7 @@ export class CapacitorStorageAdapter implements OfflineStorageAdapter {
       const res = await Filesystem.readFile({
         directory: Directory.Data,
         path: packagePath,
-        encoding: "utf8" as any,
+        encoding: Encoding.UTF8,
       });
 
       if (!res.data) return undefined;

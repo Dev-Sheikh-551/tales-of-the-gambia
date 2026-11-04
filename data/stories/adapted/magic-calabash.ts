@@ -4,6 +4,21 @@ import calabashScene02 from "@/data/audio/cues/magic-calabash/scene-02.json";
 import calabashScene03 from "@/data/audio/cues/magic-calabash/scene-03.json";
 import calabashScene04 from "@/data/audio/cues/magic-calabash/scene-04.json";
 import calabashScene05 from "@/data/audio/cues/magic-calabash/scene-05.json";
+import calabashAmaraScene01 from "@/data/audio/cues/magic-calabash/scene-01-amara.json";
+import calabashAmaraScene02 from "@/data/audio/cues/magic-calabash/scene-02-amara.json";
+import calabashAmaraScene03 from "@/data/audio/cues/magic-calabash/scene-03-amara.json";
+import calabashAmaraScene04 from "@/data/audio/cues/magic-calabash/scene-04-amara.json";
+import calabashAmaraScene05 from "@/data/audio/cues/magic-calabash/scene-05-amara.json";
+import calabashBaboucarScene01 from "@/data/audio/cues/magic-calabash/scene-01-baboucar.json";
+import calabashBaboucarScene02 from "@/data/audio/cues/magic-calabash/scene-02-baboucar.json";
+import calabashBaboucarScene03 from "@/data/audio/cues/magic-calabash/scene-03-baboucar.json";
+import calabashBaboucarScene04 from "@/data/audio/cues/magic-calabash/scene-04-baboucar.json";
+import calabashBaboucarScene05 from "@/data/audio/cues/magic-calabash/scene-05-baboucar.json";
+import calabashKaddyScene01 from "@/data/audio/cues/magic-calabash/scene-01-kaddy.json";
+import calabashKaddyScene02 from "@/data/audio/cues/magic-calabash/scene-02-kaddy.json";
+import calabashKaddyScene03 from "@/data/audio/cues/magic-calabash/scene-03-kaddy.json";
+import calabashKaddyScene04 from "@/data/audio/cues/magic-calabash/scene-04-kaddy.json";
+import calabashKaddyScene05 from "@/data/audio/cues/magic-calabash/scene-05-kaddy.json";
 
 
 export const magicCalabashStory: Story = {
@@ -129,9 +144,36 @@ export const magicCalabashStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-01-narration.mp3",
-        narrationDurationSeconds: 31.6,
-        cues: calabashScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-01-amara.mp3",
+        narrationDurationSeconds: 28.85,
+        cues: calabashAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-01-amara.mp3",
+            narrationDurationSeconds: 28.85,
+            cues: calabashAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-01-narration.mp3",
+            narrationDurationSeconds: 31.6,
+            cues: calabashScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 28.88,
+            cues: calabashBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 30.32,
+            cues: calabashKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -168,9 +210,36 @@ export const magicCalabashStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-02-narration.mp3",
-        narrationDurationSeconds: 37.92,
-        cues: calabashScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-02-amara.mp3",
+        narrationDurationSeconds: 33.45,
+        cues: calabashAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-02-amara.mp3",
+            narrationDurationSeconds: 33.45,
+            cues: calabashAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-02-narration.mp3",
+            narrationDurationSeconds: 37.92,
+            cues: calabashScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 34.02,
+            cues: calabashBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 36.45,
+            cues: calabashKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -215,9 +284,36 @@ export const magicCalabashStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-03-narration.mp3",
-        narrationDurationSeconds: 35.85,
-        cues: calabashScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-03-amara.mp3",
+        narrationDurationSeconds: 32.3,
+        cues: calabashAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-03-amara.mp3",
+            narrationDurationSeconds: 32.3,
+            cues: calabashAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-03-narration.mp3",
+            narrationDurationSeconds: 35.85,
+            cues: calabashScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 31.77,
+            cues: calabashBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 34.25,
+            cues: calabashKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -254,9 +350,36 @@ export const magicCalabashStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-04-narration.mp3",
-        narrationDurationSeconds: 34.83,
-        cues: calabashScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-04-amara.mp3",
+        narrationDurationSeconds: 31.3,
+        cues: calabashAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-04-amara.mp3",
+            narrationDurationSeconds: 31.3,
+            cues: calabashAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-04-narration.mp3",
+            narrationDurationSeconds: 34.83,
+            cues: calabashScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 30.95,
+            cues: calabashBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 32.83,
+            cues: calabashKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -301,9 +424,36 @@ export const magicCalabashStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-05-narration.mp3",
-        narrationDurationSeconds: 39.27,
-        cues: calabashScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-05-amara.mp3",
+        narrationDurationSeconds: 35.02,
+        cues: calabashAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-05-amara.mp3",
+            narrationDurationSeconds: 35.02,
+            cues: calabashAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-05-narration.mp3",
+            narrationDurationSeconds: 39.27,
+            cues: calabashScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 35.08,
+            cues: calabashBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-magic-calabash-of-banjul/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 37.85,
+            cues: calabashKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

@@ -5,6 +5,24 @@ import fulaScene03 from "@/data/audio/cues/fula-herdsman/scene-03.json";
 import fulaScene04 from "@/data/audio/cues/fula-herdsman/scene-04.json";
 import fulaScene05 from "@/data/audio/cues/fula-herdsman/scene-05.json";
 import fulaScene06 from "@/data/audio/cues/fula-herdsman/scene-06.json";
+import fulaAmaraScene01 from "@/data/audio/cues/fula-herdsman/scene-01-amara.json";
+import fulaAmaraScene02 from "@/data/audio/cues/fula-herdsman/scene-02-amara.json";
+import fulaAmaraScene03 from "@/data/audio/cues/fula-herdsman/scene-03-amara.json";
+import fulaAmaraScene04 from "@/data/audio/cues/fula-herdsman/scene-04-amara.json";
+import fulaAmaraScene05 from "@/data/audio/cues/fula-herdsman/scene-05-amara.json";
+import fulaAmaraScene06 from "@/data/audio/cues/fula-herdsman/scene-06-amara.json";
+import fulaBaboucarScene01 from "@/data/audio/cues/fula-herdsman/scene-01-baboucar.json";
+import fulaBaboucarScene02 from "@/data/audio/cues/fula-herdsman/scene-02-baboucar.json";
+import fulaBaboucarScene03 from "@/data/audio/cues/fula-herdsman/scene-03-baboucar.json";
+import fulaBaboucarScene04 from "@/data/audio/cues/fula-herdsman/scene-04-baboucar.json";
+import fulaBaboucarScene05 from "@/data/audio/cues/fula-herdsman/scene-05-baboucar.json";
+import fulaBaboucarScene06 from "@/data/audio/cues/fula-herdsman/scene-06-baboucar.json";
+import fulaKaddyScene01 from "@/data/audio/cues/fula-herdsman/scene-01-kaddy.json";
+import fulaKaddyScene02 from "@/data/audio/cues/fula-herdsman/scene-02-kaddy.json";
+import fulaKaddyScene03 from "@/data/audio/cues/fula-herdsman/scene-03-kaddy.json";
+import fulaKaddyScene04 from "@/data/audio/cues/fula-herdsman/scene-04-kaddy.json";
+import fulaKaddyScene05 from "@/data/audio/cues/fula-herdsman/scene-05-kaddy.json";
+import fulaKaddyScene06 from "@/data/audio/cues/fula-herdsman/scene-06-kaddy.json";
 
 
 /**
@@ -189,9 +207,36 @@ And Demba's cattle were the finest in three villages.`,
         intensity: "subtle",
       },
       audio: {
-        narrationUrl: "/audio/stories/the-fula-herdsman/scene-01-narration.mp3",
-        narrationDurationSeconds: 67.22,
-        cues: fulaScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-01-amara.mp3",
+        narrationDurationSeconds: 60.02,
+        cues: fulaAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-01-amara.mp3",
+            narrationDurationSeconds: 60.02,
+            cues: fulaAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-01-narration.mp3",
+            narrationDurationSeconds: 67.22,
+            cues: fulaScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 60.95,
+            cues: fulaBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 64.47,
+            cues: fulaKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -248,9 +293,36 @@ What would he do?`,
         intensity: "subtle",
       },
       audio: {
-        narrationUrl: "/audio/stories/the-fula-herdsman/scene-02-narration.mp3",
-        narrationDurationSeconds: 61.27,
-        cues: fulaScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-02-amara.mp3",
+        narrationDurationSeconds: 54.55,
+        cues: fulaAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-02-amara.mp3",
+            narrationDurationSeconds: 54.55,
+            cues: fulaAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-02-narration.mp3",
+            narrationDurationSeconds: 61.27,
+            cues: fulaScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 55.23,
+            cues: fulaBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 59.98,
+            cues: fulaKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 90,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -326,9 +398,36 @@ The old man nodded slowly. "Then you already know what to do."`,
         intensity: "subtle",
       },
       audio: {
-        narrationUrl: "/audio/stories/the-fula-herdsman/scene-03-narration.mp3",
-        narrationDurationSeconds: 74.53,
-        cues: fulaScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-03-amara.mp3",
+        narrationDurationSeconds: 65.72,
+        cues: fulaAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-03-amara.mp3",
+            narrationDurationSeconds: 65.72,
+            cues: fulaAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-03-narration.mp3",
+            narrationDurationSeconds: 74.53,
+            cues: fulaScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 70.42,
+            cues: fulaBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 72.4,
+            cues: fulaKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 120,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -387,9 +486,36 @@ And that — that stillness, that patience, that refusal to be provoked — was 
         intensity: "gentle",
       },
       audio: {
-        narrationUrl: "/audio/stories/the-fula-herdsman/scene-04-narration.mp3",
-        narrationDurationSeconds: 72.9,
-        cues: fulaScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-04-amara.mp3",
+        narrationDurationSeconds: 65.08,
+        cues: fulaAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-04-amara.mp3",
+            narrationDurationSeconds: 65.08,
+            cues: fulaAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-04-narration.mp3",
+            narrationDurationSeconds: 72.9,
+            cues: fulaScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 67.45,
+            cues: fulaBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 71.08,
+            cues: fulaKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "crossfade", durationSeconds: 1.5 },
@@ -457,9 +583,36 @@ Demba sat beside him and watched the village go about its business.
         intensity: "subtle",
       },
       audio: {
-        narrationUrl: "/audio/stories/the-fula-herdsman/scene-05-narration.mp3",
-        narrationDurationSeconds: 70.97,
-        cues: fulaScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-05-amara.mp3",
+        narrationDurationSeconds: 61.9,
+        cues: fulaAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-05-amara.mp3",
+            narrationDurationSeconds: 61.9,
+            cues: fulaAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-05-narration.mp3",
+            narrationDurationSeconds: 70.97,
+            cues: fulaScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 64.4,
+            cues: fulaBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 68.1,
+            cues: fulaKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "dissolve", durationSeconds: 2 },
@@ -518,9 +671,36 @@ And everything was as it should be.`,
         intensity: "subtle",
       },
       audio: {
-        narrationUrl: "/audio/stories/the-fula-herdsman/scene-06-narration.mp3",
-        narrationDurationSeconds: 79.45,
-        cues: fulaScene06 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fula-herdsman/scene-06-amara.mp3",
+        narrationDurationSeconds: 70.25,
+        cues: fulaAmaraScene06 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-06-amara.mp3",
+            narrationDurationSeconds: 70.25,
+            cues: fulaAmaraScene06 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-06-narration.mp3",
+            narrationDurationSeconds: 79.45,
+            cues: fulaScene06 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-06-baboucar.mp3",
+            narrationDurationSeconds: 72.83,
+            cues: fulaBaboucarScene06 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fula-herdsman/scene-06-kaddy.mp3",
+            narrationDurationSeconds: 76.45,
+            cues: fulaKaddyScene06 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 130,
       transition: { type: "fade", durationSeconds: 3 },

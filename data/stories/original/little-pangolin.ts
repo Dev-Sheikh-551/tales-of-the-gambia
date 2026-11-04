@@ -1,6 +1,12 @@
 import { Story, NarrationCue } from "@/types/story";
 import pangolinScene01 from "@/data/audio/cues/little-pangolin/scene-01.json";
 import pangolinScene02 from "@/data/audio/cues/little-pangolin/scene-02.json";
+import pangolinFodayScene01 from "@/data/audio/cues/little-pangolin/scene-01-foday.json";
+import pangolinFodayScene02 from "@/data/audio/cues/little-pangolin/scene-02-foday.json";
+import pangolinBaboucarScene01 from "@/data/audio/cues/little-pangolin/scene-01-baboucar.json";
+import pangolinBaboucarScene02 from "@/data/audio/cues/little-pangolin/scene-02-baboucar.json";
+import pangolinKaddyScene01 from "@/data/audio/cues/little-pangolin/scene-01-kaddy.json";
+import pangolinKaddyScene02 from "@/data/audio/cues/little-pangolin/scene-02-kaddy.json";
 
 
 export const littlePangolinStory: Story = {
@@ -110,6 +116,33 @@ export const littlePangolinStory: Story = {
         narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-01-narration.mp3",
         narrationDurationSeconds: 19.45,
         cues: pangolinScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-01-narration.mp3",
+            narrationDurationSeconds: 19.45,
+            cues: pangolinScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-01-foday.mp3",
+            narrationDurationSeconds: 22.23,
+            cues: pangolinFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 19.35,
+            cues: pangolinBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 20.9,
+            cues: pangolinKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 12,
     },
@@ -149,6 +182,33 @@ export const littlePangolinStory: Story = {
         narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-02-narration.mp3",
         narrationDurationSeconds: 14.7,
         cues: pangolinScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-02-narration.mp3",
+            narrationDurationSeconds: 14.7,
+            cues: pangolinScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-02-foday.mp3",
+            narrationDurationSeconds: 16.82,
+            cues: pangolinFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 14.6,
+            cues: pangolinBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-little-pangolin-who-counted-stars/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 15.88,
+            cues: pangolinKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 13,
     },

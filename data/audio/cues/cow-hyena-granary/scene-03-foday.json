@@ -1,0 +1,42 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 7.32,
+    "text": "While Cow chewed her cud peacefully and Hare rested his twitching whiskers, Hyena tossed and turned in his den.",
+    "charStart": 0,
+    "charEnd": 111
+  },
+  {
+    "index": 1,
+    "startSeconds": 7.32,
+    "endSeconds": 12.59,
+    "text": "The scent of roasted groundnuts danced in his dreams like mischievous fireflies.",
+    "charStart": 112,
+    "charEnd": 192
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.59,
+    "endSeconds": 16.24,
+    "text": "In the pitch black of midnight, he crept toward the granary.",
+    "charStart": 193,
+    "charEnd": 253
+  },
+  {
+    "index": 3,
+    "startSeconds": 16.24,
+    "endSeconds": 28.13,
+    "text": "Rather than break the front lock, he pried open a side reed slat, stuffed his muzzle inside, and gorged himself on groundnuts until his belly bulged like a water gourd.",
+    "charStart": 254,
+    "charEnd": 422
+  },
+  {
+    "index": 4,
+    "startSeconds": 28.13,
+    "endSeconds": 38.55,
+    "text": "For three successive nights, the grain level shrank by half, yet Hyena was the first each morning to wail loudly about mysterious thieves.",
+    "charStart": 423,
+    "charEnd": 561
+  }
+]

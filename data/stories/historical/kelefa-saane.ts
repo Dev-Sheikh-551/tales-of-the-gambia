@@ -5,6 +5,24 @@ import kelefaScene03 from "@/data/audio/cues/kelefa-saane/scene-03.json";
 import kelefaScene04 from "@/data/audio/cues/kelefa-saane/scene-04.json";
 import kelefaScene05 from "@/data/audio/cues/kelefa-saane/scene-05.json";
 import kelefaScene06 from "@/data/audio/cues/kelefa-saane/scene-06.json";
+import kelefaAmaraScene01 from "@/data/audio/cues/kelefa-saane/scene-01-amara.json";
+import kelefaAmaraScene02 from "@/data/audio/cues/kelefa-saane/scene-02-amara.json";
+import kelefaAmaraScene03 from "@/data/audio/cues/kelefa-saane/scene-03-amara.json";
+import kelefaAmaraScene04 from "@/data/audio/cues/kelefa-saane/scene-04-amara.json";
+import kelefaAmaraScene05 from "@/data/audio/cues/kelefa-saane/scene-05-amara.json";
+import kelefaAmaraScene06 from "@/data/audio/cues/kelefa-saane/scene-06-amara.json";
+import kelefaBaboucarScene01 from "@/data/audio/cues/kelefa-saane/scene-01-baboucar.json";
+import kelefaBaboucarScene02 from "@/data/audio/cues/kelefa-saane/scene-02-baboucar.json";
+import kelefaBaboucarScene03 from "@/data/audio/cues/kelefa-saane/scene-03-baboucar.json";
+import kelefaBaboucarScene04 from "@/data/audio/cues/kelefa-saane/scene-04-baboucar.json";
+import kelefaBaboucarScene05 from "@/data/audio/cues/kelefa-saane/scene-05-baboucar.json";
+import kelefaBaboucarScene06 from "@/data/audio/cues/kelefa-saane/scene-06-baboucar.json";
+import kelefaKaddyScene01 from "@/data/audio/cues/kelefa-saane/scene-01-kaddy.json";
+import kelefaKaddyScene02 from "@/data/audio/cues/kelefa-saane/scene-02-kaddy.json";
+import kelefaKaddyScene03 from "@/data/audio/cues/kelefa-saane/scene-03-kaddy.json";
+import kelefaKaddyScene04 from "@/data/audio/cues/kelefa-saane/scene-04-kaddy.json";
+import kelefaKaddyScene05 from "@/data/audio/cues/kelefa-saane/scene-05-kaddy.json";
+import kelefaKaddyScene06 from "@/data/audio/cues/kelefa-saane/scene-06-kaddy.json";
 
 
 /**
@@ -243,9 +261,36 @@ This is his story, as best as it can be told.`,
         intensity: "gentle",
       },
       audio: {
-        narrationUrl: "/audio/stories/kelefa-saane/scene-01-narration.mp3",
-        narrationDurationSeconds: 68.0,
-        cues: kelefaScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/kelefa-saane/scene-01-amara.mp3",
+        narrationDurationSeconds: 59.52,
+        cues: kelefaAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-01-amara.mp3",
+            narrationDurationSeconds: 59.52,
+            cues: kelefaAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-01-narration.mp3",
+            narrationDurationSeconds: 68.0,
+            cues: kelefaScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 60.27,
+            cues: kelefaBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 64.28,
+            cues: kelefaKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 90,
       transition: { type: "cinematic-fade", durationSeconds: 1.5 },
@@ -339,9 +384,36 @@ His mother, they say, loved him fiercely. And she feared for him just as fiercel
         intensity: "expressive",
       },
       audio: {
-        narrationUrl: "/audio/stories/kelefa-saane/scene-02-narration.mp3",
-        narrationDurationSeconds: 71.08,
-        cues: kelefaScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/kelefa-saane/scene-02-amara.mp3",
+        narrationDurationSeconds: 62.27,
+        cues: kelefaAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-02-amara.mp3",
+            narrationDurationSeconds: 62.27,
+            cues: kelefaAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-02-narration.mp3",
+            narrationDurationSeconds: 71.08,
+            cues: kelefaScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 62.85,
+            cues: kelefaBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 66.72,
+            cues: kelefaKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 100,
       transition: { type: "cinematic-fade", durationSeconds: 1.5 },
@@ -438,9 +510,36 @@ He did not come back.`,
         intensity: "gentle",
       },
       audio: {
-        narrationUrl: "/audio/stories/kelefa-saane/scene-03-narration.mp3",
-        narrationDurationSeconds: 62.0,
-        cues: kelefaScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/kelefa-saane/scene-03-amara.mp3",
+        narrationDurationSeconds: 54.02,
+        cues: kelefaAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-03-amara.mp3",
+            narrationDurationSeconds: 54.02,
+            cues: kelefaAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-03-narration.mp3",
+            narrationDurationSeconds: 62.0,
+            cues: kelefaScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 56.08,
+            cues: kelefaBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 58.4,
+            cues: kelefaKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "cinematic-fade", durationSeconds: 1.5 },
@@ -548,9 +647,36 @@ And because he did that, the griots remembered him.`,
         intensity: "expressive",
       },
       audio: {
-        narrationUrl: "/audio/stories/kelefa-saane/scene-04-narration.mp3",
-        narrationDurationSeconds: 70.22,
-        cues: kelefaScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/kelefa-saane/scene-04-amara.mp3",
+        narrationDurationSeconds: 61.2,
+        cues: kelefaAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-04-amara.mp3",
+            narrationDurationSeconds: 61.2,
+            cues: kelefaAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-04-narration.mp3",
+            narrationDurationSeconds: 70.22,
+            cues: kelefaScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 63.48,
+            cues: kelefaBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 66.47,
+            cues: kelefaKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 110,
       transition: { type: "cinematic-fade", durationSeconds: 2 },
@@ -650,9 +776,36 @@ And in crossing it, he reminds us what it means to live without flinching.`,
         intensity: "standard",
       },
       audio: {
-        narrationUrl: "/audio/stories/kelefa-saane/scene-05-narration.mp3",
-        narrationDurationSeconds: 81.85,
-        cues: kelefaScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/kelefa-saane/scene-05-amara.mp3",
+        narrationDurationSeconds: 71.2,
+        cues: kelefaAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-05-amara.mp3",
+            narrationDurationSeconds: 71.2,
+            cues: kelefaAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-05-narration.mp3",
+            narrationDurationSeconds: 81.85,
+            cues: kelefaScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 73.15,
+            cues: kelefaBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 77.35,
+            cues: kelefaKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 120,
       transition: { type: "nightfall", durationSeconds: 2.5 },
@@ -743,9 +896,36 @@ They always will.`,
         intensity: "standard",
       },
       audio: {
-        narrationUrl: "/audio/stories/kelefa-saane/scene-06-narration.mp3",
-        narrationDurationSeconds: 69.67,
-        cues: kelefaScene06 as NarrationCue[],
+        narrationUrl: "/audio/stories/kelefa-saane/scene-06-amara.mp3",
+        narrationDurationSeconds: 60.7,
+        cues: kelefaAmaraScene06 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-06-amara.mp3",
+            narrationDurationSeconds: 60.7,
+            cues: kelefaAmaraScene06 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-06-narration.mp3",
+            narrationDurationSeconds: 69.67,
+            cues: kelefaScene06 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-06-baboucar.mp3",
+            narrationDurationSeconds: 63.12,
+            cues: kelefaBaboucarScene06 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/kelefa-saane/scene-06-kaddy.mp3",
+            narrationDurationSeconds: 65.55,
+            cues: kelefaKaddyScene06 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 130,
       transition: { type: "cinematic-fade", durationSeconds: 3 },

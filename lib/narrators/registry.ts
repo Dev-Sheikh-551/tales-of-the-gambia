@@ -39,8 +39,8 @@ export const NARRATORS: Narrator[] = [
     language: "en-GM",
     accent: "Gambian English (Elder Mandinka inflection)",
     presentation: "male",
-    available: false,
-    badge: "Coming Soon",
+    available: true,
+    badge: "Available",
   },
   {
     id: "kaddy-brikama",
@@ -54,8 +54,8 @@ export const NARRATORS: Narrator[] = [
     language: "en-GM",
     accent: "Gambian English (Western Division rhythm)",
     presentation: "female",
-    available: false,
-    badge: "Coming Soon",
+    available: true,
+    badge: "Available",
   },
   {
     id: "foday-jali",
@@ -69,8 +69,8 @@ export const NARRATORS: Narrator[] = [
     language: "en-GM",
     accent: "Gambian English (Traditional Griot cadence)",
     presentation: "male",
-    available: false,
-    badge: "Coming Soon",
+    available: true,
+    badge: "Available",
   },
 ];
 

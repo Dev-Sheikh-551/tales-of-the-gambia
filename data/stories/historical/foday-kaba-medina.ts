@@ -4,6 +4,21 @@ import fodayScene02 from "@/data/audio/cues/foday-kaba/scene-02.json";
 import fodayScene03 from "@/data/audio/cues/foday-kaba/scene-03.json";
 import fodayScene04 from "@/data/audio/cues/foday-kaba/scene-04.json";
 import fodayScene05 from "@/data/audio/cues/foday-kaba/scene-05.json";
+import fodayAmaraScene01 from "@/data/audio/cues/foday-kaba/scene-01-amara.json";
+import fodayAmaraScene02 from "@/data/audio/cues/foday-kaba/scene-02-amara.json";
+import fodayAmaraScene03 from "@/data/audio/cues/foday-kaba/scene-03-amara.json";
+import fodayAmaraScene04 from "@/data/audio/cues/foday-kaba/scene-04-amara.json";
+import fodayAmaraScene05 from "@/data/audio/cues/foday-kaba/scene-05-amara.json";
+import fodayBaboucarScene01 from "@/data/audio/cues/foday-kaba/scene-01-baboucar.json";
+import fodayBaboucarScene02 from "@/data/audio/cues/foday-kaba/scene-02-baboucar.json";
+import fodayBaboucarScene03 from "@/data/audio/cues/foday-kaba/scene-03-baboucar.json";
+import fodayBaboucarScene04 from "@/data/audio/cues/foday-kaba/scene-04-baboucar.json";
+import fodayBaboucarScene05 from "@/data/audio/cues/foday-kaba/scene-05-baboucar.json";
+import fodayKaddyScene01 from "@/data/audio/cues/foday-kaba/scene-01-kaddy.json";
+import fodayKaddyScene02 from "@/data/audio/cues/foday-kaba/scene-02-kaddy.json";
+import fodayKaddyScene03 from "@/data/audio/cues/foday-kaba/scene-03-kaddy.json";
+import fodayKaddyScene04 from "@/data/audio/cues/foday-kaba/scene-04-kaddy.json";
+import fodayKaddyScene05 from "@/data/audio/cues/foday-kaba/scene-05-kaddy.json";
 
 
 export const fodayKabaMedinaStory: Story = {
@@ -142,9 +157,36 @@ export const fodayKabaMedinaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-narration.mp3",
-        narrationDurationSeconds: 41.6,
-        cues: fodayScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-amara.mp3",
+        narrationDurationSeconds: 37.5,
+        cues: fodayAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-amara.mp3",
+            narrationDurationSeconds: 37.5,
+            cues: fodayAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-narration.mp3",
+            narrationDurationSeconds: 41.6,
+            cues: fodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 37.33,
+            cues: fodayBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 39.8,
+            cues: fodayKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -182,9 +224,36 @@ export const fodayKabaMedinaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-narration.mp3",
-        narrationDurationSeconds: 42.0,
-        cues: fodayScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-amara.mp3",
+        narrationDurationSeconds: 37.48,
+        cues: fodayAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-amara.mp3",
+            narrationDurationSeconds: 37.48,
+            cues: fodayAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-narration.mp3",
+            narrationDurationSeconds: 42.0,
+            cues: fodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 37.92,
+            cues: fodayBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 39.85,
+            cues: fodayKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -231,9 +300,36 @@ export const fodayKabaMedinaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-narration.mp3",
-        narrationDurationSeconds: 39.75,
-        cues: fodayScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-amara.mp3",
+        narrationDurationSeconds: 36.2,
+        cues: fodayAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-amara.mp3",
+            narrationDurationSeconds: 36.2,
+            cues: fodayAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-narration.mp3",
+            narrationDurationSeconds: 39.75,
+            cues: fodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 36.25,
+            cues: fodayBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 38.17,
+            cues: fodayKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -280,9 +376,36 @@ export const fodayKabaMedinaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-narration.mp3",
-        narrationDurationSeconds: 45.0,
-        cues: fodayScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-amara.mp3",
+        narrationDurationSeconds: 40.38,
+        cues: fodayAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-amara.mp3",
+            narrationDurationSeconds: 40.38,
+            cues: fodayAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-narration.mp3",
+            narrationDurationSeconds: 45.0,
+            cues: fodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 40.33,
+            cues: fodayBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 42.7,
+            cues: fodayKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -320,9 +443,36 @@ export const fodayKabaMedinaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-narration.mp3",
-        narrationDurationSeconds: 31.62,
-        cues: fodayScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-amara.mp3",
+        narrationDurationSeconds: 28.75,
+        cues: fodayAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-amara.mp3",
+            narrationDurationSeconds: 28.75,
+            cues: fodayAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-narration.mp3",
+            narrationDurationSeconds: 31.62,
+            cues: fodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 28.73,
+            cues: fodayBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/foday-kaba-and-the-stockade-of-medina/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 30.07,
+            cues: fodayKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

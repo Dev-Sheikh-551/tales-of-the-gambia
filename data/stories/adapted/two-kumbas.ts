@@ -5,6 +5,24 @@ import twoKumbasScene03 from "@/data/audio/cues/two-kumbas/scene-03.json";
 import twoKumbasScene04 from "@/data/audio/cues/two-kumbas/scene-04.json";
 import twoKumbasScene05 from "@/data/audio/cues/two-kumbas/scene-05.json";
 import twoKumbasScene06 from "@/data/audio/cues/two-kumbas/scene-06.json";
+import twoKumbasFodayScene01 from "@/data/audio/cues/two-kumbas/scene-01-foday.json";
+import twoKumbasFodayScene02 from "@/data/audio/cues/two-kumbas/scene-02-foday.json";
+import twoKumbasFodayScene03 from "@/data/audio/cues/two-kumbas/scene-03-foday.json";
+import twoKumbasFodayScene04 from "@/data/audio/cues/two-kumbas/scene-04-foday.json";
+import twoKumbasFodayScene05 from "@/data/audio/cues/two-kumbas/scene-05-foday.json";
+import twoKumbasFodayScene06 from "@/data/audio/cues/two-kumbas/scene-06-foday.json";
+import twoKumbasBaboucarScene01 from "@/data/audio/cues/two-kumbas/scene-01-baboucar.json";
+import twoKumbasBaboucarScene02 from "@/data/audio/cues/two-kumbas/scene-02-baboucar.json";
+import twoKumbasBaboucarScene03 from "@/data/audio/cues/two-kumbas/scene-03-baboucar.json";
+import twoKumbasBaboucarScene04 from "@/data/audio/cues/two-kumbas/scene-04-baboucar.json";
+import twoKumbasBaboucarScene05 from "@/data/audio/cues/two-kumbas/scene-05-baboucar.json";
+import twoKumbasBaboucarScene06 from "@/data/audio/cues/two-kumbas/scene-06-baboucar.json";
+import twoKumbasKaddyScene01 from "@/data/audio/cues/two-kumbas/scene-01-kaddy.json";
+import twoKumbasKaddyScene02 from "@/data/audio/cues/two-kumbas/scene-02-kaddy.json";
+import twoKumbasKaddyScene03 from "@/data/audio/cues/two-kumbas/scene-03-kaddy.json";
+import twoKumbasKaddyScene04 from "@/data/audio/cues/two-kumbas/scene-04-kaddy.json";
+import twoKumbasKaddyScene05 from "@/data/audio/cues/two-kumbas/scene-05-kaddy.json";
+import twoKumbasKaddyScene06 from "@/data/audio/cues/two-kumbas/scene-06-kaddy.json";
 
 
 export const twoKumbasStory: Story = {
@@ -133,6 +151,33 @@ export const twoKumbasStory: Story = {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-01-narration.mp3",
         narrationDurationSeconds: 29.2,
         cues: twoKumbasScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-01-narration.mp3",
+            narrationDurationSeconds: 29.2,
+            cues: twoKumbasScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-01-foday.mp3",
+            narrationDurationSeconds: 32.9,
+            cues: twoKumbasFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 29.0,
+            cues: twoKumbasBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 31.05,
+            cues: twoKumbasKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -180,6 +225,33 @@ export const twoKumbasStory: Story = {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-02-narration.mp3",
         narrationDurationSeconds: 27.75,
         cues: twoKumbasScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-02-narration.mp3",
+            narrationDurationSeconds: 27.75,
+            cues: twoKumbasScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-02-foday.mp3",
+            narrationDurationSeconds: 31.93,
+            cues: twoKumbasFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 27.93,
+            cues: twoKumbasBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 29.7,
+            cues: twoKumbasKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -219,6 +291,33 @@ export const twoKumbasStory: Story = {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-03-narration.mp3",
         narrationDurationSeconds: 35.33,
         cues: twoKumbasScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-03-narration.mp3",
+            narrationDurationSeconds: 35.33,
+            cues: twoKumbasScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-03-foday.mp3",
+            narrationDurationSeconds: 40.45,
+            cues: twoKumbasFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 35.83,
+            cues: twoKumbasBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 38.33,
+            cues: twoKumbasKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -266,6 +365,33 @@ export const twoKumbasStory: Story = {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-04-narration.mp3",
         narrationDurationSeconds: 28.35,
         cues: twoKumbasScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-04-narration.mp3",
+            narrationDurationSeconds: 28.35,
+            cues: twoKumbasScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-04-foday.mp3",
+            narrationDurationSeconds: 31.52,
+            cues: twoKumbasFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 28.23,
+            cues: twoKumbasBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 29.85,
+            cues: twoKumbasKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -305,6 +431,33 @@ export const twoKumbasStory: Story = {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-05-narration.mp3",
         narrationDurationSeconds: 33.12,
         cues: twoKumbasScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-05-narration.mp3",
+            narrationDurationSeconds: 33.12,
+            cues: twoKumbasScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-05-foday.mp3",
+            narrationDurationSeconds: 38.08,
+            cues: twoKumbasFodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 32.7,
+            cues: twoKumbasBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 36.08,
+            cues: twoKumbasKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -344,6 +497,33 @@ export const twoKumbasStory: Story = {
         narrationUrl: "/audio/stories/the-two-kumbas/scene-06-narration.mp3",
         narrationDurationSeconds: 29.48,
         cues: twoKumbasScene06 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-06-narration.mp3",
+            narrationDurationSeconds: 29.48,
+            cues: twoKumbasScene06 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-06-foday.mp3",
+            narrationDurationSeconds: 33.92,
+            cues: twoKumbasFodayScene06 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-06-baboucar.mp3",
+            narrationDurationSeconds: 29.07,
+            cues: twoKumbasBaboucarScene06 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-two-kumbas/scene-06-kaddy.mp3",
+            narrationDurationSeconds: 31.7,
+            cues: twoKumbasKaddyScene06 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

@@ -2,6 +2,15 @@ import { Story, NarrationCue } from "@/types/story";
 import spiderScene01 from "@/data/audio/cues/spider-wisdom/scene-01.json";
 import spiderScene02 from "@/data/audio/cues/spider-wisdom/scene-02.json";
 import spiderScene03 from "@/data/audio/cues/spider-wisdom/scene-03.json";
+import spiderAmaraScene01 from "@/data/audio/cues/spider-wisdom/scene-01-amara.json";
+import spiderAmaraScene02 from "@/data/audio/cues/spider-wisdom/scene-02-amara.json";
+import spiderAmaraScene03 from "@/data/audio/cues/spider-wisdom/scene-03-amara.json";
+import spiderBaboucarScene01 from "@/data/audio/cues/spider-wisdom/scene-01-baboucar.json";
+import spiderBaboucarScene02 from "@/data/audio/cues/spider-wisdom/scene-02-baboucar.json";
+import spiderBaboucarScene03 from "@/data/audio/cues/spider-wisdom/scene-03-baboucar.json";
+import spiderKaddyScene01 from "@/data/audio/cues/spider-wisdom/scene-01-kaddy.json";
+import spiderKaddyScene02 from "@/data/audio/cues/spider-wisdom/scene-02-kaddy.json";
+import spiderKaddyScene03 from "@/data/audio/cues/spider-wisdom/scene-03-kaddy.json";
 
 
 export const spiderWisdomStory: Story = {
@@ -117,9 +126,36 @@ export const spiderWisdomStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-narration.mp3",
-        narrationDurationSeconds: 25.8,
-        cues: spiderScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-amara.mp3",
+        narrationDurationSeconds: 23.12,
+        cues: spiderAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-amara.mp3",
+            narrationDurationSeconds: 23.12,
+            cues: spiderAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-narration.mp3",
+            narrationDurationSeconds: 25.8,
+            cues: spiderScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 23.32,
+            cues: spiderBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 24.7,
+            cues: spiderKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -156,9 +192,36 @@ export const spiderWisdomStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-narration.mp3",
-        narrationDurationSeconds: 25.85,
-        cues: spiderScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-amara.mp3",
+        narrationDurationSeconds: 23.5,
+        cues: spiderAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-amara.mp3",
+            narrationDurationSeconds: 23.5,
+            cues: spiderAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-narration.mp3",
+            narrationDurationSeconds: 25.85,
+            cues: spiderScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 23.38,
+            cues: spiderBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 25.38,
+            cues: spiderKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -195,9 +258,36 @@ export const spiderWisdomStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-narration.mp3",
-        narrationDurationSeconds: 29.02,
-        cues: spiderScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-amara.mp3",
+        narrationDurationSeconds: 26.48,
+        cues: spiderAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-amara.mp3",
+            narrationDurationSeconds: 26.48,
+            cues: spiderAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-narration.mp3",
+            narrationDurationSeconds: 29.02,
+            cues: spiderScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 25.95,
+            cues: spiderBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-spider-and-the-pot-of-wisdom/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 28.12,
+            cues: spiderKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

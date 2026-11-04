@@ -5,6 +5,24 @@ import kansalaScene03 from "@/data/audio/cues/fall-of-kansala/scene-03.json";
 import kansalaScene04 from "@/data/audio/cues/fall-of-kansala/scene-04.json";
 import kansalaScene05 from "@/data/audio/cues/fall-of-kansala/scene-05.json";
 import kansalaScene06 from "@/data/audio/cues/fall-of-kansala/scene-06.json";
+import kansalaAmaraScene01 from "@/data/audio/cues/fall-of-kansala/scene-01-amara.json";
+import kansalaAmaraScene02 from "@/data/audio/cues/fall-of-kansala/scene-02-amara.json";
+import kansalaAmaraScene03 from "@/data/audio/cues/fall-of-kansala/scene-03-amara.json";
+import kansalaAmaraScene04 from "@/data/audio/cues/fall-of-kansala/scene-04-amara.json";
+import kansalaAmaraScene05 from "@/data/audio/cues/fall-of-kansala/scene-05-amara.json";
+import kansalaAmaraScene06 from "@/data/audio/cues/fall-of-kansala/scene-06-amara.json";
+import kansalaBaboucarScene01 from "@/data/audio/cues/fall-of-kansala/scene-01-baboucar.json";
+import kansalaBaboucarScene02 from "@/data/audio/cues/fall-of-kansala/scene-02-baboucar.json";
+import kansalaBaboucarScene03 from "@/data/audio/cues/fall-of-kansala/scene-03-baboucar.json";
+import kansalaBaboucarScene04 from "@/data/audio/cues/fall-of-kansala/scene-04-baboucar.json";
+import kansalaBaboucarScene05 from "@/data/audio/cues/fall-of-kansala/scene-05-baboucar.json";
+import kansalaBaboucarScene06 from "@/data/audio/cues/fall-of-kansala/scene-06-baboucar.json";
+import kansalaKaddyScene01 from "@/data/audio/cues/fall-of-kansala/scene-01-kaddy.json";
+import kansalaKaddyScene02 from "@/data/audio/cues/fall-of-kansala/scene-02-kaddy.json";
+import kansalaKaddyScene03 from "@/data/audio/cues/fall-of-kansala/scene-03-kaddy.json";
+import kansalaKaddyScene04 from "@/data/audio/cues/fall-of-kansala/scene-04-kaddy.json";
+import kansalaKaddyScene05 from "@/data/audio/cues/fall-of-kansala/scene-05-kaddy.json";
+import kansalaKaddyScene06 from "@/data/audio/cues/fall-of-kansala/scene-06-kaddy.json";
 
 
 export const fallOfKansalaStory: Story = {
@@ -152,9 +170,36 @@ export const fallOfKansalaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-01-narration.mp3",
-        narrationDurationSeconds: 37.88,
-        cues: kansalaScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-01-amara.mp3",
+        narrationDurationSeconds: 33.25,
+        cues: kansalaAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-01-amara.mp3",
+            narrationDurationSeconds: 33.25,
+            cues: kansalaAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-01-narration.mp3",
+            narrationDurationSeconds: 37.88,
+            cues: kansalaScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 33.62,
+            cues: kansalaBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 35.77,
+            cues: kansalaKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -192,9 +237,36 @@ export const fallOfKansalaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-02-narration.mp3",
-        narrationDurationSeconds: 39.7,
-        cues: kansalaScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-02-amara.mp3",
+        narrationDurationSeconds: 35.02,
+        cues: kansalaAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-02-amara.mp3",
+            narrationDurationSeconds: 35.02,
+            cues: kansalaAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-02-narration.mp3",
+            narrationDurationSeconds: 39.7,
+            cues: kansalaScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 35.15,
+            cues: kansalaBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 37.27,
+            cues: kansalaKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -241,9 +313,36 @@ export const fallOfKansalaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-03-narration.mp3",
-        narrationDurationSeconds: 39.25,
-        cues: kansalaScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-03-amara.mp3",
+        narrationDurationSeconds: 35.5,
+        cues: kansalaAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-03-amara.mp3",
+            narrationDurationSeconds: 35.5,
+            cues: kansalaAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-03-narration.mp3",
+            narrationDurationSeconds: 39.25,
+            cues: kansalaScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 35.38,
+            cues: kansalaBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 37.42,
+            cues: kansalaKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -281,9 +380,36 @@ export const fallOfKansalaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-04-narration.mp3",
-        narrationDurationSeconds: 38.55,
-        cues: kansalaScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-04-amara.mp3",
+        narrationDurationSeconds: 34.5,
+        cues: kansalaAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-04-amara.mp3",
+            narrationDurationSeconds: 34.5,
+            cues: kansalaAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-04-narration.mp3",
+            narrationDurationSeconds: 38.55,
+            cues: kansalaScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 34.12,
+            cues: kansalaBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 36.45,
+            cues: kansalaKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -321,9 +447,36 @@ export const fallOfKansalaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-05-narration.mp3",
-        narrationDurationSeconds: 37.75,
-        cues: kansalaScene05 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-05-amara.mp3",
+        narrationDurationSeconds: 33.35,
+        cues: kansalaAmaraScene05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-05-amara.mp3",
+            narrationDurationSeconds: 33.35,
+            cues: kansalaAmaraScene05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-05-narration.mp3",
+            narrationDurationSeconds: 37.75,
+            cues: kansalaScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 33.3,
+            cues: kansalaBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 35.33,
+            cues: kansalaKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -361,9 +514,36 @@ export const fallOfKansalaStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-06-narration.mp3",
-        narrationDurationSeconds: 34.45,
-        cues: kansalaScene06 as NarrationCue[],
+        narrationUrl: "/audio/stories/the-fall-of-kansala/scene-06-amara.mp3",
+        narrationDurationSeconds: 30.82,
+        cues: kansalaAmaraScene06 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-06-amara.mp3",
+            narrationDurationSeconds: 30.82,
+            cues: kansalaAmaraScene06 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-06-narration.mp3",
+            narrationDurationSeconds: 34.45,
+            cues: kansalaScene06 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-06-baboucar.mp3",
+            narrationDurationSeconds: 30.5,
+            cues: kansalaBaboucarScene06 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-fall-of-kansala/scene-06-kaddy.mp3",
+            narrationDurationSeconds: 32.5,
+            cues: kansalaKaddyScene06 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },

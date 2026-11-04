@@ -3,6 +3,18 @@ import boppiScene01 from "@/data/audio/cues/boppi-jerreh/scene-01.json";
 import boppiScene02 from "@/data/audio/cues/boppi-jerreh/scene-02.json";
 import boppiScene03 from "@/data/audio/cues/boppi-jerreh/scene-03.json";
 import boppiScene04 from "@/data/audio/cues/boppi-jerreh/scene-04.json";
+import boppiAmaraScene01 from "@/data/audio/cues/boppi-jerreh/scene-01-amara.json";
+import boppiAmaraScene02 from "@/data/audio/cues/boppi-jerreh/scene-02-amara.json";
+import boppiAmaraScene03 from "@/data/audio/cues/boppi-jerreh/scene-03-amara.json";
+import boppiAmaraScene04 from "@/data/audio/cues/boppi-jerreh/scene-04-amara.json";
+import boppiBaboucarScene01 from "@/data/audio/cues/boppi-jerreh/scene-01-baboucar.json";
+import boppiBaboucarScene02 from "@/data/audio/cues/boppi-jerreh/scene-02-baboucar.json";
+import boppiBaboucarScene03 from "@/data/audio/cues/boppi-jerreh/scene-03-baboucar.json";
+import boppiBaboucarScene04 from "@/data/audio/cues/boppi-jerreh/scene-04-baboucar.json";
+import boppiKaddyScene01 from "@/data/audio/cues/boppi-jerreh/scene-01-kaddy.json";
+import boppiKaddyScene02 from "@/data/audio/cues/boppi-jerreh/scene-02-kaddy.json";
+import boppiKaddyScene03 from "@/data/audio/cues/boppi-jerreh/scene-03-kaddy.json";
+import boppiKaddyScene04 from "@/data/audio/cues/boppi-jerreh/scene-04-kaddy.json";
 
 
 export const boppiJerrehStory: Story = {
@@ -128,9 +140,36 @@ export const boppiJerrehStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-narration.mp3",
-        narrationDurationSeconds: 37.98,
-        cues: boppiScene01 as NarrationCue[],
+        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-amara.mp3",
+        narrationDurationSeconds: 34.55,
+        cues: boppiAmaraScene01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-amara.mp3",
+            narrationDurationSeconds: 34.55,
+            cues: boppiAmaraScene01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-narration.mp3",
+            narrationDurationSeconds: 37.98,
+            cues: boppiScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 34.7,
+            cues: boppiBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 36.6,
+            cues: boppiKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -175,9 +214,36 @@ export const boppiJerrehStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-narration.mp3",
-        narrationDurationSeconds: 39.2,
-        cues: boppiScene02 as NarrationCue[],
+        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-amara.mp3",
+        narrationDurationSeconds: 35.38,
+        cues: boppiAmaraScene02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-amara.mp3",
+            narrationDurationSeconds: 35.38,
+            cues: boppiAmaraScene02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-narration.mp3",
+            narrationDurationSeconds: 39.2,
+            cues: boppiScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 35.0,
+            cues: boppiBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 37.38,
+            cues: boppiKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -222,9 +288,36 @@ export const boppiJerrehStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-narration.mp3",
-        narrationDurationSeconds: 38.17,
-        cues: boppiScene03 as NarrationCue[],
+        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-amara.mp3",
+        narrationDurationSeconds: 34.45,
+        cues: boppiAmaraScene03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-amara.mp3",
+            narrationDurationSeconds: 34.45,
+            cues: boppiAmaraScene03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-narration.mp3",
+            narrationDurationSeconds: 38.17,
+            cues: boppiScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 34.3,
+            cues: boppiBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 37.35,
+            cues: boppiKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -269,9 +362,36 @@ export const boppiJerrehStory: Story = {
         },
       ],
       audio: {
-        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-narration.mp3",
-        narrationDurationSeconds: 41.5,
-        cues: boppiScene04 as NarrationCue[],
+        narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-amara.mp3",
+        narrationDurationSeconds: 37.08,
+        cues: boppiAmaraScene04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-amara.mp3",
+            narrationDurationSeconds: 37.08,
+            cues: boppiAmaraScene04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-narration.mp3",
+            narrationDurationSeconds: 41.5,
+            cues: boppiScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 36.75,
+            cues: boppiBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/boppi-jerreh-spirits-of-dog-island/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 39.45,
+            cues: boppiKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },

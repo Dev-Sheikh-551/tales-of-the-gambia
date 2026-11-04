@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "startSeconds": 0.0,
+    "endSeconds": 8.17,
+    "text": "Mor Lam leapt onto his sleeping platform, pulled a coarse indigo blanket over his chin, and began groaning with theatrical agony.",
+    "charStart": 0,
+    "charEnd": 129
+  },
+  {
+    "index": 1,
+    "startSeconds": 8.17,
+    "endSeconds": 12.44,
+    "text": "Moussa rushed to his friend’s side, eyes wide with distress.",
+    "charStart": 130,
+    "charEnd": 190
+  },
+  {
+    "index": 2,
+    "startSeconds": 12.44,
+    "endSeconds": 14.23,
+    "text": "'Ah, my beloved brother!'",
+    "charStart": 191,
+    "charEnd": 216
+  },
+  {
+    "index": 3,
+    "startSeconds": 14.23,
+    "endSeconds": 16.78,
+    "text": "Moussa wept, pulling up a low stool.",
+    "charStart": 217,
+    "charEnd": 253
+  },
+  {
+    "index": 4,
+    "startSeconds": 16.78,
+    "endSeconds": 21.64,
+    "text": "'I shall not leave your side for a single second until health returns to your limbs!'",
+    "charStart": 254,
+    "charEnd": 339
+  },
+  {
+    "index": 5,
+    "startSeconds": 21.64,
+    "endSeconds": 31.38,
+    "text": "When hours passed and Moussa showed no signs of departure, Mor Lam closed his eyes, held his breath, and feigned a profound and sudden demise.",
+    "charStart": 340,
+    "charEnd": 482
+  }
+]

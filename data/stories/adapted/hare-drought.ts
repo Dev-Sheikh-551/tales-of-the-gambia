@@ -5,6 +5,24 @@ import hareCues03 from "@/data/audio/cues/hare-drought/scene-03.json";
 import hareCues04 from "@/data/audio/cues/hare-drought/scene-04.json";
 import hareCues05 from "@/data/audio/cues/hare-drought/scene-05.json";
 import hareCues06 from "@/data/audio/cues/hare-drought/scene-06.json";
+import hareFodayScene01 from "@/data/audio/cues/hare-drought/scene-01-foday.json";
+import hareFodayScene02 from "@/data/audio/cues/hare-drought/scene-02-foday.json";
+import hareFodayScene03 from "@/data/audio/cues/hare-drought/scene-03-foday.json";
+import hareFodayScene04 from "@/data/audio/cues/hare-drought/scene-04-foday.json";
+import hareFodayScene05 from "@/data/audio/cues/hare-drought/scene-05-foday.json";
+import hareFodayScene06 from "@/data/audio/cues/hare-drought/scene-06-foday.json";
+import hareBaboucarScene01 from "@/data/audio/cues/hare-drought/scene-01-baboucar.json";
+import hareBaboucarScene02 from "@/data/audio/cues/hare-drought/scene-02-baboucar.json";
+import hareBaboucarScene03 from "@/data/audio/cues/hare-drought/scene-03-baboucar.json";
+import hareBaboucarScene04 from "@/data/audio/cues/hare-drought/scene-04-baboucar.json";
+import hareBaboucarScene05 from "@/data/audio/cues/hare-drought/scene-05-baboucar.json";
+import hareBaboucarScene06 from "@/data/audio/cues/hare-drought/scene-06-baboucar.json";
+import hareKaddyScene01 from "@/data/audio/cues/hare-drought/scene-01-kaddy.json";
+import hareKaddyScene02 from "@/data/audio/cues/hare-drought/scene-02-kaddy.json";
+import hareKaddyScene03 from "@/data/audio/cues/hare-drought/scene-03-kaddy.json";
+import hareKaddyScene04 from "@/data/audio/cues/hare-drought/scene-04-kaddy.json";
+import hareKaddyScene05 from "@/data/audio/cues/hare-drought/scene-05-kaddy.json";
+import hareKaddyScene06 from "@/data/audio/cues/hare-drought/scene-06-kaddy.json";
 
 export const hareDroughtStory: Story = {
   id: "story-1",
@@ -172,6 +190,33 @@ export const hareDroughtStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-narration.mp3",
         narrationDurationSeconds: 21.2,
         cues: hareCues01 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-narration.mp3",
+            narrationDurationSeconds: 21.2,
+            cues: hareCues01 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-foday.mp3",
+            narrationDurationSeconds: 23.98,
+            cues: hareFodayScene01 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-baboucar.mp3",
+            narrationDurationSeconds: 21.38,
+            cues: hareBaboucarScene01 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-01-kaddy.mp3",
+            narrationDurationSeconds: 23.0,
+            cues: hareKaddyScene01 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -263,6 +308,33 @@ export const hareDroughtStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-narration.mp3",
         narrationDurationSeconds: 26.0,
         cues: hareCues02 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-narration.mp3",
+            narrationDurationSeconds: 26.0,
+            cues: hareCues02 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-foday.mp3",
+            narrationDurationSeconds: 29.02,
+            cues: hareFodayScene02 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-baboucar.mp3",
+            narrationDurationSeconds: 26.1,
+            cues: hareBaboucarScene02 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-02-kaddy.mp3",
+            narrationDurationSeconds: 28.3,
+            cues: hareKaddyScene02 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -353,6 +425,33 @@ export const hareDroughtStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-narration.mp3",
         narrationDurationSeconds: 22.3,
         cues: hareCues03 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-narration.mp3",
+            narrationDurationSeconds: 22.3,
+            cues: hareCues03 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-foday.mp3",
+            narrationDurationSeconds: 25.3,
+            cues: hareFodayScene03 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-baboucar.mp3",
+            narrationDurationSeconds: 22.55,
+            cues: hareBaboucarScene03 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-03-kaddy.mp3",
+            narrationDurationSeconds: 24.32,
+            cues: hareKaddyScene03 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 15,
     },
@@ -425,6 +524,33 @@ export const hareDroughtStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-narration.mp3",
         narrationDurationSeconds: 23.35,
         cues: hareCues04 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-narration.mp3",
+            narrationDurationSeconds: 23.35,
+            cues: hareCues04 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-foday.mp3",
+            narrationDurationSeconds: 26.1,
+            cues: hareFodayScene04 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-baboucar.mp3",
+            narrationDurationSeconds: 23.3,
+            cues: hareBaboucarScene04 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-04-kaddy.mp3",
+            narrationDurationSeconds: 25.2,
+            cues: hareKaddyScene04 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 14,
     },
@@ -515,6 +641,33 @@ export const hareDroughtStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-narration.mp3",
         narrationDurationSeconds: 24.6,
         cues: hareCues05 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-narration.mp3",
+            narrationDurationSeconds: 24.6,
+            cues: hareCues05 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-foday.mp3",
+            narrationDurationSeconds: 27.6,
+            cues: hareFodayScene05 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-baboucar.mp3",
+            narrationDurationSeconds: 24.9,
+            cues: hareBaboucarScene05 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-05-kaddy.mp3",
+            narrationDurationSeconds: 26.25,
+            cues: hareKaddyScene05 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
@@ -605,6 +758,33 @@ export const hareDroughtStory: Story = {
         narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-narration.mp3",
         narrationDurationSeconds: 25.27,
         cues: hareCues06 as NarrationCue[],
+        narratorId: "amara-gambia",
+        narrations: {
+          "amara-gambia": {
+            narratorId: "amara-gambia",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-narration.mp3",
+            narrationDurationSeconds: 25.27,
+            cues: hareCues06 as NarrationCue[],
+          },
+          "foday-jali": {
+            narratorId: "foday-jali",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-foday.mp3",
+            narrationDurationSeconds: 28.12,
+            cues: hareFodayScene06 as NarrationCue[],
+          },
+          "elder-baboucar": {
+            narratorId: "elder-baboucar",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-baboucar.mp3",
+            narrationDurationSeconds: 24.98,
+            cues: hareBaboucarScene06 as NarrationCue[],
+          },
+          "kaddy-brikama": {
+            narratorId: "kaddy-brikama",
+            narrationUrl: "/audio/stories/the-clever-hare-and-the-great-drought/scene-06-kaddy.mp3",
+            narrationDurationSeconds: 27.48,
+            cues: hareKaddyScene06 as NarrationCue[],
+          },
+        },
       },
       durationSeconds: 16,
     },
