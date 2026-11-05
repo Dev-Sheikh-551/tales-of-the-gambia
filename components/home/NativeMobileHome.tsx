@@ -37,7 +37,7 @@ export default function NativeMobileHome() {
   const recentStories = MOCK_STORIES.filter((s) => s.slug !== featured.slug).slice(0, 8);
 
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] pb-28">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] pb-32 pb-[calc(8rem+env(safe-area-inset-bottom,0px))]">
 
       {/* ── Compact Brand Header with Safe Area Spacing ───────── */}
       <header className="px-5 pt-[calc(max(env(safe-area-inset-top,0px),1.25rem)+0.5rem)] pb-4 flex items-center justify-between">
@@ -161,7 +161,7 @@ export default function NativeMobileHome() {
           </div>
 
           {/* Polished horizontal story carousel with snap points */}
-          <div className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory -mx-4 px-4 pb-2">
+          <div className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory -mx-4 px-4 pb-3 pt-1">
             {recentStories.map((story) => (
               <div
                 key={story.id}

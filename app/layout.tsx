@@ -45,6 +45,17 @@ export const metadata: Metadata = {
   verification: {
     google: "I_94vyJz3gC0rfG0v2QrV9Y4T8MtkFhAvNeF5n_Udms",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 import { ThemeProvider } from "@/components/theme/ThemeContext";

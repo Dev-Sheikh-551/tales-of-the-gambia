@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stopColor="#1E1915" />
+      <stop offset="70%" stopColor="#12100E" />
+      <stop offset="100%" stopColor="#0A0807" />
+    </radialGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="#FFEAA7" stopOpacity="1" />
+      <stop offset="35%" stopColor="#F2C765" stopOpacity="0.95" />
+      <stop offset="70%" stopColor="#E0AB3A" stopOpacity="0.85" />
+      <stop offset="100%" stopColor="#D9732B" stopOpacity="0" />
+    </radialGradient>
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#F2C765" stopOpacity="0.6" />
+      <stop offset="50%" stopColor="#D9732B" stopOpacity="0.2" />
+      <stop offset="100%" stopColor="#E0AB3A" stopOpacity="0.5" />
+    </linearGradient>
+    <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#1B3F48" stopOpacity="0" />
+      <stop offset="40%" stopColor="#2E626D" stopOpacity="0.6" />
+      <stop offset="60%" stopColor="#4B8590" stopOpacity="0.8" />
+      <stop offset="100%" stopColor="#1B3F48" stopOpacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" stroke="url(#rimGrad)" stroke-width="4" />
+
+  <!-- Sun Rays Ambient Halo -->
+  <circle cx="256" cy="225" r="140" fill="url(#sunGlow)" opacity="0.35" />
+
+  <!-- Core Golden Sun -->
+  <circle cx="256" cy="225" r="95" fill="url(#sunGlow)" />
+  <circle cx="256" cy="225" r="50" fill="#FFF3D1" opacity="0.45" />
+
+  <!-- River Gambia Water Ribbon (Beneath Bantaba) -->
+  <path d="M 120 380 Q 200 370, 256 385 T 392 378 Q 420 384, 440 395" 
+        fill="none" stroke="url(#riverGrad)" stroke-width="6" stroke-linecap="round" />
+
+  <!-- Ground Mound / Bantaba Base -->
+  <path d="M 80 405 Q 180 375, 256 375 Q 332 375, 432 405 L 432 440 Q 332 445, 256 445 Q 180 445, 80 440 Z" 
+        fill="#0D0B0A" />
+
+  <!-- The Ancient Baobab (Bantaba Tree of Stories) -->
+  <!-- Sturdy trunk and roots -->
+  <path d="
+    M 215 385
+    C 210 350, 222 305, 224 260
+    C 190 245, 155 235, 140 210
+    C 148 202, 165 208, 185 220
+    C 205 230, 220 242, 230 252
+    C 232 230, 230 195, 220 170
+    C 228 165, 240 172, 244 195
+    C 248 215, 248 235, 250 250
+    C 253 210, 258 175, 262 145
+    C 270 145, 274 165, 272 190
+    C 270 215, 268 238, 266 252
+    C 276 238, 290 220, 310 200
+    C 318 206, 316 218, 300 232
+    C 285 246, 275 255, 272 265
+    C 280 272, 315 258, 355 245
+    C 362 254, 350 262, 332 270
+    C 305 282, 282 284, 274 292
+    C 278 330, 286 355, 298 385
+    C 320 392, 345 398, 360 405
+    C 345 408, 320 404, 295 398
+    C 275 402, 256 403, 235 398
+    C 210 404, 180 408, 165 405
+    C 180 398, 200 392, 215 385
+    Z" 
+    fill="#0A0807" />
+
+  <!-- Foliage Tufts on Crown of Baobab -->
+  <circle cx="150" cy="205" r="28" fill="#0A0807" />
+  <circle cx="185" cy="180" r="26" fill="#0A0807" />
+  <circle cx="225" cy="155" r="30" fill="#0A0807" />
+  <circle cx="265" cy="135" r="32" fill="#0A0807" />
+  <circle cx="310" cy="155" r="28" fill="#0A0807" />
+  <circle cx="345" cy="190" r="26" fill="#0A0807" />
+  <circle cx="360" cy="235" r="24" fill="#0A0807" />
+  <circle cx="260" cy="170" r="34" fill="#0A0807" />
+  <circle cx="205" cy="210" r="25" fill="#0A0807" />
+  <circle cx="315" cy="215" r="25" fill="#0A0807" />
+
+  <!-- Delicate Griot Gold Sparkles (Representing Living Oral Stories) -->
+  <circle cx="185" cy="140" r="3" fill="#FFEAA7" opacity="0.9" />
+  <circle cx="330" cy="130" r="2.5" fill="#FFEAA7" opacity="0.8" />
+  <circle cx="275" cy="110" r="3.5" fill="#F2C765" opacity="0.95" />
+  <circle cx="130" cy="250" r="2" fill="#FFEAA7" opacity="0.75" />
+  <circle cx="380" cy="270" r="2" fill="#F2C765" opacity="0.8" />
+</svg>

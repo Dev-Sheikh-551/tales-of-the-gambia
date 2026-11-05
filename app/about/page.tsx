@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] md:pb-20">
       {/* Page Header */}
       <div className="text-center space-y-4 mb-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#241E19] border border-[#3E352E] text-xs text-[#E0AB3A] font-medium">

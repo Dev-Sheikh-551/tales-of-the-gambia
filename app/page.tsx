@@ -19,7 +19,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen pb-28 pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] md:pb-0">
       {/* 1. Atmospheric Hero.
           HeroOffset applies -mt-16 sm:-mt-20 on web (pulls hero behind transparent nav).
           On native (Capacitor) the offset is skipped — no top nav is present. */}

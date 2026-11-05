@@ -1,0 +1,84 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportHeight="108"
+    android:viewportWidth="108">
+
+    <!-- Golden Sun Aura within 66dp Safe Circle -->
+    <path
+        android:pathData="M 54,48 m -20,0 a 20,20 0 1,0 40,0 a 20,20 0 1,0 -40,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="54"
+                android:centerY="48"
+                android:gradientRadius="20"
+                android:type="radial">
+                <item android:color="#FFFFEAA7" android:offset="0.0" />
+                <item android:color="#FFF2C765" android:offset="0.4" />
+                <item android:color="#FFE0AB3A" android:offset="0.75" />
+                <item android:color="#33D9732B" android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- River Gambia Accent Curve -->
+    <path
+        android:strokeColor="#554B8590"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M 28,78 Q 42,75 54,78 T 80,77" />
+
+    <!-- Bantaba Earth Mound Base -->
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 22,82 Q 40,76 54,76 Q 68,76 86,82 L 86,88 L 22,88 Z" />
+
+    <!-- Baobab Trunk and Branches -->
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 46,78 C 45,71 47,62 48,53 C 41,50 34,48 31,43 C 33,41 36,43 40,45 C 44,47 47,49 49,51 C 49,47 49,40 47,35 C 49,34 51,35 52,40 C 53,44 53,48 53,51 C 54,43 55,36 56,30 C 57,30 58,34 58,39 C 57,44 57,49 56,51 C 58,48 61,45 65,41 C 67,42 66,44 63,47 C 60,50 58,52 57,54 C 59,55 66,52 74,50 C 75,52 73,53 69,55 C 64,57 59,58 58,59 C 59,67 60,72 63,78 C 67,79 72,80 75,82 C 72,83 67,82 62,81 C 58,82 54,82 50,81 C 45,82 39,83 36,82 C 39,81 43,79 46,78 Z" />
+
+    <!-- Baobab Foliage Tufts -->
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 33,42 m -6,0 a 6,6 0 1,0 12,0 a 6,6 0 1,0 -12,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 40,37 m -5.5,0 a 5.5,5.5 0 1,0 11,0 a 5.5,5.5 0 1,0 -11,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 48,32 m -6.5,0 a 6.5,6.5 0 1,0 13,0 a 6.5,6.5 0 1,0 -13,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 56,28 m -7,0 a 7,7 0 1,0 14,0 a 7,7 0 1,0 -14,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 65,32 m -6,0 a 6,6 0 1,0 12,0 a 6,6 0 1,0 -12,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 72,39 m -5.5,0 a 5.5,5.5 0 1,0 11,0 a 5.5,5.5 0 1,0 -11,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 75,48 m -5,0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 55,35 m -7.5,0 a 7.5,7.5 0 1,0 15,0 a 7.5,7.5 0 1,0 -15,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 44,43 m -5.5,0 a 5.5,5.5 0 1,0 11,0 a 5.5,5.5 0 1,0 -11,0" />
+    <path
+        android:fillColor="#FF0A0807"
+        android:pathData="M 66,44 m -5.5,0 a 5.5,5.5 0 1,0 11,0 a 5.5,5.5 0 1,0 -11,0" />
+
+    <!-- Griot Gold Sparkles -->
+    <path
+        android:fillColor="#FFFFEAA7"
+        android:pathData="M 40,29 m -0.9,0 a 0.9,0.9 0 1,0 1.8,0 a 0.9,0.9 0 1,0 -1.8,0" />
+    <path
+        android:fillColor="#FFFFEAA7"
+        android:pathData="M 69,27 m -0.8,0 a 0.8,0.8 0 1,0 1.6,0 a 0.8,0.8 0 1,0 -1.6,0" />
+    <path
+        android:fillColor="#FFF2C765"
+        android:pathData="M 58,23 m -1.0,0 a 1.0,1.0 0 1,0 2.0,0 a 1.0,1.0 0 1,0 -2.0,0" />
+</vector>

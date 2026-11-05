@@ -491,7 +491,7 @@ export function StoryLibraryClient({ stories }: StoryLibraryClientProps) {
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 min-[540px]:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredStories.map((story, idx) => (
             <MotionReveal key={story.id} delay={Math.min(0.2, idx * 0.04)} direction="up">
               <StoryCard

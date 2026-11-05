@@ -96,7 +96,25 @@ export default function StoryDiscovery() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Mobile & Tablet Web Carousel (Matches Native Android Tablet preview carousel) */}
+          <div className="flex lg:hidden gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory -mx-4 px-4 sm:-mx-6 sm:px-6 pb-3 pt-1">
+            {filteredStories.slice(0, 8).map((story) => (
+              <div
+                key={story.id}
+                className="w-[260px] sm:w-[280px] shrink-0 snap-start"
+              >
+                <StoryCard
+                  story={story}
+                  progress={getProgress(story.slug)}
+                  isFavorite={isFav(story.slug)}
+                  onToggleFavorite={toggleFav}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Showcase Grid (Preserved unchanged) */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-6">
             {filteredStories.slice(0, 6).map((story) => (
               <StoryCard
                 key={story.id}

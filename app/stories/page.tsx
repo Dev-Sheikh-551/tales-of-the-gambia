@@ -15,7 +15,7 @@ function StoryLibraryFallback() {
       <div className="h-10 w-64 bg-[#201B17] rounded-lg" />
       <div className="h-6 w-96 bg-[#201B17] rounded-lg" />
       <div className="h-24 w-full bg-[#171310] rounded-2xl border border-[#2E2721]" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 min-[540px]:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
         {[1, 2, 3, 4, 5, 6].map((n) => (
           <div
             key={n}

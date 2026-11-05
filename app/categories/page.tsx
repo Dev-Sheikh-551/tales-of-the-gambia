@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function CategoriesPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-28 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] md:pb-16">
       {/* Page Header */}
       <div className="max-w-3xl mb-10">
         <span className="text-xs uppercase tracking-widest text-[#E0AB3A] font-semibold">

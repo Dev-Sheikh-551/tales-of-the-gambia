@@ -9,6 +9,7 @@ import { useStoryAudio } from "@/hooks/useStoryAudio";
 import { useNarrator } from "@/hooks/useNarrator";
 import { resolveSceneNarration } from "@/lib/narrators/resolver";
 import { NarratorPicker } from "../NarratorPicker";
+import { NarratedStoryText } from "../NarratedStoryText";
 import { StorySceneViewport } from "./StorySceneViewport";
 import { StoryCompletionView } from "./StoryCompletionView";
 import { registerBackButtonHandler } from "@/lib/native/backButton";
@@ -55,9 +56,18 @@ export function StoryCinematicMode({
     audioMode: Boolean(story.scenes[currentSceneIdx]?.audio?.narrationUrl),
   });
 
+  const narrativeContainerRef = useRef<HTMLDivElement | null>(null);
+
   // Keep currentSceneIdx in sync with useStoryPlayback
   useEffect(() => {
     setCurrentSceneIdx(currentSceneIndex);
+  }, [currentSceneIndex]);
+
+  // Reset narrative scroll position to top whenever scene changes
+  useEffect(() => {
+    if (narrativeContainerRef.current) {
+      narrativeContainerRef.current.scrollTop = 0;
+    }
   }, [currentSceneIndex]);
 
   // Resolve narration track for current scene given the selected storyteller
@@ -234,11 +244,27 @@ export function StoryCinematicMode({
 
       {/* Narrative & Control Canvas (Bottom ~56-60% height) matching Prototype Screenshot 2 */}
       <div className="flex-1 min-h-0 flex flex-col justify-between py-3 sm:py-5 px-6 sm:px-12 bg-[#0D0B0A] relative z-20 overflow-hidden">
-        {/* Centered Story Narrative Text */}
-        <div className="flex-1 min-h-0 flex items-center justify-center text-center my-auto px-4 overflow-y-auto scrollbar-none select-text">
-          <p className="font-story-serif text-base sm:text-xl md:text-2xl text-[#F7F3EB] leading-relaxed max-w-2xl sm:max-w-3xl mx-auto text-center select-text">
-            {currentScene.text}
-          </p>
+        {/* Story Narrative Text Container — Perfectly Centered when Short, Fully Scrollable from Top when Long */}
+        <div
+          ref={narrativeContainerRef}
+          tabIndex={0}
+          role="region"
+          aria-label="Scene narration text"
+          className="flex-1 min-h-0 w-full overflow-y-auto px-2 sm:px-4 py-2 select-text scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent focus:outline-none"
+        >
+          <div className="min-h-full flex flex-col items-center">
+            <div className="my-auto w-full max-w-2xl sm:max-w-3xl py-2">
+              <NarratedStoryText
+                text={currentScene.text}
+                cues={resolvedNarration.cues}
+                currentTime={effectiveElapsed}
+                hasAudio={storyAudio.hasAudio}
+                enableAutoScroll={true}
+                containerRef={narrativeContainerRef}
+                className="font-story-serif text-base sm:text-xl md:text-2xl text-[#F7F3EB] leading-relaxed text-center select-text whitespace-pre-line"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Bottom Control Bar matching Prototype Screenshot 2 (Pinned shrink-0) */}
