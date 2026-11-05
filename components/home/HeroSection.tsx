@@ -78,7 +78,7 @@ export default function HeroSection() {
           </Link>
                     {!isNative && (
             <a
-              href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.3.0.apk"
+              href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.3.1.apk"
               download
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#1F292E]/80 hover:bg-[#28353B] border border-[#3E4F57] text-[#E0AB3A] hover:text-[#FFEAA7] text-sm font-semibold transition-all shadow-md cursor-pointer backdrop-blur-sm"
               title="Download Android APK (Direct install)"
