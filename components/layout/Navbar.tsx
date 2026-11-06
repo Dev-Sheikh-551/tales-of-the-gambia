@@ -114,7 +114,7 @@ export default function Navbar() {
                         {/* Android App Direct Download */}
             {!isNative && (
               <a
-                href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.3.1.apk"
+                href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.3.2.apk"
                 download
                 className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-all bg-[var(--accent-ochre)]/10 hover:bg-[var(--accent-ochre)]/20 border-[var(--accent-ochre)]/30 text-[var(--accent-ochre)] hover:text-[#FFEAA7]"
                 title="Download Android APK (Direct install)"

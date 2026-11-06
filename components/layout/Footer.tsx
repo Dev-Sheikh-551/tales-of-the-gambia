@@ -73,7 +73,7 @@ export default function Footer() {
               </li>
                             <li>
                 <a
-                  href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.3.1.apk"
+                  href="https://github.com/Dev-Sheikh-551/tales-of-the-gambia/releases/latest/download/Tales-of-The-Gambia-v1.3.2.apk"
                   download
                   className="inline-flex items-center gap-1.5 text-[var(--accent-ochre)] hover:text-[#FFEAA7] font-medium transition-colors"
                   title="Download Android APK (Direct install)"

@@ -33,7 +33,7 @@ export function FavoritesPageClient() {
       {/* Saved Stories Section */}
       <section>
         {!isLoaded ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-pulse">
+          <div className="grid grid-cols-1 min-[540px]:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 animate-pulse">
             {[1, 2, 3].map((n) => (
               <div
                 key={n}
@@ -65,7 +65,7 @@ export function FavoritesPageClient() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 min-[540px]:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {favoriteStories.map((story) => (
               <StoryCard
                 key={story.id}
